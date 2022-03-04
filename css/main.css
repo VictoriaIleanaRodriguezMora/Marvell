@@ -1,0 +1,862 @@
+.fa-twitter {
+  color: #1da1f2; }
+
+.fa-linkedin {
+  color: #0015ff; }
+
+.fa-instagram {
+  color: #a7af34; }
+
+.fa-discord {
+  color: #5865f2; }
+
+.fa-whatsapp {
+  color: #25d366; }
+
+.fa-envelope {
+  color: red; }
+
+@font-face {
+  font-family: "BalsamiqSans";
+  src: url(../fonts/BalsamiqSans-Regular.ttf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Spartan";
+  src: url(../fonts/Spartan-Medium.ttf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MarvelRegular";
+  src: url(../fonts/MarvelRegular-Dj83.ttf);
+  font-weight: bold;
+  font-style: 700; }
+
+@font-face {
+  font-family: "Captainmarvel";
+  src: url(../fonts/Captainmarvel-anm9.ttf);
+  font-weight: bold;
+  font-style: 700; }
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+::-webkit-scrollbar {
+  width: 7px;
+  opacity: 0; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #ad0808; }
+
+/* Handle */
+html {
+  scroll-behavior: smooth; }
+
+ul {
+  list-style: none; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+/* estilos generales */
+body {
+  /* background-color: #000e4e; */
+  background-image: url(../Imagenes/fondos/MarvelWallpaper.jpg);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  object-fit: cover;
+  font-family: "Spartan";
+  color: white;
+  overflow-x: hidden; }
+
+/* Inicia Header */
+.navbar {
+  margin: 0;
+  padding-top: 0px;
+  background-image: linear-gradient(#000000bb, #00000010);
+  padding-top: 0; }
+  .navbar .navbar-expand-xl {
+    padding-top: 0; }
+  .navbar .fa-house-user {
+    font-size: 2.5em;
+    color: white;
+    width: 60px;
+    margin: 10px 0px 0px 20px;
+    text-align: center;
+    animation-name: moveHome;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 10s; }
+    @media screen and (max-width: 1300px) {
+      .navbar .fa-house-user {
+        font-size: 2em; } }
+
+@keyframes moveHome {
+  0% {
+    transform: rotateZ(0deg); }
+  25% {
+    transform: rotateZ(15deg); }
+  50% {
+    transform: rotateZ(0deg); }
+  75% {
+    transform: rotateZ(-15deg); }
+  100% {
+    transform: rotateZ(0deg); } }
+  .navbar .navbar-toggler {
+    margin: 10px;
+    height: 30px;
+    width: 50px; }
+    .navbar .navbar-toggler .navbar-toggler-icon {
+      display: none;
+      color: grey; }
+  .navbar .navbar-collapse {
+    justify-content: center; }
+    .navbar .navbar-collapse .navbar-nav {
+      width: auto;
+      display: flex;
+      list-style: none;
+      transition: 2s; }
+      .navbar .navbar-collapse .navbar-nav .nav-item {
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+        background-color: rgba(0, 0, 0, 0.849);
+        padding: 15px 10px;
+        text-align: center; }
+        @media screen and (max-width: 1199px) {
+          .navbar .navbar-collapse .navbar-nav .nav-item {
+            border: 1px solid #ffffff8f; } }
+        @media screen and (max-width: 300px) {
+          .navbar .navbar-collapse .navbar-nav .nav-item {
+            padding: 10px; } }
+        @media screen and (max-width: 270px) {
+          .navbar .navbar-collapse .navbar-nav .nav-item {
+            padding: 8px; } }
+        .navbar .navbar-collapse .navbar-nav .nav-item .navbar-brand {
+          text-decoration: none;
+          font-family: "CaptainMarvel", sans-serif;
+          font-size: 2em;
+          color: white;
+          text-decoration: none; }
+          @media screen and (max-width: 1500px) {
+            .navbar .navbar-collapse .navbar-nav .nav-item .navbar-brand {
+              font-size: 1.8em; } }
+          @media screen and (max-width: 1300px) {
+            .navbar .navbar-collapse .navbar-nav .nav-item .navbar-brand {
+              font-size: 1.7em; } }
+          @media screen and (max-width: 1250px) {
+            .navbar .navbar-collapse .navbar-nav .nav-item .navbar-brand {
+              font-size: 1.6em; } }
+          @media screen and (max-width: 1100px) {
+            .navbar .navbar-collapse .navbar-nav .nav-item .navbar-brand {
+              font-size: 1.5em; } }
+          @media screen and (max-width: 1050px) {
+            .navbar .navbar-collapse .navbar-nav .nav-item .navbar-brand {
+              font-size: 1.3em; } }
+          @media screen and (max-width: 768px) {
+            .navbar .navbar-collapse .navbar-nav .nav-item .navbar-brand {
+              font-size: 1.3em; } }
+          @media screen and (max-width: 500px) {
+            .navbar .navbar-collapse .navbar-nav .nav-item .navbar-brand {
+              font-size: 1.1em; } }
+          @media screen and (max-width: 300px) {
+            .navbar .navbar-collapse .navbar-nav .nav-item .navbar-brand {
+              font-size: 0.8em; } }
+
+/* Termina Header */
+/* Inicia footer*/
+#footer {
+  width: 100vw;
+  height: auto;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+  font-family: "Spartan"; }
+  #footer .footer__section {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+    padding: 50px;
+    width: 80%; }
+    @media screen and (max-width: 950px) {
+      #footer .footer__section {
+        flex-direction: column;
+        padding: 0; } }
+    #footer .footer__section .footer__nav {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 15px; }
+      #footer .footer__section .footer__nav .footer__titulo {
+        font-size: 1.8em; }
+        @media screen and (max-width: 768px) {
+          #footer .footer__section .footer__nav .footer__titulo {
+            font-size: 1.7em; } }
+        @media screen and (max-width: 430px) {
+          #footer .footer__section .footer__nav .footer__titulo {
+            font-size: 1.5em; } }
+        @media screen and (max-width: 360px) {
+          #footer .footer__section .footer__nav .footer__titulo {
+            font-size: 1.3em; } }
+        @media screen and (max-width: 330px) {
+          #footer .footer__section .footer__nav .footer__titulo {
+            font-size: 1.2em; } }
+        @media screen and (max-width: 270px) {
+          #footer .footer__section .footer__nav .footer__titulo {
+            font-size: 1.1em; } }
+        @media screen and (max-width: 250px) {
+          #footer .footer__section .footer__nav .footer__titulo {
+            font-size: 1em; } }
+        @media screen and (max-width: 220px) {
+          #footer .footer__section .footer__nav .footer__titulo {
+            font-size: 0.8em; } }
+        @media screen and (max-width: 203px) {
+          #footer .footer__section .footer__nav .footer__titulo {
+            font-size: 0.7em; } }
+      #footer .footer__section .footer__nav .footer__lista {
+        display: flex;
+        flex-direction: row;
+        padding: 0em; }
+        #footer .footer__section .footer__nav .footer__lista li {
+          margin: 10px;
+          font-size: 40px;
+          transition: transform 1s; }
+          @media screen and (max-width: 768px) {
+            #footer .footer__section .footer__nav .footer__lista li {
+              font-size: 35px; } }
+          @media screen and (max-width: 430px) {
+            #footer .footer__section .footer__nav .footer__lista li {
+              font-size: 33px; } }
+          @media screen and (max-width: 360px) {
+            #footer .footer__section .footer__nav .footer__lista li {
+              font-size: 29px; } }
+          @media screen and (max-width: 330px) {
+            #footer .footer__section .footer__nav .footer__lista li {
+              font-size: 27px; } }
+          @media screen and (max-width: 270px) {
+            #footer .footer__section .footer__nav .footer__lista li {
+              font-size: 25px; } }
+          @media screen and (max-width: 250px) {
+            #footer .footer__section .footer__nav .footer__lista li {
+              font-size: 23px; } }
+          @media screen and (max-width: 220px) {
+            #footer .footer__section .footer__nav .footer__lista li {
+              font-size: 21px; } }
+          @media screen and (max-width: 203px) {
+            #footer .footer__section .footer__nav .footer__lista li {
+              font-size: 19px; } }
+          #footer .footer__section .footer__nav .footer__lista li:hover {
+            transform: rotateZ(360deg);
+            cursor: pointer; }
+  #footer .footer__copy {
+    width: 100vw;
+    padding: 10px 0px 60px 0px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    transition: 350ms; }
+    #footer .footer__copy a {
+      color: white;
+      text-decoration: none; }
+    #footer .footer__copy:hover {
+      transform: scale(1.1, 1.1); }
+    @media screen and (max-width: 430px) {
+      #footer .footer__copy {
+        font-size: 15px; } }
+    @media screen and (max-width: 360px) {
+      #footer .footer__copy {
+        font-size: 13px; } }
+    @media screen and (max-width: 330px) {
+      #footer .footer__copy {
+        font-size: 11px; } }
+    @media screen and (max-width: 270px) {
+      #footer .footer__copy {
+        font-size: 10px; } }
+    @media screen and (max-width: 250px) {
+      #footer .footer__copy {
+        font-size: 8px; } }
+    @media screen and (max-width: 250px) {
+      #footer .footer__copy {
+        font-size: 7px; } }
+    @media screen and (max-width: 203px) {
+      #footer .footer__copy {
+        font-size: 6px; } }
+
+/* Termina footer */
+/* ESTILOS DEL INDEX.HTML */
+#main__marvel {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 4% 3%;
+  margin-top: 8%;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  background-image: url(../Imagenes/Fondos/universo.jpg);
+  background-size: 100% 110%;
+  object-fit: cover;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px white; }
+  @media screen and (max-width: 1200px) {
+    #main__marvel {
+      width: 70%; } }
+  @media screen and (max-width: 950px) {
+    #main__marvel {
+      padding: 5% 15%;
+      width: 80%; } }
+  @media screen and (max-width: 768px) {
+    #main__marvel {
+      width: 90%; } }
+  @media screen and (max-width: 650px) {
+    #main__marvel {
+      width: 95%; } }
+  @media screen and (max-width: 430px) {
+    #main__marvel {
+      padding: 7% 0%; } }
+  @media screen and (max-width: 360px) {
+    #main__marvel {
+      padding: 11% 0%; } }
+  @media screen and (max-width: 270px) {
+    #main__marvel {
+      margin: 5% 3%; } }
+  #main__marvel .marvel__titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "MarvelRegular";
+    color: white;
+    font-size: 4em;
+    letter-spacing: 2px; }
+    @media screen and (max-width: 1050px) {
+      #main__marvel .marvel__titulo {
+        font-size: 3.5em; } }
+    @media screen and (max-width: 900px) {
+      #main__marvel .marvel__titulo {
+        font-size: 3em; } }
+    @media screen and (max-width: 768px) {
+      #main__marvel .marvel__titulo {
+        font-size: 2.8em; } }
+    @media screen and (max-width: 600px) {
+      #main__marvel .marvel__titulo {
+        font-size: 2.5em; } }
+    @media screen and (max-width: 400px) {
+      #main__marvel .marvel__titulo {
+        font-size: 2em; } }
+    #main__marvel .marvel__titulo .marvel__span {
+      transition: 1s;
+      display: block;
+      margin: 0 auto; }
+      #main__marvel .marvel__titulo .marvel__span:hover {
+        transform: scale(1.2, 1.2);
+        cursor: pointer; }
+
+#section__presentacion {
+  width: 70%;
+  height: auto;
+  padding: 2%;
+  background-color: #940909;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: "BalsamiqSans";
+  border-radius: 20px;
+  background-image: url(../Imagenes/Fondos/galaxia-4.png);
+  background-size: 100% 150%;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px #0d004b; }
+  @media screen and (max-width: 950px) {
+    #section__presentacion {
+      width: auto;
+      margin: 5%; } }
+  #section__presentacion .presentacion__h2 {
+    font-size: 1.6em; }
+  #section__presentacion .presentacion__titulo {
+    font-size: 1.4em; }
+  #section__presentacion .presentacion__parrafo {
+    font-size: 1.3em; }
+  @media screen and (max-width: 768px) {
+    #section__presentacion {
+      margin: 50px; }
+      #section__presentacion .presentacion__h2 {
+        font-size: 1.5em; }
+      #section__presentacion .presentacion__titulo {
+        font-size: 1.3em; }
+      #section__presentacion .presentacion__parrafo {
+        font-size: 1.2em; } }
+  @media screen and (max-width: 650px) {
+    #section__presentacion {
+      margin: 40px; } }
+  @media screen and (max-width: 530px) {
+    #section__presentacion {
+      margin: 25px; } }
+  @media screen and (max-width: 430px) {
+    #section__presentacion {
+      margin: 15px; } }
+  @media screen and (max-width: 360px) {
+    #section__presentacion {
+      margin: 10px; }
+      #section__presentacion .presentacion__h2 {
+        font-size: 1.4em; }
+      #section__presentacion .presentacion__titulo {
+        font-size: 1.2em; }
+      #section__presentacion .presentacion__parrafo {
+        font-size: 1.1em; } }
+  @media screen and (max-width: 250px) {
+    #section__presentacion {
+      margin: 10px; }
+      #section__presentacion .presentacion__h2 {
+        font-size: 1.3em; }
+      #section__presentacion .presentacion__titulo {
+        font-size: 1.1em; }
+      #section__presentacion .presentacion__parrafo {
+        font-size: 1em; } }
+
+/*TODOS LOS ESTILOS DE LAS SECCIONES */
+/* Empieza MAIN*/
+#titulo {
+  background-image: url(../Imagenes/Fondos/galaxia-4.png);
+  width: auto;
+  height: auto;
+  padding: 2%;
+  margin: 5% 18%;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  font-family: "BalsamiqSans";
+  box-sizing: border-box;
+  grid-area: titulo;
+  animation-name: bg_main;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s; }
+
+@keyframes bg_main {
+  0% {
+    background-position: 0% 0%; }
+  25% {
+    background-position: 0% 100%; }
+  50% {
+    background-position: 100% 0%; }
+  75% {
+    background-position: 100% 100%; }
+  100% {
+    background-position: 0% 0%; } }
+  @media screen and (max-width: 950px) {
+    #titulo {
+      margin: 5% 7%; } }
+  @media screen and (max-width: 650px) {
+    #titulo {
+      margin: 5% 10%; } }
+  @media screen and (max-width: 430px) {
+    #titulo {
+      margin: 5% 7%; } }
+  @media screen and (max-width: 360px) {
+    #titulo {
+      margin: 5% 6%; } }
+  @media screen and (max-width: 330px) {
+    #titulo {
+      margin: 5% 5%; } }
+  @media screen and (max-width: 270px) {
+    #titulo {
+      font-size: 15px; } }
+  #titulo .section__titulo {
+    font-size: 2.8em;
+    padding: 10px 0px 20px 0px; }
+    @media screen and (max-width: 950px) {
+      #titulo .section__titulo {
+        font-size: 2.6em; } }
+    @media screen and (max-width: 650px) {
+      #titulo .section__titulo {
+        font-size: 2.4em; } }
+    @media screen and (max-width: 600px) {
+      #titulo .section__titulo {
+        font-size: 2.2em; } }
+    @media screen and (max-width: 550px) {
+      #titulo .section__titulo {
+        font-size: 1.7em; } }
+    @media screen and (max-width: 430px) {
+      #titulo .section__titulo {
+        font-size: 1.5em; } }
+    @media screen and (max-width: 360px) {
+      #titulo .section__titulo {
+        font-size: 1.3em; } }
+    @media screen and (max-width: 330px) {
+      #titulo .section__titulo {
+        font-size: 1.1em; } }
+    @media screen and (max-width: 300px) {
+      #titulo .section__titulo {
+        font-size: 0.8em; } }
+  #titulo .section__parrafo {
+    font-size: 1.7em; }
+    @media screen and (max-width: 950px) {
+      #titulo .section__parrafo {
+        font-size: 1.5em; } }
+    @media screen and (max-width: 650px) {
+      #titulo .section__parrafo {
+        font-size: 1.3em; } }
+    @media screen and (max-width: 430px) {
+      #titulo .section__parrafo {
+        font-size: 1.1em; } }
+    @media screen and (max-width: 360px) {
+      #titulo .section__parrafo {
+        font-size: 0.9em; } }
+    @media screen and (max-width: 330px) {
+      #titulo .section__parrafo {
+        font-size: 0.7em; } }
+    #titulo .section__parrafo .section__span {
+      color: red; }
+
+/* Termina MAIN*/
+/*Empieza ASIDE */
+.aside, .aside--cronologia,
+.aside-estrenos,
+.aside--FueraMCU, .aside--Uni {
+  background-color: #000000d5;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 15px;
+  position: sticky;
+  font-family: "Spartan";
+  overflow-y: scroll;
+  grid-area: aside;
+  color: white; }
+  @media screen and (max-width: 1050px) {
+    .aside, .aside--cronologia,
+    .aside-estrenos,
+    .aside--FueraMCU, .aside--Uni {
+      display: none; } }
+  .aside .aside__ul, .aside--cronologia .aside__ul, .aside-estrenos .aside__ul, .aside--FueraMCU .aside__ul, .aside--Uni .aside__ul, .aside .aside__ul--FueraMCU, .aside--cronologia .aside__ul--FueraMCU, .aside-estrenos .aside__ul--FueraMCU, .aside--FueraMCU .aside__ul--FueraMCU, .aside--Uni .aside__ul--FueraMCU, .aside .aside__ul-uni, .aside--cronologia .aside__ul-uni, .aside-estrenos .aside__ul-uni, .aside--FueraMCU .aside__ul-uni, .aside--Uni .aside__ul-uni {
+    padding: 0px 20px; }
+    .aside .aside__ul li, .aside--cronologia .aside__ul li, .aside-estrenos .aside__ul li, .aside--FueraMCU .aside__ul li, .aside--Uni .aside__ul li, .aside .aside__ul--FueraMCU li, .aside--cronologia .aside__ul--FueraMCU li, .aside-estrenos .aside__ul--FueraMCU li, .aside--FueraMCU .aside__ul--FueraMCU li, .aside--Uni .aside__ul--FueraMCU li, .aside .aside__ul-uni li, .aside--cronologia .aside__ul-uni li, .aside-estrenos .aside__ul-uni li, .aside--FueraMCU .aside__ul-uni li, .aside--Uni .aside__ul-uni li {
+      margin: 2px;
+      padding: 2px;
+      width: auto;
+      height: auto;
+      transition: 51ms; }
+      .aside .aside__ul li:hover, .aside--cronologia .aside__ul li:hover, .aside-estrenos .aside__ul li:hover, .aside--FueraMCU .aside__ul li:hover, .aside--Uni .aside__ul li:hover, .aside .aside__ul--FueraMCU li:hover, .aside--cronologia .aside__ul--FueraMCU li:hover, .aside-estrenos .aside__ul--FueraMCU li:hover, .aside--FueraMCU .aside__ul--FueraMCU li:hover, .aside--Uni .aside__ul--FueraMCU li:hover, .aside .aside__ul-uni li:hover, .aside--cronologia .aside__ul-uni li:hover, .aside-estrenos .aside__ul-uni li:hover, .aside--FueraMCU .aside__ul-uni li:hover, .aside--Uni .aside__ul-uni li:hover {
+        margin-left: 10px; }
+      .aside .aside__ul li a, .aside--cronologia .aside__ul li a, .aside-estrenos .aside__ul li a, .aside--FueraMCU .aside__ul li a, .aside--Uni .aside__ul li a, .aside .aside__ul--FueraMCU li a, .aside--cronologia .aside__ul--FueraMCU li a, .aside-estrenos .aside__ul--FueraMCU li a, .aside--FueraMCU .aside__ul--FueraMCU li a, .aside--Uni .aside__ul--FueraMCU li a, .aside .aside__ul-uni li a, .aside--cronologia .aside__ul-uni li a, .aside-estrenos .aside__ul-uni li a, .aside--FueraMCU .aside__ul-uni li a, .aside--Uni .aside__ul-uni li a {
+        color: white;
+        text-decoration: none; }
+  .aside .aside__ul--FueraMCU, .aside--cronologia .aside__ul--FueraMCU, .aside-estrenos .aside__ul--FueraMCU, .aside--FueraMCU .aside__ul--FueraMCU, .aside--Uni .aside__ul--FueraMCU {
+    margin: 0px;
+    list-style: disc; }
+  .aside .aside__ul-uni, .aside--cronologia .aside__ul-uni, .aside-estrenos .aside__ul-uni, .aside--FueraMCU .aside__ul-uni, .aside--Uni .aside__ul-uni {
+    list-style: disc; }
+
+.aside--cronologia,
+.aside-estrenos,
+.aside--FueraMCU {
+  height: 40em;
+  top: 6%; }
+  @media screen and (max-width: 1062px) {
+    .aside--cronologia,
+    .aside-estrenos,
+    .aside--FueraMCU {
+      height: 820px; } }
+  .aside--cronologia li,
+  .aside-estrenos li,
+  .aside--FueraMCU li {
+    font-size: 13px; }
+
+.aside--Uni {
+  height: 33em;
+  top: 15%; }
+
+/*Termina ASIDE */
+/* Empieza #Contenedor */
+#contenedor {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 30% 70%;
+  grid-column-gap: 0%;
+  grid-template-areas: "titulo titulo"
+ "aside peliculas";
+  margin: 1%; }
+  @media screen and (max-width: 1050px) {
+    #contenedor {
+      grid-template-columns: 1fr; } }
+  #contenedor .contenedor__peliculas {
+    grid-area: peliculas;
+    width: 95%;
+    /* Articulos */ }
+    @media screen and (max-width: 1050px) {
+      #contenedor .contenedor__peliculas {
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
+    #contenedor .contenedor__peliculas .articulos, #contenedor .contenedor__peliculas .articulos--izquierda, #contenedor .contenedor__peliculas .primer--articulo, #contenedor .contenedor__peliculas .ultimo--articulo {
+      width: 95%;
+      height: auto;
+      background-color: #000000d5;
+      padding: 20px;
+      border-radius: 30px;
+      margin: 30px 0px;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      box-shadow: 0px 0px 10px #000;
+      color: white;
+      font-family: "Spartan";
+      transition: 1s; }
+      @media screen and (max-width: 850px) {
+        #contenedor .contenedor__peliculas .articulos, #contenedor .contenedor__peliculas .articulos--izquierda, #contenedor .contenedor__peliculas .primer--articulo, #contenedor .contenedor__peliculas .ultimo--articulo {
+          flex-direction: column;
+          width: 85%; } }
+      @media screen and (max-width: 600px) {
+        #contenedor .contenedor__peliculas .articulos, #contenedor .contenedor__peliculas .articulos--izquierda, #contenedor .contenedor__peliculas .primer--articulo, #contenedor .contenedor__peliculas .ultimo--articulo {
+          width: 80%; } }
+      #contenedor .contenedor__peliculas .articulos .articulos__div, #contenedor .contenedor__peliculas .articulos--izquierda .articulos__div, #contenedor .contenedor__peliculas .primer--articulo .articulos__div, #contenedor .contenedor__peliculas .ultimo--articulo .articulos__div {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 5%; }
+        #contenedor .contenedor__peliculas .articulos .articulos__div .div__titulo, #contenedor .contenedor__peliculas .articulos--izquierda .articulos__div .div__titulo, #contenedor .contenedor__peliculas .primer--articulo .articulos__div .div__titulo, #contenedor .contenedor__peliculas .ultimo--articulo .articulos__div .div__titulo {
+          font-size: 2.5em; }
+        #contenedor .contenedor__peliculas .articulos .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .articulos--izquierda .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .primer--articulo .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .ultimo--articulo .articulos__div .div__parrafo {
+          font-size: 1.3em; }
+        @media screen and (max-width: 768px) {
+          #contenedor .contenedor__peliculas .articulos .articulos__div .div__titulo, #contenedor .contenedor__peliculas .articulos--izquierda .articulos__div .div__titulo, #contenedor .contenedor__peliculas .primer--articulo .articulos__div .div__titulo, #contenedor .contenedor__peliculas .ultimo--articulo .articulos__div .div__titulo {
+            font-size: 2em; }
+          #contenedor .contenedor__peliculas .articulos .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .articulos--izquierda .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .primer--articulo .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .ultimo--articulo .articulos__div .div__parrafo {
+            font-size: 1em; } }
+        @media screen and (max-width: 500px) {
+          #contenedor .contenedor__peliculas .articulos .articulos__div .div__titulo, #contenedor .contenedor__peliculas .articulos--izquierda .articulos__div .div__titulo, #contenedor .contenedor__peliculas .primer--articulo .articulos__div .div__titulo, #contenedor .contenedor__peliculas .ultimo--articulo .articulos__div .div__titulo {
+            font-size: 1.7em; } }
+        @media screen and (max-width: 380px) {
+          #contenedor .contenedor__peliculas .articulos .articulos__div .div__titulo, #contenedor .contenedor__peliculas .articulos--izquierda .articulos__div .div__titulo, #contenedor .contenedor__peliculas .primer--articulo .articulos__div .div__titulo, #contenedor .contenedor__peliculas .ultimo--articulo .articulos__div .div__titulo {
+            font-size: 1.4em; }
+          #contenedor .contenedor__peliculas .articulos .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .articulos--izquierda .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .primer--articulo .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .ultimo--articulo .articulos__div .div__parrafo {
+            font-size: 0.8em; } }
+        @media screen and (max-width: 300px) {
+          #contenedor .contenedor__peliculas .articulos .articulos__div .div__titulo, #contenedor .contenedor__peliculas .articulos--izquierda .articulos__div .div__titulo, #contenedor .contenedor__peliculas .primer--articulo .articulos__div .div__titulo, #contenedor .contenedor__peliculas .ultimo--articulo .articulos__div .div__titulo {
+            font-size: 1.2em; }
+          #contenedor .contenedor__peliculas .articulos .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .articulos--izquierda .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .primer--articulo .articulos__div .div__parrafo, #contenedor .contenedor__peliculas .ultimo--articulo .articulos__div .div__parrafo {
+            font-size: 0.5em; } }
+    #contenedor .contenedor__peliculas .articulos--izquierda {
+      flex-direction: row-reverse; }
+      @media screen and (max-width: 850px) {
+        #contenedor .contenedor__peliculas .articulos--izquierda {
+          flex-direction: column;
+          width: 85%; } }
+    #contenedor .contenedor__peliculas .primer--articulo {
+      margin-top: 0px; }
+    #contenedor .contenedor__peliculas .ultimo--articulo {
+      margin: 30px 0px 0px; }
+    #contenedor .contenedor__peliculas .carousel,
+    #contenedor .contenedor__peliculas .imgs {
+      width: 45%;
+      height: auto;
+      box-shadow: 0px 0px 15px white;
+      object-fit: cover; }
+      @media screen and (max-width: 850px) {
+        #contenedor .contenedor__peliculas .carousel,
+        #contenedor .contenedor__peliculas .imgs {
+          width: 40%; } }
+      @media screen and (max-width: 700px) {
+        #contenedor .contenedor__peliculas .carousel,
+        #contenedor .contenedor__peliculas .imgs {
+          width: 45%; } }
+      @media screen and (max-width: 650px) {
+        #contenedor .contenedor__peliculas .carousel,
+        #contenedor .contenedor__peliculas .imgs {
+          width: 50%; } }
+      @media screen and (max-width: 550px) {
+        #contenedor .contenedor__peliculas .carousel,
+        #contenedor .contenedor__peliculas .imgs {
+          width: 55%; } }
+      @media screen and (max-width: 430px) {
+        #contenedor .contenedor__peliculas .carousel,
+        #contenedor .contenedor__peliculas .imgs {
+          width: 60%; } }
+      @media screen and (max-width: 360px) {
+        #contenedor .contenedor__peliculas .carousel,
+        #contenedor .contenedor__peliculas .imgs {
+          width: 65%; } }
+      @media screen and (max-width: 330px) {
+        #contenedor .contenedor__peliculas .carousel,
+        #contenedor .contenedor__peliculas .imgs {
+          width: 70%; } }
+      @media screen and (max-width: 270px) {
+        #contenedor .contenedor__peliculas .carousel,
+        #contenedor .contenedor__peliculas .imgs {
+          width: 72%; } }
+      @media screen and (max-width: 250px) {
+        #contenedor .contenedor__peliculas .carousel,
+        #contenedor .contenedor__peliculas .imgs {
+          width: 75%; } }
+      @media screen and (max-width: 220px) {
+        #contenedor .contenedor__peliculas .carousel,
+        #contenedor .contenedor__peliculas .imgs {
+          width: 80%; } }
+      #contenedor .contenedor__peliculas .carousel .w-100,
+      #contenedor .contenedor__peliculas .imgs .w-100 {
+        width: 100%;
+        height: 340px;
+        object-fit: cover; }
+        @media screen and (max-width: 650px) {
+          #contenedor .contenedor__peliculas .carousel .w-100,
+          #contenedor .contenedor__peliculas .imgs .w-100 {
+            height: 310px; } }
+        @media screen and (max-width: 550px) {
+          #contenedor .contenedor__peliculas .carousel .w-100,
+          #contenedor .contenedor__peliculas .imgs .w-100 {
+            height: 300px; } }
+        @media screen and (max-width: 430px) {
+          #contenedor .contenedor__peliculas .carousel .w-100,
+          #contenedor .contenedor__peliculas .imgs .w-100 {
+            height: 280px; } }
+        @media screen and (max-width: 360px) {
+          #contenedor .contenedor__peliculas .carousel .w-100,
+          #contenedor .contenedor__peliculas .imgs .w-100 {
+            height: 260px; } }
+
+/*Termina Contenedor */
+/*Empieza  SECCION FASES */
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: auto; }
+  @media screen and (max-width: 1050px) {
+    #main {
+      align-items: center;
+      flex-direction: column;
+      row-gap: 50px; } }
+  #main .fases {
+    background-image: url(../Imagenes/Fondos/universo.jpg);
+    background-size: 100% 110%;
+    border-radius: 30px;
+    padding: 40px;
+    width: 42%;
+    margin: 4% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px white;
+    font-family: "Spartan"; }
+    @media screen and (max-width: 1050px) {
+      #main .fases {
+        width: 92%;
+        padding: 4%; } }
+    #main .fases .fases__titulo {
+      font-size: 2.3em;
+      text-shadow: 3px 3px 9px black;
+      padding: 10px;
+      font-family: "Spartan";
+      color: white; }
+      @media screen and (max-width: 650px) {
+        #main .fases .fases__titulo {
+          font-size: 2.2em; } }
+      @media screen and (max-width: 530px) {
+        #main .fases .fases__titulo {
+          font-size: 2em; } }
+      @media screen and (max-width: 430px) {
+        #main .fases .fases__titulo {
+          font-size: 1.8em; } }
+      @media screen and (max-width: 360px) {
+        #main .fases .fases__titulo {
+          font-size: 1.7em; } }
+      @media screen and (max-width: 330px) {
+        #main .fases .fases__titulo {
+          font-size: 1.6em; } }
+      @media screen and (max-width: 270px) {
+        #main .fases .fases__titulo {
+          font-size: 1.5em; } }
+    #main .fases .fases__lista {
+      padding: 10px;
+      list-style: disc; }
+      #main .fases .fases__lista li {
+        font-size: 1.3em;
+        font-family: "Spartan";
+        color: white;
+        transition: margin 500ms; }
+        #main .fases .fases__lista li:hover {
+          margin-left: 15px; }
+        @media screen and (max-width: 768px) {
+          #main .fases .fases__lista li {
+            font-size: 1.2em; } }
+        @media screen and (max-width: 650px) {
+          #main .fases .fases__lista li {
+            font-size: 1.1em; } }
+        @media screen and (max-width: 530px) {
+          #main .fases .fases__lista li {
+            font-size: 1em; } }
+        @media screen and (max-width: 430px) {
+          #main .fases .fases__lista li {
+            font-size: 0.8em; } }
+        @media screen and (max-width: 360px) {
+          #main .fases .fases__lista li {
+            font-size: 0.7em; } }
+        @media screen and (max-width: 330px) {
+          #main .fases .fases__lista li {
+            font-size: 0.6em; } }
+
+/* Termina SECCION FASES */
+#botones {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0.5%;
+  bottom: 1%;
+  height: 8em; }
+  @media screen and (max-width: 1050px) {
+    #botones {
+      height: 7em; } }
+  @media screen and (max-width: 600px) {
+    #botones {
+      height: 6em; } }
+  #botones .boton {
+    background-color: white;
+    border-radius: 50%;
+    margin: 10px 0px;
+    transition: 1s;
+    overflow: hidden; }
+  @media screen and (max-width: 1050px) {
+    #botones {
+      margin: 8px 0px; } }
+  @media screen and (max-width: 600px) {
+    #botones {
+      margin: 5px 0px; } }
+  #botones a {
+    color: black;
+    padding: 5px; }
+    #botones a .fas {
+      font-size: 30px;
+      padding: 5px; }
+      @media screen and (max-width: 1050px) {
+        #botones a .fas {
+          font-size: 20px; } }
+      @media screen and (max-width: 600px) {
+        #botones a .fas {
+          font-size: 15px; } }
