@@ -133,11 +133,11 @@
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators101" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators102" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators101" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators102" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators101" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators102" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
 
                     </div>

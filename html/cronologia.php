@@ -363,8 +363,8 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2013ironman-1.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/ironman-1.jpg 1500w, 
-                                ../Imagenes/imagenes768/carousel-imgs/ironman-1.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2013ironman-1.jpg 1500w, 
+                                ../Imagenes/imagenes768/carousel-imgs/2013ironman-1.jpg 700w"
                                 class="d-block w-100" alt="Iron Man 3">
                         </div>
                     </div>
@@ -751,7 +751,8 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2016drs-1.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/2016drs-1.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/2016drs-1.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2016drs-1.jpg 1500w, 
+                                ../Imagenes/imagenes768/carousel-imgs/2016drs-1.jpg 700w"
                                 class="d-block w-100" alt="Doctor Strange">
                         </div>
                     </div>
