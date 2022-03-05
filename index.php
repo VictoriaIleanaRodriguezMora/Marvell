@@ -27,19 +27,19 @@
       <nav class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="navbar-brand" href="./html/cronologia.html">CRONOLOGIA</a>
+            <a class="navbar-brand" href="./html/cronologia.php">CRONOLOGIA</a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" href="./html/estrenos.html">ESTRENOS</a>
+            <a class="navbar-brand" href="./html/estrenos.php">ESTRENOS</a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" href="./html/fases.html">FASES</a>
+            <a class="navbar-brand" href="./html/fases.php">FASES</a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" href="./html/universos.html">UNIVERSOS</a>
+            <a class="navbar-brand" href="./html/universos.php">UNIVERSOS</a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" href="./html/fueraDelMCU.html">PELIS FUERA DEL UCM</a>
+            <a class="navbar-brand" href="./html/fueraDelMCU.php">PELIS FUERA DEL UCM</a>
           </li>
         </ul>
       </nav>
