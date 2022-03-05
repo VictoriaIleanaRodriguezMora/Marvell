@@ -125,14 +125,16 @@
     position: relative;
     top: unset;
     height: auto;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     width: 50%;
   }
   @media screen and (max-width: 850px) {
+    height: 70vh;
     width: 80%;
   }
   @media screen and (max-width: 400px) {
     width: 90%;
+    height: 50vh;
   }
   .aside__ul {
     padding: 0px 5%;
@@ -221,11 +223,10 @@
       transition: 1s;
       @media screen and (max-width: 850px) {
         flex-direction: map-get($flexbox, flex-dir-c);
-
         width: 85%;
       }
       @media screen and (max-width: 600px) {
-        width: 80%;
+        width: 90%;
       }
       .articulos__div {
         width: 100%;
