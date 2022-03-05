@@ -179,14 +179,10 @@
 }
 .aside--Uni {
   @extend.aside;
-  height: 33em;
+  height: 28em;
   top: 10%;
   @media screen and (max-width: 1050px) {
-    height: 29em;
     top: 0;
-  }
-  @media screen and (max-width: 768px) {
-    height: 27em;
   }
   @media screen and (max-width: 500px) {
     height: 25em;

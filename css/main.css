@@ -612,15 +612,11 @@ body {
       height: 50vh; } }
 
 .aside--Uni {
-  height: 33em;
+  height: 28em;
   top: 10%; }
   @media screen and (max-width: 1050px) {
     .aside--Uni {
-      height: 29em;
       top: 0; } }
-  @media screen and (max-width: 768px) {
-    .aside--Uni {
-      height: 27em; } }
   @media screen and (max-width: 500px) {
     .aside--Uni {
       height: 25em; } }
