@@ -1,0 +1,473 @@
+/*TODOS LOS ESTILOS DE LAS SECCIONES */
+/* Empieza MAIN*/
+#titulo {
+  background-image: url(../Imagenes/Fondos/galaxia-4.png);
+  width: auto;
+  height: auto;
+  padding: 2%;
+  margin: 5% 18%;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  font-family: "BalsamiqSans";
+  box-sizing: border-box;
+  grid-area: titulo;
+  animation-name: bg_main;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+  @keyframes bg_main {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 0% 100%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+    75% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    margin: 5% 7%;
+  }
+  @media screen and (max-width: 650px) {
+    margin: 5% 10%;
+  }
+  @media screen and (max-width: 430px) {
+    margin: 5% 7%;
+  }
+  @media screen and (max-width: 360px) {
+    margin: 5% 6%;
+  }
+  @media screen and (max-width: 330px) {
+    margin: 5% 5%;
+  }
+  @media screen and (max-width: 270px) {
+    font-size: 15px;
+  }
+  .section__titulo {
+    font-size: 2.8em;
+    padding: 10px 0px 20px 0px;
+    @media screen and (max-width: 950px) {
+      font-size: 2.6em;
+    }
+    @media screen and (max-width: 650px) {
+      font-size: 2.4em;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 2.2em;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 1.7em;
+    }
+    @media screen and (max-width: 430px) {
+      font-size: 1.5em;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 1.3em;
+    }
+    @media screen and (max-width: 330px) {
+      font-size: 1.1em;
+    }
+    @media screen and (max-width: 300px) {
+      font-size: 0.8em;
+    }
+  }
+  .section__parrafo {
+    font-size: 1.7em;
+    @media screen and (max-width: 950px) {
+      font-size: 1.5em;
+    }
+    @media screen and (max-width: 650px) {
+      font-size: 1.3em;
+    }
+    @media screen and (max-width: 430px) {
+      font-size: 1.1em;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 0.9em;
+    }
+    @media screen and (max-width: 330px) {
+      font-size: 0.7em;
+    }
+    .section__span {
+      color: red;
+    }
+  }
+}
+/* Termina MAIN*/
+
+/*Empieza ASIDE */
+.aside {
+  background-color: $black;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 15px;
+  position: sticky;
+  font-family: "Spartan";
+  overflow-y: scroll;
+  grid-area: aside;
+  color: white;
+  @media screen and (max-width: 1050px) {
+    display: none;
+  }
+  .aside__ul {
+    padding: 0px 20px;
+    li {
+      margin: 2px;
+      padding: 2px;
+      width: auto;
+      height: auto;
+      transition: 51ms;
+      &:hover {
+        margin-left: 10px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+  .aside__ul--FueraMCU {
+    @extend.aside__ul;
+    margin: 0px;
+    list-style: disc;
+  }
+  .aside__ul-uni {
+    @extend.aside__ul;
+    list-style: disc;
+  }
+}
+.aside--cronologia,
+.aside-estrenos,
+.aside--FueraMCU {
+  @extend.aside;
+  height: 40em;
+  top: 6%;
+  @media screen and (max-width: 1062px) {
+    height: 820px;
+  }
+  li {
+    font-size: 13px;
+  }
+}
+.aside--Uni {
+  @extend.aside;
+  height: 33em;
+  top: 15%;
+}
+
+/*Termina ASIDE */
+
+/* Empieza #Contenedor */
+#contenedor {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 30% 70%;
+  grid-column-gap: 0%;
+  grid-template-areas:
+    "titulo titulo"
+    "aside peliculas";
+  margin: 1%;
+  @media screen and (max-width: 1050px) {
+    grid-template-columns: 1fr;
+  }
+  // Contenedor Peliculas
+  .contenedor__peliculas {
+    grid-area: peliculas;
+    width: 95%;
+    @media screen and (max-width: 1050px) {
+      display: map-get($flexbox, display);
+
+      flex-direction: map-get($flexbox, flex-dir-c);
+
+      align-items: center;
+    }
+    /* Articulos */
+    .articulos {
+      width: 95%;
+      height: auto;
+      background-color: $black;
+      padding: 20px;
+      border-radius: 30px;
+      margin: 30px 0px;
+      align-items: center;
+      display: map-get($flexbox, display);
+
+      flex-direction: map-get($flexbox, flex-dir-r);
+      box-shadow: 0px 0px 10px #000;
+      color: white;
+      font-family: "Spartan";
+      transition: 1s;
+      @media screen and (max-width: 850px) {
+        flex-direction: map-get($flexbox, flex-dir-c);
+
+        width: 85%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 80%;
+      }
+      .articulos__div {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 5%;
+        .div__titulo {
+          font-size: 2.5em;
+        }
+        .div__parrafo {
+          font-size: 1.3em;
+        }
+        @media screen and (max-width: 768px) {
+          .div__titulo {
+            font-size: 2em;
+          }
+          .div__parrafo {
+            font-size: 1em;
+          }
+        }
+        @media screen and (max-width: 500px) {
+          .div__titulo {
+            font-size: 1.7em;
+          }
+        }
+        @media screen and (max-width: 380px) {
+          .div__titulo {
+            font-size: 1.4em;
+          }
+          .div__parrafo {
+            font-size: 0.8em;
+          }
+        }
+        @media screen and (max-width: 300px) {
+          .div__titulo {
+            font-size: 1.2em;
+          }
+          .div__parrafo {
+            font-size: 0.5em;
+          }
+        }
+      }
+    }
+    .articulos--izquierda {
+      @extend.articulos;
+      flex-direction: row-reverse;
+      @media screen and (max-width: 850px) {
+        flex-direction: map-get($flexbox, flex-dir-c);
+
+        width: 85%;
+      }
+    }
+    .primer--articulo {
+      @extend.articulos;
+      margin-top: 0px;
+    }
+    .ultimo--articulo {
+      @extend.articulos;
+      margin: 30px 0px 0px;
+    }
+    //   Imagenes de los Carouseles
+    .carousel,
+    .imgs {
+      @include alto-ancho(45%, auto);
+      box-shadow: 0px 0px 15px rgb(255, 255, 255);
+      object-fit: cover;
+
+      @media screen and (max-width: 850px) {
+        width: 40%;
+      }
+      @media screen and (max-width: 700px) {
+        width: 45%;
+      }
+      @media screen and (max-width: 650px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 550px) {
+        width: 55%;
+      }
+      @media screen and (max-width: 430px) {
+        width: 60%;
+      }
+      @media screen and (max-width: 360px) {
+        width: 65%;
+      }
+      @media screen and (max-width: 330px) {
+        width: 70%;
+      }
+      @media screen and (max-width: 270px) {
+        width: 72%;
+      }
+      @media screen and (max-width: 250px) {
+        width: 75%;
+      }
+      @media screen and (max-width: 220px) {
+        width: 80%;
+      }
+      .w-100 {
+        @include alto-ancho(100%, 340px);
+        object-fit: cover;
+        @media screen and (max-width: 650px) {
+          height: 310px;
+        }
+        @media screen and (max-width: 550px) {
+          height: 300px;
+        }
+        @media screen and (max-width: 430px) {
+          height: 280px;
+        }
+        @media screen and (max-width: 360px) {
+          height: 260px;
+        }
+      }
+    }
+  }
+}
+
+/*Termina Contenedor */
+
+/*Empieza  SECCION FASES */
+#main {
+  display: map-get($flexbox, display);
+
+  flex-direction: map-get($flexbox, flex-dir-r);
+  justify-content: map-get($flexbox, justify-c);
+  flex-wrap: wrap;
+  width: 100vw;
+  height: auto;
+  @media screen and (max-width: 1050px) {
+    align-items: center;
+    flex-direction: map-get($flexbox, flex-dir-c);
+
+    row-gap: 50px;
+  }
+  .fases {
+    background-image: url(../Imagenes/Fondos/universo.jpg);
+    background-size: 100% 110%;
+    border-radius: 30px;
+    padding: 40px;
+    width: 42%;
+    margin: 4% 4%;
+    display: map-get($flexbox, display);
+
+    flex-direction: map-get($flexbox, flex-dir-c);
+
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px white;
+    font-family: "Spartan";
+    @media screen and (max-width: 1050px) {
+      width: 92%;
+      padding: 4%;
+    }
+    .fases__titulo {
+      font-size: 2.3em;
+      text-shadow: 3px 3px 9px black;
+      padding: 10px;
+      font-family: "Spartan";
+      color: white;
+
+      @media screen and (max-width: 650px) {
+        font-size: 2.2em;
+      }
+      @media screen and (max-width: 530px) {
+        font-size: 2em;
+      }
+      @media screen and (max-width: 430px) {
+        font-size: 1.8em;
+      }
+      @media screen and (max-width: 360px) {
+        font-size: 1.7em;
+      }
+      @media screen and (max-width: 330px) {
+        font-size: 1.6em;
+      }
+      @media screen and (max-width: 270px) {
+        font-size: 1.5em;
+      }
+    }
+    .fases__lista {
+      padding: 10px;
+      list-style: disc;
+      li {
+        font-size: 1.3em;
+        font-family: "Spartan";
+        color: white;
+        transition: margin 500ms;
+        &:hover {
+          margin-left: 15px;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 1.2em;
+        }
+        @media screen and (max-width: 650px) {
+          font-size: 1.1em;
+        }
+        @media screen and (max-width: 530px) {
+          font-size: 1em;
+        }
+        @media screen and (max-width: 430px) {
+          font-size: 0.8em;
+        }
+        @media screen and (max-width: 360px) {
+          font-size: 0.7em;
+        }
+        @media screen and (max-width: 330px) {
+          font-size: 0.6em;
+        }
+      }
+    }
+  }
+}
+/* Termina SECCION FASES */
+
+// botones
+#botones {
+  display: map-get($flexbox, display);
+
+  flex-direction: map-get($flexbox, flex-dir-c);
+
+  position: fixed;
+  right: 0.5%;
+  bottom: 1%;
+  height: 8em;
+  @media screen and (max-width: 1050px) {
+    height: 7em;
+  }
+  @media screen and (max-width: 600px) {
+    height: 6em;
+  }
+  .boton {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: 10px 0px;
+    transition: 1s;
+    overflow: hidden;
+  }
+  @media screen and (max-width: 1050px) {
+    margin: 8px 0px;
+  }
+  @media screen and (max-width: 600px) {
+    margin: 5px 0px;
+  }
+  a {
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    .fas {
+      font-size: 30px;
+      padding: 5px;
+      @media screen and (max-width: 1050px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 15px;
+      }
+    }
+  }
+}

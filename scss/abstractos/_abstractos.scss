@@ -1,0 +1,32 @@
+// Mapas
+$iconos:(
+    twitter:#1da1f2,
+    linkedin:#0015ff,
+    instagram: #a7af34,
+    discord: rgb(88, 101, 242),
+    whatsapp:#25d366,
+    envelope: rgb(255, 0, 0)
+);
+// Bucles empleados
+@each $x, $color in $iconos {
+    .fa-#{$x} {
+      color: $color;
+    }
+  }
+  
+  // Map-Get
+  $flexbox:(
+      display:flex,
+      justify-c:center,
+      align-c: center,
+      flex-dir-c: column,
+      flex-dir-r: row,
+      flex-wrap:wrap
+  );
+// Mixin
+  @mixin alto-ancho($width, $height){
+    width: $width;
+    height: $height;
+}
+// Variables
+$black: #000000d5; 

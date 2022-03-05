@@ -1,0 +1,307 @@
+// Estilos GENERALES A TODAS LAS PAGINAS:
+// Configuraciones de navegador, header y footer.
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+// :root {
+//   scrollbar-width: none !important;
+// }
+// ::-webkit-scrollbar {
+//   width: 0;
+// }
+::-webkit-scrollbar {
+  width: 7px;
+  opacity: 0;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgb(173, 8, 8);
+}
+/* Handle */
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+/* estilos generales */
+body {
+  /* background-color: #000e4e; */
+  background-image: url(../Imagenes/fondos/MarvelWallpaper.jpg);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  object-fit: cover;
+  font-family: "Spartan";
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Inicia Header */
+.navbar {
+  margin: 0;
+  padding-top: 0px;
+  background-image: linear-gradient(#000000bb, #00000010);
+  padding-top: 0;
+  .navbar-expand-xl {
+    padding-top: 0;
+  }
+  .fa-house-user {
+    font-size: 2.5em;
+    color: white;
+    width: 60px;
+    margin: 10px 0px 0px 20px;
+    text-align: center;
+    animation-name: moveHome;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 10s;
+    @media screen and (max-width: 1300px) {
+      font-size: 2em;
+    }
+  }
+
+  @keyframes moveHome {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    25% {
+      transform: rotateZ(15deg);
+    }
+    50% {
+      transform: rotateZ(0deg);
+    }
+    75% {
+      transform: rotateZ(-15deg);
+    }
+    100% {
+      transform: rotateZ(0deg);
+    }
+  }
+  .navbar-toggler {
+    margin: 10px;
+    height: 30px;
+    width: 50px;
+    .navbar-toggler-icon {
+      display: none;
+      color: grey;
+    }
+  }
+  .navbar-collapse {
+    justify-content: map-get($flexbox, justify-c);
+    .navbar-nav {
+      width: auto;
+      display: map-get($flexbox, display);
+
+      list-style: none;
+      transition: 2s;
+      .nav-item {
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+        background-color: rgba(0, 0, 0, 0.849);
+        padding: 15px 10px;
+        text-align: center;
+        @media screen and (max-width: 1199px) {
+          border: 1px solid #ffffff8f;
+        }
+        @media screen and (max-width: 300px) {
+          padding: 10px;
+        }
+        @media screen and (max-width: 270px) {
+          padding: 8px;
+        }
+        .navbar-brand {
+          text-decoration: none;
+          font-family: "CaptainMarvel", sans-serif;
+          font-size: 2em;
+          color: white;
+          text-decoration: none;
+          @media screen and (max-width: 1500px) {
+            font-size: 1.8em;
+          }
+          @media screen and (max-width: 1300px) {
+            font-size: 1.7em;
+          }
+          @media screen and (max-width: 1250px) {
+            font-size: 1.6em;
+          }
+          @media screen and (max-width: 1100px) {
+            font-size: 1.5em;
+          }
+          @media screen and (max-width: 1050px) {
+            font-size: 1.3em;
+          }
+          @media screen and (max-width: 768px) {
+            font-size: 1.3em;
+          }
+          @media screen and (max-width: 500px) {
+            font-size: 1.1em;
+          }
+          @media screen and (max-width: 300px) {
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}
+/* Termina Header */
+
+/* Inicia footer*/
+#footer {
+  @include alto-ancho(100vw, auto);
+  background-color: black;
+  color: white;
+  display: map-get($flexbox, display);
+
+  justify-content: map-get($flexbox, justify-c);
+  align-items: center;
+  flex-direction: map-get($flexbox, flex-dir-c);
+
+  margin-top: 60px;
+  font-family: "Spartan";
+
+  .footer__section {
+    display: map-get($flexbox, display);
+
+    justify-content: space-around;
+    margin: 40px;
+    padding: 50px;
+    width: 80%;
+    @media screen and (max-width: 950px) {
+      flex-direction: map-get($flexbox, flex-dir-c);
+
+      padding: 0;
+    }
+    .footer__nav {
+      display: map-get($flexbox, display);
+
+      justify-content: space-evenly;
+      flex-direction: map-get($flexbox, flex-dir-c);
+
+      align-items: center;
+      height: auto;
+      padding: 15px;
+      .footer__titulo {
+        font-size: 1.8em;
+        @media screen and (max-width: 768px) {
+          font-size: 1.7em;
+        }
+        @media screen and (max-width: 430px) {
+          font-size: 1.5em;
+        }
+        @media screen and (max-width: 360px) {
+          font-size: 1.3em;
+        }
+        @media screen and (max-width: 330px) {
+          font-size: 1.2em;
+        }
+        @media screen and (max-width: 270px) {
+          font-size: 1.1em;
+        }
+        @media screen and (max-width: 250px) {
+          font-size: 1em;
+        }
+        @media screen and (max-width: 220px) {
+          font-size: 0.8em;
+        }
+        @media screen and (max-width: 203px) {
+          font-size: 0.7em;
+        }
+      }
+      .footer__lista {
+        display: map-get($flexbox, display);
+        flex-direction: map-get($flexbox, flex-dir-r);
+        padding: 0em;
+        li {
+          margin: 10px;
+          font-size: 40px;
+          transition: transform 1s;
+          @media screen and (max-width: 768px) {
+            font-size: 35px;
+          }
+          @media screen and (max-width: 430px) {
+            font-size: 33px;
+          }
+          @media screen and (max-width: 360px) {
+            font-size: 29px;
+          }
+          @media screen and (max-width: 330px) {
+            font-size: 27px;
+          }
+          @media screen and (max-width: 270px) {
+            font-size: 25px;
+          }
+          @media screen and (max-width: 250px) {
+            font-size: 23px;
+          }
+          @media screen and (max-width: 220px) {
+            font-size: 21px;
+          }
+          @media screen and (max-width: 203px) {
+            font-size: 19px;
+          }
+          &:hover {
+            transform: rotateZ(360deg);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__copy {
+    width: 100vw;
+    padding: 10px 0px 60px 0px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    transition: 350ms;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+    @media screen and (max-width: 430px) {
+      font-size: 15px;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 13px;
+    }
+    @media screen and (max-width: 330px) {
+      font-size: 11px;
+    }
+    @media screen and (max-width: 270px) {
+      font-size: 10px;
+    }
+    @media screen and (max-width: 250px) {
+      font-size: 8px;
+    }
+    @media screen and (max-width: 250px) {
+      font-size: 7px;
+    }
+    @media screen and (max-width: 203px) {
+      font-size: 6px;
+    }
+  }
+}
+/* Termina footer */
