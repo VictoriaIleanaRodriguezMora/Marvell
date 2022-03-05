@@ -616,7 +616,17 @@ body {
   top: 10%; }
   @media screen and (max-width: 1050px) {
     .aside--Uni {
-      height: 29em; } }
+      height: 29em;
+      top: 0; } }
+  @media screen and (max-width: 768px) {
+    .aside--Uni {
+      height: 27em; } }
+  @media screen and (max-width: 500px) {
+    .aside--Uni {
+      height: 25em; } }
+  @media screen and (max-width: 400px) {
+    .aside--Uni {
+      height: 23em; } }
 
 /*Termina ASIDE */
 /* Empieza #Contenedor */
