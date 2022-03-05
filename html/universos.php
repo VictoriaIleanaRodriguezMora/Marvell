@@ -323,7 +323,8 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/universosplanetas/marvel2149__2.jpg"
-                            srcset="../Imagenes/imagenes1500/carousel-imgs/marvel2149__2.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/marvel2149__2.jpg 768w"
+                            srcset="../Imagenes/imagenes1500/universosplanetas/marvel2149__2.jpg 1500w, 
+                            ../Imagenes/imagenes768/universosplanetas/marvel2149__2.jpg 768w"
                                 class="d-block w-100" alt="Marvel Zombies">
                         </div>
                         <div class="carousel-item">
