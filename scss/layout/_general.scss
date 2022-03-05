@@ -1,7 +1,7 @@
 // Estilos GENERALES A TODAS LAS PAGINAS:
 // Configuraciones de navegador, header y footer.
 html {
-  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -9,7 +9,7 @@ html {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }

@@ -1,23 +1,23 @@
 {
-  "name": "marvel_repositorio",
+  "name": "marvell",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
-     "build-css": "node-sass --include-path scss scss/style.scss css/main.css",
-  "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VictoriaIleanaRodriguezMora/Marvel_Repositorio.git"
+    "url": "git+https://github.com/VictoriaIleanaRodriguezMora/Marvell.git"
   },
-  "author": "Victoria Rodriguez",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VictoriaIleanaRodriguezMora/Marvel_Repositorio/issues"
+    "url": "https://github.com/VictoriaIleanaRodriguezMora/Marvell/issues"
   },
-  "homepage": "https://github.com/VictoriaIleanaRodriguezMora/Marvel_Repositorio#readme",
+  "homepage": "https://github.com/VictoriaIleanaRodriguezMora/Marvell#readme",
   "devDependencies": {
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.15"
