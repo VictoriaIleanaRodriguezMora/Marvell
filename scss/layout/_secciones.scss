@@ -310,7 +310,7 @@
       @media screen and (max-width: 220px) {
         width: 80%;
       }
-      .w-100 {
+      .w-100, .imgs {
         @include alto-ancho(100%, 340px);
         object-fit: cover;
         @media screen and (max-width: 650px) {
