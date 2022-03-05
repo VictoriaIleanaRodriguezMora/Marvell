@@ -79,7 +79,7 @@ a {
 /* estilos generales */
 body {
   /* background-color: #000e4e; */
-  background-image: url(../Imagenes/fondos/MarvelWallpaper.jpg);
+  background-image: url("../Imagenes/fondos/MarvelWallpaper.jpg");
   background-size: 100%;
   background-repeat: repeat-y;
   object-fit: cover;
@@ -598,8 +598,7 @@ body {
   justify-items: center;
   grid-template-columns: 30% 70%;
   grid-column-gap: 0%;
-  grid-template-areas: "titulo titulo"
- "aside peliculas";
+  grid-template-areas: "titulo titulo" "aside peliculas";
   margin: 1%; }
   @media screen and (max-width: 1050px) {
     #contenedor {
@@ -673,7 +672,7 @@ body {
     #contenedor .contenedor__peliculas .carousel,
     #contenedor .contenedor__peliculas .imgs {
       width: 45%;
-      height: auto;
+      height: 340px;
       box-shadow: 0px 0px 15px white;
       object-fit: cover; }
       @media screen and (max-width: 850px) {
@@ -687,19 +686,23 @@ body {
       @media screen and (max-width: 650px) {
         #contenedor .contenedor__peliculas .carousel,
         #contenedor .contenedor__peliculas .imgs {
-          width: 50%; } }
+          width: 50%;
+          height: 310px; } }
       @media screen and (max-width: 550px) {
         #contenedor .contenedor__peliculas .carousel,
         #contenedor .contenedor__peliculas .imgs {
-          width: 55%; } }
+          width: 55%;
+          height: 300px; } }
       @media screen and (max-width: 430px) {
         #contenedor .contenedor__peliculas .carousel,
         #contenedor .contenedor__peliculas .imgs {
-          width: 60%; } }
+          width: 60%;
+          height: 280px; } }
       @media screen and (max-width: 360px) {
         #contenedor .contenedor__peliculas .carousel,
         #contenedor .contenedor__peliculas .imgs {
-          width: 65%; } }
+          width: 65%;
+          height: 260px; } }
       @media screen and (max-width: 330px) {
         #contenedor .contenedor__peliculas .carousel,
         #contenedor .contenedor__peliculas .imgs {
