@@ -73,10 +73,10 @@
         <div class="footer__nav estamos_en">
             <h3 class="footer__titulo">Estamos en</h3>
             <ul class="footer__lista">
-                <li> <a href="https://twitter.com/VirmCode"> <i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/victoriarodriguezmora"><i class="fab fa-linkedin"></i></a>
+                <li> <a href="https://twitter.com/VirmCode"  target="_blank"> <i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/victoriarodriguezmora"  target="_blank"><i class="fab fa-linkedin"></i></a>
                 </li>
-                <li><a href="https://www.instagram.com/virmcode/?hl=es"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.instagram.com/virmcode/?hl=es"  target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
         <!-- termina 1er articulo -->
@@ -84,7 +84,7 @@
         <div class="footer__nav contacto">
             <h3 class="footer__titulo">Contacto</h3>
             <ul class="footer__lista">
-                <li><a href="https://wa.me//5491133990583?text=Hola%20Victoria%20"><i
+                <li><a href="https://wa.me//5491133990583?text=Hola%20Victoria%20" target="_blank"><i
                             class="fab fa-whatsapp"></i></a></li>
                 <li> <i class="fas fa-envelope" data-bs-container="body" data-bs-toggle="popover"
                         data-bs-placement="top" data-bs-content="victoriaileanarodriguezmora@gmail.com"></i>
@@ -96,8 +96,8 @@
         <!--termina 2do articulo -->
     </div>
     <!-- termina section -->
-    <p class="footer__copy"> <a href="https://victoriarodriguez-portfolio.netlify.app/"> <i
-                class="far fa-copyright"></i> Victoria Mora y Rodriguez 2022 </a></p>
+    <p class="footer__copy"> <a href="https://victoriarodriguez-portfolio.netlify.app/" target="_blank"> <i
+                class="far fa-copyright"></i> Victoria Ileana Rodriguez  Mora 2022 </a></p>
 </footer>
 <!-- Termina footer -->
 
