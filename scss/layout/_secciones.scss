@@ -124,17 +124,14 @@
   @media screen and (max-width: 1050px) {
     position: relative;
     top: unset;
-    height: auto;
     margin-bottom: 10%;
     width: 50%;
   }
   @media screen and (max-width: 850px) {
-    height: 70vh;
     width: 80%;
   }
   @media screen and (max-width: 400px) {
     width: 90%;
-    height: 50vh;
   }
   .aside__ul {
     padding: 0px 5%;
@@ -173,11 +170,20 @@
   @media screen and (max-width: 1050px) {
     height: 820px;
   }
+  @media screen and (max-width: 850px) {
+  height: 70vh;
+  }
+  @media screen and (max-width: 400px) {
+    height: 50vh;
+    }
 }
 .aside--Uni {
   @extend.aside;
   height: 33em;
   top: 10%;
+  @media screen and (max-width: 1050px) {
+    height: 29em;
+  }
 }
 
 /*Termina ASIDE */

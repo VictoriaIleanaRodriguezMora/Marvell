@@ -558,21 +558,18 @@ body {
     .aside--FueraMCU, .aside--Uni {
       position: relative;
       top: unset;
-      height: auto;
       margin-bottom: 10%;
       width: 50%; } }
   @media screen and (max-width: 850px) {
     .aside, .aside--cronologia,
     .aside-estrenos,
     .aside--FueraMCU, .aside--Uni {
-      height: 70vh;
       width: 80%; } }
   @media screen and (max-width: 400px) {
     .aside, .aside--cronologia,
     .aside-estrenos,
     .aside--FueraMCU, .aside--Uni {
-      width: 90%;
-      height: 50vh; } }
+      width: 90%; } }
   .aside .aside__ul, .aside--cronologia .aside__ul, .aside-estrenos .aside__ul, .aside--FueraMCU .aside__ul, .aside--Uni .aside__ul, .aside .aside__ul--FueraMCU, .aside--cronologia .aside__ul--FueraMCU, .aside-estrenos .aside__ul--FueraMCU, .aside--FueraMCU .aside__ul--FueraMCU, .aside--Uni .aside__ul--FueraMCU, .aside .aside__ul-uni, .aside--cronologia .aside__ul-uni, .aside-estrenos .aside__ul-uni, .aside--FueraMCU .aside__ul-uni, .aside--Uni .aside__ul-uni {
     padding: 0px 5%; }
     .aside .aside__ul li, .aside--cronologia .aside__ul li, .aside-estrenos .aside__ul li, .aside--FueraMCU .aside__ul li, .aside--Uni .aside__ul li, .aside .aside__ul--FueraMCU li, .aside--cronologia .aside__ul--FueraMCU li, .aside-estrenos .aside__ul--FueraMCU li, .aside--FueraMCU .aside__ul--FueraMCU li, .aside--Uni .aside__ul--FueraMCU li, .aside .aside__ul-uni li, .aside--cronologia .aside__ul-uni li, .aside-estrenos .aside__ul-uni li, .aside--FueraMCU .aside__ul-uni li, .aside--Uni .aside__ul-uni li {
@@ -603,10 +600,23 @@ body {
     .aside-estrenos,
     .aside--FueraMCU {
       height: 820px; } }
+  @media screen and (max-width: 850px) {
+    .aside--cronologia,
+    .aside-estrenos,
+    .aside--FueraMCU {
+      height: 70vh; } }
+  @media screen and (max-width: 400px) {
+    .aside--cronologia,
+    .aside-estrenos,
+    .aside--FueraMCU {
+      height: 50vh; } }
 
 .aside--Uni {
   height: 33em;
   top: 10%; }
+  @media screen and (max-width: 1050px) {
+    .aside--Uni {
+      height: 29em; } }
 
 /*Termina ASIDE */
 /* Empieza #Contenedor */
