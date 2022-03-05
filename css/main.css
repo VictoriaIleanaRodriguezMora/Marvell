@@ -558,12 +558,14 @@ body {
     .aside--FueraMCU, .aside--Uni {
       position: relative;
       top: unset;
-      height: auto; } }
+      height: auto;
+      margin-bottom: 5%;
+      width: 50%; } }
   .aside .aside__ul, .aside--cronologia .aside__ul, .aside-estrenos .aside__ul, .aside--FueraMCU .aside__ul, .aside--Uni .aside__ul, .aside .aside__ul--FueraMCU, .aside--cronologia .aside__ul--FueraMCU, .aside-estrenos .aside__ul--FueraMCU, .aside--FueraMCU .aside__ul--FueraMCU, .aside--Uni .aside__ul--FueraMCU, .aside .aside__ul-uni, .aside--cronologia .aside__ul-uni, .aside-estrenos .aside__ul-uni, .aside--FueraMCU .aside__ul-uni, .aside--Uni .aside__ul-uni {
-    padding: 0px 20px; }
+    padding: 0px 5%; }
     .aside .aside__ul li, .aside--cronologia .aside__ul li, .aside-estrenos .aside__ul li, .aside--FueraMCU .aside__ul li, .aside--Uni .aside__ul li, .aside .aside__ul--FueraMCU li, .aside--cronologia .aside__ul--FueraMCU li, .aside-estrenos .aside__ul--FueraMCU li, .aside--FueraMCU .aside__ul--FueraMCU li, .aside--Uni .aside__ul--FueraMCU li, .aside .aside__ul-uni li, .aside--cronologia .aside__ul-uni li, .aside-estrenos .aside__ul-uni li, .aside--FueraMCU .aside__ul-uni li, .aside--Uni .aside__ul-uni li {
       margin: 2px;
-      padding: 2px;
+      padding: 0.5% 2%;
       width: auto;
       height: auto;
       transition: 51ms; }
