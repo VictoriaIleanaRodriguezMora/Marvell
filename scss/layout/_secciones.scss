@@ -128,6 +128,12 @@
     margin-bottom: 5%;
     width: 50%;
   }
+  @media screen and (max-width: 850px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 400px) {
+    width: 90%;
+  }
   .aside__ul {
     padding: 0px 5%;
     li {
@@ -136,6 +142,7 @@
       width: auto;
       height: auto;
       transition: 51ms;
+      font-size: 0.8em;
       &:hover {
         margin-left: 10px;
       }
@@ -160,18 +167,15 @@
 .aside--FueraMCU {
   @extend.aside;
   height: 40em;
-  top: 6%;
-  @media screen and (max-width: 1062px) {
+  top: 5%;
+  @media screen and (max-width: 1050px) {
     height: 820px;
-  }
-  li {
-    font-size: 13px;
   }
 }
 .aside--Uni {
   @extend.aside;
   height: 33em;
-  top: 15%;
+  top: 10%;
 }
 
 /*Termina ASIDE */
@@ -196,9 +200,7 @@
     width: 95%;
     @media screen and (max-width: 1050px) {
       display: map-get($flexbox, display);
-
       flex-direction: map-get($flexbox, flex-dir-c);
-
       align-items: center;
     }
     /* Articulos */
@@ -278,6 +280,9 @@
     .primer--articulo {
       @extend.articulos;
       margin-top: 0px;
+      @media screen and (max-width: 1050px){
+        margin-top: 2%;
+      }
     }
     .ultimo--articulo {
       @extend.articulos;

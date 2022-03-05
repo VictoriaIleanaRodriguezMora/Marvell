@@ -561,6 +561,16 @@ body {
       height: auto;
       margin-bottom: 5%;
       width: 50%; } }
+  @media screen and (max-width: 850px) {
+    .aside, .aside--cronologia,
+    .aside-estrenos,
+    .aside--FueraMCU, .aside--Uni {
+      width: 80%; } }
+  @media screen and (max-width: 400px) {
+    .aside, .aside--cronologia,
+    .aside-estrenos,
+    .aside--FueraMCU, .aside--Uni {
+      width: 90%; } }
   .aside .aside__ul, .aside--cronologia .aside__ul, .aside-estrenos .aside__ul, .aside--FueraMCU .aside__ul, .aside--Uni .aside__ul, .aside .aside__ul--FueraMCU, .aside--cronologia .aside__ul--FueraMCU, .aside-estrenos .aside__ul--FueraMCU, .aside--FueraMCU .aside__ul--FueraMCU, .aside--Uni .aside__ul--FueraMCU, .aside .aside__ul-uni, .aside--cronologia .aside__ul-uni, .aside-estrenos .aside__ul-uni, .aside--FueraMCU .aside__ul-uni, .aside--Uni .aside__ul-uni {
     padding: 0px 5%; }
     .aside .aside__ul li, .aside--cronologia .aside__ul li, .aside-estrenos .aside__ul li, .aside--FueraMCU .aside__ul li, .aside--Uni .aside__ul li, .aside .aside__ul--FueraMCU li, .aside--cronologia .aside__ul--FueraMCU li, .aside-estrenos .aside__ul--FueraMCU li, .aside--FueraMCU .aside__ul--FueraMCU li, .aside--Uni .aside__ul--FueraMCU li, .aside .aside__ul-uni li, .aside--cronologia .aside__ul-uni li, .aside-estrenos .aside__ul-uni li, .aside--FueraMCU .aside__ul-uni li, .aside--Uni .aside__ul-uni li {
@@ -568,7 +578,8 @@ body {
       padding: 0.5% 2%;
       width: auto;
       height: auto;
-      transition: 51ms; }
+      transition: 51ms;
+      font-size: 0.8em; }
       .aside .aside__ul li:hover, .aside--cronologia .aside__ul li:hover, .aside-estrenos .aside__ul li:hover, .aside--FueraMCU .aside__ul li:hover, .aside--Uni .aside__ul li:hover, .aside .aside__ul--FueraMCU li:hover, .aside--cronologia .aside__ul--FueraMCU li:hover, .aside-estrenos .aside__ul--FueraMCU li:hover, .aside--FueraMCU .aside__ul--FueraMCU li:hover, .aside--Uni .aside__ul--FueraMCU li:hover, .aside .aside__ul-uni li:hover, .aside--cronologia .aside__ul-uni li:hover, .aside-estrenos .aside__ul-uni li:hover, .aside--FueraMCU .aside__ul-uni li:hover, .aside--Uni .aside__ul-uni li:hover {
         margin-left: 10px; }
       .aside .aside__ul li a, .aside--cronologia .aside__ul li a, .aside-estrenos .aside__ul li a, .aside--FueraMCU .aside__ul li a, .aside--Uni .aside__ul li a, .aside .aside__ul--FueraMCU li a, .aside--cronologia .aside__ul--FueraMCU li a, .aside-estrenos .aside__ul--FueraMCU li a, .aside--FueraMCU .aside__ul--FueraMCU li a, .aside--Uni .aside__ul--FueraMCU li a, .aside .aside__ul-uni li a, .aside--cronologia .aside__ul-uni li a, .aside-estrenos .aside__ul-uni li a, .aside--FueraMCU .aside__ul-uni li a, .aside--Uni .aside__ul-uni li a {
@@ -584,20 +595,16 @@ body {
 .aside-estrenos,
 .aside--FueraMCU {
   height: 40em;
-  top: 6%; }
-  @media screen and (max-width: 1062px) {
+  top: 5%; }
+  @media screen and (max-width: 1050px) {
     .aside--cronologia,
     .aside-estrenos,
     .aside--FueraMCU {
       height: 820px; } }
-  .aside--cronologia li,
-  .aside-estrenos li,
-  .aside--FueraMCU li {
-    font-size: 13px; }
 
 .aside--Uni {
   height: 33em;
-  top: 15%; }
+  top: 10%; }
 
 /*Termina ASIDE */
 /* Empieza #Contenedor */
@@ -676,6 +683,9 @@ body {
           width: 85%; } }
     #contenedor .contenedor__peliculas .primer--articulo {
       margin-top: 0px; }
+      @media screen and (max-width: 1050px) {
+        #contenedor .contenedor__peliculas .primer--articulo {
+          margin-top: 2%; } }
     #contenedor .contenedor__peliculas .ultimo--articulo {
       margin: 30px 0px 0px; }
     #contenedor .contenedor__peliculas .carousel,
