@@ -163,7 +163,7 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2008hulk.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/2008hulk.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/2008hulk.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2008hulk.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/2008hulk.jpg 700w"
                                 class="d-block w-100" alt="Hulk">
                         </div>
                     </div>
@@ -195,7 +195,7 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2010ironman.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/2010ironman.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/2010ironman.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2010ironman.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/2010ironman.jpg 700w"
                                 class="d-block w-100" alt="Iron man">
                         </div>
                     </div>
@@ -223,12 +223,14 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/thor2011.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/thor2011.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/thor2011.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/thor2011.jpg 1500w, 
+                                ../Imagenes/imagenes768/portadaspeliculas/thor2011.jpg 700w"
                                 class="d-block w-100" alt="Thor">
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2011thor.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas2011thor.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas2011thor.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2011thor.jpg 1500w, 
+                                ../Imagenes/imagenes768/carousel-imgs/2011thor.jpg 700w"
                                 class="d-block w-100" alt="Thor">
                         </div>
                     </div>
@@ -295,8 +297,9 @@
                                 alt="Los Vengadores">
                         </div>
                         <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2012avengers.jpg" srcset="../Imagenes/imagenes1500/carousel-imgs2012avengers.jpg 1500w,
-                                ../Imagenes/imagenes768/carousel-imgs2012avengers.jpg 700w" class="d-block w-100"
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2012avengers.jpg" 
+                            srcset="../Imagenes/imagenes1500/carousel-imgs/2012avengers.jpg 1500w,
+                                ../Imagenes/imagenes768/carousel-imgs/2012avengers.jpg 700w" class="d-block w-100"
                                 alt="Los Vengadores">
                         </div>
                     </div>
@@ -335,7 +338,8 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2013ironman-1.jpg"
-                                srcset="../Imagenes/imagenes1500/ironman-1.jpg 1500w, ../Imagenes/imagenes768/ironman-1.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/ironman-1.jpg 1500w, 
+                                ../Imagenes/imagenes768/carousel-imgs/ironman-1.jpg 700w"
                                 class="d-block w-100" alt="Iron Man 3">
                         </div>
                     </div>
@@ -368,8 +372,8 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2013thor.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/thor2013.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/thor2013.jpg 700w"
-                                srcset="../Imagenes/imagenes1500/thor2013.jpg 1500w, ../Imagenes/imagenes768/thor2013.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2013thor.jpg 1500w, 
+                                ../Imagenes/imagenes768/carousel-imgs/2013thor.jpg 700w"
                                 class="d-block w-100" alt="Thor">
                         </div>
                     </div>
@@ -517,21 +521,24 @@
                                 srcset="../Imagenes/imagenes1500/portadaspeliculas/civilwar.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/civilwar.jpg 700w"
                                 class="d-block w-100" alt="Capitán América">
                         </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2016civilwar.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2016civilwar.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2016civilwar.jpg 700w"
-                                class="d-block w-100" alt="Capitán América">
+                        <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/antman2015.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/antman2015.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/antman2015.jpg 700w"
+                                class="d-block w-100" alt="Ant-Man">
                         </div>
                         <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2016civilwar-1.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2016civilwar-1.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2016civilwar-1.jpg 700w"
-                                class="d-block w-100" alt="Capitán América">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2015antman.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2015antman.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/2015antman.jpg 700w"
+                                class="d-block w-100" alt="Ant-Man">
                         </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2016civilwar-2.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2016civilwar-2.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2016civilwar-2.jpg 700w"
-                                class="d-block w-100" alt="Capitán América">
-                        </div>
+                    </div>
                     </div>
                 </div>
             </article>
@@ -610,7 +617,7 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2016drs.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/2016drs.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/2016drs.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2016drs.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2016drs.jpg 700w"
                                 class="d-block w-100" alt="Doctor Strange">
                         </div>
                         <div class="carousel-item">
