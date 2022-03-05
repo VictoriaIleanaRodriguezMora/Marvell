@@ -122,7 +122,9 @@
   grid-area: aside;
   color: white;
   @media screen and (max-width: 1050px) {
-    display: none;
+    position: relative;
+    top: unset;
+    height: auto;
   }
   .aside__ul {
     padding: 0px 20px;
@@ -184,6 +186,7 @@
   margin: 1%;
   @media screen and (max-width: 1050px) {
     grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "aside" "peliculas";
   }
   // Contenedor Peliculas
   .contenedor__peliculas {
@@ -319,7 +322,7 @@
       @media screen and (max-width: 220px) {
         width: 80%;
       }
-      .w-100{
+      .w-100 {
         @include alto-ancho(100%, 340px);
         object-fit: cover;
         @media screen and (max-width: 650px) {
