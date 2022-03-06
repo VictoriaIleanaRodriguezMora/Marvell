@@ -437,8 +437,8 @@
                 </div>
                 <!-- carousel -->
                 <div id="carouselExampleIndicators110" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators110" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators110" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
@@ -454,6 +454,8 @@
                             aria-label="Slide 7"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators110" data-bs-slide-to="7"
                             aria-label="Slide 8"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators110" data-bs-slide-to="8"
+                            aria-label="Slide 9"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -691,7 +693,7 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/311-6.jpg"
-                            srcset="../Imagenes/imagenes1500/carousel-imgs/311-6.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/amalgam-6.jpg 768w"
+                            srcset="../Imagenes/imagenes1500/carousel-imgs/311-6.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/311-6.jpg 768w"
                                 class="d-block w-100" alt="Tierra 311">
                         </div>
                         <div class="carousel-item">
@@ -731,7 +733,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img loading="lazy" src="../Imagenes/imagenes1500/universosplanetas/secretwar.jpg"
-                            srcset="../Imagenes/imagenes1500/universosplanetas/secretwar.jpg 1500w, ../Imagenes/universosplanetas/imagenes768/secretwar.jpg 768w"
+                            srcset="../Imagenes/imagenes1500/universosplanetas/secretwar.jpg 1500w, ../Imagenes/universosplanetas/imagenes768/universosplanetas/secretwar.jpg 768w"
                                 class="d-block w-100" alt="Secret Wars">
                         </div>
                         <div class="carousel-item">

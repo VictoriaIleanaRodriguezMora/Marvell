@@ -228,7 +228,7 @@
                         <div class="carousel-item active">
                             <img loading="lazy"
                                 src="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/ThePunisher.jpg"
-                                srcset="../Imagenes/imagenes768/portadaspeliculas/ThePunisher.jpg 700w, ../Imagenes/imagenes1500/portadaspeliculas/fueramcu/ThePunisher.jpg 1500w"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/ThePunisher.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/fueramcu/ThePunisher.jpg 700w"
                                 class="d-block w-100" alt="The Punisher">
                         </div>
                         <div class="carousel-item">
@@ -267,7 +267,7 @@
                         <div class="carousel-item active">
                             <img loading="lazy"
                                 src="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/capitanAmerica1990.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/capitanAmerica1990.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/gueramcu/capitanAmerica1990.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/capitanAmerica1990.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/fueramcu/capitanAmerica1990.jpg 700w"
                                 class="d-block w-100" alt="Captain America">
                         </div>
                         <div class="carousel-item">
@@ -301,7 +301,7 @@
                         <div class="carousel-item active">
                             <img loading="lazy"
                                 src="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Los4Fantasticos.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Los4Fantasticos.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/Los4Fantasticos.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Los4Fantasticos.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/fueramcu/Los4Fantasticos.jpg 700w"
                                 class="d-block w-100" alt="Los 4 Fantásticos">
                         </div>
                         <div class="carousel-item">
@@ -335,7 +335,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Blade.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Blade.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/Blade.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Blade.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/fueramcu/Blade.jpg 700w"
                                 class="d-block w-100" alt="Blade (1998)">
                         </div>
                         <div class="carousel-item">
@@ -414,7 +414,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Blade2.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Blade2.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/Blade2.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Blade2.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/fueramcu/Blade2.jpg 700w"
                                 class="d-block w-100" alt="Blade II (2002)">
                         </div>
                         <div class="carousel-item">
@@ -456,7 +456,7 @@
                         <div class="carousel-item active">
                             <img loading="lazy"
                                 src="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/SpiderMan2002.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/SpiderMan2002.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/SpiderMan2002.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/SpiderMan2002.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/fueramcu/SpiderMan2002.jpg 700w"
                                 class="d-block w-100" alt="Spider-Man">
                         </div>
                         <div class="carousel-item">
@@ -495,7 +495,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/xmen2.jpg"
-                                srcset="../Imagenes/imagenes768/portadaspeliculas/xmen2.jpg 700w, ../Imagenes/imagenes1500/portadaspeliculas/fueramcu/xmen2.jpg 1500w"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/xmen2.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/fueramcu/xmen2.jpg 700w"
                                 class="d-block w-100" alt="X-Men 2">
                         </div>
                         <div class="carousel-item">
@@ -536,7 +536,7 @@
                         <div class="carousel-item active">
                             <img loading="lazy"
                                 src="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Daredevil2003.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Daredevil2003.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/Daredevil2003.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/fueramcu/Daredevil2003.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/fueramcu/Daredevil2003.jpg 700w"
                                 class="d-block w-100" alt="Daredevil">
                         </div>
                         <div class="carousel-item">
@@ -1055,8 +1055,6 @@
                             aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators86" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators86" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -1066,10 +1064,6 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/xmen2011.jpg"
-                                class="d-block w-100" alt="X-Men: primera generación">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/xmen2011-1.jpg"
                                 class="d-block w-100" alt="X-Men: primera generación">
                         </div>
                     </div>
