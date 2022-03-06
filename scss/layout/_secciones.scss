@@ -462,9 +462,7 @@
 // botones
 #botones {
   display: map-get($flexbox, display);
-
   flex-direction: map-get($flexbox, flex-dir-c);
-
   position: fixed;
   right: 0.5%;
   bottom: 1%;
@@ -478,7 +476,7 @@
   .boton {
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
-    margin: 10px 0px;
+    margin: 20% 0px;
     transition: 1s;
     overflow: hidden;
   }
@@ -490,7 +488,6 @@
   }
   a {
     color: rgb(0, 0, 0);
-    padding: 5px;
     .fas {
       font-size: 30px;
       padding: 5px;

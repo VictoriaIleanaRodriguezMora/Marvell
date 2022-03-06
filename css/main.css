@@ -879,7 +879,7 @@ body {
   #botones .boton {
     background-color: white;
     border-radius: 50%;
-    margin: 10px 0px;
+    margin: 20% 0px;
     transition: 1s;
     overflow: hidden; }
   @media screen and (max-width: 1050px) {
@@ -889,8 +889,7 @@ body {
     #botones {
       margin: 5px 0px; } }
   #botones a {
-    color: black;
-    padding: 5px; }
+    color: black; }
     #botones a .fas {
       font-size: 30px;
       padding: 5px; }
