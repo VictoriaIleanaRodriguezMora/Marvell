@@ -1306,10 +1306,10 @@
     <!-- Termina footer -->
 
     <!-- botones -->
-    <section id="botones">
+    <div id="botones">
         <button class="boton"><a href="#header"><i class="fas fa-arrow-up"></i></a></button>
         <button class="boton"><a href="#footer"><i class="fas fa-arrow-down"></i></a></button>
-    </section>
+    </div>
     <!-- botones -->
 
 
