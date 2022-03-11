@@ -50,7 +50,7 @@
   <main id="main__marvel">
     <h1 class="marvel__titulo">
       LAS PELICULAS DE
-      <a href="https://www.marvel.com/movies" class="marvel__span"><img loading="lazy"
+      <a href="https://www.marvel.com/movies" class="marvel__span" target="_blank" ><img loading="lazy"
           src="./Imagenes/principal/marvelstudios.png"></a>
       EN ORDEN
     </h1>
