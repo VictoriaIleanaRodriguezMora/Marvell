@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orden de Estreno Marvel</title>
+    <title>Orden Cronologico de Marvel</title>
     <meta name="description"
-        content="Vas a poder encontrar las peliculas del Universo Cinematografico de Marvel en Orden de Estreno con la respectiva descripcionde cada pelicula.">
-    <meta name="keywords" content="Marvel, Marvel Studios, Orden de Estreno Marvel, Info Marvel">
+        content="Vas a poder encontrar las peliculas del Universo Cinematografico de Marvel en Orden Cronologico con la respectiva descripcionde cada pelicula.">
+    <meta name="keywords" content="Marvel, Marvel Studios, Orden Cronologico Marvel, Info Marvel">
+
     <link rel="stylesheet" href="../css/main.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,10 +17,9 @@
 </head>
 
 <body>
-
     <!-- Empieza header -->
     <header class="navbar navbar-expand-xl container-fluid navbar-dark" id="header">
-        <a class="navbar-brand" href="../index.html"><i class="fas fa-house-user"></i></a>
+        <a class="navbar-brand" href="../index.php"><i class="fas fa-house-user"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span><i class="fas fa-bars"></i></span>
@@ -27,219 +27,80 @@
         <nav class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="navbar-brand" href="../html/cronologia.html">CRONOLOGIA</a>
+                    <a class="navbar-brand" href="../html/cronologia.php">CRONOLOGIA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="../html/estrenos.html">ESTRENOS</a>
+                    <a class="navbar-brand" href="../html/estrenos.php">ESTRENOS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="../html/fases.html">FASES</a>
+                    <a class="navbar-brand" href="../html/fases.php">FASES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="../html/universos.html">UNIVERSOS</a>
+                    <a class="navbar-brand" href="../html/universos.php">UNIVERSOS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="../html/fueraDelMCU.html">PELIS FUERA DEL UCM</a>
+                    <a class="navbar-brand" href="../html/fueraDelMCU.php">PELIS FUERA DEL UCM</a>
                 </li>
             </ul>
         </nav>
     </header>
     <!-- Termina header -->
 
-
-
     <!-- peliculas -->
     <main id="contenedor">
         <!-- titulo -->
         <section id="titulo">
-            <h1 class="section__titulo">ORDEN DE ESTRENO</h1>
+            <h1 class="section__titulo">ORDEN CRONOLOGICO</h1>
             <p class="section__parrafo"> Acá vas a poder encontrar todas las peliculas del Universo Cinematografico
-                de Marvel en <span class="section__span">Orden de Estreno</span>. ¿Y eso que significa? Significa,
-                que el
-                orden que estas por ver, refiere al orden en que <span class="section__span">se estrenaron</span>
-                las peliculas, y
-                no el orden en que <span class="section__span"> sucedieron</span> las cosas. Para eso, podes ir a la
-                seccion
-                cronologia.
+                de Marvel en <span class="section__span">Orden Cronologico</span>. ¿Y eso que significa? Significa,
+                que el orden que estas por ver, refiere al orden en que <span class="section__span">pasaron</span> las
+                cosas, y
+                no el orden en que se <span class="section__span"> estrenaron</span> las peliculas. Para eso, podes ir a
+                la
+                seccion de estrenos.
             </p>
         </section>
         <!-- titulo -->
         <!-- Aside -->
-        <aside class="aside aside-estrenos">
+        <aside class="aside aside--cronologia">
             <ol class="aside__ul">
-                <li><a href="#p32">Iron Man (2008)</a></li>
-                <li><a href="#p33">El increíble Hulk (2008</a></li>
-                <li><a href="#p34">Iron Man 2 (2010)</a></li>
-                <li><a href="#p35">Thor (2011)</a></li>
-                <li><a href="#p36">Cap América First Avenger (2011)</a></li>
-                <li><a href="#p37">Los Vengadores (2012)</a></li>
-                <li><a href="#p38">Iron Man 3 (2013)</a></li>
-                <li><a href="#p39">Thor El mundo oscuro (2013)</a></li>
-                <li><a href="#p40">Cap América: Winter Soldier(2014)</a></li>
-                <li><a href="#p41">Guardianes de la Galaxia (2014)</a></li>
-                <li><a href="#p42">Vengadores La era de Ultrón (2015)</a></li>
-                <li><a href="#p43">Ant-Man (2015)</a></li>
-                <li><a href="#p44">Capitán América Civil War (2016)</a></li>
-                <li><a href="#p45">Doctor Strange (2016)</a></li>
-                <li><a href="#p46">Guardianes de la Galaxia Vol. 2 (2017)</a></li>
-                <li><a href="#p47">Thor Ragnarok (2017)</a></li>
-                <li><a href="#p48">Spider-Man Homecoming (2017)</a></li>
-                <li><a href="#p49">Black Panther (2018)</a></li>
-                <li><a href="#p50">Vengadores Infinity War (2018)</a></li>
-                <li><a href="#p51">Ant-Man y la Avispa (2018)</a></li>
-                <li><a href="#p52">Capitana Marvel (2019)</a></li>
-                <li><a href="#p53">Vengadores Endgame (2019)</a></li>
-                <li><a href="#p54">Spider-Man Far from Home (2019)</a></li>
-                <li><a href="#p55">SERIE: WandaVision (2021)</a></li>
-                <li><a href="#p56">SERIE: Falcon & Winter Soldier (2021)</a></li>
-                <li><a href="#p57">SERIE: Loki (2021)</a></li>
-                <li><a href="#p58">Viuda Negra (2021)</a></li>
-                <li><a href="#p59">Shang-Chi y la leyenda de los 10 anillos </a></li>
-                <li><a href="#p60">Eternals (2021)</a></li>
-                <li><a href="#p61">SERIE: Ojo de Halcón (2021)</a></li>
-                <li><a href="#p62">Spider-Man: No Way Home (2021)</a></li>
+                <li><a href="#p1">Cap América: First Avenger (2011)</a></li>
+                <li><a href="#p2">Capitana Marvel (2019)</a></li>
+                <li><a href="#p3">Iron Man (2008)</a></li>
+                <li><a href="#p4">El increíble Hulk (2008)</a></li>
+                <li><a href="#p5">Iron Man 2 (2010)</a></li>
+                <li><a href="#p6">Thor (2011)</a></li>
+                <li><a href="#p7">Los Vengadores (2012)</a></li>
+                <li><a href="#p8">Iron Man 3 (2013)</a></li>
+                <li><a href="#p9">Thor: El mundo oscuro (2013)</a></li>
+                <li><a href="#p10">Cap América: Winter Soldier (2014)</a></li>
+                <li><a href="#p11">Guardianes de la Galaxia (2014)</a></li>
+                <li><a href="#p12">Guardianes de la Galaxia Vol. 2 (2017)</a></li>
+                <li><a href="#p13">Vengadores: La era de Ultrón (2015)</a></li>
+                <li><a href="#p14">Ant-Man (2015)</a></li>
+                <li><a href="#p15">Capitán América: Civil War (2016)</a></li>
+                <li><a href="#p16">Viuda Negra (2021)</a></li>
+                <li><a href="#p17">Black Panther (2018)</a></li>
+                <li><a href="#p18">Doctor Strange (2016)</a></li>
+                <li><a href="#p19">Spider-Man: Homecoming (2017)</a></li>
+                <li><a href="#p20">Thor: Ragnarok (2017)</a></li>
+                <li><a href="#p21">Ant-Man y la Avispa (2018)</a></li>
+                <li><a href="#p22">Vengadores: Infinity War (2018)</a></li>
+                <li><a href="#p23">Vengadores: Endgame (2019)</a></li>
+                <li><a href="#p24">SERIE: WandaVision (2021)</a></li>
+                <li><a href="#p25">SERIE: Loki (2021)</a></li>
+                <li><a href="#p26">Falcon & Winter Soldier (2021)</a></li>
+                <li><a href="#p27">Spider-Man: Far from Home (2019)</a></li>
+                <li><a href="#p28">Spider-Man: No Way Home (2021)</a></li>
+                <li><a href="#p29">Eternals (2021)</a></li>
+                <li><a href="#p30">Shang-Chi y la leyenda de los 10 anillos</a></li>
+                <li><a href="#p31">SERIE: Ojo de Halcón (2021)</a></li>
             </ol>
         </aside>
         <!-- Aside -->
         <section class="contenedor__peliculas">
-            <!-- 31 cronologia -->
-            <!-- pelicula  1 - 32-->
-            <article id="p32" class="articulos primer--articulo">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">Iron Man (2008)</h2>
-                    <p class="div__parrafo">Tony Stark es un inventor de armamento brillante que es secuestrado en el
-                        extranjero. Sus captores
-                        son unos terroristas que le obligan a construir una máquina destructiva pero Tony se
-                        construirá una
-                        armadura para poder enfrentarse a ellos y escapar.
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators32" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators32" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators32" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/IronMan2008.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/IronMan2008.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/IronMan2008.jpg 700w"
-                                class="d-block w-100" alt="Iron Man">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2008ironman.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2008ironman.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2008ironman.jpg 700w"
-                                class="d-block w-100" alt="Iron Man">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula 2 - 33-->
-            <article id="p33" class="articulos articulos--izquierda">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">El increíble Hulk (2008)</h2>
-                    <p class="div__parrafo">Bruce Banner recorre el mundo en busca de un antídoto para librarse de su
-                        alter ego. Además tendrá que hacer frente a Emil, un nuevo enemigo, lo que convertirá a Nueva
-                        York en el escenario de
-                        la última batalla entre las dos criaturas más poderosas.
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators33" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators33" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators33" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/hulk2008.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/hulk2008.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/hulk2008.jpg 700w"
-                                class="d-block w-100" alt="Hulk">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2008hulk.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2008hulk.jpg 1500w, 
-                                ../Imagenes/imagenes768/carousel-imgs/2008hulk.jpg 700w"
-                                class="d-block w-100" alt="Hulk">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  3 - 34-->
-            <article id="p34" class="articulos">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">Iron Man 2 (2010)</h2>
-                    <p class="div__parrafo">Con el mundo ahora consciente de que él es Iron Man, el millonario inventor
-                        Tony Stark debe forjar nuevas alianzas y enfrentarse a un nuevo y poderoso enemigo.
-
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators34" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators34" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators34" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/IronMan2010.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/IronMan2010.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/IronMan2010.jpg 700w"
-                                class="d-block w-100" alt="Iron man">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2010ironman.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2010ironman.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2010ironman.jpg 700w"
-                                class="d-block w-100" alt="Iron man">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  4 - 35-->
-            <article id="p35" class="articulos articulos--izquierda">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">Thor (2011)</h2>
-                    <p class="div__parrafo">Tras desatar una antigua guerra, el codicioso guerrero Thor es desterrado a
-                        la Tierra por su padre para que viva entre los hombres y descubra así el verdadero sentido de la
-                        humildad. Allí, sin sus poderes, Thor deberá enfrentarse a las fuerzas más oscuras que su mayor
-                        enemigo le enviará desde Asgard.
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators35" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators35" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators35" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/thor2011.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/thor2011.jpg 1500w, 
-                                ../Imagenes/imagenes768/portadaspeliculas/thor2011.jpg 700w"
-                                class="d-block w-100" alt="Thor">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2011thor.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2011thor.jpg 1500w, 
-                                ../Imagenes/imagenes768/carousel-imgs/2011thor.jpg 700w"
-                                class="d-block w-100" alt="Thor">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  5 - 36-->
-            <article id="p36" id="p36" class="articulos articulos--derecha primer--articulo">
+            <!-- pelicula  1-->
+            <article id="p1" class="articulos articulos--derecha primer--articulo">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Capitán América: El primer vengador (2011)</h2>
                     <p class="div__parrafo">
@@ -249,11 +110,11 @@
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators36" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators36" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators36" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner">
@@ -272,22 +133,187 @@
                 </div>
             </article>
 
-            <!-- pelicula  6 - 37-->
-            <article id="p37" class="articulos articulos--izquierda">
+            <!-- pelicula 2 -->
+            <article id="p2" class="articulos articulos--izquierda">
+                <div class="articulos__div ">
+                    <h2 class="div__titulo">Capitana Marvel (2019)</h2>
+                    <p class="div__parrafo">La guerrera Vers no recuerda su pasado, el cual vuelve a ella en sueños. A
+                        pesar de sus problemas para controlar sus emociones y, con ellas, sus poderes, la Inteligencia
+                        Suprema le permite
+                        participar en una misión.
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/capitanaMarvel.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/capitanaMarvel.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/capitanaMarvel.jpg 700w"
+                                class="d-block w-100" alt="capitana marvel">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2019capitanaM.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2019capitanaM.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2019capitanaM.jpg 700w"
+                                class="d-block w-100" alt="capitana marvel">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  3-->
+            <article id="p3" class="articulos">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">Iron Man (2008)</h2>
+                    <p class="div__parrafo">Tony Stark es un inventor de armamento brillante que es secuestrado en el
+                        extranjero. Sus captores son unos terroristas que le obligan a construir una máquina destructiva
+                        pero Tony se
+                        construirá una armadura para poder enfrentarse a ellos y escapar.
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/IronMan2008.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/IronMan2008.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/IronMan2008.jpg 700w"
+                                class="d-block w-100" alt="Iron Man">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2008ironman.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2008ironman.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2008ironman.jpg 700w"
+                                class="d-block w-100" alt="Iron Man">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  4-->
+            <article id="p4" class="articulos articulos--izquierda">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">El increíble Hulk (2008)</h2>
+                    <p class="div__parrafo">Bruce Banner recorre el mundo en busca de un antídoto para librarse de su
+                        alter ego. Además tendrá que hacer frente a Emil, un nuevo enemigo, lo que convertirá a Nueva
+                        York en el escenario de
+                        la última batalla entre las dos criaturas más poderosas.
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators4" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/hulk2008.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/hulk2008.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/hulk2008.jpg 700w"
+                                class="d-block w-100" alt="Hulk">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2008hulk.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2008hulk.jpg 1500w, 
+                                ../Imagenes/imagenes768/carousel-imgs/2008hulk.jpg 700w"
+                                class="d-block w-100" alt="Hulk">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  5-->
+            <article id="p5" class="articulos">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">Iron Man 2 (2010)</h2>
+                    <p class="div__parrafo">Con el mundo ahora consciente de que él es Iron Man, el millonario inventor
+                        Tony Stark debe forjar nuevas alianzas y enfrentarse a un nuevo y poderoso enemigo.
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators5" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/IronMan2010.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/IronMan2010.jpg 1500w, 
+                                ../Imagenes/imagenes768/portadaspeliculas/IronMan2010.jpg 700w"
+                                class="d-block w-100" alt="Iron man">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2010ironman.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2010ironman.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2010ironman.jpg 700w"
+                                class="d-block w-100" alt="Iron man">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  6-->
+            <article id="p6" class="articulos articulos--izquierda">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">Thor (2011)</h2>
+                    <p class="div__parrafo">Tras desatar una antigua guerra, el codicioso guerrero Thor es desterrado a
+                        la Tierra por su padre para que viva entre los hombres y descubra así el verdadero sentido de la
+                        humildad. Allí, sin sus poderes, Thor deberá enfrentarse a las fuerzas más oscuras que su mayor
+                        enemigo le enviará desde Asgard.
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators6" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/thor2011.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/thor2011.jpg 1500w, 
+                                ../Imagenes/imagenes768/portadaspeliculas/thor2011.jpg 700w"
+                                class="d-block w-100" alt="Thor">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2011thor.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2011thor.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2011thor.jpg 700w"
+                                class="d-block w-100" alt="Thor">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  7-->
+            <article id="p7" class="articulos">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Los Vengadores (2012)</h2>
                     <p class="div__parrafo">El director de la Agencia SHIELD decide reclutar a un equipo para salvar al
                         mundo de un desastre casi seguro cuando un enemigo inesperado surge como una gran amenaza para
                         la seguridad mundial.
-
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators37" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators7" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators37" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators37" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner">
@@ -307,8 +333,8 @@
                 </div>
             </article>
 
-            <!-- pelicula  7 - 38-->
-            <article id="p38" class="articulos">
+            <!-- pelicula  8-->
+            <article id="p8" class="articulos articulos--izquierda">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Iron Man 3 (2013)</h2>
                     <p class="div__parrafo">El descarado y brillante Tony Stark, tras ver destruido todo su universo
@@ -317,13 +343,13 @@
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators38" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators8" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators38" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators38" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators38" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
@@ -347,55 +373,56 @@
                 </div>
             </article>
 
-            <!-- pelicula  8 - 39-->
-            <article id="p39" class="articulos  articulos--izquierda">
+            <!-- pelicula  9-->
+            <article id="p9" class="articulos">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Thor: El mundo oscuro (2013)</h2>
                     <p class="div__parrafo">Malekith, un enemigo más antiguo que el universo, regresa a la Tierra para
-                        cumplir su plan destructor. Thor debe enfrentarse a un rival al que ni siquiera Odín parece
-                        poder detener y,
+                        cumplir
+                        su plan
+                        destructor. Thor debe enfrentarse a un rival al que ni siquiera Odín parece poder detener y,
                         desesperado, libera a su hermano Loki para que lo ayude.
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators39" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators9" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators39" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators39" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/thor2013.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/thor2013.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/thor2013.jpg 700w"
+                            srcset="../Imagenes/imagenes1500/carousel-imgs/2013thor.jpg 1500w, 
+                                ../Imagenes/imagenes768/carousel-imgs/2013thor.jpg 700w"
                                 class="d-block w-100" alt="Thor">
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2013thor.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2013thor.jpg 1500w, 
-                                ../Imagenes/imagenes768/carousel-imgs/2013thor.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/thor2013.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/thor2013.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/thor2013.jpg 1500w, ../Imagenes/imagenes768/thor2013.jpg 700w"
                                 class="d-block w-100" alt="Thor">
                         </div>
                     </div>
                 </div>
             </article>
 
-            <!-- pelicula  9 - 40-->
-            <article id="p40" class="articulos">
+            <!-- pelicula  10-->
+            <article id="p10" class="articulos articulos--izquierda">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Capitán América: El soldado de invierno (2014)</h2>
                     <p class="div__parrafo">Tras los devastadores acontecimientos vividos en Nueva York, el superhéroe
-                        vive tranquilamente en Washington D.C., intentando adaptarse al mundo moderno. Sin embargo,
-                        cuando un colega de es amenazado, Rogers se ve envuelto en una trama de intrigas.
+                        vive tranquilamente en amenazado, Rogers se ve envuelto en una trama de intrigas.
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators40" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators10" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators40" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators10" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators40" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators10" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner">
@@ -413,8 +440,8 @@
                 </div>
             </article>
 
-            <!-- pelicula  10 - 41-->
-            <article id="p41" class="articulos articulos--izquierda">
+            <!-- pelicula  11-->
+            <article id="p11" class="articulos">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Guardianes de la Galaxia (2014)</h2>
                     <p class="div__parrafo">El temerario aventurero Peter Quill, tras robar una misteriosa esfera
@@ -423,11 +450,11 @@
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators41" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators11" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators41" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators11" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators41" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators11" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner">
@@ -445,8 +472,41 @@
                 </div>
             </article>
 
-            <!-- pelicula  11 - 42-->
-            <article id="p42" class="articulos">
+            <!-- pelicula  12-->
+            <article id="p12" class="articulos articulos--izquierda">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">Guardianes de la Galaxia Vol. 2 (2017)</h2>
+                    <p class="div__parrafo">Una poderosa raza alienígena contrata a los Guardianes para que protejan
+                        sus valiosas baterías de energía, pero, cuando Rocket las roba, los alienígenas envían a sus
+                        tropas de combate a vengarse de los Guardianes. Mientras tratan de escapar con vida, intentan
+                        resolver el misterio de los verdaderos orígenes de Peter Quill.
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators12" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators12" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators12" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/gdlx2017.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/gdlx2017.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/gdlx2017.jpg 700w"
+                                class="d-block w-100" alt="Guardianes de la Galaxia">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2017gdlg.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2017gdlg.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2017gdlg.jpg 700w"
+                                class="d-block w-100" alt="Guardianes de la Galaxia">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  13-->
+            <article id="p13" class="articulos">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Vengadores: La era de Ultrón (2015)</h2>
                     <p class="div__parrafo">Tony Stark quiere lanzar un nuevo programa de paz, pero algo sale mal y
@@ -455,17 +515,17 @@
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators42" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators13" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators42" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators42" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators42" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="2"
                             class="active" aria-current="true" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="3"
                             aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators42" data-bs-slide-to="4"
+                        <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="4"
                             class="active" aria-current="true" aria-label="Slide 5"></button>
 
                     </div>
@@ -499,8 +559,8 @@
                 </div>
             </article>
 
-            <!-- pelicula  12 - 43-->
-            <article id="p43" class="articulos articulos--izquierda">
+            <!-- pelicula  14-->
+            <article id="p14" class="articulos articulos--izquierda">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Ant-Man (2015)</h2>
                     <p class="div__parrafo">El doctor Hank Pym anuncia que abandona S.H.I.E.L.D. tras descubrir que han
@@ -509,8 +569,13 @@
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators43" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators14" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/antman2015.jpg"
@@ -519,34 +584,32 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2015antman.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2015antman.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/2015antman.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2015antman.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2015antman.jpg 700w"
                                 class="d-block w-100" alt="Ant-Man">
                         </div>
-                    </div>
                     </div>
                 </div>
             </article>
 
-            <!-- pelicula  13 - 44-->
-            <article id="p44" class="articulos">
+            <!-- pelicula  15-->
+            <article id="p15" class="articulos">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Capitán América: Civil War (2016)</h2>
                     <p class="div__parrafo">Mientras intentan detener a Rumlow en Lagos, Capitán América, Falcon, Viuda
                         Negra y Bruja Escarlata se ven obligados a realizar una intervención para evitar el robo de una
-                        muestra letal en el
-                        Instituto de Enfermedades Infecciosas.
+                        muestra letal en el Instituto de Enfermedades Infecciosas.
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators44" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators15" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators44" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators44" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators44" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide-to="2"
                             class="active" aria-current="true" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators44" data-bs-slide-to="3"
+                        <button type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide-to="3"
                             aria-label="Slide 4"></button>
 
                     </div>
@@ -575,23 +638,107 @@
                 </div>
             </article>
 
-            <!-- pelicula  14 - 45-->
-            <article id="p45" class="articulos articulos--izquierda">
+            <!-- pelicula  16-->
+            <article id="p16" class="articulos articulos--izquierda">
                 <div class="articulos__div">
-                    <h2 class="div__titulo">Doctor Strange (2016)</h2>
-                    <p class="div__parrafo">La vida del famoso neurocirujano Dr. Stephen Strange cambia para siempre
-                        cuando un terrible accidente de coche le arrebata el uso de sus manos.
+                    <h2 class="div__titulo">Viuda Negra (2021)</h2>
+                    <p class="div__parrafo">Una peligrosa conspiración, relacionada con su pasado, persigue a Natasha
+                        Romanoff, también conocida como Viuda Negra. La agente tendrá que lidiar con las consecuencias
+                        de haber sido espía, así como con las relaciones rotas, para sobrevivir.
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators45" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators16" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators45" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators16" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators45" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators16" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators45" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="#carouselExampleIndicators16" data-bs-slide-to="2"
                             class="active" aria-current="true" aria-label="Slide 3"></button>
+
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/viudanegra.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/viudanegra.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/viudanegra.jpg 700w"
+                                class="d-block w-100" alt="Viuda Negra">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021bw.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021bw.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021bw.jpg 700w"
+                                class="d-block w-100" alt="Viuda Negra">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021bw-1.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021bw-1.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021bw-1.jpg 700w"
+                                class="d-block w-100" alt="Viuda Negra">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  17-->
+            <article id="p17" class="articulos">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">Black Panther (2018)</h2>
+                    <p class="div__parrafo">Hace millones de años, un meteorito de poderoso vibranium impactó en
+                        África. Cuando llegó la era del hombre, la mayoría de los habitantes de aquel territorio se
+                        unieron bajo el mand o de un guerrero.
+
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators17" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators17" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators17" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators17" data-bs-slide-to="2"
+                            class="active" aria-current="true" aria-label="Slide 3"></button>
+
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/panteranegra.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/panteranegra.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/panteranegra.jpg 700w"
+                                class="d-block w-100" alt="Black Panther">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2018bp.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2018bp.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2018bp.jpg 700w"
+                                class="d-block w-100" alt="Black Panther">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2018bp-1.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2018bp-1.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2018bp-1.jpg 700w"
+                                class="d-block w-100" alt="Black Panther">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  18-->
+            <article id="p18" class="articulos articulos--izquierda">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">Doctor Strange (2016)</h2>
+                    <p class="div__parrafo">La vida del famoso neurocirujano Dr. Stephen Strange cambia para siempre
+                        cuando un
+                        terrible accidente
+                        de coche le arrebata el uso de sus manos.
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators18" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators18" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators18" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators18" data-bs-slide-to="2"
+                            class="active" aria-current="true" aria-label="Slide 3"></button>
+
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -606,48 +753,57 @@
                         </div>
                         <div class="carousel-item">
                             <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2016drs-1.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2016drs-1.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2016drs-1.jpg 700w"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2016drs-1.jpg 1500w, 
+                                ../Imagenes/imagenes768/carousel-imgs/2016drs-1.jpg 700w"
                                 class="d-block w-100" alt="Doctor Strange">
                         </div>
                     </div>
                 </div>
             </article>
 
-            <!-- pelicula  15 - 46-->
-            <article id="p46" class="articulos">
+            <!-- pelicula  19-->
+            <article id="p19" class="articulos">
                 <div class="articulos__div">
-                    <h2 class="div__titulo">Guardianes de la Galaxia Vol. 2 (2017)</h2>
-                    <p class="div__parrafo">Una poderosa raza alienígena contrata a los Guardianes para que protejan
-                        sus valiosas baterías de energía, pero, cuando Rocket las roba, los alienígenas envían a sus
-                        tropas de combate a vengarse de los Guardianes. Mientras tratan de escapar con vida, intentan
-                        resolver el misterio de los verdaderos orígenes de Peter Quill.
+                    <h2 class="div__titulo">Spider-Man: Homecoming (2017) </h2>
+                    <p class="div__parrafo">Peter Parker asume su nueva identidad como Spider-Man y regresa a vivir con
+                        su tía después de su aventura con los Vengadores. Al volver, mientras sigue bajo la tutela de
+                        Tony Stark, descubre que ha surgido un nuevo y despiadado enemigo que pretende destruir todo lo
+                        que ama: el Buitre.
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators46" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators19" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators46" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators19" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators46" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators19" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators19" data-bs-slide-to="2"
+                            class="active" aria-current="true" aria-label="Slide 3"></button>
+
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/gdlx2017.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/gdlx2017.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/gdlx2017.jpg 700w"
-                                class="d-block w-100" alt="Guardianes de la Galaxia">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/homecoming2017.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/homecoming2017.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/homecoming2017.jpg 700w"
+                                class="d-block w-100" alt="Spider-Man">
                         </div>
                         <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2017gdlg.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2017gdlg.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2017gdlg.jpg 700w"
-                                class="d-block w-100" alt="Guardianes de la Galaxia">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2017spiderman.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2017spiderman.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2017spiderman.jpg 700w"
+                                class="d-block w-100" alt="Spider-Man">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2017spiderman-1.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2017spiderman-1.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2017spiderman-1.jpg 700w"
+                                class="d-block w-100" alt="Spider-Man">
                         </div>
                     </div>
                 </div>
             </article>
 
-            <!-- pelicula  16 - 47-->
-            <article id="p47" class="articulos articulos--izquierda">
+            <!-- pelicula  20-->
+            <article id="p20" class="articulos articulos--izquierda">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Thor: Ragnarok (2017)</h2>
                     <p class="div__parrafo">Thor está preso en el otro extremo del universo. Necesita regresar a tiempo
@@ -656,15 +812,15 @@
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators47" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators20" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators47" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators20" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators47" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators20" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators47" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="#carouselExampleIndicators20" data-bs-slide-to="2"
                             class="active" aria-current="true" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators47" data-bs-slide-to="3"
+                        <button type="button" data-bs-target="#carouselExampleIndicators20" data-bs-slide-to="3"
                             class="active" aria-current="true" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
@@ -692,141 +848,24 @@
                 </div>
             </article>
 
-            <!-- pelicula  17 - 48-->
-            <article id="p48" class="articulos">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">Spider-Man: Homecoming (2017) </h2>
-                    <p class="div__parrafo">Peter Parker asume su nueva identidad como Spider-Man y regresa a vivir con
-                        su tía después de su aventura con los Vengadores. Al volver, mientras sigue bajo la tutela de
-                        Tony Stark, descubre que ha surgido un nuevo y despiadado enemigo que pretende destruir todo lo
-                        que ama: el Buitre.
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators48" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators48" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators48" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators48" data-bs-slide-to="2"
-                            class="active" aria-current="true" aria-label="Slide 3"></button>
-
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/homecoming2017.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/homecoming2017.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/homecoming2017.jpg 700w"
-                                class="d-block w-100" alt="Spider-Man">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2017spiderman.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2017spiderman.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2017spiderman.jpg 700w"
-                                class="d-block w-100" alt="Spider-Man">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2017spiderman-1.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2017spiderman-1.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2017spiderman-1.jpg 700w"
-                                class="d-block w-100" alt="Spider-Man">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  18 - 49-->
-            <article id="p49" class="articulos articulos--izquierda">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">Black Panther (2018)</h2>
-                    <p class="div__parrafo">Hace millones de años, un meteorito de poderoso vibranium impactó en
-                        África. Cuando llegó la era del hombre, la mayoría de los habitantes de aquel territorio se
-                        unieron bajo el mand o de un guerrero.
-
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators49" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators49" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators49" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators49" data-bs-slide-to="2"
-                            class="active" aria-current="true" aria-label="Slide 3"></button>
-
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/panteranegra.jpg"
-                                srcset="../Imagenes/imagenes768/portadaspeliculas/panteranegra.jpg 700w, ../Imagenes/imagenes1500/portadaspeliculas/panteranegra.jpg 1500w"
-                                class="d-block w-100" alt="Black Panther">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2018bp.jpg"
-                                class="d-block w-100" alt="Black Panther">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2018bp-1.jpg"
-                                class="d-block w-100" alt="Black Panther">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  19 - 50-->
-            <article id="p50" class="articulos">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">Vengadores: Infinity War (2018)</h2>
-                    <p class="div__parrafo">
-                        Los superhéroes se alían para vencer al poderoso Thanos, el peor enemigo al que se han
-                        enfrentado. Si Thanos logra reunir las seis gemas del infinito: poder, tiempo, alma, realidad,
-                        mente y espacio, nadie podrá detenerlo.
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators50" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators50" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators50" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-
-
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/infinityWar.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/infinityWar.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/infinityWar.jpg 700w"
-                                class="d-block w-100" alt="Vengadores">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2018iw-1.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2018iw-1.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2018iw-1.jpg 700w"
-                                class="d-block w-100" alt="Vengadores">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  20 - 51-->
-            <article id="p51" class="articulos articulos--izquierda">
+            <!-- pelicula  21-->
+            <article id="p21" class="articulos">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Ant-Man y la Avispa (2018)</h2>
                     <p class="div__parrafo">Scott Lang vuelve a enfundarse el traje de Ant-Man para pelear codo a codo
                         junto con la Avispa. La misión revela a los dos superhéroes un secreto terrible y los enfrenta a
                         su enemigo más poderoso.
-
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators51" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators21" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators51" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators21" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators51" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators21" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators51" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="#carouselExampleIndicators21" data-bs-slide-to="2"
                             class="active" aria-current="true" aria-label="Slide 3"></button>
-
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -848,43 +887,41 @@
                 </div>
             </article>
 
-            <!-- pelicula  21 - 52-->
-            <article id="p52" class="articulos articulos--derecha">
+            <!-- pelicula  22-->
+            <article id="p22" class="articulos articulos--izquierda">
                 <div class="articulos__div">
-                    <h2 class="div__titulo">Capitana Marvel (2019)
-                    </h2>
+                    <h2 class="div__titulo">Vengadores: Infinity War (2018)</h2>
                     <p class="div__parrafo">
-                        La guerrera Vers no recuerda su pasado, el cual vuelve a ella en sueños. A pesar de sus
-                        problemas para controlar sus emociones y, con ellas, sus poderes, la Inteligencia Suprema le
-                        permite participar en una misión.
-
+                        Los superhéroes se alían para vencer al poderoso Thanos, el peor enemigo al que se han
+                        enfrentado. Si Thanos logra reunir las seis gemas del infinito: poder, tiempo, alma, realidad,
+                        mente y espacio, nadie podrá detenerlo.
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators52" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators22" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators52" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators22" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators52" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators22" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/capitanaMarvel.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/capitanaMarvel.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/capitanaMarvel.jpg 700w"
-                                class="d-block w-100" alt="capitana marvel">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/infinityWar.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/infinityWar.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/infinityWar.jpg 700w"
+                                class="d-block w-100" alt="Vengadores">
                         </div>
                         <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2019capitanaM.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2019capitanaM.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2019capitanaM.jpg 700w"
-                                class="d-block w-100" alt="capitana marvel">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2018iw-1.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2018iw-1.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2018iw-1.jpg 700w"
+                                class="d-block w-100" alt="Vengadores">
                         </div>
                     </div>
                 </div>
             </article>
 
-            <!-- pelicula  22 - 53-->
-            <article id="p53" class="articulos articulos--izquierda">
+            <!-- pelicula  23-->
+            <article id="p23" class="articulos">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Vengadores: Endgame (2019)</h2>
                     <p class="div__parrafo">Después de los eventos devastadores de "Avengers: Infinity War", el
@@ -894,19 +931,19 @@
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators53" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators23" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators53" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators23" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators53" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators23" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators53" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="#carouselExampleIndicators23" data-bs-slide-to="2"
                             class="active" aria-current="true" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators53" data-bs-slide-to="3"
+                        <button type="button" data-bs-target="#carouselExampleIndicators23" data-bs-slide-to="3"
                             class="active" aria-current="true" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators53" data-bs-slide-to="4"
+                        <button type="button" data-bs-target="#carouselExampleIndicators23" data-bs-slide-to="4"
                             class="active" aria-current="true" aria-label="Slide 5"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators53" data-bs-slide-to="5"
+                        <button type="button" data-bs-target="#carouselExampleIndicators23" data-bs-slide-to="5"
                             class="active" aria-current="true" aria-label="Slide 6"></button>
                     </div>
                     <div class="carousel-inner">
@@ -944,8 +981,105 @@
                 </div>
             </article>
 
-            <!-- pelicula  23 - 54-->
-            <article id="p54" class="articulos">
+            <!-- pelicula  24-->
+            <article id="p24" class="articulos articulos--izquierda">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">SERIE: WandaVision (2021) </h2>
+                    <p class="div__parrafo">Con vidas suburbanas idealizadas, los seres superpoderosos Wanda y Vision
+                        comienzan a sospechar que nada es lo que parece.
+                    </p>
+                </div>
+                <!-- carousel -->
+
+                <div id="carouselExampleIndicators24" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators24" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators24" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/wandavision.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/wandavision.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/wandavision.jpg 700w"
+                                class="d-block w-100" alt="WandaVision">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021wandavision.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021wandavision.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021wandavision.jpg 700w"
+                                class="d-block w-100" alt="WandaVision">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  25-->
+            <article id="p25" class="articulos">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">SERIE: Loki (2021)</h2>
+                    <p class="div__parrafo">Loki, el Dios de las Mentiras, se aleja de la sombra de su hermano para
+                        embarcarse en una aventura que se desarrolla tras los acontecimientos de "Vengadores: Endgame".
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators25" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators25" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators25" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/loki.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/loki.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/loki.jpg 700w"
+                                class="d-block w-100" alt="Loki">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021loki.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021loki.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021loki.jpg 700w"
+                                class="d-block w-100" alt="Loki">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  26-->
+            <article id="p26" class="articulos articulos--izquierda">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">SERIE: Falcon y El soldado de invierno (2021)</h2>
+                    <p class="div__parrafo">Falcon y Winter Soldier son un dúo diferente que se unen para una aventura
+                        internacional que pondrá a prueba sus habilidades de supervivencia, así como su paciencia.
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators26" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators26" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators26" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy"
+                                src="../Imagenes/imagenes1500/portadaspeliculas/FalconyElSoldadoDeInvierno(2021).jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/FalconyElSoldadoDeInvierno(2021).jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/FalconyElSoldadoDeInvierno(2021).jpg 700w"
+                                class="d-block w-100" alt="Falcon y El soldado de invierno">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021fys.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021fys.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021fys.jpg 700w"
+                                class="d-block w-100" alt="Falcon y El soldado de invierno">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  27-->
+            <article id="p27" class="articulos">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Spider-Man: Far from Home (2019)</h2>
                     <p class="div__parrafo"> Peter Parker decide pasar unas merecidas vacaciones en Europa junto a MJ,
@@ -955,13 +1089,13 @@
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators54" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators27" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators54" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators27" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators54" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators27" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators54" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="#carouselExampleIndicators27" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
@@ -984,249 +1118,8 @@
                     </div>
                 </div>
             </article>
-
-            <!-- pelicula  24 - 55-->
-            <article id="p55" class="articulos articulos--izquierda">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">SERIE: WandaVision (2021) </h2>
-                    <p class="div__parrafo">Con vidas suburbanas idealizadas, los seres superpoderosos Wanda y Vision
-                        comienzan a sospechar que nada es lo que parece.
-                    </p>
-                </div>
-                <!-- carousel -->
-
-                <div id="carouselExampleIndicators55" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators55" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators55" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/wandavision.jpg"
-                                srcset="../Imagenes/imagenes768/portadaspeliculas/wandavision.jpg 700w, ../Imagenes/imagenes1500/portadaspeliculas/wandavision.jpg 1500w"
-                                class="d-block w-100" alt="WandaVision">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021wandavision.jpg"
-                                class="d-block w-100" alt="WandaVision">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  25 - 56-->
-            <article id="p56" class="articulos">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">SERIE: Falcon y El soldado de invierno (2021)</h2>
-                    <p class="div__parrafo">Falcon y Winter Soldier son un dúo diferente que se unen para una aventura
-                        internacional que pondrá a
-                        prueba sus habilidades de supervivencia, así como su paciencia.
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators56" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators56" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators56" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy"
-                                src="../Imagenes/imagenes1500/portadaspeliculas/FalconyElSoldadoDeInvierno(2021).jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/FalconyElSoldadoDeInvierno(2021).jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/FalconyElSoldadoDeInvierno(2021).jpg 700w"
-                                class="d-block w-100" alt="Falcon y El soldado de invierno">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021fys.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021fys.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021fys.jpg 700w"
-                                class="d-block w-100" alt="Falcon y El soldado de invierno">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  26 - 57-->
-            <article id="p57" class="articulos articulos--izquierda">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">SERIE: Loki (2021)</h2>
-                    <p class="div__parrafo">Loki, el Dios de las Mentiras, se aleja de la sombra de su hermano para
-                        embarcarse en una aventura que se desarrolla tras los acontecimientos de "Vengadores: Endgame".
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators57" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators57" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators57" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/loki.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/loki.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/loki.jpg 700w"
-                                class="d-block w-100" alt="Loki">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021loki.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021loki.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021loki.jpg 700w"
-                                class="d-block w-100" alt="Loki">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  27 - 58-->
-            <article id="p58" class="articulos">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">Viuda Negra (2021)</h2>
-                    <p class="div__parrafo">Una peligrosa conspiración, relacionada con su pasado, persigue a Natasha
-                        Romanoff, también conocida como Viuda Negra. La agente tendrá que lidiar con las consecuencias
-                        de haber sido espía, así
-                        como con las relaciones rotas, para sobrevivir.
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators58" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators58" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators58" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators58" data-bs-slide-to="2"
-                            class="active" aria-current="true" aria-label="Slide 3"></button>
-
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/viudanegra.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/viudanegra.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/viudanegra.jpg 700w"
-                                class="d-block w-100" alt="Viuda Negra">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021bw.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021bw.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021bw.jpg 700w"
-                                class="d-block w-100" alt="Viuda Negra">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021bw-1.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021bw-1.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021bw-1.jpg 700w"
-                                class="d-block w-100" alt="Viuda Negra">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  28 - 59-->
-            <article id="p59" class="articulos articulos--izquierda">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">Shang-Chi y la leyenda de los diez anillos (2021)</h2>
-                    <p class="div__parrafo">El maestro de artes marciales Shang-Chi se enfrenta al pasado que creía
-                        haber dejado atrás cuando se ve envuelto en la red de la misteriosa organización de los Diez
-                        Anillos.
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators59" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators59" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators59" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/shangChi.jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/shangChi.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/shangChi.jpg 700w"
-                                class="d-block w-100" alt="Shang-Chi">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021shanghi.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021shanghi.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021shanghi.jpg 700w"
-                                class="d-block w-100" alt="Shang-Chi">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  29 - 60-->
-            <article id="p60" class="articulos">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">Eternals (2021)</h2>
-                    <p class="div__parrafo">Los Eternos son una raza de seres inmortales con poderes sobrehumanos que
-                        han vivido en secreto en la Tierra durante miles de años. Aunque nunca han intervenido en el
-                        destino de la población, ahora una amenaza se cierne sobre la humanidad.
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators60" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators60" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators60" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/Eternals.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/Eternals.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/Eternals.jpg 700w"
-                                class="d-block w-100" alt="Eternals">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021eternals.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021eternals.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021eternals.jpg 700w"
-                                class="d-block w-100" alt="Eternals">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  30 - 61-->
-            <article id="p61" class="articulos ultimo--articulo articulos--izquierda">
-                <div class="articulos__div">
-                    <h2 class="div__titulo">SERIE: Ojo de Halcón (2021)</h2>
-                    <p class="div__parrafo">Clint Barton y Kate Bishop disparan flechas mientras evitan convertirse
-                        ellos mismos en el blanco cuando la situación cambia.
-                    </p>
-                </div>
-                <!-- carousel -->
-                <div id="carouselExampleIndicators61" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators61" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators61" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators61" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/OjoDeHalcón(2021).jpg"
-                                srcset="../Imagenes/imagenes1500/portadaspeliculas/OjoDeHalcón(2021).jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/OjoDeHalcón(2021).jpg 700w"
-                                class="d-block w-100" alt="Hawkeye">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021hawkeye.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021hawkeye.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021hawkeye.jpg 700w"
-                                class="d-block w-100" alt="Hawkeye">
-                        </div>
-                        <div class="carousel-item">
-                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021hawkeye-1.jpg"
-                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021hawkeye-1.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021hawkeye-1.jpg 700w"
-                                class="d-block w-100" alt="Hawkeye">
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- pelicula  31 - 62-->
-            <article id="p62" class="articulos">
+            <!-- pelicula  28 -->
+            <article id="p28" class="articulos">
                 <div class="articulos__div">
                     <h2 class="div__titulo">Spider-Man: No Way Home (2021)</h2>
                     <p class="div__parrafo">Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la
@@ -1236,13 +1129,13 @@
                     </p>
                 </div>
                 <!-- carousel -->
-                <div id="carouselExampleIndicators62" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators28" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators62" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carouselExampleIndicators28" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators62" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="#carouselExampleIndicators28" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators62" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="#carouselExampleIndicators28" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
@@ -1264,6 +1157,108 @@
                     </div>
                 </div>
             </article>
+            <!-- pelicula  29-->
+            <article id="p29" class="articulos articulos--izquierda">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">Eternals (2021)</h2>
+                    <p class="div__parrafo">Los Eternos son una raza de seres inmortales con poderes sobrehumanos que
+                        han vivido en secreto en la Tierra durante miles de años. Aunque nunca han intervenido en el
+                        destino de la población, ahora una amenaza se cierne sobre la humanidad.
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators29" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators29" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators29" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/Eternals.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/Eternals.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/Eternals.jpg 700w"
+                                class="d-block w-100" alt="Eternals">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021eternals.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021eternals.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021eternals.jpg 700w"
+                                class="d-block w-100" alt="Eternals">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  30-->
+            <article id="p30" class="articulos">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">Shang-Chi y la leyenda de los diez anillos (2021)</h2>
+                    <p class="div__parrafo">El maestro de artes marciales Shang-Chi se enfrenta al pasado que creía
+                        haber dejado atrás cuando se ve envuelto en la red de la misteriosa organización de los Diez
+                        Anillos.
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators30" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators30" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators30" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/shangChi.jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/shangChi.jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/shangChi.jpg 700w"
+                                class="d-block w-100" alt="Shang-Chi">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021shanghi.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021shanghi.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021shanghi.jpg 700w"
+                                class="d-block w-100" alt="Shang-Chi">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- pelicula  31-->
+            <article id="p31" class="articulos ultimo--articulo articulos--izquierda">
+                <div class="articulos__div">
+                    <h2 class="div__titulo">SERIE: Ojo de Halcón (2021)</h2>
+                    <p class="div__parrafo">Clint Barton y Kate Bishop disparan flechas mientras evitan convertirse
+                        ellos mismos en el blanco cuando la situación cambia.
+                    </p>
+                </div>
+                <!-- carousel -->
+                <div id="carouselExampleIndicators31" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators31" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators31" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators31" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/portadaspeliculas/OjoDeHalcón(2021).jpg"
+                                srcset="../Imagenes/imagenes1500/portadaspeliculas/OjoDeHalcón(2021).jpg 1500w, ../Imagenes/imagenes768/portadaspeliculas/OjoDeHalcón(2021).jpg 700w"
+                                class="d-block w-100" alt="Hawkeye">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021hawkeye.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021hawkeye.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021hawkeye.jpg 700w"
+                                class="d-block w-100" alt="Hawkeye">
+                        </div>
+                        <div class="carousel-item">
+                            <img loading="lazy" src="../Imagenes/imagenes1500/carousel-imgs/2021hawkeye-1.jpg"
+                                srcset="../Imagenes/imagenes1500/carousel-imgs/2021hawkeye-1.jpg 1500w, ../Imagenes/imagenes768/carousel-imgs/2021hawkeye-1.jpg 700w"
+                                class="d-block w-100" alt="Hawkeye">
+                        </div>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
     <!-- peliculas -->
@@ -1277,7 +1272,7 @@
             <div class="footer__nav estamos_en">
                 <h3 class="footer__titulo">Estamos en</h3>
                 <ul class="footer__lista">
-                   <li> <a href="https://twitter.com/VirmCode" target="_blank"> <i class="fab fa-twitter"></i></a></li>
+                    <li> <a href="https://twitter.com/VirmCode" target="_blank"> <i class="fab fa-twitter"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/victoriarodriguezmora" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </li>
                     <li><a href="https://www.instagram.com/virmcode/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -1291,7 +1286,7 @@
                     <li><a href="https://wa.me//5491133990583?text=Hola%20Victoria%20" target="_blank"><i
                                 class="fab fa-whatsapp"></i></a></li>
                     <li> <i class="fas fa-envelope" data-bs-container="body" data-bs-toggle="popover"
-                            data-bs-placement="top" data-bs-content="victoriaileanarodriguezmora@gmail.com" target="_blank"></i>
+                            data-bs-placement="top" data-bs-content="victoriaileanarodriguezmora@gmail.com"></i>
                     </li>
                     <li><i class="fab fa-discord" data-bs-container="body" data-bs-toggle="popover"
                             data-bs-placement="top" data-bs-content="Victoria Rodriguez#1198"></i></li>
