@@ -123,10 +123,10 @@ body {
   .navbar .navbar-toggler {
     margin: 10px;
     height: 30px;
-    width: 50px; }
-    .navbar .navbar-toggler .navbar-toggler-icon {
-      display: none;
-      color: grey; }
+    width: 50px;
+    background-color: white; }
+    .navbar .navbar-toggler span {
+      color: black; }
   .navbar .navbar-collapse {
     justify-content: center; }
     .navbar .navbar-collapse .navbar-nav {

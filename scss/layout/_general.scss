@@ -99,9 +99,9 @@ body {
     margin: 10px;
     height: 30px;
     width: 50px;
-    .navbar-toggler-icon {
-      display: none;
-      color: grey;
+    background-color: white;
+    span {
+      color: black;
     }
   }
   .navbar-collapse {
