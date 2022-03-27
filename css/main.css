@@ -147,7 +147,7 @@ body {
         background-color: rgba(0, 0, 0, 0.849);
         padding: 15px 8px;
         text-align: center; }
-        @media screen and (max-width: 1199px) {
+        @media screen and (max-width: 1400px) {
           .navbar .navbar-collapse .navbar-nav .nav-item {
             border: 1px solid #ffffff8f; } }
         @media screen and (max-width: 300px) {
