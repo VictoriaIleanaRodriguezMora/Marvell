@@ -1,7 +1,7 @@
 /*TODOS LOS ESTILOS DE LAS SECCIONES */
 /* Empieza MAIN*/
 #titulo {
-  background-image: $fondoSecciones;
+  background-image: url(../Imagenes/fondos/galaxia.png);
   width: auto;
   height: auto;
   padding: 2%;
@@ -377,7 +377,7 @@
     row-gap: 50px;
   }
   .fases {
-    background-image: $galaxia2;
+    background-image: url(../Imagenes/fondos/galaxia2.jpg);
     background-size: 100% 110%;
     border-radius: 30px;
     padding: 40px;
