@@ -599,17 +599,17 @@ body {
     .aside--cronologia,
     .aside-estrenos,
     .aside--FueraMCU {
-      height: 820px; } }
+      height: 30em; } }
   @media screen and (max-width: 850px) {
     .aside--cronologia,
     .aside-estrenos,
     .aside--FueraMCU {
-      height: 70vh; } }
+      height: 30em; } }
   @media screen and (max-width: 400px) {
     .aside--cronologia,
     .aside-estrenos,
     .aside--FueraMCU {
-      height: 50vh; } }
+      height: 23em; } }
 
 .aside--Uni {
   height: 28em;

@@ -168,13 +168,13 @@
   height: 40em;
   top: 5%;
   @media screen and (max-width: 1050px) {
-    height: 820px;
+    height: 30em;
   }
   @media screen and (max-width: 850px) {
-  height: 70vh;
+  height: 30em;
   }
   @media screen and (max-width: 400px) {
-    height: 50vh;
+    height: 23em;
     }
 }
 .aside--Uni {
@@ -227,7 +227,6 @@
       margin: 30px 0px;
       align-items: center;
       display: map-get($flexbox, display);
-
       flex-direction: map-get($flexbox, flex-dir-r);
       box-shadow: 0px 0px 10px #000;
       color: white;
@@ -367,7 +366,6 @@
 /*Empieza  SECCION FASES */
 #main {
   display: map-get($flexbox, display);
-
   flex-direction: map-get($flexbox, flex-dir-r);
   justify-content: map-get($flexbox, justify-c);
   flex-wrap: wrap;
@@ -376,7 +374,6 @@
   @media screen and (max-width: 1050px) {
     align-items: center;
     flex-direction: map-get($flexbox, flex-dir-c);
-
     row-gap: 50px;
   }
   .fases {
@@ -387,9 +384,7 @@
     width: 42%;
     margin: 4% 4%;
     display: map-get($flexbox, display);
-
     flex-direction: map-get($flexbox, flex-dir-c);
-
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 0px 10px white;
