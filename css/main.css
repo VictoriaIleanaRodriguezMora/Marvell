@@ -42,7 +42,7 @@
 
 @font-face {
   font-family: "Comfortaa";
-  src: url(../../fonts/Comfortaa-Bold.ttf);
+  src: url(../fonts/Comfortaa-Bold.ttf);
   font-weight: bold;
   font-style: normal; }
 
@@ -806,7 +806,7 @@ body {
       flex-direction: column;
       row-gap: 50px; } }
   #main .fases {
-    background-image: url(../Imagenes/fondos/universo.jpg);
+    background-image: url(../Imagenes/fondos/galaxia2.jpg);
     background-size: 100% 110%;
     border-radius: 30px;
     padding: 40px;
