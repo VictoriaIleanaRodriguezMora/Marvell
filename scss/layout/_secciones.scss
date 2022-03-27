@@ -1,7 +1,7 @@
 /*TODOS LOS ESTILOS DE LAS SECCIONES */
 /* Empieza MAIN*/
 #titulo {
-  background-image: url(../Imagenes/fondos/galaxia.png);
+  background-image: $fondoSecciones;
   width: auto;
   height: auto;
   padding: 2%;
@@ -377,7 +377,7 @@
     row-gap: 50px;
   }
   .fases {
-    background-image: url(../Imagenes/fondos/galaxia2.jpg);
+    background-image: $galaxia2;
     background-size: 100% 110%;
     border-radius: 30px;
     padding: 40px;
@@ -458,17 +458,68 @@
 .quizz {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  flex-direction: column;
   font-family: "Comfortaa";
-  #jugas {
+  width: 100vw;
+  height: auto;
+  box-sizing: border-box;
+  .jugas {
     background-color: red;
     font-size: 2rem;
-    width: auto;
+    width: 20%;
     height: auto;
     padding: 0.5em;
-    border: 10px solid #860000;
+    border: 10px solid #640000;
     border-radius: 44px;
     color: white;
+    transition: 500ms;
+    margin: 2%;
+    box-sizing: border-box;
+    &:hover {
+      background-color: #640000;
+      border-color: red;
+    }
+  }
+  .categorias {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 80%;
+    box-sizing: border-box;
+    .categorias__boton {
+      @extend.jugas;
+      border-color: rgb(38, 0, 255);
+      background-color: #060052;
+      width: 15%;
+      &:hover {
+        border-color: #060052;
+        background-color: rgb(38, 0, 255);
+      }
+    }
+  }
+  .contenedor__preguntas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    // padding: 5%;
+    width: 100vw;
+    .div__pregunta {
+      width: 80%;
+      background-color: $black;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      flex-direction: column;
+      padding: 2%;
+      .pregunta__titulo {
+        color: white;
+        font-size: 1.5em;
+      }
+    }
   }
 }
 // Termina SECCION QUIZZ
