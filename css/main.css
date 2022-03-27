@@ -88,18 +88,21 @@ body {
   overflow-x: hidden; }
 
 /* Inicia Header */
+#header {
+  justify-content: flex-end; }
+
 .navbar {
   margin: 0;
   padding-top: 0px;
   background-image: linear-gradient(#000000bb, #00000010);
   padding-top: 0; }
-  .navbar .navbar-expand-fluid {
+  .navbar .navbar-expand-xxl {
     padding-top: 0; }
   .navbar .fa-house-user {
     font-size: 2.5em;
     color: white;
     width: 60px;
-    margin: 0px -9px 0px -2px;
+    margin: 0rem -1rem 0rem 0rem;
     text-align: center;
     animation-name: moveHome;
     animation-duration: 2s;
@@ -107,7 +110,7 @@ body {
     animation-delay: 10s; }
     @media screen and (max-width: 1399px) {
       .navbar .fa-house-user {
-        margin: 0px 20px 0px 10px; } }
+        margin: 0.5rem 0em 0px 0.5rem; } }
     @media screen and (max-width: 1300px) {
       .navbar .fa-house-user {
         font-size: 2em; } }
@@ -127,7 +130,8 @@ body {
     margin: 10px;
     height: 30px;
     width: 50px;
-    background-color: white; }
+    background-color: white;
+    justify-content: flex-end; }
     .navbar .navbar-toggler span {
       color: black; }
   .navbar .navbar-collapse {
