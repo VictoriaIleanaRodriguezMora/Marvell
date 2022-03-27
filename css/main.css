@@ -17,7 +17,7 @@
   color: red; }
 
 @font-face {
-  font-family: "BalsamiqSans";
+  font-family: "Balsamiq";
   src: url(../fonts/BalsamiqSans-Regular.ttf);
   font-weight: normal;
   font-style: normal; }
@@ -39,6 +39,12 @@
   src: url(../fonts/Captainmarvel-anm9.ttf);
   font-weight: bold;
   font-style: 700; }
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url(../fonts/Comfortaa-Bold.ttf);
+  font-weight: bold;
+  font-style: normal; }
 
 html {
   box-sizing: border-box;
@@ -324,7 +330,7 @@ body {
   margin-top: 8%;
   margin-bottom: 5%;
   border-radius: 20px;
-  background-image: url(../Imagenes/fondos/universo.jpg);
+  background-image: url(../Imagenes/fondos/galaxia2.jpg);
   background-size: 100% 110%;
   object-fit: cover;
   box-sizing: border-box;
@@ -390,7 +396,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  font-family: "BalsamiqSans";
+  font-family: "Comfortaa";
   border-radius: 20px;
   background-image: url(../Imagenes/fondos/galaxia-banner.jpg);
   background-size: 100% 150%;
@@ -457,7 +463,7 @@ body {
   border-radius: 20px;
   text-align: center;
   color: white;
-  font-family: "BalsamiqSans";
+  font-family: "Comfortaa";
   box-sizing: border-box;
   grid-area: titulo;
   animation-name: bg_main;
@@ -800,7 +806,7 @@ body {
       flex-direction: column;
       row-gap: 50px; } }
   #main .fases {
-    background-image: url(../Imagenes/fondos/universo.jpg);
+    background-image: url(../Imagenes/fondos/galaxia2.jpg);
     background-size: 100% 110%;
     border-radius: 30px;
     padding: 40px;
@@ -870,6 +876,63 @@ body {
             font-size: 0.6em; } }
 
 /* Termina SECCION FASES */
+.quizz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Comfortaa";
+  width: 100vw;
+  height: auto;
+  box-sizing: border-box; }
+  .quizz .jugas, .quizz .categorias .categorias__boton {
+    background-color: red;
+    font-size: 2rem;
+    width: 20%;
+    height: auto;
+    padding: 0.5em;
+    border: 10px solid #640000;
+    border-radius: 44px;
+    color: white;
+    transition: 500ms;
+    margin: 2%;
+    box-sizing: border-box; }
+    .quizz .jugas:hover, .quizz .categorias .categorias__boton:hover {
+      background-color: #640000;
+      border-color: red; }
+  .quizz .categorias {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 80%;
+    box-sizing: border-box; }
+    .quizz .categorias .categorias__boton {
+      border-color: #2600ff;
+      background-color: #060052;
+      width: 15%; }
+      .quizz .categorias .categorias__boton:hover {
+        border-color: #060052;
+        background-color: #2600ff; }
+  .quizz .contenedor__preguntas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100vw; }
+    .quizz .contenedor__preguntas .div__pregunta {
+      width: 80%;
+      background-color: #000000d5;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      flex-direction: column;
+      padding: 2%; }
+      .quizz .contenedor__preguntas .div__pregunta .pregunta__titulo {
+        color: white;
+        font-size: 1.5em; }
+
 #botones {
   display: flex;
   flex-direction: column;

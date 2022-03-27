@@ -9,7 +9,7 @@
   border-radius: 20px;
   text-align: center;
   color: white;
-  font-family: "BalsamiqSans";
+  font-family: "Comfortaa";
   box-sizing: border-box;
   grid-area: titulo;
   animation-name: bg_main;
@@ -171,11 +171,11 @@
     height: 30em;
   }
   @media screen and (max-width: 850px) {
-  height: 28em;
+    height: 28em;
   }
   @media screen and (max-width: 400px) {
     height: 23em;
-    }
+  }
 }
 .aside--Uni {
   @extend.aside;
@@ -292,7 +292,7 @@
     .primer--articulo {
       @extend.articulos;
       margin-top: 0px;
-      @media screen and (max-width: 1050px){
+      @media screen and (max-width: 1050px) {
         margin-top: 2%;
       }
     }
@@ -377,7 +377,7 @@
     row-gap: 50px;
   }
   .fases {
-    background-image: url(../Imagenes/fondos/universo.jpg);
+    background-image: url(../Imagenes/fondos/galaxia2.jpg);
     background-size: 100% 110%;
     border-radius: 30px;
     padding: 40px;
@@ -453,6 +453,76 @@
   }
 }
 /* Termina SECCION FASES */
+
+// Empieza SECCION QUIZZ
+.quizz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Comfortaa";
+  width: 100vw;
+  height: auto;
+  box-sizing: border-box;
+  .jugas {
+    background-color: red;
+    font-size: 2rem;
+    width: 20%;
+    height: auto;
+    padding: 0.5em;
+    border: 10px solid #640000;
+    border-radius: 44px;
+    color: white;
+    transition: 500ms;
+    margin: 2%;
+    box-sizing: border-box;
+    &:hover {
+      background-color: #640000;
+      border-color: red;
+    }
+  }
+  .categorias {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 80%;
+    box-sizing: border-box;
+    .categorias__boton {
+      @extend.jugas;
+      border-color: rgb(38, 0, 255);
+      background-color: #060052;
+      width: 15%;
+      &:hover {
+        border-color: #060052;
+        background-color: rgb(38, 0, 255);
+      }
+    }
+  }
+  .contenedor__preguntas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    // padding: 5%;
+    width: 100vw;
+    .div__pregunta {
+      width: 80%;
+      background-color: $black;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      flex-direction: column;
+      padding: 2%;
+      .pregunta__titulo {
+        color: white;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+// Termina SECCION QUIZZ
 
 // botones
 #botones {
