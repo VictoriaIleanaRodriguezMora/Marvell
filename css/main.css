@@ -88,23 +88,29 @@ body {
   overflow-x: hidden; }
 
 /* Inicia Header */
+#header {
+  justify-content: flex-end; }
+
 .navbar {
   margin: 0;
   padding-top: 0px;
   background-image: linear-gradient(#000000bb, #00000010);
   padding-top: 0; }
-  .navbar .navbar-expand-xl {
+  .navbar .navbar-expand-xxl {
     padding-top: 0; }
   .navbar .fa-house-user {
     font-size: 2.5em;
     color: white;
     width: 60px;
-    margin: 10px 0px 0px 20px;
+    margin: 0rem -1rem 0rem 0rem;
     text-align: center;
     animation-name: moveHome;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 10s; }
+    @media screen and (max-width: 1399px) {
+      .navbar .fa-house-user {
+        margin: 0.5rem 0em 0px 0.5rem; } }
     @media screen and (max-width: 1300px) {
       .navbar .fa-house-user {
         font-size: 2em; } }
@@ -124,7 +130,8 @@ body {
     margin: 10px;
     height: 30px;
     width: 50px;
-    background-color: white; }
+    background-color: white;
+    justify-content: flex-end; }
     .navbar .navbar-toggler span {
       color: black; }
   .navbar .navbar-collapse {
@@ -138,7 +145,7 @@ body {
         border-right: 1px solid white;
         border-left: 1px solid white;
         background-color: rgba(0, 0, 0, 0.849);
-        padding: 15px 10px;
+        padding: 15px 8px;
         text-align: center; }
         @media screen and (max-width: 1199px) {
           .navbar .navbar-collapse .navbar-nav .nav-item {
@@ -604,7 +611,7 @@ body {
     .aside--cronologia,
     .aside-estrenos,
     .aside--FueraMCU {
-      height: 30em; } }
+      height: 28em; } }
   @media screen and (max-width: 400px) {
     .aside--cronologia,
     .aside-estrenos,
