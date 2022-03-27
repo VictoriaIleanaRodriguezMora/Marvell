@@ -17,7 +17,7 @@
   color: red; }
 
 @font-face {
-  font-family: "BalsamiqSans";
+  font-family: "Balsamiq";
   src: url(../fonts/BalsamiqSans-Regular.ttf);
   font-weight: normal;
   font-style: normal; }
@@ -39,6 +39,12 @@
   src: url(../fonts/Captainmarvel-anm9.ttf);
   font-weight: bold;
   font-style: 700; }
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url(../../fonts/Comfortaa-Bold.ttf);
+  font-weight: bold;
+  font-style: normal; }
 
 html {
   box-sizing: border-box;
@@ -390,7 +396,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  font-family: "BalsamiqSans";
+  font-family: "Comfortaa";
   border-radius: 20px;
   background-image: url(../Imagenes/fondos/galaxia-banner.jpg);
   background-size: 100% 150%;
@@ -457,7 +463,7 @@ body {
   border-radius: 20px;
   text-align: center;
   color: white;
-  font-family: "BalsamiqSans";
+  font-family: "Comfortaa";
   box-sizing: border-box;
   grid-area: titulo;
   animation-name: bg_main;
@@ -870,6 +876,21 @@ body {
             font-size: 0.6em; } }
 
 /* Termina SECCION FASES */
+.quizz {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: "Comfortaa"; }
+  .quizz #jugas {
+    background-color: red;
+    font-size: 2rem;
+    width: auto;
+    height: auto;
+    padding: 0.5em;
+    border: 10px solid #860000;
+    border-radius: 44px;
+    color: white; }
+
 #botones {
   display: flex;
   flex-direction: column;

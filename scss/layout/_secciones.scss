@@ -9,7 +9,7 @@
   border-radius: 20px;
   text-align: center;
   color: white;
-  font-family: "BalsamiqSans";
+  font-family: "Comfortaa";
   box-sizing: border-box;
   grid-area: titulo;
   animation-name: bg_main;
@@ -171,11 +171,11 @@
     height: 30em;
   }
   @media screen and (max-width: 850px) {
-  height: 28em;
+    height: 28em;
   }
   @media screen and (max-width: 400px) {
     height: 23em;
-    }
+  }
 }
 .aside--Uni {
   @extend.aside;
@@ -292,7 +292,7 @@
     .primer--articulo {
       @extend.articulos;
       margin-top: 0px;
-      @media screen and (max-width: 1050px){
+      @media screen and (max-width: 1050px) {
         margin-top: 2%;
       }
     }
@@ -453,6 +453,25 @@
   }
 }
 /* Termina SECCION FASES */
+
+// Empieza SECCION QUIZZ
+.quizz {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: "Comfortaa";
+  #jugas {
+    background-color: red;
+    font-size: 2rem;
+    width: auto;
+    height: auto;
+    padding: 0.5em;
+    border: 10px solid #860000;
+    border-radius: 44px;
+    color: white;
+  }
+}
+// Termina SECCION QUIZZ
 
 // botones
 #botones {
