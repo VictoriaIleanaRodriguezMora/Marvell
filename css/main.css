@@ -95,7 +95,7 @@ body {
 
 /* Inicia Header */
 #header {
-  justify-content: flex-end; }
+  justify-content: space-between; }
 
 .navbar {
   margin: 0;
