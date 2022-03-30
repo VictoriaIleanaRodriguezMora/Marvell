@@ -954,9 +954,23 @@ body {
       align-self: center;
       flex-direction: column;
       padding: 2%; }
+      @media screen and (max-width: 900px) {
+        .quizz .contenedor__preguntas .div__pregunta {
+          width: 90%; } }
       .quizz .contenedor__preguntas .div__pregunta .pregunta__titulo {
         color: white;
         font-size: 1.5em; }
+        @media screen and (max-width: 1000px) {
+          .quizz .contenedor__preguntas .div__pregunta .pregunta__titulo {
+            font-size: 1.2em; } }
+        @media screen and (max-width: 800px) {
+          .quizz .contenedor__preguntas .div__pregunta .pregunta__titulo {
+            font-size: 1em; } }
+        .quizz .contenedor__preguntas .div__pregunta .pregunta__titulo .pregunta__opcion {
+          color: black;
+          background-color: white; }
+          .quizz .contenedor__preguntas .div__pregunta .pregunta__titulo .pregunta__opcion:hover {
+            background-color: #5a5a5a; }
 
 #botones {
   display: flex;
