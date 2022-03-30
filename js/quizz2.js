@@ -18,11 +18,18 @@ function elegirJuego() {
             break;
     }
 }
+elegirJuego()
 
 function jugarDeNuevo() {
+    contadorAcertadas = 0
+    contadorDesacertadas = 0
     elijeJuego = parseInt(prompt("Queres jugar de nuevo? \n 1. Sí \n 2. No "))
     elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men \n 3. TODO"))
     elegirJuego()
+}
+
+function alertScore() {
+    alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.`)
 }
 
 function switchUser() {
@@ -58,9 +65,7 @@ function preguntasXMEN() {
     jugarDeNuevo()
 }
 
-function alertScore() {
-    alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.`)
-}
+
 // function todo() {
 //     preguntasXMEN()
 //     preguntasUCM()
