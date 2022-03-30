@@ -644,7 +644,7 @@ body {
   justify-items: center;
   grid-template-columns: 30% 70%;
   grid-column-gap: 0%;
-  grid-template-areas: "titulo titulo" "aside peliculas";
+  grid-template-areas: "titulo titulo" "aside peliculas";
   margin: 1%; }
   @media screen and (max-width: 1050px) {
     #contenedor {
@@ -890,26 +890,52 @@ body {
     font-size: 2rem;
     width: 20%;
     height: auto;
-    padding: 0.5em;
+    padding: 0.7rem;
     border: 10px solid #640000;
     border-radius: 44px;
     color: white;
     transition: 500ms;
     margin: 2%;
     box-sizing: border-box; }
+    @media screen and (max-width: 1300px) {
+      .quizz .jugas, .quizz .categorias .categorias__boton {
+        font-size: 1.8rem; } }
+    @media screen and (max-width: 1100px) {
+      .quizz .jugas, .quizz .categorias .categorias__boton {
+        font-size: 1.6rem;
+        width: 40%; } }
+    @media screen and (max-width: 1000px) {
+      .quizz .jugas, .quizz .categorias .categorias__boton {
+        font-size: 1.4rem;
+        width: 50%; } }
+    @media screen and (max-width: 900px) {
+      .quizz .jugas, .quizz .categorias .categorias__boton {
+        font-size: 1.1rem;
+        width: 60%;
+        border: 7px solid #640000; } }
     .quizz .jugas:hover, .quizz .categorias .categorias__boton:hover {
       background-color: #640000;
       border-color: red; }
   .quizz .categorias {
     display: flex;
     justify-content: space-around;
-    align-content: center;
+    flex-direction: row;
+    align-items: center;
     width: 80%;
     box-sizing: border-box; }
+    @media screen and (max-width: 800px) {
+      .quizz .categorias {
+        flex-direction: column; } }
     .quizz .categorias .categorias__boton {
       border-color: #2600ff;
       background-color: #060052;
       width: 15%; }
+      @media screen and (max-width: 800px) {
+        .quizz .categorias .categorias__boton {
+          width: 30%; } }
+      @media screen and (max-width: 500px) {
+        .quizz .categorias .categorias__boton {
+          width: 50%; } }
       .quizz .categorias .categorias__boton:hover {
         border-color: #060052;
         background-color: #2600ff; }
@@ -918,8 +944,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-sizing: border-box;
-    width: 100vw; }
+    box-sizing: border-box; }
     .quizz .contenedor__preguntas .div__pregunta {
       width: 80%;
       background-color: #000000d5;
