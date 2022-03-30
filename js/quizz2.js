@@ -14,31 +14,42 @@ function elegirJuego() {
         case 3:
             todo()
             break;
-        default:
+        case 0:
             break;
     }
 }
 elegirJuego()
 
+function cerrarJuego() {
+    elijeJuego = parseInt(prompt("Queres jugar de nuevo? \n 1. Sí \n 2. No "))
+    switch (elijeJuego) {
+        case 1:
+            elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men \n 3. TODO"))
+            elegirJuego()
+            break;
+        case 2:
+            break;
+    }
+}
+
 function jugarDeNuevo() {
+    alertScore()
+    cerrarJuego()
     contadorAcertadas = 0
     contadorDesacertadas = 0
-    elijeJuego = parseInt(prompt("Queres jugar de nuevo? \n 1. Sí \n 2. No "))
-    elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men \n 3. TODO"))
-    elegirJuego()
 }
 
 function alertScore() {
     alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.`)
 }
 
-function switchUser() {
+function contadorDePuntos() {
+
     switch (datoUsuario) {
         case 1:
             contadorAcertadas++
             break;
         case 0:
-            alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}`)
             break;
         default:
             contadorDesacertadas++
@@ -47,21 +58,22 @@ function switchUser() {
 }
 
 function preguntasUCM() {
+
     datoUsuario = parseInt(prompt("Que raza es aliada de Loki en Avengers? \n Ingresá el nro correspondiente. \n 1. Chitauri \n 2. Klyntar \n 3. Kronans \n 0. Para salir"))
-    switchUser()
+    contadorDePuntos()
     datoUsuario = parseInt(prompt("¿Por quien consigue Clint la gema del Alma?. \n Ingresá el nro correspondiente. \n 1. Viuda Negra \n 2. Bruja Escarlata \n 3. Gamora \n 4. Carol Danvers \n 0. Para salir"))
-    switchUser()
-    alertScore()
+    contadorDePuntos()
+    contadorDePuntos()
     jugarDeNuevo()
 
 }
 
 function preguntasXMEN() {
+
     datoUsuario = parseInt(prompt("¿Qué personas tiene un premio por intrepretar en live action más veces a un superhéroe de marvel? \n 1. Hugh JackMan & Patrick Stewart \n 2. Hugh JackMan & Robert D. Junior\n 3. Patrick Stewart & Robert D. Junior \n 0. Para salir"))
-    switchUser()
+    contadorDePuntos()
     datoUsuario = parseInt(prompt("¿Por quien consigue Clint la gema del Alma?. \n Ingresá el nro correspondiente. \n 1. Viuda Negra \n 2. Bruja Escarlata \n 3. Gamora \n 4. Carol Danvers \n 0. Para salir"))
-    switchUser()
-    alertScore()
+    contadorDePuntos()
     jugarDeNuevo()
 }
 
@@ -71,13 +83,4 @@ function preguntasXMEN() {
 //     preguntasUCM()
 // }
 
-// function jugar() {
-//     while (datoUsuario != 0) {
-//         switchUser()
-//         datoUsuario = parseInt(prompt("¿Qué personas tiene un premio por intrepretar en live action más veces a un superhéroe de marvel? \n 1. Hugh JackMan & Patrick Stewart \n 2. Hugh JackMan & Robert D. Junior\n 3. Patrick Stewart & Robert D. Junior \n 0. Para salir"))
-//         switchUser()
-// alertScore()
-//
-//     }
-// }
-// jugar()
+// todo()
