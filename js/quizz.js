@@ -1,5 +1,5 @@
 // let jugarSN = parseInt(prompt("Quieres jugar?. \n 1. SÍ \n 2. No"))
-let datoUsuario = parseInt(prompt("¿Por quien consigue Clint la gema del Alma?. \n Ingresá el nro correspondiente. \n 1. Viuda Negra \n 2.Bruja Escarlata \n 3.Gamora \n 4.Carol Danvers \n 0. Para salir"))
+let datoUsuario = parseInt(prompt("¿Por quien consigue Clint la gema del Alma?. \n Ingresá el nro correspondiente. \n 1. Viuda Negra \n 2. Bruja Escarlata \n 3. Gamora \n 4. Carol Danvers \n 0. Para salir"))
 let contadorAcertadas = 0
 let contadorDesacertadas = 0
 
