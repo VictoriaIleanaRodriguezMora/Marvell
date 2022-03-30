@@ -1,4 +1,4 @@
-let elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men \n 3. TODO"))
+let elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men"))
 let datoUsuario
 let contadorAcertadas = 0
 let contadorDesacertadas = 0
