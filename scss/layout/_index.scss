@@ -1,151 +1,148 @@
-/* ESTILOS DEL INDEX.php */
+/* ESTILOS DEL INDEX */
+
 #main__marvel {
-  @include alto-ancho(50%, auto);
-  display: map-get($flexbox, display);
-  justify-content: map-get($flexbox, justify-c);
-  margin: 0 auto;
-  padding: 4% 3%;
-  margin-top: 8%;
-  margin-bottom: 5%;
-  border-radius: 20px;
-  background-image: url(../Imagenes/fondos/galaxia2.jpg);
-  background-size: 100% 110%;
-  object-fit: cover;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 10px white;
-  @media screen and (max-width: 1200px) {
-    width: 70%;
-  }
-  @media screen and (max-width: 950px) {
-    padding: 5% 15%;
-    width: 80%;
-  }
-  @media screen and (max-width: 768px) {
-    width: 90%;
-  background-image: url(../Imagenes/fondos/universo700.jpg);
-
-  }
-  @media screen and (max-width: 650px) {
-    width: 95%;
-  }
-  @media screen and (max-width: 430px) {
-    padding: 7% 0%;
-  }
-  @media screen and (max-width: 360px) {
-    padding: 11% 0%;
-  }
-  @media screen and (max-width: 270px) {
-    margin: 5% 3%;
-  }
-  .marvel__titulo {
+    @include alto-ancho(50%, auto);
     display: map-get($flexbox, display);
-
-          flex-direction: map-get($flexbox, flex-dir-c);
-
-    align-items: center;
-    font-family: "MarvelRegular";
-    color: white;
-    font-size: 4em;
-    letter-spacing: 2px;
-    @media screen and (max-width: 1050px) {
-      font-size: 3.5em;
+    justify-content: map-get($flexbox, justify-c);
+    margin: 0 auto;
+    padding: 4% 3%;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    background-image: url(../Imagenes/fondos/galaxia2.jpg);
+    background-size: 100% 110%;
+    object-fit: cover;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px white;
+    @media screen and (max-width: 1200px) {
+        width: 70%;
     }
-    @media screen and (max-width: 900px) {
-      font-size: 3em;
+    @media screen and (max-width: 950px) {
+        padding: 5% 15%;
+        width: 80%;
     }
     @media screen and (max-width: 768px) {
-      font-size: 2.8em;
+        width: 90%;
+        background-image: url(../Imagenes/fondos/universo700.jpg);
     }
-    @media screen and (max-width: 400px) {
-      font-size: 2.5em;
+    @media screen and (max-width: 650px) {
+        width: 95%;
     }
-    .marvel__span {
-      transition: 1s;
-      display: block;
-      margin: 0 auto;
-      &:hover {
-        transform: scale(1.2, 1.2);
-        cursor: pointer;
-      }
+    @media screen and (max-width: 430px) {
+        padding: 7% 0%;
     }
-  }
+    @media screen and (max-width: 360px) {
+        padding: 11% 0%;
+    }
+    @media screen and (max-width: 270px) {
+        margin: 5% 3%;
+    }
+    .marvel__titulo {
+        display: map-get($flexbox, display);
+        flex-direction: map-get($flexbox, flex-dir-c);
+        align-items: center;
+        font-family: "MarvelRegular";
+        color: white;
+        font-size: 4em;
+        letter-spacing: 2px;
+        @media screen and (max-width: 1050px) {
+            font-size: 3.5em;
+        }
+        @media screen and (max-width: 900px) {
+            font-size: 3em;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 2.8em;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 2.5em;
+        }
+        .marvel__span {
+            transition: 1s;
+            display: block;
+            margin: 0 auto;
+            &:hover {
+                transform: scale(1.2, 1.2);
+                cursor: pointer;
+            }
+        }
+    }
 }
+
 #section__presentacion {
-  @include alto-ancho(70%, auto);
-  padding: 2%;
-  background-color: rgb(148, 9, 9);
-  color: white;
-  display: map-get($flexbox, display);
-  justify-content: map-get($flexbox, justify-c);
-  flex-direction: map-get($flexbox, flex-dir-c);
-  margin: 0 auto;
-  font-family: "Comfortaa";
-  border-radius: 20px;
-  background-image: url(../Imagenes/fondos/galaxia-banner.jpg);
-  background-size: 100% 150%;
-  object-fit: cover;
-  box-shadow: 0px 0px 10px #0d004b;
-
-  @media screen and (max-width: 950px) {
-    width: auto;
-    margin: 5%;
-  }
-  @media screen and (max-width: 700px) {
-    background-image: url(../Imagenes/fondos/galaxia-banner700.jpg);
-
-  }
-  .presentacion__h2 {
-    font-size: 1.6em;
-  }
-  .presentacion__titulo {
-    font-size: 1.4em;
-  }
-  .presentacion__parrafo {
-    font-size: 1.3em;
-  }
-  @media screen and (max-width: 768px) {
-    margin: 50px;
+    @include alto-ancho(70%, auto);
+    padding: 2%;
+    background-color: rgb(148, 9, 9);
+    color: white;
+    display: map-get($flexbox, display);
+    justify-content: map-get($flexbox, justify-c);
+    flex-direction: map-get($flexbox, flex-dir-c);
+    margin: 0 auto;
+    font-family: "Comfortaa";
+    border-radius: 20px;
+    background-image: url(../Imagenes/fondos/galaxia-banner.jpg);
+    background-size: 100% 150%;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px #0d004b;
+    @media screen and (max-width: 950px) {
+        width: auto;
+        margin: 5%;
+    }
+    @media screen and (max-width: 700px) {
+        background-image: url(../Imagenes/fondos/galaxia-banner700.jpg);
+    }
     .presentacion__h2 {
-      font-size: 1.5em;
+        font-size: 1.6em;
     }
     .presentacion__titulo {
-      font-size: 1.3em;
+        font-size: 1.4em;
     }
     .presentacion__parrafo {
-      font-size: 1.2em;
+        font-size: 1.3em;
     }
-  }
-  @media screen and (max-width: 650px) {
-    margin: 40px;
-  }
-  @media screen and (max-width: 530px) {
-    margin: 25px;
-  }
-  @media screen and (max-width: 430px) {
-    margin: 15px;
-  }
-  @media screen and (max-width: 360px) {
-    margin: 10px;
-    .presentacion__h2 {
-      font-size: 1.4em;
+    @media screen and (max-width: 768px) {
+        margin: 50px;
+        .presentacion__h2 {
+            font-size: 1.5em;
+        }
+        .presentacion__titulo {
+            font-size: 1.3em;
+        }
+        .presentacion__parrafo {
+            font-size: 1.2em;
+        }
     }
-    .presentacion__titulo {
-      font-size: 1.2em;
+    @media screen and (max-width: 650px) {
+        margin: 40px;
     }
-    .presentacion__parrafo {
-      font-size: 1.1em;
+    @media screen and (max-width: 530px) {
+        margin: 25px;
     }
-  }
-  @media screen and (max-width: 250px) {
-    margin: 10px;
-    .presentacion__h2 {
-      font-size: 1.3em;
+    @media screen and (max-width: 430px) {
+        margin: 15px;
     }
-    .presentacion__titulo {
-      font-size: 1.1em;
+    @media screen and (max-width: 360px) {
+        margin: 10px;
+        .presentacion__h2 {
+            font-size: 1.4em;
+        }
+        .presentacion__titulo {
+            font-size: 1.2em;
+        }
+        .presentacion__parrafo {
+            font-size: 1.1em;
+        }
     }
-    .presentacion__parrafo {
-      font-size: 1em;
+    @media screen and (max-width: 250px) {
+        margin: 10px;
+        .presentacion__h2 {
+            font-size: 1.3em;
+        }
+        .presentacion__titulo {
+            font-size: 1.1em;
+        }
+        .presentacion__parrafo {
+            font-size: 1em;
+        }
     }
-  }
 }

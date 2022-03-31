@@ -18,7 +18,7 @@ function elegirJuego() {
             todo()
             break;
             // El caso 0, no me funciona como el caso 2 de jugarDeNuevo(). No se rompe si el usuario ingresa 0.
-        case 0:
+        default:
             break;
     }
 }
@@ -56,10 +56,18 @@ function contadorDePuntos() {
         case 1:
             contadorAcertadas++
             break;
+        case 2:
+            contadorDesacertadas++
+            break;
+        case 3:
+            contadorDesacertadas++
+            break;
+        case 4:
+            contadorDesacertadas++
+            break;
         case 0:
             break;
         default:
-            contadorDesacertadas++
             break;
     }
 }
