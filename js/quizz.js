@@ -4,7 +4,7 @@ let contadorDesacertadas = 0
 
 let elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men"))
     //elijeJuego inicialmente pude valer 1 || 2
-    //Pero
+    //Pero despues puede tomar 4 valores 1, 2, 3 y 0
 
 function elegirJuego() {
     switch (elijeJuego) {
@@ -17,23 +17,20 @@ function elegirJuego() {
         case 3:
             todo()
             break;
+            // El caso 0, no me funciona como el caso 2 de jugarDeNuevo(). No se rompe si el usuario ingresa 0.
         case 0:
             break;
     }
 }
+// Si no se ejecuta, no inicia el juego
 elegirJuego()
 
 // Se ejecuta una vez finalizadas las preguntas. Y reestablece los contadores, para jugar de nuevo.
+//Es de callback
 
 function jugarDeNuevo() {
     alertScore()
     contadorAcertadas = 0
-    contadorDesacertadas = 0
-    cerrarJuego()
-}
-
-// Esta funcion se ejecuta en jugarDeNuevo. Es de callback
-function cerrarJuego() {
     elijeJuego = parseInt(prompt("Queres jugar de nuevo? \n 1. Sí \n 2. No "))
     switch (elijeJuego) {
         case 1:
@@ -41,6 +38,7 @@ function cerrarJuego() {
             elegirJuego()
             break;
         case 2:
+            // si el usuario ingresa 2, acá sis e rompe.
             break;
     }
 }
