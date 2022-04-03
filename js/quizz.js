@@ -2,8 +2,6 @@ let datoUsuario
 let contadorAcertadas = 0
 let contadorDesacertadas = 0
 
-
-
 class Pregunta {
     constructor(pregunta, opciones, datoDelUsuario) {
         this.pregunta = pregunta;
