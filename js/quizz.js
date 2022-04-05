@@ -1,7 +1,7 @@
 let datoUsuario
 let contadorAcertadas = 0
 let contadorDesacertadas = 0
-
+let preguntasTotales = 0
 class Pregunta {
     constructor(pregunta, opciones, datoDelUsuario) {
         this.pregunta = pregunta;
@@ -13,7 +13,7 @@ class Pregunta {
         this.datoDelUsuario = parseInt(prompt(this.pregunta + this.opciones))
     }
     contadorDePuntos() {
-
+        preguntasTotales++
         if (this.datoDelUsuario != 1 && this.datoDelUsuario != 0) {
             contadorDesacertadas++
         } else if (this.datoDelUsuario == 0) {
@@ -23,12 +23,21 @@ class Pregunta {
         }
     }
     alertScore() {
-        alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.`)
+        if (contadorAcertadas < preguntasTotales * 10 / 100) {
+            alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.\nCreo que vos no sabes lo que es Marvel.`)
+        } else if (contadorAcertadas < preguntasTotales * 30 / 100) {
+            alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.\nBueno, nadie es perfecto...`)
+        } else if (contadorAcertadas == preguntasTotales * 50 / 100) {
+            alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.\nBien! Seguro que podes hacerlo mejor`)
+        } else if (contadorAcertadas == preguntasTotales * 100 / 100) {
+            alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.\nSos un expert@!`)
+        }
     }
     jugarDeNuevo() {
         this.alertScore()
         contadorAcertadas = 0
         contadorDesacertadas = 0
+        preguntasTotales = 0
         elijeJuego = parseInt(prompt("Queres jugar de nuevo? \n 1. Sí \n 2. No "))
         switch (elijeJuego) {
             case 1:
