@@ -2,19 +2,19 @@ let datoUsuario
 let contadorAcertadas = 0
 let contadorDesacertadas = 0
 let preguntasTotales = 0
-let arrayPreguntas = []
 let preguntasFiltradas
+
 class Pregunta {
     constructor(pregunta, opciones, datoDelUsuario) {
-        this.pregunta = pregunta;
-        this.opciones = opciones;
-        this.datoDelUsuario = datoDelUsuario;
+            this.pregunta = pregunta;
+            this.opciones = opciones;
+            this.datoDelUsuario = datoDelUsuario;
 
-    }
-    arrayPreguntasF(funcion) {
-        arrayPreguntas.push(funcion(this.pregunta))
+        }
+        // arrayPreguntasF(funcion) {
+        //     arrayPreguntas.push(funcion(this.pregunta))
 
-    }
+    // }
 
     mostrarPregunta() {
         this.datoDelUsuario = parseInt(prompt(this.pregunta + this.opciones))
@@ -75,10 +75,13 @@ function preguntasUCM() {
     preguntaUCM3.mostrarPregunta()
     preguntaUCM3.contadorDePuntos()
 
-    preguntaUCM3.jugarDeNuevo()
-    arrayPreguntasF(preguntasUCM())
+    jugarDeNuevo()
+        // preguntaUCM3.arrayPreguntasF(preguntasUCM())
 
+    let arrayPreguntas = Object.values(preguntasUCM())
+    console.log(arrayPreguntas)
 }
+
 
 function preguntasXMEN() {
     let preguntaXMEN1 = new Pregunta("¿Qué personas tiene un premio por intrepretar en live action más veces a un superhéroe de marvel? \n Ingresá el numero correspondiente.",
@@ -117,7 +120,7 @@ function preguntasXMEN() {
     preguntaXMEN7.mostrarPregunta()
     preguntaXMEN7.contadorDePuntos()
 
-    preguntaXMEN7.jugarDeNuevo()
+    jugarDeNuevo()
 }
 
 function preguntasTodo() {
@@ -169,8 +172,9 @@ function preguntasTodo() {
     preguntaTodo9.contadorDePuntos()
 
 
-    preguntaTodo9.jugarDeNuevo()
+    jugarDeNuevo()
 }
+// Inicia el juego 
 let elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men \n 3. TODO"))
 
 function elegirJuego() {
