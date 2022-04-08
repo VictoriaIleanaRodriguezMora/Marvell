@@ -2,6 +2,7 @@ let datoUsuario
 let contadorAcertadas = 0
 let contadorDesacertadas = 0
 let preguntasTotales = 0
+arrayPreguntas = []
 class Pregunta {
     constructor(pregunta, opciones, datoDelUsuario) {
         this.pregunta = pregunta;
@@ -9,9 +10,17 @@ class Pregunta {
         this.datoDelUsuario = datoDelUsuario;
 
     }
+
+    // guardar() {
+    //     for (let pregunta of this.pregunta) {
+    //         arrayPreguntas.push(pregunta)
+    //         console.log(pregunta);
+    //     }
+    // }
     mostrarPregunta() {
         this.datoDelUsuario = parseInt(prompt(this.pregunta + this.opciones))
     }
+
     contadorDePuntos() {
         preguntasTotales++
         if (this.datoDelUsuario != 1 && this.datoDelUsuario != 0) {
@@ -68,6 +77,7 @@ function preguntasUCM() {
     preguntaUCM3.mostrarPregunta()
     preguntaUCM3.contadorDePuntos()
 
+    arrayPreguntas = [preguntaUCM1, preguntaUCM2, preguntaUCM3]
     preguntaUCM3.jugarDeNuevo()
 }
 
