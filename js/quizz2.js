@@ -3,7 +3,7 @@ let contadorAcertadas = 0
 let contadorDesacertadas = 0
 let preguntasTotales = 0
 let preguntasFiltradas
-let arrPreguntas = []
+let preguntasUCM = []
 class Pregunta {
     constructor(pregunta, opciones, datoDelUsuario) {
         this.pregunta = pregunta;
@@ -55,24 +55,30 @@ class Pregunta {
 
 }
 
-function preguntasUCM() {
+function showQuestion(array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i].pregunta)
+    }
+}
+
+function preguntasUCMF() {
     let preguntaUCM1 = new Pregunta("Que raza es aliada de Loki en Avengers? Ingresá el numero correspondiente.",
         "\n1. Chitauri \n 2. Klyntar \n 3. Kronans \n 0. Para salir", datoUsuario)
     preguntaUCM1.mostrarPregunta()
     preguntaUCM1.contadorDePuntos()
-    arrPreguntas.push(preguntaUCM1)
+    preguntasUCM.push(preguntaUCM1)
     let preguntaUCM2 = new Pregunta("¿Por quien consigue Clint la gema del Alma? \n Ingresá el nro correspondiente.",
         "\n 1. Viuda Negra \n 2. Bruja Escarlata \n 3. Gamora \n 4. Carol Danvers \n 0. Para salir", datoUsuario)
     preguntaUCM2.mostrarPregunta()
     preguntaUCM2.contadorDePuntos()
-    arrPreguntas.push(preguntaUCM2)
+    preguntasUCM.push(preguntaUCM2)
 
     let preguntaUCM3 = new Pregunta("¿Que Avenger crea a Vision? \n Ingresá el nro correspondiente.",
         "\n 1. Iron Man \n 2. Thor \n 3. Bruja Escarlata \n 4. Clint \n 0. Para salir", datoUsuario)
     preguntaUCM3.mostrarPregunta()
     preguntaUCM3.contadorDePuntos()
-    arrPreguntas.push(preguntaUCM3)
-    console.log(arrPreguntas)
+    preguntasUCM.push(preguntaUCM3)
+    showQuestion(preguntasUCM)
     preguntaUCM3.jugarDeNuevo()
 
 }
@@ -175,7 +181,7 @@ let elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el 
 function elegirJuego() {
     switch (elijeJuego) {
         case 1:
-            preguntasUCM()
+            preguntasUCMF()
             break;
         case 2:
             preguntasXMEN()
