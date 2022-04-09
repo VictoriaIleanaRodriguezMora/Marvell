@@ -5,9 +5,59 @@ let preguntasTotales = 0
 let arrPreguntasUCM = []
 let arrPreguntasXMEN = []
 let arrPreguntasTodo = []
-let nroRandom;
+let nroRandom = [0, 1, 2, 3, 4];
+
+// Recibe un array por parametro
+function showQuestion(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        //Genera un numero random, no me anduvo con sort
+        nroRandom = Math.floor(Math.random() * (arr.length))
+            //Ubico a mi array, en la posicion del numero aleatorio
+        datoUsuario = parseInt(prompt(`${arr[nroRandom].pregunta} \n ${arr[nroRandom].opciones}`))
+            // Evaluo lo ingresado. Linea 25
+        contadorDePuntos(arr);
+    }
+    //Linea 74
+    jugarDeNuevo();
+}
+
+//Funcion validadora y contadora
+function contadorDePuntos(arr) {
+    //Este while, si ingreso 0 no termina el bucle
+    while (datoUsuario != 0) {
+        if (isNaN(datoUsuario)) {
+            alert("Debes ingresar una opcion válida.")
+            showQuestion(arr);
+        }
+        if (datoUsuario < 0 || datoUsuario > arr.length) {
+            alert("Debes ingresar una opcion válida.")
+            showQuestion(arr);
+        }
+        //Si se ejecuta este if, suma a dichas variables. Y termina de ejecutar showQuestion() Linea 75
+        if (datoUsuario == 1) {
+            contadorAcertadas++
+            preguntasTotales++
+
+        } else if (datoUsuario > 0 || datoUsuario <= arr.length) {
+            contadorDesacertadas++
+            preguntasTotales++
+
+        } else if (datoUsuario == 0) {
+            //No lo termina, ni muestra eso por consola
+            console.log("break");
+            return;
+        }
+        //No lo termina, ni muestra eso por consola
+        console.log("break");
+        return;
+    }
+
+
+}
+
 
 function alertScore() {
+    //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
     if (contadorAcertadas < preguntasTotales * 10 / 100) {
         alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.\nCreo que vos no sabes lo que es Marvel.`)
     } else if (contadorAcertadas < preguntasTotales * 30 / 100) {
@@ -22,50 +72,26 @@ function alertScore() {
 }
 
 function jugarDeNuevo() {
+    //Muestro el puntaje
     alertScore()
+        //Reinicio los contador
     contadorAcertadas = 0
     contadorDesacertadas = 0
     preguntasTotales = 0
+        //Pregunto si quiere jugar
     elijeJuego = parseInt(prompt("Queres jugar de nuevo? \n 1. Sí \n 2. No "))
     switch (elijeJuego) {
+        //Si elije este caso, va a la linea 200
         case 1:
             elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men \n 3. TODO"))
             elegirJuego()
             break;
         case 2:
-            console.log("break");
             break;
     }
 }
 
-function contadorDePuntos(arr) {
-    preguntasTotales++
-
-    if (datoUsuario > 0 && datoUsuario <= 4 && datoUsuario != 1) {
-        contadorDesacertadas++
-    } else if (datoUsuario == 1) {
-        contadorAcertadas++
-    } else if (datoUsuario == 0) {
-        console.log("break");
-    } else {
-        alert("Empezaras de nuevo, debes ingresar una opcion válida.")
-        contadorAcertadas = 0
-        contadorDesacertadas = 0
-        preguntasTotales = 0
-        showQuestion(arr);
-    }
-
-}
-
-
-function showQuestion(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        nroRandom = Math.floor(Math.random() * (arr.length))
-        datoUsuario = parseInt(prompt(`${arr[nroRandom].pregunta} \n ${arr[nroRandom].opciones}`))
-        contadorDePuntos(arr);
-    }
-    jugarDeNuevo();
-}
+// Arrays de Objetos. Preguntas y opciones
 arrPreguntasUCM = [{
         pregunta: "¿Que raza es aliada de Loki en Avengers? Ingresá el numero correspondiente.",
         opciones: [" 1. Chitauri", " 2. Klyntar", " 3. Kronans", " 0. Para salir "]
@@ -166,8 +192,10 @@ function preguntasTodoF() {
     showQuestion(arrPreguntasTodo)
 
 }
+// Arrays de Objetos. Preguntas y opciones
+
 // Inicia el juego 
-let elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men \n 3. TODO \n 4. Cancelar"))
+let elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men \n 3. TODO \n 0. Cancelar"))
 
 function elegirJuego() {
     switch (elijeJuego) {
@@ -179,13 +207,11 @@ function elegirJuego() {
             break;
         case 3:
             preguntasTodoF()
-        case 4:
+        case 0:
             break;
+        default:
+            elegirJuego()
             break;
-            // default:
-            //     elijeJuego = parseInt(prompt("Ingresa una opcion. \n 1. UCM \n 2. X-men \n 3. TODO \n 4. Cancelar"))
-            //     elegirJuego()
-            //     break;
     }
 }
 // Si no se ejecuta, no inicia el juego
