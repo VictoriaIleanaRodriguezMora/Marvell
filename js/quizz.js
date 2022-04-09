@@ -11,12 +11,6 @@ class Pregunta {
 
     }
 
-    // guardar() {
-    //     for (let pregunta of this.pregunta) {
-    //         arrayPreguntas.push(pregunta)
-    //         console.log(pregunta);
-    //     }
-    // }
     mostrarPregunta() {
         this.datoDelUsuario = parseInt(prompt(this.pregunta + this.opciones))
     }
