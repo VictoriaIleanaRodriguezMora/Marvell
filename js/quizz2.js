@@ -13,10 +13,6 @@ class Pregunta {
         this.datoDelUsuario = datoDelUsuario;
 
     }
-    mostrarPregunta() {
-        this.datoDelUsuario = parseInt(prompt(this.pregunta + this.opciones))
-    }
-
     contadorDePuntos() {
         preguntasTotales++
         if (this.datoDelUsuario != 1 && this.datoDelUsuario != 0) {
@@ -53,12 +49,15 @@ class Pregunta {
                 break;
         }
     }
+    mostrarPreguntaRandom() {
+        return this.datoDelUsuario = parseInt(prompt(Math.ceil(Math.random() * this.pregunta.length - 1) + this.pregunta + this.opciones))
+    }
 
 }
 
 function showQuestion(array) {
     for (let i = 0; i < array.length; i++) {
-        array[i].mostrarPregunta()
+        array[i].mostrarPreguntaRandom()
         array[i].contadorDePuntos()
     }
     array[0].jugarDeNuevo();
