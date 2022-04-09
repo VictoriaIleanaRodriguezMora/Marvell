@@ -2,8 +2,10 @@ let datoUsuario
 let contadorAcertadas = 0
 let contadorDesacertadas = 0
 let preguntasTotales = 0
-let preguntasFiltradas
-let preguntasUCM = []
+let arrPreguntasUCM = []
+let arrPreguntasXMEN = []
+let arrPreguntasTodo = []
+
 class Pregunta {
     constructor(pregunta, opciones, datoDelUsuario) {
         this.pregunta = pregunta;
@@ -11,7 +13,6 @@ class Pregunta {
         this.datoDelUsuario = datoDelUsuario;
 
     }
-
     mostrarPregunta() {
         this.datoDelUsuario = parseInt(prompt(this.pregunta + this.opciones))
     }
@@ -57,123 +58,62 @@ class Pregunta {
 
 function showQuestion(array) {
     for (let i = 0; i < array.length; i++) {
-        console.log(array[i].pregunta)
+        array[i].mostrarPregunta()
+        array[i].contadorDePuntos()
     }
+    array[0].jugarDeNuevo();
 }
+arrPreguntasUCM = [
+    new Pregunta("Que raza es aliada de Loki en Avengers? Ingresá el numero correspondiente.", "\n1. Chitauri \n 2. Klyntar \n 3. Kronans \n 0. Para salir", datoUsuario),
+    new Pregunta("¿Por quien consigue Clint la gema del Alma? \n Ingresá el nro correspondiente.",
+        "\n 1. Viuda Negra \n 2. Bruja Escarlata \n 3. Gamora \n 4. Carol Danvers \n 0. Para salir", datoUsuario),
+    new Pregunta("¿Que Avenger crea a Vision? \n Ingresá el nro correspondiente.",
+        "\n 1. Iron Man \n 2. Thor \n 3. Bruja Escarlata \n 4. Clint \n 0. Para salir", datoUsuario)
+]
 
 function preguntasUCMF() {
-    let preguntaUCM1 = new Pregunta("Que raza es aliada de Loki en Avengers? Ingresá el numero correspondiente.",
-        "\n1. Chitauri \n 2. Klyntar \n 3. Kronans \n 0. Para salir", datoUsuario)
-    preguntaUCM1.mostrarPregunta()
-    preguntaUCM1.contadorDePuntos()
-    preguntasUCM.push(preguntaUCM1)
-    let preguntaUCM2 = new Pregunta("¿Por quien consigue Clint la gema del Alma? \n Ingresá el nro correspondiente.",
-        "\n 1. Viuda Negra \n 2. Bruja Escarlata \n 3. Gamora \n 4. Carol Danvers \n 0. Para salir", datoUsuario)
-    preguntaUCM2.mostrarPregunta()
-    preguntaUCM2.contadorDePuntos()
-    preguntasUCM.push(preguntaUCM2)
-
-    let preguntaUCM3 = new Pregunta("¿Que Avenger crea a Vision? \n Ingresá el nro correspondiente.",
-        "\n 1. Iron Man \n 2. Thor \n 3. Bruja Escarlata \n 4. Clint \n 0. Para salir", datoUsuario)
-    preguntaUCM3.mostrarPregunta()
-    preguntaUCM3.contadorDePuntos()
-    preguntasUCM.push(preguntaUCM3)
-    showQuestion(preguntasUCM)
-    preguntaUCM3.jugarDeNuevo()
-
+    showQuestion(arrPreguntasUCM)
 }
 
+arrPreguntasXMEN = [
+        new Pregunta("¿Qué personas tiene un premio por intrepretar en live action más veces a un superhéroe de marvel? \n Ingresá el numero correspondiente.", "\n 1. Hugh JackMan & Patrick Stewart \n 2. Hugh JackMan & Robert D. Junior\n 3. Patrick Stewart & Robert D. Junior \n 0. Para salir", datoUsuario),
+        new Pregunta("¿En que pelicula Wolverine viaja al pasado? \n Ingresá el nro correspondiente.",
+            "\n 1. X-men Dias del Futuro Pasado \n 2. X-men 0rigenes \n 3. X-men 2 \n 0. Para salir", datoUsuario),
+        new Pregunta("¿Como se llama la nave de los X-men? \n Ingresá el nro correspondiente.",
+            "\n 1. X-jet \n 2. X-ship \n 3. X-moon", datoUsuario),
+        new Pregunta("¿Que accidente tiene Charles Xavier que lo deja invalido? \n Ingresá el nro correspondiente.", "\n 1. Tiro en la espina dorsal \n 2. Accidente de auto \n 3. Golpe en la cabeza", datoUsuario),
+        new Pregunta("¿En donde ocurre 'La Batalla Final' donde Logan tiene que matar a Phoenix? \n Ingresá el nro correspondiente.", "\n 1. Alcatraz \n 2. Genosha \n 3. Canada", datoUsuario),
+        new Pregunta("¿Donde nació Lobezno? \n Ingresá el nro correspondiente.", "\n 1. Canada \n 2. EEUU \n 3. Inglaterra", datoUsuario),
+        new Pregunta("¿Cual es el verdadero nombre de Logan? \n Ingresá el nro correspondiente.",
+            "\n 1. Shimmy \n 2. James \n 3. David", datoUsuario)
 
-function preguntasXMEN() {
-    let preguntaXMEN1 = new Pregunta("¿Qué personas tiene un premio por intrepretar en live action más veces a un superhéroe de marvel? \n Ingresá el numero correspondiente.",
-        "\n 1. Hugh JackMan & Patrick Stewart \n 2. Hugh JackMan & Robert D. Junior\n 3. Patrick Stewart & Robert D. Junior \n 0. Para salir", datoUsuario)
-    preguntaXMEN1.mostrarPregunta()
-    preguntaXMEN1.contadorDePuntos()
+    ]
+    //lo ves? perdon jaja
+function preguntasXMENF() {
+    showQuestion(arrPreguntasXMEN)
 
-    let preguntaXMEN2 = new Pregunta("¿En que pelicula Wolverine viaja al pasado? \n Ingresá el nro correspondiente.",
-        "\n 1. X-men Dias del Futuro Pasado \n 2. X-men 0rigenes \n 3. X-men 2 \n 0. Para salir", datoUsuario)
-    preguntaXMEN2.mostrarPregunta()
-    preguntaXMEN2.contadorDePuntos()
-
-    let preguntaXMEN3 = new Pregunta("¿Como se llama la nave de los X-men? \n Ingresá el nro correspondiente.",
-        "\n 1. X-jet \n 2. X-ship \n 3. X-moon", datoUsuario)
-    preguntaXMEN3.mostrarPregunta()
-    preguntaXMEN3.contadorDePuntos()
-
-    let preguntaXMEN4 = new Pregunta("¿Que accidente tiene Charles Xavier que lo deja invalido? \n Ingresá el nro correspondiente.",
-        "\n 1. Tiro en la espina dorsal \n 2. Accidente de auto \n 3. Golpe en la cabeza", datoUsuario)
-    preguntaXMEN4.mostrarPregunta()
-    preguntaXMEN4.contadorDePuntos()
-
-
-    let preguntaXMEN5 = new Pregunta("¿En donde ocurre 'La Batalla Final' donde Logan tiene que matar a Phoenix? \n Ingresá el nro correspondiente.",
-        "\n 1. Alcatraz \n 2. Genosha \n 3. Canada", datoUsuario)
-    preguntaXMEN5.mostrarPregunta()
-    preguntaXMEN5.contadorDePuntos()
-
-    let preguntaXMEN6 = new Pregunta("¿Donde nació Lobezno? \n Ingresá el nro correspondiente.",
-        "\n 1. Canada \n 2. EEUU \n 3. Inglaterra", datoUsuario)
-    preguntaXMEN6.mostrarPregunta()
-    preguntaXMEN6.contadorDePuntos()
-
-    let preguntaXMEN7 = new Pregunta("¿Cual es el verdadero nombre de Logan? \n Ingresá el nro correspondiente.",
-        "\n 1. Shimmy \n 2. James \n 3. David", datoUsuario)
-    preguntaXMEN7.mostrarPregunta()
-    preguntaXMEN7.contadorDePuntos()
-
-    preguntaXMEN7.jugarDeNuevo()
 }
-
-function preguntasTodo() {
-
-    let preguntaTodo1 = new Pregunta("¿Qué personas tiene un premio por intrepretar en live action más veces a un superhéroe de marvel? \n Ingresá el numero correspondiente.",
-        "\n 1. Hugh JackMan & Patrick Stewart \n 2. Hugh JackMan & Robert D. Junior\n 3. Patrick Stewart & Robert D. Junior \n 0. Para salir", datoUsuario)
-    preguntaTodo1.mostrarPregunta()
-    preguntaTodo1.contadorDePuntos()
-
-    let preguntaTodo2 = new Pregunta("¿En que pelicula Wolverine viaja al pasado? \n Ingresá el nro correspondiente.",
-        "\n 1. X-men Dias del Futuro Pasado \n 2. X-men 0rigenes \n 3. X-men 2 \n 0. Para salir", datoUsuario)
-    preguntaTodo2.mostrarPregunta()
-    preguntaTodo2.contadorDePuntos()
-
-    let preguntaTodo3 = new Pregunta("¿Como se llama la nave de los X-men? \n Ingresá el nro correspondiente.",
-        "\n 1. X-jet \n 2. X-ship \n 3. X-moon", datoUsuario)
-    preguntaTodo3.mostrarPregunta()
-    preguntaTodo3.contadorDePuntos()
-
-    let preguntaTodo4 = new Pregunta("¿Que accidente tiene Charles Xavier que lo deja invalido? \n Ingresá el nro correspondiente.",
-        "\n 1. Tiro en la espina dorsal \n 2. Accidente de auto \n 3. Golpe en la cabeza", datoUsuario)
-    preguntaTodo4.mostrarPregunta()
-    preguntaTodo4.contadorDePuntos()
-
-
-    let preguntaTodo5 = new Pregunta("¿En donde ocurre 'La Batalla Final' donde Logan tiene que matar a Phoenix? \n Ingresá el nro correspondiente.",
-        "\n 1. Alcatraz \n 2. Genosha \n 3. Canada", datoUsuario)
-    preguntaTodo5.mostrarPregunta()
-    preguntaTodo5.contadorDePuntos()
-
-    let preguntaTodo6 = new Pregunta("¿Donde nació Lobezno? \n Ingresá el nro correspondiente.",
-        "\n 1. Canada \n 2. EEUU \n 3. Inglaterra", datoUsuario)
-    preguntaTodo6.mostrarPregunta()
-    preguntaTodo6.contadorDePuntos()
-
-    let preguntaTodo7 = new Pregunta("¿Cual es el verdadero nombre de Logan? \n Ingresá el nro correspondiente.",
+arrPreguntasTodo = [
+    new Pregunta("Que raza es aliada de Loki en Avengers? Ingresá el numero correspondiente.", "\n1. Chitauri \n 2. Klyntar \n 3. Kronans \n 0. Para salir", datoUsuario),
+    new Pregunta("¿Por quien consigue Clint la gema del Alma? \n Ingresá el nro correspondiente.",
+        "\n 1. Viuda Negra \n 2. Bruja Escarlata \n 3. Gamora \n 4. Carol Danvers \n 0. Para salir", datoUsuario),
+    new Pregunta("¿Que Avenger crea a Vision? \n Ingresá el nro correspondiente.",
+        "\n 1. Iron Man \n 2. Thor \n 3. Bruja Escarlata \n 4. Clint \n 0. Para salir", datoUsuario),
+    new Pregunta("¿Qué personas tiene un premio por intrepretar en live action más veces a un superhéroe de marvel? \n Ingresá el numero correspondiente.", "\n 1. Hugh JackMan & Patrick Stewart \n 2. Hugh JackMan & Robert D. Junior\n 3. Patrick Stewart & Robert D. Junior \n 0. Para salir", datoUsuario),
+    new Pregunta("¿En que pelicula Wolverine viaja al pasado? \n Ingresá el nro correspondiente.",
+        "\n 1. X-men Dias del Futuro Pasado \n 2. X-men 0rigenes \n 3. X-men 2 \n 0. Para salir", datoUsuario),
+    new Pregunta("¿Como se llama la nave de los X-men? \n Ingresá el nro correspondiente.",
+        "\n 1. X-jet \n 2. X-ship \n 3. X-moon", datoUsuario),
+    new Pregunta("¿Que accidente tiene Charles Xavier que lo deja invalido? \n Ingresá el nro correspondiente.", "\n 1. Tiro en la espina dorsal \n 2. Accidente de auto \n 3. Golpe en la cabeza", datoUsuario),
+    new Pregunta("¿En donde ocurre 'La Batalla Final' donde Logan tiene que matar a Phoenix? \n Ingresá el nro correspondiente.", "\n 1. Alcatraz \n 2. Genosha \n 3. Canada", datoUsuario),
+    new Pregunta("¿Donde nació Lobezno? \n Ingresá el nro correspondiente.", "\n 1. Canada \n 2. EEUU \n 3. Inglaterra", datoUsuario),
+    new Pregunta("¿Cual es el verdadero nombre de Logan? \n Ingresá el nro correspondiente.",
         "\n 1. Shimmy \n 2. James \n 3. David", datoUsuario)
-    preguntaTodo7.mostrarPregunta()
-    preguntaTodo7.contadorDePuntos()
+];
 
-    let preguntaTodo8 = new Pregunta("Que raza es aliada de Loki en Avengers? Ingresá el numero correspondiente.",
-        "\n1. Chitauri \n 2. Klyntar \n 3. Kronans \n 0. Para salir", datoUsuario)
-    preguntaTodo8.mostrarPregunta()
-    preguntaTodo8.contadorDePuntos()
+function preguntasTodoF() {
+    showQuestion(arrPreguntasTodo)
 
-    let preguntaTodo9 = new Pregunta("¿Por quien consigue Clint la gema del Alma? \n Ingresá el nro correspondiente.",
-        "\n 1. Viuda Negra \n 2. Bruja Escarlata \n 3. Gamora \n 4. Carol Danvers \n 0. Para salir", datoUsuario)
-    preguntaTodo9.mostrarPregunta()
-    preguntaTodo9.contadorDePuntos()
-
-
-    preguntaTodo9.jugarDeNuevo()
 }
 // Inicia el juego 
 let elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men \n 3. TODO"))
@@ -184,10 +124,10 @@ function elegirJuego() {
             preguntasUCMF()
             break;
         case 2:
-            preguntasXMEN()
+            preguntasXMENF()
             break;
         case 3:
-            preguntasTodo()
+            preguntasTodoF()
             break;
         default:
             break;
