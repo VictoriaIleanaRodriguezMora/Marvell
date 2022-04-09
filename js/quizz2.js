@@ -3,18 +3,14 @@ let contadorAcertadas = 0
 let contadorDesacertadas = 0
 let preguntasTotales = 0
 let preguntasFiltradas
-
+let arrPreguntas = []
 class Pregunta {
     constructor(pregunta, opciones, datoDelUsuario) {
-            this.pregunta = pregunta;
-            this.opciones = opciones;
-            this.datoDelUsuario = datoDelUsuario;
+        this.pregunta = pregunta;
+        this.opciones = opciones;
+        this.datoDelUsuario = datoDelUsuario;
 
-        }
-        // arrayPreguntasF(funcion) {
-        //     arrayPreguntas.push(funcion(this.pregunta))
-
-    // }
+    }
 
     mostrarPregunta() {
         this.datoDelUsuario = parseInt(prompt(this.pregunta + this.opciones))
@@ -64,22 +60,21 @@ function preguntasUCM() {
         "\n1. Chitauri \n 2. Klyntar \n 3. Kronans \n 0. Para salir", datoUsuario)
     preguntaUCM1.mostrarPregunta()
     preguntaUCM1.contadorDePuntos()
-
+    arrPreguntas.push(preguntaUCM1)
     let preguntaUCM2 = new Pregunta("¿Por quien consigue Clint la gema del Alma? \n Ingresá el nro correspondiente.",
         "\n 1. Viuda Negra \n 2. Bruja Escarlata \n 3. Gamora \n 4. Carol Danvers \n 0. Para salir", datoUsuario)
     preguntaUCM2.mostrarPregunta()
     preguntaUCM2.contadorDePuntos()
+    arrPreguntas.push(preguntaUCM2)
 
     let preguntaUCM3 = new Pregunta("¿Que Avenger crea a Vision? \n Ingresá el nro correspondiente.",
         "\n 1. Iron Man \n 2. Thor \n 3. Bruja Escarlata \n 4. Clint \n 0. Para salir", datoUsuario)
     preguntaUCM3.mostrarPregunta()
     preguntaUCM3.contadorDePuntos()
+    arrPreguntas.push(preguntaUCM3)
+    console.log(arrPreguntas)
+    preguntaUCM3.jugarDeNuevo()
 
-    jugarDeNuevo()
-        // preguntaUCM3.arrayPreguntasF(preguntasUCM())
-
-    let arrayPreguntas = Object.values(preguntasUCM())
-    console.log(arrayPreguntas)
 }
 
 
@@ -120,7 +115,7 @@ function preguntasXMEN() {
     preguntaXMEN7.mostrarPregunta()
     preguntaXMEN7.contadorDePuntos()
 
-    jugarDeNuevo()
+    preguntaXMEN7.jugarDeNuevo()
 }
 
 function preguntasTodo() {
@@ -172,7 +167,7 @@ function preguntasTodo() {
     preguntaTodo9.contadorDePuntos()
 
 
-    jugarDeNuevo()
+    preguntaTodo9.jugarDeNuevo()
 }
 // Inicia el juego 
 let elijeJuego = parseInt(prompt("Sobre qué tematica queres jugar? Ingresá el nro. \n 1. UCM \n 2. X-men \n 3. TODO"))
