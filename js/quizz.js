@@ -17,21 +17,33 @@ function showQuestion(arr) {
             // Evaluo lo ingresado. Linea 25
         contadorDePuntos(arr);
     }
-    //Linea 74
-    jugarDeNuevo();
 }
 
 //Funcion validadora y contadora
 function contadorDePuntos(arr) {
-    //Este while, si ingreso 0 no termina el bucle
+    //Este while, si ingreso 0 termina el bucle! 
+    //Pero si ingresas una opcion correcta antes de poner algo invalido. Lo suma. No me lee los reestablecimientos de la variables
     while (datoUsuario != 0) {
         if (isNaN(datoUsuario)) {
-            alert("Debes ingresar una opcion válida.")
+            alert("Empezaras de nuevo, debes ingresar una opcion válida.")
+            contadorAcertadas = 0
+            contadorDesacertadas = 0
+            preguntasTotales = 0
             showQuestion(arr);
         }
-        if (datoUsuario < 0 || datoUsuario > arr.length) {
+        if (datoUsuario < 0 || datoUsuario > arr.length + 1) {
             alert("Debes ingresar una opcion válida.")
+
             showQuestion(arr);
+            //no me lo lee
+            contadorAcertadas = 0
+            contadorDesacertadas = 0
+            preguntasTotales = 0
+        }
+        if (datoUsuario == 0) {
+            //No lo termina ni lo muestra
+            console.log("de datoUsuario == 0 - break");
+            return;
         }
         //Si se ejecuta este if, suma a dichas variables. Y termina de ejecutar showQuestion() Linea 75
         if (datoUsuario == 1) {
@@ -42,13 +54,9 @@ function contadorDePuntos(arr) {
             contadorDesacertadas++
             preguntasTotales++
 
-        } else if (datoUsuario == 0) {
-            //No lo termina, ni muestra eso por consola
-            console.log("break");
-            return;
         }
-        //No lo termina, ni muestra eso por consola
-        console.log("break");
+        //No lo termina
+        console.log("del while - break");
         return;
     }
 
@@ -65,7 +73,7 @@ function alertScore() {
     } else if (contadorAcertadas < preguntasTotales * 60 / 100) {
         alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.\nBien! Seguro que podes hacerlo mejor`)
     } else if (contadorAcertadas < preguntasTotales * 100 / 100) {
-        alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.\nBueno, si fuera Fury, te habria considerado.`)
+        alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.\nBueno, si fuera Fury, te habria considerado una buena opcion.`)
     } else if (contadorAcertadas == preguntasTotales * 100 / 100) {
         alert(`Has acertado ${contadorAcertadas}, y desacertado ${contadorDesacertadas}.\nSos un expert@!`)
     }
@@ -109,6 +117,8 @@ arrPreguntasUCM = [{
 
 function preguntasUCMF() {
     showQuestion(arrPreguntasUCM)
+    jugarDeNuevo();
+
 }
 
 arrPreguntasXMEN = [{
@@ -144,6 +154,8 @@ arrPreguntasXMEN = [{
 
 function preguntasXMENF() {
     showQuestion(arrPreguntasXMEN)
+    jugarDeNuevo();
+
 
 }
 arrPreguntasTodo = [{
@@ -190,6 +202,8 @@ arrPreguntasTodo = [{
 
 function preguntasTodoF() {
     showQuestion(arrPreguntasTodo)
+    jugarDeNuevo();
+
 
 }
 // Arrays de Objetos. Preguntas y opciones
