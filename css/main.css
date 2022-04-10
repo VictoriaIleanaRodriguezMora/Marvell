@@ -319,7 +319,7 @@ body {
         font-size: 6px; } }
 
 /* Termina footer */
-/* ESTILOS DEL INDEX.php */
+/* ESTILOS DEL INDEX */
 #main__marvel {
   width: 50%;
   height: auto;
@@ -1008,3 +1008,6 @@ body {
       @media screen and (max-width: 600px) {
         #botones a .fas {
           font-size: 15px; } }
+
+.fadeOut {
+  transition: 300ms; }
