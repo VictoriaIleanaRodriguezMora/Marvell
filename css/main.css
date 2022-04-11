@@ -877,6 +877,7 @@ body {
 
 /* Termina SECCION FASES */
 .quizz {
+  visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -885,7 +886,8 @@ body {
   width: 100vw;
   height: auto;
   box-sizing: border-box; }
-  .quizz .jugas, .quizz .categorias .categorias__boton {
+  .quizz .jugas {
+    visibility: visible;
     background-color: red;
     font-size: 2rem;
     width: 20%;
@@ -898,22 +900,22 @@ body {
     margin: 2%;
     box-sizing: border-box; }
     @media screen and (max-width: 1300px) {
-      .quizz .jugas, .quizz .categorias .categorias__boton {
+      .quizz .jugas {
         font-size: 1.8rem; } }
     @media screen and (max-width: 1100px) {
-      .quizz .jugas, .quizz .categorias .categorias__boton {
+      .quizz .jugas {
         font-size: 1.6rem;
         width: 40%; } }
     @media screen and (max-width: 1000px) {
-      .quizz .jugas, .quizz .categorias .categorias__boton {
+      .quizz .jugas {
         font-size: 1.4rem;
         width: 50%; } }
     @media screen and (max-width: 900px) {
-      .quizz .jugas, .quizz .categorias .categorias__boton {
+      .quizz .jugas {
         font-size: 1.1rem;
         width: 60%;
         border: 7px solid #640000; } }
-    .quizz .jugas:hover, .quizz .categorias .categorias__boton:hover {
+    .quizz .jugas:hover {
       background-color: #640000;
       border-color: red; }
   .quizz .categorias {
@@ -922,12 +924,20 @@ body {
     flex-direction: row;
     align-items: center;
     width: 80%;
+    margin: 2%;
+    color: white;
     box-sizing: border-box; }
     @media screen and (max-width: 800px) {
       .quizz .categorias {
         flex-direction: column; } }
     .quizz .categorias .categorias__boton {
-      border-color: #2600ff;
+      font-size: 2rem;
+      height: auto;
+      padding: 0.7rem;
+      border: 10px solid #2600ff;
+      border-radius: 44px;
+      color: white;
+      transition: 500ms;
       background-color: #060052;
       width: 15%; }
       @media screen and (max-width: 800px) {
@@ -1010,4 +1020,27 @@ body {
           font-size: 15px; } }
 
 .fadeOut {
-  transition: 300ms; }
+  transition: 300ms;
+  opacity: 0;
+  display: none; }
+
+.fadeShow {
+  transition: 300ms;
+  opacity: 1;
+  visibility: visible; }
+
+.buttonSelected {
+  transition: 500ms;
+  font-size: 1rem;
+  padding: 0.7rem;
+  border: 5px solid #2600ff;
+  width: 6%;
+  border-radius: 44px;
+  position: fixed;
+  background-color: #060052;
+  color: white;
+  left: 1%;
+  top: 20%; }
+  .buttonSelected:hover {
+    border-color: #060052;
+    background-color: #2600ff; }

@@ -467,6 +467,7 @@
 
 // Empieza SECCION QUIZZ
 .quizz {
+    visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -476,6 +477,7 @@
     height: auto;
     box-sizing: border-box;
     .jugas {
+        visibility: visible;
         background-color: red;
         font-size: 2rem;
         width: 20%;
@@ -514,13 +516,20 @@
         flex-direction: row;
         align-items: center;
         width: 80%;
+        margin: 2%;
+        color: white;
         box-sizing: border-box;
         @media screen and (max-width: 800px) {
             flex-direction: column;
         }
         .categorias__boton {
-            @extend.jugas;
-            border-color: rgb(38, 0, 255);
+            font-size: 2rem;
+            height: auto;
+            padding: 0.7rem;
+            border: 10px solid rgb(38, 0, 255);
+            border-radius: 44px;
+            color: white;
+            transition: 500ms;
             background-color: #060052;
             width: 15%;
             @media screen and (max-width: 800px) {
