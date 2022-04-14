@@ -23,25 +23,20 @@ function fadeOutInicial() {
 }
 
 //Se muestran los 3 botones para elegir
-// function showCategorias() {
-//     for (let i = 0; i < botonesCategorias.length; i++) {
-//         botonesCategorias[i].addEventListener("click", function() {
-//             this.classList.toggle("categorias__boton")
-//             this.classList.add("buttonSelected")
-//         })
 
-//     }
-//     contenedorPreguntas.classList.toggle("fadeOut")
-// }
-// showCategorias()function showCategorias() {
-for (let i = 0; i < botonesCategorias.length; i++) {
-    botonesCategorias[i].addEventListener("click", showCategories)
-
-}
 
 function showCategories() {
-    this.classList.toggle("categorias__boton")
-    this.classList.add("buttonSelected")
-    contenedorPreguntas.classList.toggle("fadeOut")
 
+    for (let i = 0; i < botonesCategorias.length; i++) {
+        if (botonesCategorias[i].addEventListener("click", showCategories)) {
+            this.classList.toggle("categorias__boton")
+            this.classList.add("buttonSelected")
+            contenedorPreguntas.classList.toggle("fadeOut")
+        } else {
+            this.classList.toggle("fadeOut")
+
+        }
+
+    }
 }
+showCategories()
