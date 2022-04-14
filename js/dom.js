@@ -18,26 +18,27 @@ function fadeOutInicial() {
     botonJugas.classList.toggle("fadeOut")
     titulo.classList.toggle("fadeOut")
     // Se muestran las categorias para jugar
-    divCategorias.classList.toggle("fadeShow")
+    divCategorias.classList.toggle("fadeOut")
 }
 
-
+for (let i = 0; i < botonesCategorias.length; i++) {
+    botonesCategorias[i].addEventListener("click", categorySelected(botonesCategorias[i]))    
+}
 function categorySelected(x){
-    console.log(botonUCM.classList)
     switch (x) {
-        case 1:
+        case 0:
             botonUCM.classList.add("buttonSelected")
             botonXMEN.classList.add('fadeOut');
             botonTODO.classList.add('fadeOut');
             break;
     
-        case 2:
+        case 1:
             botonXMEN.classList.add("buttonSelected")
             botonUCM.classList.add('fadeOut');
             botonTODO.classList.add('fadeOut');
             break;
     
-        case 3:
+        case 2:
             botonTODO.classList.add("buttonSelected")
             botonUCM.classList.add('fadeOut');
             botonXMEN.classList.add('fadeOut');
@@ -47,17 +48,3 @@ function categorySelected(x){
             break;
     }
 }
-// function showCategories() {
-
-//     for (let i = 0; i < botonesCategorias.length; i++) {
-//         botonesCategorias[i].addEventListener("click", function () {
-//             botonesCategorias[i].classList.toggle("buttonSelected")
-//         })
-//         console.log(botonesCategorias[i].classList);
-//     }
-
-// }
-// showCategories()
-// if (botonesCategorias.classList.contains('buttonSelected')) {
-//     botonesCategorias.classList.toggle('fadeOut')
-// }
