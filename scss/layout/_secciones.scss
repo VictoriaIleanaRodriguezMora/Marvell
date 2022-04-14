@@ -467,7 +467,6 @@
 
 // Empieza SECCION QUIZZ
 .quizz {
-    visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -477,7 +476,7 @@
     height: auto;
     box-sizing: border-box;
     .jugas {
-        visibility: visible;
+        // visibility: visible;
         background-color: red;
         font-size: 2rem;
         width: 20%;

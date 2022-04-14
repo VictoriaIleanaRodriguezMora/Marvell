@@ -1,6 +1,10 @@
 .fadeOut {
-    transition: 300ms;
+    transition: 100ms;
     opacity: 0;
+    display: none;
+}
+
+.displayNone {
     display: none;
 }
 
