@@ -1,32 +1,34 @@
 .fadeOut {
-    transition: 100ms;
-    display: none;
+  transition: 100ms;
+  opacity: 0;
+  display: none;
 }
 
 .displayNone {
-    display: none;
+  display: none;
 }
 
 .fadeShow {
-    transition: 300ms;
-    opacity: 1;
-    visibility: visible;
+  transition: 300ms;
+  opacity: 1;
+display: "";
 }
 
-.buttonSelected {
-    transition: 500ms;
-    font-size: 1rem;
-    padding: 0.7rem;
-    border: 5px solid rgb(38, 0, 255);
-    width: 6%;
-    border-radius: 44px;
-    position: fixed;
-    background-color: #060052;
-    color: white;
-    left: 1%;
-    top: 20%;
-    &:hover {
-        border-color: #060052;
-        background-color: rgb(38, 0, 255);
-    }
+.buttonSelected{
+  transition: 500ms;
+  font-size: 1rem;
+  padding: 0.7rem;
+  border: 5px solid rgb(38, 0, 255);
+  width: 6%;
+  border-radius: 44px;
+  position: fixed;
+  background-color: #060052;
+  color: white;
+  left: 1%;
+  top: 20%;    
+}
+
+.buttonSelected:hover {
+  border-color: #060052;
+  background-color: rgb(38, 0, 255);
 }

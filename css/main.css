@@ -1028,7 +1028,7 @@ body {
 .fadeShow {
   transition: 300ms;
   opacity: 1;
-  visibility: visible; }
+  display: ""; }
 
 .buttonSelected {
   transition: 500ms;
@@ -1042,6 +1042,7 @@ body {
   color: white;
   left: 1%;
   top: 20%; }
-  .buttonSelected:hover {
-    border-color: #060052;
-    background-color: #2600ff; }
+
+.buttonSelected:hover {
+  border-color: #060052;
+  background-color: #2600ff; }
