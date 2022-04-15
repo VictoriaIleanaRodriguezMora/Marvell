@@ -5,6 +5,7 @@
 let titulo = document.querySelector("#titulo")
 let botonJugas = document.querySelector(".jugas")
 //Variables contenedoras
+let contenedorDeTodo = document.querySelector(".contenedor__preguntas__general")
 let divCategoriasDeJuego = document.querySelectorAll(".categorias__boton")
 let contPregsUCM = document.querySelector(".contenedor__preguntas__UCM")
 let contPregsXMEN = document.querySelector(".contenedor__preguntas__XMEN")
@@ -28,7 +29,7 @@ let botonXMEN = document.querySelector("#botonXMEN")
 let botonTODO = document.querySelector("#botonTODO")
 
 //Contadores
-let contadorPreguntas = 0;
+let preguntasTotales = 0;
 let contadorAcertadas = 0;
 let contadorDesacertadas = 0;
 // Terminan las variables
@@ -49,7 +50,7 @@ fadeOut(arrContPregs)
 fadeOut(preguntasUCM)
 fadeOut(preguntasXMEN)
 fadeOut(preguntasTODO)
-
+contenedorDeTodo.classList.remove("contenedor__preguntas__general")
 // Empieza el juego
 // Se clickea el boton ¿JUGAS?
 botonJugas.addEventListener("click", fadeOutInicial)
@@ -66,66 +67,73 @@ function fadeOutInicial() {
 }
 //Elegir Juego
 botonUCM.onclick = () => {
+    contenedorDeTodo.classList.add("contenedor__preguntas__general")
     botonUCM.classList.remove("categorias__boton")
     botonUCM.classList.add("buttonSelected")
     botonXMEN.classList.add('fadeOut');
     botonTODO.classList.add('fadeOut');
-    recorrerInicial(arrContPregs, 0, preguntasUCM, 0, opcionesUCM)
-    contarPuntos()
+    contPregsXMEN.classList.remove("contenedores")
+    contPregsTODO.classList.remove("contenedores")
+
+    recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
+    arrContPregs[1, 2]
+    // contarPuntos()
+    jugar(preguntasUCM)
 
 }
 botonXMEN.onclick = () => {
+    contenedorDeTodo.classList.add("contenedor__preguntas__general")
     botonXMEN.classList.remove("categorias__boton")
     botonXMEN.classList.add("buttonSelected")
     botonUCM.classList.add('fadeOut');
     botonTODO.classList.add('fadeOut');
-    recorrerInicial(arrContPregs, 1, preguntasXMEN, opcionesXMEN)
-    contarPuntos()
+    contPregsUCM.classList.remove("contenedores")
+    contPregsTODO.classList.remove("contenedores")
+    recorrerInicial(arrContPregs, 1, preguntasXMEN)
+    // contarPuntos()
+    jugar(preguntasXMEN)
 
 }
 botonTODO.onclick = () => {
+    contenedorDeTodo.classList.add("contenedor__preguntas__general")
     botonTODO.classList.remove("categorias__boton")
     botonTODO.classList.add("buttonSelected")
     botonUCM.classList.add('fadeOut');
     botonXMEN.classList.add('fadeOut');
-    recorrerInicial(arrContPregs, 2, preguntasTODO, opcionesTODO)
-    contarPuntos()
+    contPregsUCM.classList.remove("contenedores")
+    contPregsXMEN.classList.remove("contenedores")
+    recorrerInicial(arrContPregs, 2, preguntasTODO)
+    // contarPuntos()
+    jugar(preguntasTODO)
 
 }
 //Funcion para automatizar 
-function recorrerInicial(arrGeneral, n, arrPregunta, arrOpciones) {
+function recorrerInicial(arrGeneral, n, arrPregunta) {
     arrGeneral[n].classList.remove("fadeOut")
     console.log("yo");
     fadeOutRemove(arrPregunta)
 
 }
 function contarPuntos() {
-    // opcionIncorrecta.onclick = () => {
-    //     contadorDesacertadas++
-    //     console.log(contadorDesacertadas);
-    // }
     for (let i = 0; i < opcionIncorrecta.length; i++) {
         opcionIncorrecta[i].addEventListener("click", function () {
-        contadorDesacertadas++
-        console.log(`desacertadas${contadorDesacertadas}`);  
-    })
+            contadorDesacertadas++
+            console.log(`desacertadas${contadorDesacertadas}`);
+        })
     }
     for (let x = 0; x < opcionCorrecta.length; x++) {
         opcionCorrecta[x].addEventListener("click", function () {
-        contadorAcertadas++
-        console.log(`acertadas${contadorAcertadas}`);  
-    })
+            contadorAcertadas++
+            console.log(`acertadas${contadorAcertadas}`);
+        })
     }
-    // opcionCorrecta.onclick = () => {
-    //     contadorAcertadas++
-    //     console.log(contadorAcertadas);
-    // }
-    
+
 }
-contarPuntos()
-// function jugar(arr) {
+function jugar(arr) {
+    for (let i = 0; i < preguntasUCM.length; i++) {
+        preguntasTotales++
+        contarPuntos(arr)
 
-//     contarPuntos(arr)
-
-// }
-// jugar(preguntasUCM)
+    }
+}
+jugar(preguntasUCM)
