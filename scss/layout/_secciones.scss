@@ -1,626 +1,626 @@
 /*TODOS LOS ESTILOS DE LAS SECCIONES */
 
-
 /* Empieza MAIN*/
 
 #titulo {
-    background-image: url(../Imagenes/fondos/galaxia.png);
-    width: auto;
-    height: auto;
-    padding: 2%;
-    margin: 5% 18%;
-    border-radius: 20px;
-    text-align: center;
-    color: white;
-    font-family: "Comfortaa";
-    box-sizing: border-box;
-    grid-area: titulo;
-    animation-name: bg_main;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-    animation-delay: 5s;
-    @keyframes bg_main {
-        0% {
-            background-position: 0% 0%;
-        }
-        25% {
-            background-position: 0% 100%;
-        }
-        50% {
-            background-position: 100% 0%;
-        }
-        75% {
-            background-position: 100% 100%;
-        }
-        100% {
-            background-position: 0% 0%;
-        }
+  background-image: url(../Imagenes/fondos/galaxia.png);
+  width: auto;
+  height: auto;
+  padding: 2%;
+  margin: 5% 18%;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Comfortaa';
+  box-sizing: border-box;
+  grid-area: titulo;
+  animation-name: bg_main;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+  @keyframes bg_main {
+    0% {
+      background-position: 0% 0%;
     }
+    25% {
+      background-position: 0% 100%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+    75% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    margin: 5% 7%;
+  }
+  @media screen and (max-width: 700px) {
+    #titulo {
+      background-image: url(../Imagenes/fondos/galaxia700w.jpg);
+    }
+  }
+  @media screen and (max-width: 650px) {
+    margin: 5% 10%;
+  }
+  @media screen and (max-width: 430px) {
+    margin: 5% 7%;
+  }
+  @media screen and (max-width: 360px) {
+    margin: 5% 6%;
+  }
+  @media screen and (max-width: 330px) {
+    margin: 5% 5%;
+  }
+  @media screen and (max-width: 270px) {
+    font-size: 15px;
+  }
+  .section__titulo {
+    font-size: 2.8em;
+    padding: 10px 0px 20px 0px;
     @media screen and (max-width: 950px) {
-        margin: 5% 7%;
-    }
-    @media screen and (max-width: 700px) {
-        #titulo {
-            background-image: url(../Imagenes/fondos/galaxia700w.jpg);
-        }
+      font-size: 2.6em;
     }
     @media screen and (max-width: 650px) {
-        margin: 5% 10%;
+      font-size: 2.4em;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 2.2em;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 1.7em;
     }
     @media screen and (max-width: 430px) {
-        margin: 5% 7%;
+      font-size: 1.5em;
     }
     @media screen and (max-width: 360px) {
-        margin: 5% 6%;
+      font-size: 1.3em;
     }
     @media screen and (max-width: 330px) {
-        margin: 5% 5%;
+      font-size: 1.1em;
     }
-    @media screen and (max-width: 270px) {
-        font-size: 15px;
+    @media screen and (max-width: 300px) {
+      font-size: 0.8em;
     }
-    .section__titulo {
-        font-size: 2.8em;
-        padding: 10px 0px 20px 0px;
-        @media screen and (max-width: 950px) {
-            font-size: 2.6em;
-        }
-        @media screen and (max-width: 650px) {
-            font-size: 2.4em;
-        }
-        @media screen and (max-width: 600px) {
-            font-size: 2.2em;
-        }
-        @media screen and (max-width: 550px) {
-            font-size: 1.7em;
-        }
-        @media screen and (max-width: 430px) {
-            font-size: 1.5em;
-        }
-        @media screen and (max-width: 360px) {
-            font-size: 1.3em;
-        }
-        @media screen and (max-width: 330px) {
-            font-size: 1.1em;
-        }
-        @media screen and (max-width: 300px) {
-            font-size: 0.8em;
-        }
+  }
+  .section__parrafo {
+    font-size: 1.7em;
+    @media screen and (max-width: 950px) {
+      font-size: 1.5em;
     }
-    .section__parrafo {
-        font-size: 1.7em;
-        @media screen and (max-width: 950px) {
-            font-size: 1.5em;
-        }
-        @media screen and (max-width: 650px) {
-            font-size: 1.3em;
-        }
-        @media screen and (max-width: 430px) {
-            font-size: 1.1em;
-        }
-        @media screen and (max-width: 360px) {
-            font-size: 0.9em;
-        }
-        @media screen and (max-width: 330px) {
-            font-size: 0.7em;
-        }
-        .section__span {
-            color: red;
-        }
+    @media screen and (max-width: 650px) {
+      font-size: 1.3em;
     }
+    @media screen and (max-width: 430px) {
+      font-size: 1.1em;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 0.9em;
+    }
+    @media screen and (max-width: 330px) {
+      font-size: 0.7em;
+    }
+    .section__span {
+      color: red;
+    }
+  }
 }
 
-
 /* Termina MAIN*/
-
 
 /*Empieza ASIDE */
 
 .aside {
-    background-color: $black;
+  background-color: $black;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 15px;
+  position: sticky;
+  font-family: 'Spartan';
+  overflow-y: scroll;
+  grid-area: aside;
+  color: white;
+  @media screen and (max-width: 1050px) {
+    position: relative;
+    top: unset;
+    margin-bottom: 10%;
+    width: 50%;
+  }
+  @media screen and (max-width: 850px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 400px) {
     width: 90%;
-    box-sizing: border-box;
-    padding: 15px;
-    border-radius: 15px;
-    position: sticky;
-    font-family: "Spartan";
-    overflow-y: scroll;
-    grid-area: aside;
-    color: white;
-    @media screen and (max-width: 1050px) {
-        position: relative;
-        top: unset;
-        margin-bottom: 10%;
-        width: 50%;
+  }
+  .aside__ul {
+    padding: 0px 5%;
+    li {
+      margin: 2px;
+      padding: 0.5% 2%;
+      width: auto;
+      height: auto;
+      transition: 51ms;
+      font-size: 0.8em;
+      &:hover {
+        margin-left: 10px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
     }
-    @media screen and (max-width: 850px) {
-        width: 80%;
-    }
-    @media screen and (max-width: 400px) {
-        width: 90%;
-    }
-    .aside__ul {
-        padding: 0px 5%;
-        li {
-            margin: 2px;
-            padding: 0.5% 2%;
-            width: auto;
-            height: auto;
-            transition: 51ms;
-            font-size: 0.8em;
-            &:hover {
-                margin-left: 10px;
-            }
-            a {
-                color: white;
-                text-decoration: none;
-            }
-        }
-    }
-    .aside__ul--FueraMCU {
-        @extend.aside__ul;
-        margin: 0px;
-        list-style: disc;
-    }
-    .aside__ul-uni {
-        @extend.aside__ul;
-        list-style: disc;
-    }
+  }
+  .aside__ul--FueraMCU {
+    @extend.aside__ul;
+    margin: 0px;
+    list-style: disc;
+  }
+  .aside__ul-uni {
+    @extend.aside__ul;
+    list-style: disc;
+  }
 }
 
 .aside--cronologia,
 .aside-estrenos,
 .aside--FueraMCU {
-    @extend.aside;
-    height: 40em;
-    top: 5%;
-    @media screen and (max-width: 1050px) {
-        height: 30em;
-    }
-    @media screen and (max-width: 850px) {
-        height: 28em;
-    }
-    @media screen and (max-width: 400px) {
-        height: 23em;
-    }
+  @extend.aside;
+  height: 40em;
+  top: 5%;
+  @media screen and (max-width: 1050px) {
+    height: 30em;
+  }
+  @media screen and (max-width: 850px) {
+    height: 28em;
+  }
+  @media screen and (max-width: 400px) {
+    height: 23em;
+  }
 }
 
 .aside--Uni {
-    @extend.aside;
-    height: 28em;
-    top: 10%;
-    @media screen and (max-width: 1050px) {
-        top: 0;
-    }
-    @media screen and (max-width: 500px) {
-        height: 25em;
-    }
-    @media screen and (max-width: 400px) {
-        height: 23em;
-    }
+  @extend.aside;
+  height: 28em;
+  top: 10%;
+  @media screen and (max-width: 1050px) {
+    top: 0;
+  }
+  @media screen and (max-width: 500px) {
+    height: 25em;
+  }
+  @media screen and (max-width: 400px) {
+    height: 23em;
+  }
 }
 
-
 /*Termina ASIDE */
-
 
 /* Empieza #Contenedor */
 
 #contenedor {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 30% 70%;
-    grid-column-gap: 0%;
-    grid-template-areas: "titulo titulo" "aside peliculas";
-    margin: 1%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 30% 70%;
+  grid-column-gap: 0%;
+  grid-template-areas: 'titulo titulo' 'aside peliculas';
+  margin: 1%;
+  @media screen and (max-width: 1050px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'titulo' 'aside' 'peliculas';
+  }
+  // Contenedor Peliculas
+  .contenedor__peliculas {
+    grid-area: peliculas;
+    width: 95%;
     @media screen and (max-width: 1050px) {
-        grid-template-columns: 1fr;
-        grid-template-areas: "titulo" "aside" "peliculas";
+      display: map-get($flexbox, display);
+      flex-direction: map-get($flexbox, flex-dir-c);
+      align-items: center;
     }
-    // Contenedor Peliculas
-    .contenedor__peliculas {
-        grid-area: peliculas;
-        width: 95%;
-        @media screen and (max-width: 1050px) {
-            display: map-get($flexbox, display);
-            flex-direction: map-get($flexbox, flex-dir-c);
-            align-items: center;
+    /* Articulos */
+    .articulos {
+      width: 95%;
+      height: auto;
+      background-color: $black;
+      padding: 20px;
+      border-radius: 30px;
+      margin: 30px 0px;
+      align-items: center;
+      display: map-get($flexbox, display);
+      flex-direction: map-get($flexbox, flex-dir-r);
+      box-shadow: 0px 0px 10px #000;
+      color: white;
+      font-family: 'Spartan';
+      transition: 1s;
+      @media screen and (max-width: 850px) {
+        flex-direction: map-get($flexbox, flex-dir-c);
+        width: 85%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 90%;
+      }
+      .articulos__div {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 5%;
+        .div__titulo {
+          font-size: 2.5em;
         }
-        /* Articulos */
-        .articulos {
-            width: 95%;
-            height: auto;
-            background-color: $black;
-            padding: 20px;
-            border-radius: 30px;
-            margin: 30px 0px;
-            align-items: center;
-            display: map-get($flexbox, display);
-            flex-direction: map-get($flexbox, flex-dir-r);
-            box-shadow: 0px 0px 10px #000;
-            color: white;
-            font-family: "Spartan";
-            transition: 1s;
-            @media screen and (max-width: 850px) {
-                flex-direction: map-get($flexbox, flex-dir-c);
-                width: 85%;
-            }
-            @media screen and (max-width: 600px) {
-                width: 90%;
-            }
-            .articulos__div {
-                width: 100%;
-                box-sizing: border-box;
-                margin: 5%;
-                .div__titulo {
-                    font-size: 2.5em;
-                }
-                .div__parrafo {
-                    font-size: 1.3em;
-                }
-                @media screen and (max-width: 768px) {
-                    .div__titulo {
-                        font-size: 2em;
-                    }
-                    .div__parrafo {
-                        font-size: 1em;
-                    }
-                }
-                @media screen and (max-width: 500px) {
-                    .div__titulo {
-                        font-size: 1.7em;
-                    }
-                }
-                @media screen and (max-width: 380px) {
-                    .div__titulo {
-                        font-size: 1.4em;
-                    }
-                    .div__parrafo {
-                        font-size: 0.8em;
-                    }
-                }
-                @media screen and (max-width: 300px) {
-                    .div__titulo {
-                        font-size: 1.2em;
-                    }
-                    .div__parrafo {
-                        font-size: 0.5em;
-                    }
-                }
-            }
+        .div__parrafo {
+          font-size: 1.3em;
         }
-        .articulos--izquierda {
-            @extend.articulos;
-            flex-direction: row-reverse;
-            @media screen and (max-width: 850px) {
-                flex-direction: map-get($flexbox, flex-dir-c);
-                width: 85%;
-            }
+        @media screen and (max-width: 768px) {
+          .div__titulo {
+            font-size: 2em;
+          }
+          .div__parrafo {
+            font-size: 1em;
+          }
         }
-        .primer--articulo {
-            @extend.articulos;
-            margin-top: 0px;
-            @media screen and (max-width: 1050px) {
-                margin-top: 2%;
-            }
+        @media screen and (max-width: 500px) {
+          .div__titulo {
+            font-size: 1.7em;
+          }
         }
-        .ultimo--articulo {
-            @extend.articulos;
-            margin: 30px 0px 0px;
+        @media screen and (max-width: 380px) {
+          .div__titulo {
+            font-size: 1.4em;
+          }
+          .div__parrafo {
+            font-size: 0.8em;
+          }
         }
-        //   Imagenes de los Carouseles
-        .carousel,
-        .imgs {
-            @include alto-ancho(45%, 340px);
-            box-shadow: 0px 0px 15px rgb(255, 255, 255);
-            object-fit: cover;
-            @media screen and (max-width: 850px) {
-                width: 40%;
-            }
-            @media screen and (max-width: 700px) {
-                width: 45%;
-            }
-            @media screen and (max-width: 650px) {
-                width: 50%;
-                height: 310px;
-            }
-            @media screen and (max-width: 550px) {
-                width: 55%;
-                height: 300px;
-            }
-            @media screen and (max-width: 430px) {
-                width: 60%;
-                height: 280px;
-            }
-            @media screen and (max-width: 360px) {
-                width: 65%;
-                height: 260px;
-            }
-            @media screen and (max-width: 330px) {
-                width: 70%;
-            }
-            @media screen and (max-width: 270px) {
-                width: 72%;
-            }
-            @media screen and (max-width: 250px) {
-                width: 75%;
-            }
-            @media screen and (max-width: 220px) {
-                width: 80%;
-            }
-            .w-100 {
-                @include alto-ancho(100%, 340px);
-                object-fit: cover;
-                @media screen and (max-width: 650px) {
-                    height: 310px;
-                }
-                @media screen and (max-width: 550px) {
-                    height: 300px;
-                }
-                @media screen and (max-width: 430px) {
-                    height: 280px;
-                }
-                @media screen and (max-width: 360px) {
-                    height: 260px;
-                }
-            }
+        @media screen and (max-width: 300px) {
+          .div__titulo {
+            font-size: 1.2em;
+          }
+          .div__parrafo {
+            font-size: 0.5em;
+          }
         }
+      }
     }
+    .articulos--izquierda {
+      @extend.articulos;
+      flex-direction: row-reverse;
+      @media screen and (max-width: 850px) {
+        flex-direction: map-get($flexbox, flex-dir-c);
+        width: 85%;
+      }
+    }
+    .primer--articulo {
+      @extend.articulos;
+      margin-top: 0px;
+      @media screen and (max-width: 1050px) {
+        margin-top: 2%;
+      }
+    }
+    .ultimo--articulo {
+      @extend.articulos;
+      margin: 30px 0px 0px;
+    }
+    //   Imagenes de los Carouseles
+    .carousel,
+    .imgs {
+      @include alto-ancho(45%, 340px);
+      box-shadow: 0px 0px 15px rgb(255, 255, 255);
+      object-fit: cover;
+      @media screen and (max-width: 850px) {
+        width: 40%;
+      }
+      @media screen and (max-width: 700px) {
+        width: 45%;
+      }
+      @media screen and (max-width: 650px) {
+        width: 50%;
+        height: 310px;
+      }
+      @media screen and (max-width: 550px) {
+        width: 55%;
+        height: 300px;
+      }
+      @media screen and (max-width: 430px) {
+        width: 60%;
+        height: 280px;
+      }
+      @media screen and (max-width: 360px) {
+        width: 65%;
+        height: 260px;
+      }
+      @media screen and (max-width: 330px) {
+        width: 70%;
+      }
+      @media screen and (max-width: 270px) {
+        width: 72%;
+      }
+      @media screen and (max-width: 250px) {
+        width: 75%;
+      }
+      @media screen and (max-width: 220px) {
+        width: 80%;
+      }
+      .w-100 {
+        @include alto-ancho(100%, 340px);
+        object-fit: cover;
+        @media screen and (max-width: 650px) {
+          height: 310px;
+        }
+        @media screen and (max-width: 550px) {
+          height: 300px;
+        }
+        @media screen and (max-width: 430px) {
+          height: 280px;
+        }
+        @media screen and (max-width: 360px) {
+          height: 260px;
+        }
+      }
+    }
+  }
 }
 
-
 /*Termina Contenedor */
-
 
 /*Empieza  SECCION FASES */
 
 #main {
+  display: map-get($flexbox, display);
+  flex-direction: map-get($flexbox, flex-dir-r);
+  justify-content: map-get($flexbox, justify-c);
+  flex-wrap: wrap;
+  width: 100vw;
+  height: auto;
+  @media screen and (max-width: 1050px) {
+    align-items: center;
+    flex-direction: map-get($flexbox, flex-dir-c);
+    row-gap: 50px;
+  }
+  .fases {
+    background-image: url(../Imagenes/fondos/galaxia2.jpg);
+    background-size: 100% 110%;
+    border-radius: 30px;
+    padding: 40px;
+    width: 42%;
+    margin: 4% 4%;
     display: map-get($flexbox, display);
-    flex-direction: map-get($flexbox, flex-dir-r);
-    justify-content: map-get($flexbox, justify-c);
-    flex-wrap: wrap;
-    width: 100vw;
-    height: auto;
+    flex-direction: map-get($flexbox, flex-dir-c);
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px white;
+    font-family: 'Spartan';
     @media screen and (max-width: 1050px) {
-        align-items: center;
-        flex-direction: map-get($flexbox, flex-dir-c);
-        row-gap: 50px;
+      width: 92%;
+      padding: 4%;
     }
-    .fases {
-        background-image: url(../Imagenes/fondos/galaxia2.jpg);
-        background-size: 100% 110%;
-        border-radius: 30px;
-        padding: 40px;
-        width: 42%;
-        margin: 4% 4%;
-        display: map-get($flexbox, display);
-        flex-direction: map-get($flexbox, flex-dir-c);
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0px 0px 10px white;
-        font-family: "Spartan";
-        @media screen and (max-width: 1050px) {
-            width: 92%;
-            padding: 4%;
-        }
-        .fases__titulo {
-            font-size: 2.3em;
-            text-shadow: 3px 3px 9px black;
-            padding: 10px;
-            font-family: "Spartan";
-            color: white;
-            @media screen and (max-width: 650px) {
-                font-size: 2.2em;
-            }
-            @media screen and (max-width: 530px) {
-                font-size: 2em;
-            }
-            @media screen and (max-width: 430px) {
-                font-size: 1.8em;
-            }
-            @media screen and (max-width: 360px) {
-                font-size: 1.7em;
-            }
-            @media screen and (max-width: 330px) {
-                font-size: 1.6em;
-            }
-            @media screen and (max-width: 270px) {
-                font-size: 1.5em;
-            }
-        }
-        .fases__lista {
-            padding: 10px;
-            list-style: disc;
-            li {
-                font-size: 1.3em;
-                font-family: "Spartan";
-                color: white;
-                transition: margin 500ms;
-                &:hover {
-                    margin-left: 15px;
-                }
-                @media screen and (max-width: 768px) {
-                    font-size: 1.2em;
-                }
-                @media screen and (max-width: 650px) {
-                    font-size: 1.1em;
-                }
-                @media screen and (max-width: 530px) {
-                    font-size: 1em;
-                }
-                @media screen and (max-width: 430px) {
-                    font-size: 0.8em;
-                }
-                @media screen and (max-width: 360px) {
-                    font-size: 0.7em;
-                }
-                @media screen and (max-width: 330px) {
-                    font-size: 0.6em;
-                }
-            }
-        }
+    .fases__titulo {
+      font-size: 2.3em;
+      text-shadow: 3px 3px 9px black;
+      padding: 10px;
+      font-family: 'Spartan';
+      color: white;
+      @media screen and (max-width: 650px) {
+        font-size: 2.2em;
+      }
+      @media screen and (max-width: 530px) {
+        font-size: 2em;
+      }
+      @media screen and (max-width: 430px) {
+        font-size: 1.8em;
+      }
+      @media screen and (max-width: 360px) {
+        font-size: 1.7em;
+      }
+      @media screen and (max-width: 330px) {
+        font-size: 1.6em;
+      }
+      @media screen and (max-width: 270px) {
+        font-size: 1.5em;
+      }
     }
+    .fases__lista {
+      padding: 10px;
+      list-style: disc;
+      li {
+        font-size: 1.3em;
+        font-family: 'Spartan';
+        color: white;
+        transition: margin 500ms;
+        &:hover {
+          margin-left: 15px;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 1.2em;
+        }
+        @media screen and (max-width: 650px) {
+          font-size: 1.1em;
+        }
+        @media screen and (max-width: 530px) {
+          font-size: 1em;
+        }
+        @media screen and (max-width: 430px) {
+          font-size: 0.8em;
+        }
+        @media screen and (max-width: 360px) {
+          font-size: 0.7em;
+        }
+        @media screen and (max-width: 330px) {
+          font-size: 0.6em;
+        }
+      }
+    }
+  }
 }
-
 
 /* Termina SECCION FASES */
 
 // Empieza SECCION QUIZZ
 .quizz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Comfortaa';
+  width: 100vw;
+  height: auto;
+  box-sizing: border-box;
+  .jugas {
+    // visibility: visible;
+    background-color: red;
+    font-size: 2rem;
+    width: 20%;
+    height: auto;
+    padding: 0.7rem;
+    border: 10px solid #640000;
+    border-radius: 44px;
+    color: white;
+    transition: 500ms;
+    margin: 2%;
+    box-sizing: border-box;
+    @media screen and (max-width: 1300px) {
+      font-size: 1.8rem;
+    }
+    @media screen and (max-width: 1100px) {
+      font-size: 1.6rem;
+      width: 40%;
+    }
+    @media screen and (max-width: 1000px) {
+      font-size: 1.4rem;
+      width: 50%;
+    }
+    @media screen and (max-width: 900px) {
+      font-size: 1.1rem;
+      width: 60%;
+      border: 7px solid #640000;
+    }
+    &:hover {
+      background-color: #640000;
+      border-color: red;
+    }
+  }
+  .categorias {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin: 2%;
+    color: white;
+    box-sizing: border-box;
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
+    .categorias__boton {
+      font-size: 2rem;
+      height: auto;
+      padding: 0.7rem;
+      border: 10px solid rgb(38, 0, 255);
+      border-radius: 44px;
+      color: white;
+      transition: 500ms;
+      background-color: #060052;
+      width: 15%;
+      @media screen and (max-width: 800px) {
+        width: 30%;
+      }
+      @media screen and (max-width: 500px) {
+        width: 50%;
+      }
+      &:hover {
+        border-color: #060052;
+        background-color: rgb(38, 0, 255);
+      }
+    }
+  }
+  .contenedor__preguntas__general {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: "Comfortaa";
-    width: 100vw;
-    height: auto;
     box-sizing: border-box;
-    .jugas {
-        // visibility: visible;
-        background-color: red;
-        font-size: 2rem;
-        width: 20%;
-        height: auto;
-        padding: 0.7rem;
-        border: 10px solid #640000;
-        border-radius: 44px;
-        color: white;
-        transition: 500ms;
-        margin: 2%;
-        box-sizing: border-box;
-        @media screen and (max-width: 1300px) {
-            font-size: 1.8rem;
-        }
-        @media screen and (max-width: 1100px) {
-            font-size: 1.6rem;
-            width: 40%;
-        }
-        @media screen and (max-width: 1000px) {
-            font-size: 1.4rem;
-            width: 50%;
-        }
-        @media screen and (max-width: 900px) {
-            font-size: 1.1rem;
-            width: 60%;
-            border: 7px solid #640000;
-        }
-        &:hover {
-            background-color: #640000;
-            border-color: red;
-        }
-    }
-    .categorias {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        align-items: center;
+    .contenedores {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .div__pregunta {
         width: 80%;
-        margin: 2%;
-        color: white;
-        box-sizing: border-box;
-        @media screen and (max-width: 800px) {
-            flex-direction: column;
-        }
-        .categorias__boton {
-            font-size: 2rem;
-            height: auto;
-            padding: 0.7rem;
-            border: 10px solid rgb(38, 0, 255);
-            border-radius: 44px;
-            color: white;
-            transition: 500ms;
-            background-color: #060052;
-            width: 15%;
-            @media screen and (max-width: 800px) {
-                width: 30%;
-            }
-            @media screen and (max-width: 500px) {
-                width: 50%;
-            }
-            &:hover {
-                border-color: #060052;
-                background-color: rgb(38, 0, 255);
-            }
-        }
-    }
-    .contenedor__preguntas {
+        background-color: $black;
+        border-radius: 15px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-self: center;
         flex-direction: column;
-        box-sizing: border-box;
-        .div__pregunta {
-            width: 80%;
-            background-color: $black;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-self: center;
-            flex-direction: column;
-            padding: 2%;
-            @media screen and (max-width: 900px) {
-                width: 90%;
-            }
-            .pregunta__titulo {
-                color: white;
-                font-size: 1.5em;
-                @media screen and (max-width: 1000px) {
-                    font-size: 1.2em;
-                }
-                @media screen and (max-width: 800px) {
-                    font-size: 1em;
-                }
-                .pregunta__opcion {
-                    color: black;
-                    background-color: white;
-                    &:hover {
-                        background-color: rgb(90, 90, 90);
-                    }
-                }
-            }
+        padding: 2%;
+        margin: 1%;
+
+        @media screen and (max-width: 900px) {
+          width: 90%;
         }
+        .pregunta__titulo {
+          color: white;
+          font-size: 1.5em;
+          @media screen and (max-width: 1000px) {
+            font-size: 1.2em;
+          }
+          @media screen and (max-width: 800px) {
+            font-size: 1em;
+          }
+          .pregunta__opcion {
+            color: black;
+            background-color: white;
+            &:hover {
+              background-color: rgb(90, 90, 90);
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 // Termina SECCION QUIZZ
 // botones
 #botones {
-    display: map-get($flexbox, display);
-    flex-direction: map-get($flexbox, flex-dir-c);
-    position: fixed;
-    right: 0.5%;
-    bottom: 1%;
-    height: 8em;
-    @media screen and (max-width: 1050px) {
-        height: 7em;
+  display: map-get($flexbox, display);
+  flex-direction: map-get($flexbox, flex-dir-c);
+  position: fixed;
+  right: 0.5%;
+  bottom: 1%;
+  height: 8em;
+  @media screen and (max-width: 1050px) {
+    height: 7em;
+  }
+  @media screen and (max-width: 600px) {
+    height: 6em;
+  }
+  .boton {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: 20% 0px;
+    transition: 1s;
+    overflow: hidden;
+  }
+  @media screen and (max-width: 1050px) {
+    margin: 8px 0px;
+  }
+  @media screen and (max-width: 600px) {
+    margin: 5px 0px;
+  }
+  a {
+    color: rgb(0, 0, 0);
+    .fas {
+      font-size: 30px;
+      padding: 5px;
+      @media screen and (max-width: 1050px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 15px;
+      }
     }
-    @media screen and (max-width: 600px) {
-        height: 6em;
-    }
-    .boton {
-        background-color: rgb(255, 255, 255);
-        border-radius: 50%;
-        margin: 20% 0px;
-        transition: 1s;
-        overflow: hidden;
-    }
-    @media screen and (max-width: 1050px) {
-        margin: 8px 0px;
-    }
-    @media screen and (max-width: 600px) {
-        margin: 5px 0px;
-    }
-    a {
-        color: rgb(0, 0, 0);
-        .fas {
-            font-size: 30px;
-            padding: 5px;
-            @media screen and (max-width: 1050px) {
-                font-size: 20px;
-            }
-            @media screen and (max-width: 600px) {
-                font-size: 15px;
-            }
-        }
-    }
+  }
 }

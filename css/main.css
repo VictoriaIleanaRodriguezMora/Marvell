@@ -463,7 +463,7 @@ body {
   border-radius: 20px;
   text-align: center;
   color: white;
-  font-family: "Comfortaa";
+  font-family: 'Comfortaa';
   box-sizing: border-box;
   grid-area: titulo;
   animation-name: bg_main;
@@ -561,7 +561,7 @@ body {
   padding: 15px;
   border-radius: 15px;
   position: sticky;
-  font-family: "Spartan";
+  font-family: 'Spartan';
   overflow-y: scroll;
   grid-area: aside;
   color: white; }
@@ -644,12 +644,12 @@ body {
   justify-items: center;
   grid-template-columns: 30% 70%;
   grid-column-gap: 0%;
-  grid-template-areas: "titulo titulo" "aside peliculas";
+  grid-template-areas: 'titulo titulo' 'aside peliculas';
   margin: 1%; }
   @media screen and (max-width: 1050px) {
     #contenedor {
       grid-template-columns: 1fr;
-      grid-template-areas: "titulo" "aside" "peliculas"; } }
+      grid-template-areas: 'titulo' 'aside' 'peliculas'; } }
   #contenedor .contenedor__peliculas {
     grid-area: peliculas;
     width: 95%;
@@ -671,7 +671,7 @@ body {
       flex-direction: row;
       box-shadow: 0px 0px 10px #000;
       color: white;
-      font-family: "Spartan";
+      font-family: 'Spartan';
       transition: 1s; }
       @media screen and (max-width: 850px) {
         #contenedor .contenedor__peliculas .articulos, #contenedor .contenedor__peliculas .articulos--izquierda, #contenedor .contenedor__peliculas .primer--articulo, #contenedor .contenedor__peliculas .ultimo--articulo {
@@ -817,7 +817,7 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 0px 10px white;
-    font-family: "Spartan"; }
+    font-family: 'Spartan'; }
     @media screen and (max-width: 1050px) {
       #main .fases {
         width: 92%;
@@ -826,7 +826,7 @@ body {
       font-size: 2.3em;
       text-shadow: 3px 3px 9px black;
       padding: 10px;
-      font-family: "Spartan";
+      font-family: 'Spartan';
       color: white; }
       @media screen and (max-width: 650px) {
         #main .fases .fases__titulo {
@@ -851,7 +851,7 @@ body {
       list-style: disc; }
       #main .fases .fases__lista li {
         font-size: 1.3em;
-        font-family: "Spartan";
+        font-family: 'Spartan';
         color: white;
         transition: margin 500ms; }
         #main .fases .fases__lista li:hover {
@@ -881,7 +881,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Comfortaa";
+  font-family: 'Comfortaa';
   width: 100vw;
   height: auto;
   box-sizing: border-box; }
@@ -947,38 +947,44 @@ body {
       .quizz .categorias .categorias__boton:hover {
         border-color: #060052;
         background-color: #2600ff; }
-  .quizz .contenedor__preguntas {
+  .quizz .contenedor__preguntas__general {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-sizing: border-box; }
-    .quizz .contenedor__preguntas .div__pregunta {
-      width: 80%;
-      background-color: #000000d5;
-      border-radius: 15px;
+    .quizz .contenedor__preguntas__general .contenedores {
       display: flex;
-      justify-content: center;
-      align-self: center;
       flex-direction: column;
-      padding: 2%; }
-      @media screen and (max-width: 900px) {
-        .quizz .contenedor__preguntas .div__pregunta {
-          width: 90%; } }
-      .quizz .contenedor__preguntas .div__pregunta .pregunta__titulo {
-        color: white;
-        font-size: 1.5em; }
-        @media screen and (max-width: 1000px) {
-          .quizz .contenedor__preguntas .div__pregunta .pregunta__titulo {
-            font-size: 1.2em; } }
-        @media screen and (max-width: 800px) {
-          .quizz .contenedor__preguntas .div__pregunta .pregunta__titulo {
-            font-size: 1em; } }
-        .quizz .contenedor__preguntas .div__pregunta .pregunta__titulo .pregunta__opcion {
-          color: black;
-          background-color: white; }
-          .quizz .contenedor__preguntas .div__pregunta .pregunta__titulo .pregunta__opcion:hover {
-            background-color: #5a5a5a; }
+      justify-content: center;
+      align-items: center; }
+      .quizz .contenedor__preguntas__general .contenedores .div__pregunta {
+        width: 80%;
+        background-color: #000000d5;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+        padding: 2%;
+        margin: 1%; }
+        @media screen and (max-width: 900px) {
+          .quizz .contenedor__preguntas__general .contenedores .div__pregunta {
+            width: 90%; } }
+        .quizz .contenedor__preguntas__general .contenedores .div__pregunta .pregunta__titulo {
+          color: white;
+          font-size: 1.5em; }
+          @media screen and (max-width: 1000px) {
+            .quizz .contenedor__preguntas__general .contenedores .div__pregunta .pregunta__titulo {
+              font-size: 1.2em; } }
+          @media screen and (max-width: 800px) {
+            .quizz .contenedor__preguntas__general .contenedores .div__pregunta .pregunta__titulo {
+              font-size: 1em; } }
+          .quizz .contenedor__preguntas__general .contenedores .div__pregunta .pregunta__titulo .pregunta__opcion {
+            color: black;
+            background-color: white; }
+            .quizz .contenedor__preguntas__general .contenedores .div__pregunta .pregunta__titulo .pregunta__opcion:hover {
+              background-color: #5a5a5a; }
 
 #botones {
   display: flex;
@@ -1027,8 +1033,7 @@ body {
 
 .fadeShow {
   transition: 300ms;
-  opacity: 1;
-  display: ""; }
+  opacity: 1; }
 
 .buttonSelected {
   transition: 500ms;

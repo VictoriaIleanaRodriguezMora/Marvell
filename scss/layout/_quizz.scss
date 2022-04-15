@@ -1,6 +1,7 @@
 .fadeOut {
   transition: 100ms;
   opacity: 0;
+
   display: none;
 }
 
@@ -11,10 +12,9 @@
 .fadeShow {
   transition: 300ms;
   opacity: 1;
-display: "";
 }
 
-.buttonSelected{
+.buttonSelected {
   transition: 500ms;
   font-size: 1rem;
   padding: 0.7rem;
@@ -25,7 +25,7 @@ display: "";
   background-color: #060052;
   color: white;
   left: 1%;
-  top: 20%;    
+  top: 20%;
 }
 
 .buttonSelected:hover {
