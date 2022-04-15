@@ -20,6 +20,7 @@ let opcionesUCM = document.querySelectorAll(".ucm > .pregunta__opcion")
 let opcionesXMEN = document.querySelectorAll(".xmen > .pregunta__opcion")
 let opcionesTODO = document.querySelectorAll(".todo > .pregunta__opcion")
 let opcionCorrecta = document.querySelectorAll(".opcion__correcta")
+let opcionIncorrecta = document.querySelectorAll("#opIncorrecta")
 //Botones de juego
 let botonesCategoriasDeJuego = document.querySelectorAll(".categorias > button")
 let botonUCM = document.querySelector("#botonUCM")
@@ -27,10 +28,9 @@ let botonXMEN = document.querySelector("#botonXMEN")
 let botonTODO = document.querySelector("#botonTODO")
 
 //Contadores
-let contadorPreguntas;
-let contadorAcertadas;
-let contadorDesacertadas;
-
+let contadorPreguntas = 0;
+let contadorAcertadas = 0;
+let contadorDesacertadas = 0;
 // Terminan las variables
 
 //Oculto lo que necesito para empezar
@@ -71,6 +71,7 @@ botonUCM.onclick = () => {
     botonXMEN.classList.add('fadeOut');
     botonTODO.classList.add('fadeOut');
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0, opcionesUCM)
+    contarPuntos()
 
 }
 botonXMEN.onclick = () => {
@@ -78,7 +79,8 @@ botonXMEN.onclick = () => {
     botonXMEN.classList.add("buttonSelected")
     botonUCM.classList.add('fadeOut');
     botonTODO.classList.add('fadeOut');
-    recorrerInicial(arrContPregs, 1, preguntasXMEN, 0, opcionesXMEN)
+    recorrerInicial(arrContPregs, 1, preguntasXMEN, opcionesXMEN)
+    contarPuntos()
 
 }
 botonTODO.onclick = () => {
@@ -86,30 +88,44 @@ botonTODO.onclick = () => {
     botonTODO.classList.add("buttonSelected")
     botonUCM.classList.add('fadeOut');
     botonXMEN.classList.add('fadeOut');
-    recorrerInicial(arrContPregs, 2, preguntasTODO, 0, opcionesTODO)
+    recorrerInicial(arrContPregs, 2, preguntasTODO, opcionesTODO)
+    contarPuntos()
 
 }
 //Funcion para automatizar 
-function recorrerInicial(arrGeneral, n, arrPregunta, n2, arrOpciones) {
+function recorrerInicial(arrGeneral, n, arrPregunta, arrOpciones) {
     arrGeneral[n].classList.remove("fadeOut")
     console.log("yo");
-    arrPregunta[n2].classList.remove("fadeOut")
-    contarPuntos(arrOpciones)
+    fadeOutRemove(arrPregunta)
 
 }
-function contarPuntos(opciones) {
-    console.log("hola");
-for (let i = 0; i < opcionesUCM.length; i++) {
-    
-
-    opcionesUCM[i].addEventListener("click", function () {
+function contarPuntos() {
+    // opcionIncorrecta.onclick = () => {
+    //     contadorDesacertadas++
+    //     console.log(contadorDesacertadas);
+    // }
+    for (let i = 0; i < opcionIncorrecta.length; i++) {
+        opcionIncorrecta[i].addEventListener("click", function () {
         contadorDesacertadas++
-        console.log("chau");
-        opcionCorrecta.onclick = () => {
-            contadorAcertadas++
-            console.log(contadorAcertadas)
-        }
+        console.log(`desacertadas${contadorDesacertadas}`);  
     })
+    }
+    for (let x = 0; x < opcionCorrecta.length; x++) {
+        opcionCorrecta[x].addEventListener("click", function () {
+        contadorAcertadas++
+        console.log(`acertadas${contadorAcertadas}`);  
+    })
+    }
+    // opcionCorrecta.onclick = () => {
+    //     contadorAcertadas++
+    //     console.log(contadorAcertadas);
+    // }
+    
 }
+contarPuntos()
+// function jugar(arr) {
 
-}
+//     contarPuntos(arr)
+
+// }
+// jugar(preguntasUCM)

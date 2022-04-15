@@ -12,9 +12,9 @@ function showQuestion(arr) {
     for (let i = 0; i < arr.length; i++) {
         //Genera un numero random, no me anduvo con sort
         nroRandom = Math.floor(Math.random() * (arr.length))
-            //Ubico a mi array, en la posicion del numero aleatorio
+        //Ubico a mi array, en la posicion del numero aleatorio
         datoUsuario = parseInt(prompt(`${arr[nroRandom].pregunta} \n ${arr[nroRandom].opciones}`))
-            // Evaluo lo ingresado. Linea 25
+        // Evaluo lo ingresado. Linea 25
         contadorDePuntos(arr);
     }
     //Linea 74
@@ -54,8 +54,6 @@ function contadorDePuntos(arr) {
 
 
 }
-
-
 function alertScore() {
     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
     if (contadorAcertadas < preguntasTotales * 10 / 100) {
@@ -74,11 +72,11 @@ function alertScore() {
 function jugarDeNuevo() {
     //Muestro el puntaje
     alertScore()
-        //Reinicio los contador
+    //Reinicio los contador
     contadorAcertadas = 0
     contadorDesacertadas = 0
     preguntasTotales = 0
-        //Pregunto si quiere jugar
+    //Pregunto si quiere jugar
     elijeJuego = parseInt(prompt("Queres jugar de nuevo? \n 1. Sí \n 2. No "))
     switch (elijeJuego) {
         //Si elije este caso, va a la linea 200
@@ -93,17 +91,17 @@ function jugarDeNuevo() {
 
 // Arrays de Objetos. Preguntas y opciones
 arrPreguntasUCM = [{
-        pregunta: "¿Que raza es aliada de Loki en Avengers? Ingresá el numero correspondiente.",
-        opciones: [" 1. Chitauri", " 2. Klyntar", " 3. Kronans", " 0. Para salir "]
-    },
-    {
-        pregunta: "¿Por quien consigue Clint la gema del Alma? Ingresá el numero correspondiente.",
-        opciones: [" 1. Viuda Negra", " 2. Bruja Escarlata", " 3. Gamora", " 4. Carol Danvers", " 0. Para salir "],
-    },
-    {
-        pregunta: "¿Que Avenger crea a Vision? Ingresá el numero correspondiente.",
-        opciones: [" 1. Iron Man", " 2. Thor", " 3. Bruja Escarlata", " 4. Clint", " 0. Para salir "],
-    }
+    pregunta: "¿Que raza es aliada de Loki en Avengers? Ingresá el numero correspondiente.",
+    opciones: [" 1. Chitauri", " 2. Klyntar", " 3. Kronans", " 0. Para salir "]
+},
+{
+    pregunta: "¿Por quien consigue Clint la gema del Alma? Ingresá el numero correspondiente.",
+    opciones: [" 1. Viuda Negra", " 2. Bruja Escarlata", " 3. Gamora", " 4. Carol Danvers", " 0. Para salir "],
+},
+{
+    pregunta: "¿Que Avenger crea a Vision? Ingresá el numero correspondiente.",
+    opciones: [" 1. Iron Man", " 2. Thor", " 3. Bruja Escarlata", " 4. Clint", " 0. Para salir "],
+}
 
 ]
 
@@ -112,33 +110,33 @@ function preguntasUCMF() {
 }
 
 arrPreguntasXMEN = [{
-        pregunta: "¿Qué personas tiene un premio por intrepretar en live action más veces a un superhéroe de marvel?",
-        opciones: [" 1. Hugh JackMan & Patrick Stewart", " 2. Hugh JackMan & Robert D. Junior", " 3. Patrick Stewart & Robert D. Junior", " 0. Para salir "]
-    },
-    {
-        pregunta: "¿En que pelicula Wolverine viaja al pasado? Ingresá el numero correspondiente.",
-        opciones: [" 1. X-men Dias del Futuro Pasado", " 2. X-men Origenes", " 3. X-men 2", " 0. Para salir "],
-    },
-    {
-        pregunta: "¿Como se llama la nave de los X-men?",
-        opciones: [" 1. X-jet", " 2. X-ship", " 3. X-moon", " 0. Para salir "],
-    },
-    {
-        pregunta: "¿Que accidente tiene Charles Xavier que lo deja invalido?",
-        opciones: [" 1. Dsiparo en la espina dorsal", " 2. Accidente de auto", " 3. Golpe en la cabeza", " 0. Para salir "]
-    },
-    {
-        pregunta: "¿En donde ocurre 'La Batalla Final' donde Logan tiene que matar a Phoenix?",
-        opciones: [" 1. Alcatraz", " 2. Genosha", " 3. Canada", " 0. Para salir "],
-    },
-    {
-        pregunta: "¿Donde nació Lobezno?",
-        opciones: [" 1. Canada", " 2. EEUU", " 3. Inglaterra", " 0. Para salir "],
-    },
-    {
-        pregunta: "¿Cual es el verdadero nombre de Logan?",
-        opciones: [" 1. Shimmy", " 2. James", " 3. David", " 0. Para salir "],
-    }
+    pregunta: "¿Qué personas tiene un premio por intrepretar en live action más veces a un superhéroe de marvel?",
+    opciones: [" 1. Hugh JackMan & Patrick Stewart", " 2. Hugh JackMan & Robert D. Junior", " 3. Patrick Stewart & Robert D. Junior", " 0. Para salir "]
+},
+{
+    pregunta: "¿En que pelicula Wolverine viaja al pasado? Ingresá el numero correspondiente.",
+    opciones: [" 1. X-men Dias del Futuro Pasado", " 2. X-men Origenes", " 3. X-men 2", " 0. Para salir "],
+},
+{
+    pregunta: "¿Como se llama la nave de los X-men?",
+    opciones: [" 1. X-jet", " 2. X-ship", " 3. X-moon", " 0. Para salir "],
+},
+{
+    pregunta: "¿Que accidente tiene Charles Xavier que lo deja invalido?",
+    opciones: [" 1. Dsiparo en la espina dorsal", " 2. Accidente de auto", " 3. Golpe en la cabeza", " 0. Para salir "]
+},
+{
+    pregunta: "¿En donde ocurre 'La Batalla Final' donde Logan tiene que matar a Phoenix?",
+    opciones: [" 1. Alcatraz", " 2. Genosha", " 3. Canada", " 0. Para salir "],
+},
+{
+    pregunta: "¿Donde nació Lobezno?",
+    opciones: [" 1. Canada", " 2. EEUU", " 3. Inglaterra", " 0. Para salir "],
+},
+{
+    pregunta: "¿Cual es el verdadero nombre de Logan?",
+    opciones: [" 1. Shimmy", " 2. James", " 3. David", " 0. Para salir "],
+}
 
 ]
 
@@ -147,45 +145,45 @@ function preguntasXMENF() {
 
 }
 arrPreguntasTodo = [{
-        pregunta: "¿Qué personas tiene un premio por intrepretar en live action más veces a un superhéroe de marvel?",
-        opciones: [" 1. Hugh JackMan & Patrick Stewart", " 2. Hugh JackMan & Robert D. Junior", " 3. Patrick Stewart & Robert D. Junior", " 0. Para salir "]
-    },
-    {
-        pregunta: "¿En que pelicula Wolverine viaja al pasado? Ingresá el numero correspondiente.",
-        opciones: [" 1. X-men Dias del Futuro Pasado", " 2. X-men Origenes", " 3. X-men 2", " 0. Para salir "],
-    },
-    {
-        pregunta: "¿Como se llama la nave de los X-men?",
-        opciones: [" 1. X-jet", " 2. X-ship", " 3. X-moon", " 0. Para salir "],
-    },
-    {
-        pregunta: "¿Que accidente tiene Charles Xavier que lo deja invalido?",
-        opciones: [" 1. Dsiparo en la espina dorsal", " 2. Accidente de auto", " 3. Golpe en la cabeza", " 0. Para salir "]
-    },
-    {
-        pregunta: "¿En donde ocurre 'La Batalla Final' donde Logan tiene que matar a Phoenix?",
-        opciones: [" 1. Alcatraz", " 2. Genosha", " 3. Canada", " 0. Para salir "],
-    },
-    {
-        pregunta: "¿Donde nació Lobezno?",
-        opciones: [" 1. Canada", " 2. EEUU", " 3. Inglaterra", " 0. Para salir "],
-    },
-    {
-        pregunta: "¿Cual es el verdadero nombre de Logan?",
-        opciones: [" 1. Shimmy", " 2. James", " 3. David", " 0. Para salir "],
-    },
-    {
-        pregunta: "¿Que raza es aliada de Loki en Avengers? Ingresá el numero correspondiente.",
-        opciones: [" 1. Chitauri", " 2. Klyntar", " 3. Kronans", " 0. Para salir "]
-    },
-    {
-        pregunta: "¿Por quien consigue Clint la gema del Alma? Ingresá el numero correspondiente.",
-        opciones: [" 1. Viuda Negra", " 2. Bruja Escarlata", " 3. Gamora", " 4. Carol Danvers", " 0. Para salir "],
-    },
-    {
-        pregunta: "¿Que Avenger crea a Vision? Ingresá el numero correspondiente.",
-        opciones: [" 1. Iron Man", " 2. Thor", " 3. Bruja Escarlata", " 4. Clint", " 0. Para salir "],
-    }
+    pregunta: "¿Qué personas tiene un premio por intrepretar en live action más veces a un superhéroe de marvel?",
+    opciones: [" 1. Hugh JackMan & Patrick Stewart", " 2. Hugh JackMan & Robert D. Junior", " 3. Patrick Stewart & Robert D. Junior", " 0. Para salir "]
+},
+{
+    pregunta: "¿En que pelicula Wolverine viaja al pasado? Ingresá el numero correspondiente.",
+    opciones: [" 1. X-men Dias del Futuro Pasado", " 2. X-men Origenes", " 3. X-men 2", " 0. Para salir "],
+},
+{
+    pregunta: "¿Como se llama la nave de los X-men?",
+    opciones: [" 1. X-jet", " 2. X-ship", " 3. X-moon", " 0. Para salir "],
+},
+{
+    pregunta: "¿Que accidente tiene Charles Xavier que lo deja invalido?",
+    opciones: [" 1. Dsiparo en la espina dorsal", " 2. Accidente de auto", " 3. Golpe en la cabeza", " 0. Para salir "]
+},
+{
+    pregunta: "¿En donde ocurre 'La Batalla Final' donde Logan tiene que matar a Phoenix?",
+    opciones: [" 1. Alcatraz", " 2. Genosha", " 3. Canada", " 0. Para salir "],
+},
+{
+    pregunta: "¿Donde nació Lobezno?",
+    opciones: [" 1. Canada", " 2. EEUU", " 3. Inglaterra", " 0. Para salir "],
+},
+{
+    pregunta: "¿Cual es el verdadero nombre de Logan?",
+    opciones: [" 1. Shimmy", " 2. James", " 3. David", " 0. Para salir "],
+},
+{
+    pregunta: "¿Que raza es aliada de Loki en Avengers? Ingresá el numero correspondiente.",
+    opciones: [" 1. Chitauri", " 2. Klyntar", " 3. Kronans", " 0. Para salir "]
+},
+{
+    pregunta: "¿Por quien consigue Clint la gema del Alma? Ingresá el numero correspondiente.",
+    opciones: [" 1. Viuda Negra", " 2. Bruja Escarlata", " 3. Gamora", " 4. Carol Danvers", " 0. Para salir "],
+},
+{
+    pregunta: "¿Que Avenger crea a Vision? Ingresá el numero correspondiente.",
+    opciones: [" 1. Iron Man", " 2. Thor", " 3. Bruja Escarlata", " 4. Clint", " 0. Para salir "],
+}
 ];
 
 function preguntasTodoF() {
