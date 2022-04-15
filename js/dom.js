@@ -2,9 +2,9 @@ let titulo = document.querySelector("#titulo")
 let botonJugas = document.querySelector(".jugas")
 let secccionQuizz = document.querySelector(".quizz")
 //Variables contenedoras
-let divCategoriasDeJuego = document.querySelectorAll(".categorias")
+let divCategoriasDeJuego = document.querySelectorAll(".categorias__boton")
 let contenedorGeneralPreguntas = document.querySelectorAll(".contenedor__preguntas__general > .contenedores")
-let preguntasUCM = document.querySelectorAll(".contenedor__preguntas__UCM > .ucm")
+let preguntasUCM = document.querySelectorAll(".ucm")
 let preguntasXMEN = document.querySelectorAll(".xmen")
 let preguntasTODO = document.querySelectorAll(".todo")
 let arrPreguntas = [preguntasUCM, preguntasXMEN, preguntasTODO]
@@ -19,12 +19,14 @@ let contadorPreguntas
 let contadorAcertadas
 
 // Empieza el juego
-for (let i = 0; i < divCategoriasDeJuego.length; i++) {
-    divCategoriasDeJuego[i].classList.add("fadeOut")
+function fadeOut(array){
+    for (let i = 0; i < array.length; i++) {
+        array[i].classList.add("fadeOut")
+    }
 }
-for (let i = 0; i < contenedorGeneralPreguntas.length; i++) {
-    contenedorGeneralPreguntas[i].classList.add("fadeOut")
-}
+fadeOut(divCategoriasDeJuego)
+fadeOut(contenedorGeneralPreguntas)
+
 
 // Se clickea el boton ¿JUGAS?
 botonJugas.addEventListener("click", fadeOutInicial)
@@ -39,29 +41,31 @@ function fadeOutInicial() {
 
 }
 //Mostrar categorias y elegir juego
-function mostrarCategorias() {
-    for (let i = 0; i < divCategoriasDeJuego.length; i++) {
-        console.log(i); // esto devuelve 0
-        divCategoriasDeJuego[i].addEventListener("click", elegirJuego)
-    }
+
+for (let i = 0; i < divCategoriasDeJuego.length; i++) {
+    divCategoriasDeJuego[i].addEventListener("click", elegirJuego)
+}
 
 //Elegir Juego
 function elegirJuego() {
-    console.log(this); //y si apreto los botones me duelve el codigo html como? podemos sacar el for linea 43 de ah
-    switch (this) {
-        case 0:
+    switch (this.textContent) {
+        case 'MCU':
+            botonUCM.classList.remove("categorias__boton")
             botonUCM.classList.add("buttonSelected")
             botonXMEN.classList.add('fadeOut');
             botonTODO.classList.add('fadeOut');
+            // preguntasUCM(preguntasUCM)
             break;
 
-        case 1:
+        case 'X-Men':
+            botonXMEN.classList.remove("categorias__boton")
             botonXMEN.classList.add("buttonSelected")
             botonUCM.classList.add('fadeOut');
             botonTODO.classList.add('fadeOut');
             break;
 
-        case 2:
+        case 'TODO':
+            botonTODO.classList.remove("categorias__boton")
             botonTODO.classList.add("buttonSelected")
             botonUCM.classList.add('fadeOut');
             botonXMEN.classList.add('fadeOut');
@@ -71,4 +75,13 @@ function elegirJuego() {
             break;
     }
 }
-mostrarCategorias()
+for (let i = 0; i < preguntasUCM.length; i++) {
+    preguntasUCM[i].addEventListener("click", preguntasF)
+}
+function preguntasF() {
+        this.addEventListener("click", function() {
+            console.log(this)
+        })
+        
+}
+preguntasF()
