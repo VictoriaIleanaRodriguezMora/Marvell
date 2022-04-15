@@ -117,7 +117,7 @@ arrPreguntasXMEN = [{
     },
     {
         pregunta: "¿En que pelicula Wolverine viaja al pasado? Ingresá el numero correspondiente.",
-        opciones: [" 1. X-men Dias del Futuro Pasado", " 2. X-men 0rigenes", " 3. X-men 2", " 0. Para salir "],
+        opciones: [" 1. X-men Dias del Futuro Pasado", " 2. X-men Origenes", " 3. X-men 2", " 0. Para salir "],
     },
     {
         pregunta: "¿Como se llama la nave de los X-men?",
@@ -152,7 +152,7 @@ arrPreguntasTodo = [{
     },
     {
         pregunta: "¿En que pelicula Wolverine viaja al pasado? Ingresá el numero correspondiente.",
-        opciones: [" 1. X-men Dias del Futuro Pasado", " 2. X-men 0rigenes", " 3. X-men 2", " 0. Para salir "],
+        opciones: [" 1. X-men Dias del Futuro Pasado", " 2. X-men Origenes", " 3. X-men 2", " 0. Para salir "],
     },
     {
         pregunta: "¿Como se llama la nave de los X-men?",
