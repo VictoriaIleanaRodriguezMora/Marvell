@@ -2,9 +2,9 @@ let titulo = document.querySelector("#titulo")
 let botonJugas = document.querySelector(".jugas")
 let secccionQuizz = document.querySelector(".quizz")
 //Variables contenedoras
-let divCategoriasDeJuego = document.querySelector(".categorias")
+let divCategoriasDeJuego = document.querySelectorAll(".categorias")
 let contenedorGeneralPreguntas = document.querySelectorAll(".contenedor__preguntas__general > .contenedores")
-let preguntasUCM = document.querySelectorAll(".ucm")
+let preguntasUCM = document.querySelectorAll(".contenedor__preguntas__UCM > .ucm")
 let preguntasXMEN = document.querySelectorAll(".xmen")
 let preguntasTODO = document.querySelectorAll(".todo")
 let arrPreguntas = [preguntasUCM, preguntasXMEN, preguntasTODO]
@@ -19,13 +19,12 @@ let contadorPreguntas
 let contadorAcertadas
 
 // Empieza el juego
-divCategoriasDeJuego.classList.add("fadeOut")
+for (let i = 0; i < divCategoriasDeJuego.length; i++) {
+    divCategoriasDeJuego[i].classList.add("fadeOut")
+}
 for (let i = 0; i < contenedorGeneralPreguntas.length; i++) {
     contenedorGeneralPreguntas[i].classList.add("fadeOut")
-    
 }
-
-
 
 // Se clickea el boton ¿JUGAS?
 botonJugas.addEventListener("click", fadeOutInicial)
@@ -34,20 +33,22 @@ function fadeOutInicial() {
     botonJugas.classList.toggle("fadeOut")
     titulo.classList.toggle("fadeOut")
     // Se muestran las categorias para jugar
-    divCategoriasDeJuego.classList.toggle("fadeOut")
+    for (let i = 0; i < divCategoriasDeJuego.length; i++) {
+        divCategoriasDeJuego[i].classList.toggle("fadeOut")
+    }
 
 }
 //Mostrar categorias y elegir juego
 function mostrarCategorias() {
     for (let i = 0; i < divCategoriasDeJuego.length; i++) {
-        console.log(i);
-        divCategoriasDeJuego[i].addEventListener("click", elegirJuego([i]))
+        console.log(i); // esto devuelve 0
+        divCategoriasDeJuego[i].addEventListener("click", elegirJuego)
     }
-}
+
 //Elegir Juego
-function elegirJuego(x) {
-    console.log("hola");
-    switch (x) {
+function elegirJuego() {
+    console.log(this); //y si apreto los botones me duelve el codigo html como? podemos sacar el for linea 43 de ah
+    switch (this) {
         case 0:
             botonUCM.classList.add("buttonSelected")
             botonXMEN.classList.add('fadeOut');
@@ -70,11 +71,4 @@ function elegirJuego(x) {
             break;
     }
 }
-function mostrarPreguntas(arrayPregs) {
-    for (let i = 0; i < arrayPregs.length; i++) {
-        arrayPregs[i].classList.add("fadeShow")
-        console.log(arrayPregs[i])
-        
-    }
-}
-mostrarPreguntas(preguntasUCM)
+mostrarCategorias()
