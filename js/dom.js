@@ -4,6 +4,10 @@
 // let arrPreguntas = [preguntasUCM, preguntasXMEN, preguntasTODO]
 let titulo = document.querySelector("#titulo")
 let botonJugas = document.querySelector(".jugas")
+let botonJugarDeNuevo = document.querySelector(".jugarDeNuevo")
+let score = document.querySelector("#score")
+let botonTerminar = document.querySelector(".terminar")
+
 //Variables contenedoras
 let contenedorDeTodo = document.querySelector(".contenedor__preguntas__general")
 let divCategoriasDeJuego = document.querySelectorAll(".categorias__boton")
@@ -20,8 +24,8 @@ let arrPregs = [preguntasUCM, preguntasXMEN, preguntasTODO]
 let opcionesUCM = document.querySelectorAll(".ucm > .pregunta__opcion")
 let opcionesXMEN = document.querySelectorAll(".xmen > .pregunta__opcion")
 let opcionesTODO = document.querySelectorAll(".todo > .pregunta__opcion")
-let opcionCorrecta = document.querySelectorAll(".opcion__correcta")
-let opcionIncorrecta = document.querySelectorAll("#opIncorrecta")
+let opcionesCorrectas = document.querySelectorAll(".opcion__correcta")
+let opcionesIncorrectas = document.querySelectorAll("#opIncorrecta")
 //Botones de juego
 let botonesCategoriasDeJuego = document.querySelectorAll(".categorias > button")
 let botonUCM = document.querySelector("#botonUCM")
@@ -32,6 +36,7 @@ let botonTODO = document.querySelector("#botonTODO")
 let preguntasTotales = 0;
 let contadorAcertadas = 0;
 let contadorDesacertadas = 0;
+let limiteOpciones = 0;
 // Terminan las variables
 
 //Oculto lo que necesito para empezar
@@ -50,6 +55,9 @@ fadeOut(arrContPregs)
 fadeOut(preguntasUCM)
 fadeOut(preguntasXMEN)
 fadeOut(preguntasTODO)
+botonJugarDeNuevo.classList.add("fadeOut")
+score.classList.add("fadeOut")
+botonTerminar.classList.add("fadeOut")
 contenedorDeTodo.classList.remove("contenedor__preguntas__general")
 // Empieza el juego
 // Se clickea el boton ¿JUGAS?
@@ -65,45 +73,33 @@ function fadeOutInicial() {
     }
 
 }
+function botonesCat(botonPrincipal, segundoBoton, tercerBoton, contenedorUno, contenedorDos, botonFinish) {
+    contenedorDeTodo.classList.add("contenedor__preguntas__general")
+    botonPrincipal.classList.remove("categorias__boton")
+    botonPrincipal.classList.add("buttonSelected")
+    botonPrincipal.disabled = true
+    segundoBoton.classList.add('fadeOut');
+    tercerBoton.classList.add('fadeOut');
+    botonFinish.classList.remove("fadeOut")
+    contenedorUno.classList.remove("contenedores")
+    contenedorDos.classList.remove("contenedores")
+}
 //Elegir Juego
 botonUCM.onclick = () => {
-    contenedorDeTodo.classList.add("contenedor__preguntas__general")
-    botonUCM.classList.remove("categorias__boton")
-    botonUCM.classList.add("buttonSelected")
-    botonXMEN.classList.add('fadeOut');
-    botonTODO.classList.add('fadeOut');
-    contPregsXMEN.classList.remove("contenedores")
-    contPregsTODO.classList.remove("contenedores")
-
+    botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
-    arrContPregs[1, 2]
-    // contarPuntos()
     jugar(preguntasUCM)
 
 }
 botonXMEN.onclick = () => {
-    contenedorDeTodo.classList.add("contenedor__preguntas__general")
-    botonXMEN.classList.remove("categorias__boton")
-    botonXMEN.classList.add("buttonSelected")
-    botonUCM.classList.add('fadeOut');
-    botonTODO.classList.add('fadeOut');
-    contPregsUCM.classList.remove("contenedores")
-    contPregsTODO.classList.remove("contenedores")
+    botonesCat(botonXMEN, botonUCM, botonTODO, contPregsUCM, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 1, preguntasXMEN)
-    // contarPuntos()
     jugar(preguntasXMEN)
 
 }
 botonTODO.onclick = () => {
-    contenedorDeTodo.classList.add("contenedor__preguntas__general")
-    botonTODO.classList.remove("categorias__boton")
-    botonTODO.classList.add("buttonSelected")
-    botonUCM.classList.add('fadeOut');
-    botonXMEN.classList.add('fadeOut');
-    contPregsUCM.classList.remove("contenedores")
-    contPregsXMEN.classList.remove("contenedores")
+    botonesCat(botonTODO, botonUCM, botonXMEN, contPregsUCM, contPregsXMEN, botonTerminar)
     recorrerInicial(arrContPregs, 2, preguntasTODO)
-    // contarPuntos()
     jugar(preguntasTODO)
 
 }
@@ -115,25 +111,64 @@ function recorrerInicial(arrGeneral, n, arrPregunta) {
 
 }
 function contarPuntos() {
-    for (let i = 0; i < opcionIncorrecta.length; i++) {
-        opcionIncorrecta[i].addEventListener("click", function () {
+    for (let i = 0; i < opcionesIncorrectas.length; i++) {
+        opcionesIncorrectas[i].addEventListener("click", function () {
             contadorDesacertadas++
+            limiteOpciones++
+            opcionesIncorrectas.disabled = true
+            opcionesCorrectas.disabled = true
+            opcionesIncorrectas[i].classList.add("opcionSeleccionada")
             console.log(`desacertadas${contadorDesacertadas}`);
         })
+
     }
-    for (let x = 0; x < opcionCorrecta.length; x++) {
-        opcionCorrecta[x].addEventListener("click", function () {
+    for (let x = 0; x < opcionesCorrectas.length; x++) {
+        opcionesCorrectas[x].addEventListener("click", function () {
             contadorAcertadas++
+            limiteOpciones++
+            opcionesCorrectas.disabled = true
+            opcionesIncorrectas.disabled = true
+            opcionesCorrectas[x].classList.add("opcionSeleccionada")
             console.log(`acertadas${contadorAcertadas}`);
         })
     }
 
 }
 function jugar(arr) {
-    for (let i = 0; i < preguntasUCM.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         preguntasTotales++
-        contarPuntos(arr)
+        console.log(preguntasTotales);
+    }
 
+    contarPuntos()
+}
+botonTerminar.onclick = () => {
+    botonTerminar.classList.add("fadeOut")
+    //Muestro el puntaje
+    alertScore()
+    //Reinicio los contador
+    contadorAcertadas = 0
+    contadorDesacertadas = 0
+    preguntasTotales = 0
+    botonJugarDeNuevo.classList.remove("fadeOut")
+
+}
+botonJugarDeNuevo.onclick = () => {
+    location.reload()
+}
+function alertScore() {
+    score.classList.remove("fadeOut")
+    //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
+    if (contadorAcertadas < preguntasTotales * 10 / 100) {
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`)    } else if (contadorAcertadas < preguntasTotales * 30 / 100) {
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, nadie es perfecto... 😵`)
+    } else if (contadorAcertadas < preguntasTotales * 60 / 100) {
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bien! Seguro que podes hacerlo mejor 😉`)
+    } else if (contadorAcertadas < preguntasTotales * 100 / 100) {
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, si fuera Fury, te habria considerado! 😁`)
+    } else if (contadorAcertadas == preguntasTotales * 100 / 100) {
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Sos un expert@! 🥳`)
     }
 }
-jugar(preguntasUCM)
+
+
