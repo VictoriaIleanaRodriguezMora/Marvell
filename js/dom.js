@@ -37,6 +37,7 @@ let preguntasTotales = 0;
 let contadorAcertadas = 0;
 let contadorDesacertadas = 0;
 let limiteOpciones = 0;
+
 // Terminan las variables
 
 //Oculto lo que necesito para empezar
@@ -57,6 +58,7 @@ fadeOut(preguntasXMEN)
 fadeOut(preguntasTODO)
 botonJugarDeNuevo.classList.add("fadeOut")
 score.classList.add("fadeOut")
+fadeOut(score)
 botonTerminar.classList.add("fadeOut")
 contenedorDeTodo.classList.remove("contenedor__preguntas__general")
 // Empieza el juego
@@ -153,9 +155,9 @@ botonTerminar.onclick = () => {
     botonJugarDeNuevo.classList.remove("fadeOut")
 
 }
-botonJugarDeNuevo.onclick = () => {
-    location.reload()
-}
+// botonJugarDeNuevo.onclick = () => {
+//     location.reload()
+// }
 function alertScore() {
     score.classList.remove("fadeOut")
     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
