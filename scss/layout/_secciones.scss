@@ -372,9 +372,10 @@
   flex-direction: map-get($flexbox, flex-dir-r);
   justify-content: map-get($flexbox, justify-c);
   flex-wrap: wrap;
+  align-content: center;
   width: 100vw;
   height: auto;
-  padding:5% ;
+  padding: 5%;
   @media screen and (max-width: 1050px) {
     align-items: center;
     flex-direction: map-get($flexbox, flex-dir-c);
@@ -469,7 +470,6 @@
   height: auto;
   box-sizing: border-box;
   .jugas {
-    // visibility: visible;
     background-color: red;
     font-size: 2rem;
     width: 20%;
@@ -524,11 +524,18 @@
       transition: 500ms;
       background-color: #060052;
       width: 15%;
+      margin: 0.5%;
+      @media screen and (max-width: 1350px) {
+        width: 20%;
+        font-size: 1.7rem;
+      }
       @media screen and (max-width: 800px) {
         width: 30%;
+        font-size: 1.5rem;
       }
       @media screen and (max-width: 500px) {
         width: 50%;
+        font-size: 1rem;
       }
       &:hover {
         border-color: #060052;
@@ -581,25 +588,42 @@
       }
     }
   }
-  .score{
+  .score {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 30px red;    width: 60%;
+    box-shadow: 0px 0px 30px red;
+    width: 60%;
     border-radius: 25px;
     text-align: center;
     font-size: 1.5rem;
     margin: 1%;
+    @media screen and (max-width: 1300px) {
+      width: 80%;
+      font-size: 1.3rem;
+    }
+    @media screen and (max-width: 800px) {
+      width: 80%;
+      font-size: 1.1rem;
+    }
+    @media screen and (max-width: 500px) {
+      width: 80%;
+      font-size: 0.9rem;
+    }
   }
-  .jugarDeNuevo{
+  .jugarDeNuevo {
     width: 60%;
     margin: 1%;
-
   }
-  .terminar{
-    padding: 1%;
-font-size: 1.3rem;
-border-radius: 50px;
-margin: 2% 0% -5% 0%;
+  .terminar {
+    padding: 3%;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    margin: 2% 0% -5% 0%;
+    box-sizing: border-box;
+    @media screen and (max-width: 500px) {
+      padding: 5%;
+      font-size: 1rem;
+    }
   }
 }
 
