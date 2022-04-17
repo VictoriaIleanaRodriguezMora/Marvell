@@ -106,7 +106,7 @@ botonTODO.onclick = () => {
 //Funcion para automatizar 
 function recorrerInicial(arrGeneral, n, arrPregunta) {
     arrGeneral[n].classList.remove("fadeOut")
-    console.log("yo");
+    // console.log("yo");
     fadeOutRemove(arrPregunta)
 
 }
@@ -118,7 +118,7 @@ function contarPuntos() {
             opcionesIncorrectas.disabled = true
             opcionesCorrectas.disabled = true
             opcionesIncorrectas[i].classList.add("opcionSeleccionada")
-            console.log(`desacertadas${contadorDesacertadas}`);
+            // console.log(`desacertadas${contadorDesacertadas}`);
         })
 
     }
@@ -129,7 +129,7 @@ function contarPuntos() {
             opcionesCorrectas.disabled = true
             opcionesIncorrectas.disabled = true
             opcionesCorrectas[x].classList.add("opcionSeleccionada")
-            console.log(`acertadas${contadorAcertadas}`);
+            // console.log(`acertadas${contadorAcertadas}`);
         })
     }
 
