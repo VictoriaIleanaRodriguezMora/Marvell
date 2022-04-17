@@ -493,7 +493,8 @@ body {
       margin: 5% 10%; } }
   @media screen and (max-width: 430px) {
     #titulo {
-      margin: 5% 7%; } }
+      margin: 5% 7%;
+      width: 100%; } }
   @media screen and (max-width: 360px) {
     #titulo {
       margin: 5% 6%; } }
