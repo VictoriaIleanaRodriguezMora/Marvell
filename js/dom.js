@@ -1,7 +1,4 @@
-// let arrBotones = [botonUCM, botonXMEN, botonTODO]
-// let contenedorGeneralPreguntas = document.querySelectorAll(".contenedor__preguntas__general > .contenedores")
-// let secccionQuizz = document.querySelector(".quizz")
-// let arrPreguntas = [preguntasUCM, preguntasXMEN, preguntasTODO]
+
 let titulo = document.querySelector("#titulo")
 let botonJugas = document.querySelector(".jugas")
 let botonJugarDeNuevo = document.querySelector(".jugarDeNuevo")
@@ -37,6 +34,10 @@ let preguntasTotales = 0;
 let contadorAcertadas = 0;
 let contadorDesacertadas = 0;
 let limiteOpciones = 0;
+let vecesJugadasUCM = 0
+let vecesJugadasXMEN = 0;
+let vecesJugadasTODO = 0;
+let vecesJugadasUCMLS;
 
 // Terminan las variables
 
@@ -75,6 +76,7 @@ function fadeOutInicial() {
     }
 
 }
+//Funciones para automatizar comportamientos iguales en todos los botones
 function botonesCat(botonPrincipal, segundoBoton, tercerBoton, contenedorUno, contenedorDos, botonFinish) {
     contenedorDeTodo.classList.add("contenedor__preguntas__general")
     botonPrincipal.classList.remove("categorias__boton")
@@ -86,11 +88,18 @@ function botonesCat(botonPrincipal, segundoBoton, tercerBoton, contenedorUno, co
     contenedorUno.classList.remove("contenedores")
     contenedorDos.classList.remove("contenedores")
 }
+//Esta funcion, muestra la categoria elegida. Y solo esa.
+function recorrerInicial(arrGeneral, n, arrPregunta) {
+    arrGeneral[n].classList.remove("fadeOut")
+    fadeOutRemove(arrPregunta)
+}
 //Elegir Juego
+
 botonUCM.onclick = () => {
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
     jugar(preguntasUCM)
+    vecesJugadasUCMLS = localStorage.setItem("vecesJugadasUCM", vecesJugadasUCM++);
 
 }
 botonXMEN.onclick = () => {
@@ -105,13 +114,7 @@ botonTODO.onclick = () => {
     jugar(preguntasTODO)
 
 }
-//Funcion para automatizar 
-function recorrerInicial(arrGeneral, n, arrPregunta) {
-    arrGeneral[n].classList.remove("fadeOut")
-    console.log("yo");
-    fadeOutRemove(arrPregunta)
 
-}
 function contarPuntos() {
     for (let i = 0; i < opcionesIncorrectas.length; i++) {
         opcionesIncorrectas[i].addEventListener("click", function () {
@@ -139,7 +142,6 @@ function contarPuntos() {
 function jugar(arr) {
     for (let i = 0; i < arr.length; i++) {
         preguntasTotales++
-        console.log(preguntasTotales);
     }
 
     contarPuntos()
@@ -153,16 +155,15 @@ botonTerminar.onclick = () => {
     contadorDesacertadas = 0
     preguntasTotales = 0
     botonJugarDeNuevo.classList.remove("fadeOut")
-
 }
-// botonJugarDeNuevo.onclick = () => {
-//     location.reload()
-// }
+
+
 function alertScore() {
     score.classList.remove("fadeOut")
     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
     if (contadorAcertadas < preguntasTotales * 10 / 100) {
-        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`)    } else if (contadorAcertadas < preguntasTotales * 30 / 100) {
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`)
+    } else if (contadorAcertadas < preguntasTotales * 30 / 100) {
         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, nadie es perfecto... 😵`)
     } else if (contadorAcertadas < preguntasTotales * 60 / 100) {
         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bien! Seguro que podes hacerlo mejor 😉`)
