@@ -114,7 +114,11 @@ botonTODO.onclick = () => {
     jugar(preguntasTODO)
 
 }
-
+//Funcion para automatizar 
+function recorrerInicial(arrGeneral, n, arrPregunta) {
+    arrGeneral[n].classList.remove("fadeOut")
+    fadeOutRemove(arrPregunta)
+}
 function contarPuntos() {
     for (let i = 0; i < opcionesIncorrectas.length; i++) {
         opcionesIncorrectas[i].addEventListener("click", function () {
@@ -123,7 +127,6 @@ function contarPuntos() {
             opcionesIncorrectas.disabled = true
             opcionesCorrectas.disabled = true
             opcionesIncorrectas[i].classList.add("opcionSeleccionada")
-            console.log(`desacertadas${contadorDesacertadas}`);
         })
 
     }
@@ -134,7 +137,6 @@ function contarPuntos() {
             opcionesCorrectas.disabled = true
             opcionesIncorrectas.disabled = true
             opcionesCorrectas[x].classList.add("opcionSeleccionada")
-            console.log(`acertadas${contadorAcertadas}`);
         })
     }
 
