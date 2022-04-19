@@ -551,11 +551,7 @@
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
-    .contenedores {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    // width: 100vw;
       .div__pregunta {
         width: 80%;
         background-color: $black;
@@ -588,7 +584,6 @@
           }
         }
       }
-    }
   }
   .score {
     background-color: rgb(255, 255, 255);

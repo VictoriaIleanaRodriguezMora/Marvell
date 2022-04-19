@@ -1,9 +1,4 @@
-.fadeOut {
-  transition: 100ms;
-  opacity: 0;
 
-  display: none;
-}
 
 .displayNone {
   display: none;
@@ -14,7 +9,7 @@
   opacity: 1;
 }
 
-.buttonSelected {
+.btnSelected {
   transition: 500ms;
   font-size: 0.8rem;
   padding: 0.7rem;

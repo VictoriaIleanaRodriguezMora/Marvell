@@ -100,7 +100,6 @@ botonUCM.onclick = () => {
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
     jugar(preguntasUCM)
     vecesJugadasUCMLS = localStorage.setItem("vecesJugadasUCM", vecesJugadasUCM++);
-
 }
 botonXMEN.onclick = () => {
     botonesCat(botonXMEN, botonUCM, botonTODO, contPregsUCM, contPregsTODO, botonTerminar)
