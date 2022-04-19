@@ -77,7 +77,14 @@ function mostrarPregunta() {
 }
 function rellenarPregunta(arr) {
     pregunta.innerText = arr["pregunta"]
-
+    for (let i = 0; i < arr.length; i++) {
+        let posBoton = arr[i]["respuestas"][0]["respuesta"]
+        let btn = document.createElement("button")
+        btn.classList.add("pregunta__opcion")
+        divPregunta.appendChild(btn)
+        btn.innerText = posBoton.text
+        btn.classList.add("pregunta__opcion")
+    }
 }
 const preguntasUCM =
     [{
