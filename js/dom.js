@@ -38,6 +38,8 @@ let contadorAcertadas = 0;
 let contadorDesacertadas = 0;
 let limiteOpciones = 0;
 // Terminan las variables
+let vecesJugadasUCM = 0;
+let vecesJugadasUCMLS;
 
 //Oculto lo que necesito para empezar
 function fadeOut(array) {
@@ -89,7 +91,7 @@ botonUCM.onclick = () => {
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
     jugar(preguntasUCM)
-
+    vecesJugadasUCMLS = localStorage.setItem("vecesJugadasUCM", vecesJugadasUCM++);
 }
 botonXMEN.onclick = () => {
     botonesCat(botonXMEN, botonUCM, botonTODO, contPregsUCM, contPregsTODO, botonTerminar)
@@ -160,7 +162,8 @@ function alertScore() {
     score.classList.remove("fadeOut")
     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
     if (contadorAcertadas < preguntasTotales * 10 / 100) {
-        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`)    } else if (contadorAcertadas < preguntasTotales * 30 / 100) {
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`)
+    } else if (contadorAcertadas < preguntasTotales * 30 / 100) {
         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, nadie es perfecto... 😵`)
     } else if (contadorAcertadas < preguntasTotales * 60 / 100) {
         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bien! Seguro que podes hacerlo mejor 😉`)
