@@ -80,11 +80,9 @@ function rellenarPregunta(arr) {
     pregunta.innerText = arr["pregunta"]
     for (let i = 0; i < arr["respuestas"][0]["respuesta"].length; i++) {
         let btn = document.createElement("button")
-        let posc = [i]
         divPregunta.appendChild(btn)
         btn.classList.add("pregunta__opcion")
-        btn.classList.add("pregunta__opcion")
-        btn.innerText = posc.text
+        btn.innerText = [i]["respuesta"]
     }
 }
 const preguntasUCM =
