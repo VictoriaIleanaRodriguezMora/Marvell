@@ -33,6 +33,8 @@ let vecesJugadasUCMLS;
 let preguntasDesordenadas = 0
 let posicionPregs = 0
 
+
+let btn
 // Terminan las variables
 function displayNone(array) {
     for (let i = 0; i < array.length; i++) {
@@ -78,11 +80,11 @@ function mostrarPregunta() {
 function rellenarPregunta(arr) {
     pregunta.innerText = arr["pregunta"]
     for (let i = 0; i < arr["respuestas"].length; i++) {
-        let btn = document.createElement("button")
+        btn = document.createElement("button")
         divPregunta.appendChild(btn)
         console.log(i);
         btn.classList.add("pregunta__opcion")
-        btn.innerText = [i]["respuesta"]
+        btn.innerText = arr["respuestas"][i]["rta"]
         console.log(btn);
     }
 }
@@ -90,19 +92,19 @@ const preguntasUCM =
     [{
         pregunta: "¿Por quien consigue Clint la gema del Alma?",
         respuestas: [
-            { respuesta: "Bruja Escarlata", correcto: false },
-            { respuesta: "Gamora", correcto: false },
-            { respuesta: "Viuda Negra", correcto: true },
-            { respuesta: "Carol Danvers", correcto: false }
+            { rta: "Bruja Escarlata", correcto: false },
+            { rta: "Gamora", correcto: false },
+            { rta: "Viuda Negra", correcto: true },
+            { rta: "Carol Danvers", correcto: false }
         ]
     },
     {
         pregunta: "¿Que raza es aliada de Loki en Avengers??",
         respuestas: [
-            { respuesta: "Chitauri", correcto: false },
-            { respuesta: "Klyntar", correcto: false },
-            { respuesta: "Kronans", correcto: true },
-            { respuesta: "Centaurians", correcto: false }
+            { rta: "Chitauri", correcto: false },
+            { rta: "Klyntar", correcto: false },
+            { rta: "Kronans", correcto: true },
+            { rta: "Centaurians", correcto: false }
         ]
     }
 
