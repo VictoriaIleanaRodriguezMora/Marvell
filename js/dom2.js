@@ -61,6 +61,7 @@ botonJugas.onclick = () => {
 
 botonUCM.onclick = () => {
     removeDisplayNone(divPregunta)
+    botonUCM.style.disabled = "true"
     botonXMEN.classList.add("displayNone")
     botonTODO.classList.add("displayNone")
     botonUCM.classList.remove("categorias__boton")
@@ -77,13 +78,13 @@ function mostrarPregunta() {
 }
 function rellenarPregunta(arr) {
     pregunta.innerText = arr["pregunta"]
-    for (let i = 0; i < arr.length; i++) {
-        let posBoton = arr[i]["respuestas"][0]["respuesta"]
+    for (let i = 0; i < arr["respuestas"][0]["respuesta"].length; i++) {
         let btn = document.createElement("button")
-        btn.classList.add("pregunta__opcion")
+        let posc = [i]
         divPregunta.appendChild(btn)
-        btn.innerText = posBoton.text
         btn.classList.add("pregunta__opcion")
+        btn.classList.add("pregunta__opcion")
+        btn.innerText = posc.text
     }
 }
 const preguntasUCM =
