@@ -96,7 +96,6 @@ function rellenarPregunta(arr) {
         })
     }
 }
-
 function siguientePreg() {
     btnSiguiente.classList.remove("displayNone")
     btnSiguiente.addEventListener("click", btnSig)
@@ -105,12 +104,11 @@ function siguientePreg() {
 function btnSig() {
     btnSiguiente.classList.add("displayNone")
     btn.innerText = ""
-    for (let i = 0; i < arrBtn.length; i++) {
-        divPregunta.removeChild(arrBtn)
-        
-    }
     posicionPregs++
     rellenarPregunta(preguntasDesordenadas[posicionPregs])
+    while (divPregunta.firstChild) {
+        divPregunta.removeChild(divPregunta.firstChild)
+    }
 }
 // function alertScore() {
 //     score.classList.remove("fadeOut")
