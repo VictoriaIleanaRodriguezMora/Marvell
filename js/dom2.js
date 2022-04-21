@@ -3,8 +3,8 @@ let titulo = document.querySelector("#titulo")
 let botonJugas = document.querySelector("#jugas")
 let botonJugarDeNuevo = document.querySelector(".jugarDeNuevo")
 let score = document.querySelector("#score")
-let botonTerminar = document.querySelector(".terminar")
-let arrDisplayNone = [botonJugarDeNuevo, score, botonTerminar]
+let btnSiguiente = document.querySelector(".terminar")
+let arrDisplayNone = [botonJugarDeNuevo, score, btnSiguiente]
 //Variables contenedoras
 let contenedorDeTodo = document.querySelector(".contenedor__preguntas__general")
 let divCategoriasDeJuego = document.querySelectorAll(".categorias__boton")
@@ -33,7 +33,7 @@ let vecesJugadasUCMLS;
 let preguntasDesordenadas = 0
 let posicionPregs = 0
 
-
+let arrBtn = []
 let btn
 // Terminan las variables
 function displayNone(array) {
@@ -46,13 +46,14 @@ function removeDisplayNone(array) {
         array[i].classList.remove("displayNone")
     }
 }
+
+// Configuraciones iniciales
 displayNone(arrDisplayNone)
 displayNone(divCategoriasDeJuego)
-displayNone(divPregunta)
+displayNone(btnSiguiente)
 divPregunta.classList.add("displayNone")
 
-
-
+//
 botonJugas.onclick = () => {
     botonJugas.classList.add("displayNone")
     titulo.classList.add("displayNone")
@@ -79,20 +80,53 @@ function rellenarPregunta(arr) {
         divPregunta.appendChild(btn)
         btn.classList.add("pregunta__opcion")
         btn.innerText = arr["respuestas"][i]["rta"]
+        arrBtn.push(arr["respuestas"][i]["rta"])
         btn.addEventListener("click", function () {
             if (arr["respuestas"][i]["correcto"] == true) {
                 contadorAcertadas++
                 console.log(contadorAcertadas + "a");
                 btn.style.disabled = "true"
+                siguientePreg()
             } else {
                 contadorDesacertadas++
                 console.log(contadorDesacertadas + "des");
                 btn.style.disabled = "true"
-
+                siguientePreg()
             }
         })
     }
 }
+
+function siguientePreg() {
+    btnSiguiente.classList.remove("displayNone")
+    btnSiguiente.addEventListener("click", btnSig)
+}
+
+function btnSig() {
+    btnSiguiente.classList.add("displayNone")
+    btn.innerText = ""
+    for (let i = 0; i < arrBtn.length; i++) {
+        divPregunta.removeChild(arrBtn)
+        
+    }
+    posicionPregs++
+    rellenarPregunta(preguntasDesordenadas[posicionPregs])
+}
+// function alertScore() {
+//     score.classList.remove("fadeOut")
+//     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
+//     if (contadorAcertadas < preguntasTotales * 10 / 100) {
+//         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`)
+//     } else if (contadorAcertadas < preguntasTotales * 30 / 100) {
+//         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, nadie es perfecto... 😵`)
+//     } else if (contadorAcertadas < preguntasTotales * 60 / 100) {
+//         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bien! Seguro que podes hacerlo mejor 😉`)
+//     } else if (contadorAcertadas < preguntasTotales * 100 / 100) {
+//         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, si fuera Fury, te habria considerado! 😁`)
+//     } else if (contadorAcertadas == preguntasTotales * 100 / 100) {
+//         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Sos un expert@! 🥳`)
+//     }
+// }
 
 const preguntasUCM =
     [{
