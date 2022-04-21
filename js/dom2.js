@@ -57,8 +57,6 @@ botonJugas.onclick = () => {
     botonJugas.classList.add("displayNone")
     titulo.classList.add("displayNone")
     removeDisplayNone(divCategoriasDeJuego)
-    console.log(preguntasUCM);
-
 }
 
 botonUCM.onclick = () => {
@@ -69,26 +67,56 @@ botonUCM.onclick = () => {
     botonUCM.classList.remove("categorias__boton")
     botonUCM.classList.add("btnSelected")
     desordenarPreguntas(preguntasUCM)
-    mostrarPregunta()
+    rellenarPregunta(preguntasDesordenadas[posicionPregs])
 }
 function desordenarPreguntas(array) {
     preguntasDesordenadas = array.sort(() => Math.random() - 0.5)
-}
-function mostrarPregunta() {
-    rellenarPregunta(preguntasDesordenadas[posicionPregs])
 }
 function rellenarPregunta(arr) {
     pregunta.innerText = arr["pregunta"]
     for (let i = 0; i < arr["respuestas"].length; i++) {
         btn = document.createElement("button")
         divPregunta.appendChild(btn)
-        console.log(i);
         btn.classList.add("pregunta__opcion")
         btn.innerText = arr["respuestas"][i]["rta"]
-        console.log(btn);
+        btn.addEventListener("click", function () {
+            if (arr["respuestas"][i]["correcto"] == true) {
+                contadorAcertadas++
+                console.log(contadorAcertadas + "a");
+                btn.style.disabled = "true"
+            } else {
+                contadorDesacertadas++
+                console.log(contadorDesacertadas + "des");
+                btn.style.disabled = "true"
+
+            }
+        })
     }
 }
+
 const preguntasUCM =
+    [{
+        pregunta: "¿Por quien consigue Clint la gema del Alma?",
+        respuestas: [
+            { rta: "Bruja Escarlata", correcto: false },
+            { rta: "Gamora", correcto: false },
+            { rta: "Viuda Negra", correcto: true },
+            { rta: "Carol Danvers", correcto: false }
+        ]
+    },
+    {
+        pregunta: "¿Que raza es aliada de Loki en Avengers??",
+        respuestas: [
+            { rta: "Chitauri", correcto: true },
+            { rta: "Klyntar", correcto: false },
+            { rta: "Kronans", correcto: false },
+            { rta: "Centaurians", correcto: false }
+        ]
+    }
+
+    ]
+
+const preguntasXMEN =
     [{
         pregunta: "¿Por quien consigue Clint la gema del Alma?",
         respuestas: [
