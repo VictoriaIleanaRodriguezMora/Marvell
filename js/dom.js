@@ -61,6 +61,8 @@ botonJugarDeNuevo.classList.add("fadeOut")
 score.classList.add("fadeOut")
 botonTerminar.classList.add("fadeOut")
 contenedorDeTodo.classList.remove("contenedor__preguntas__general")
+botonJugarDeNuevo.removeAttribute("href", "#header")
+
 // Empieza el juego
 // Se clickea el boton ¿JUGAS?
 botonJugas.addEventListener("click", fadeOutInicial)
@@ -91,13 +93,13 @@ botonUCM.onclick = () => {
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
     jugar(preguntasUCM)
-    vecesJugadasUCMLS = localStorage.setItem("vecesJugadasUCM", vecesJugadasUCM++);
+    vecesJugadasUCM++
+    vecesJugadasUCMLS = localStorage.setItem("vecesJugadasUCM", vecesJugadasUCM);
 }
 botonXMEN.onclick = () => {
     botonesCat(botonXMEN, botonUCM, botonTODO, contPregsUCM, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 1, preguntasXMEN)
     jugar(preguntasXMEN)
-
 }
 botonTODO.onclick = () => {
     botonesCat(botonTODO, botonUCM, botonXMEN, contPregsUCM, contPregsXMEN, botonTerminar)
@@ -108,7 +110,6 @@ botonTODO.onclick = () => {
 //Funcion para automatizar 
 function recorrerInicial(arrGeneral, n, arrPregunta) {
     arrGeneral[n].classList.remove("fadeOut")
-    // console.log("yo");
     fadeOutRemove(arrPregunta)
 
 }
@@ -120,7 +121,6 @@ function contarPuntos() {
             opcionesIncorrectas.disabled = true
             opcionesCorrectas.disabled = true
             opcionesIncorrectas[i].classList.add("opcionSeleccionada")
-            // console.log(`desacertadas${contadorDesacertadas}`);
         })
 
     }
@@ -131,7 +131,6 @@ function contarPuntos() {
             opcionesCorrectas.disabled = true
             opcionesIncorrectas.disabled = true
             opcionesCorrectas[x].classList.add("opcionSeleccionada")
-            // console.log(`acertadas${contadorAcertadas}`);
         })
     }
 
@@ -139,8 +138,7 @@ function contarPuntos() {
 function jugar(arr) {
     for (let i = 0; i < arr.length; i++) {
         preguntasTotales++
-        console.log(preguntasTotales);
-    }
+        }
 
     contarPuntos()
 }
@@ -148,7 +146,7 @@ botonTerminar.onclick = () => {
     botonTerminar.classList.add("fadeOut")
     //Muestro el puntaje
     alertScore()
-    //Reinicio los contador
+    //Reinicio los contadores
     contadorAcertadas = 0
     contadorDesacertadas = 0
     preguntasTotales = 0
@@ -156,9 +154,11 @@ botonTerminar.onclick = () => {
 
 }
 botonJugarDeNuevo.onclick = () => {
-    location.reload()
+    //location.reload()
+    botonJugarDeNuevo.setAttribute("href", "#header")
 }
 function alertScore() {
+    console.log(localStorage.getItem("vecesJugadasUCM")); 
     score.classList.remove("fadeOut")
     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
     if (contadorAcertadas < preguntasTotales * 10 / 100) {
