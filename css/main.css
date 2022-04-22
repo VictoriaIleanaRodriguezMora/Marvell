@@ -986,11 +986,18 @@ body {
         @media screen and (max-width: 800px) {
           .quizz .contenedor__preguntas__general .div__pregunta .pregunta__titulo {
             font-size: 1em; } }
-        .quizz .contenedor__preguntas__general .div__pregunta .pregunta__titulo .pregunta__opcion {
+      .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column; }
+        .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs .pregunta__opcion {
           color: black;
           background-color: white; }
-          .quizz .contenedor__preguntas__general .div__pregunta .pregunta__titulo .pregunta__opcion:hover {
-            background-color: #5a5a5a; }
+          .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs .pregunta__opcion:hover {
+            background-color: #5a5a5a;
+            color: white; }
   .quizz .score {
     background-color: white;
     color: black;

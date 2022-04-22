@@ -1,4 +1,3 @@
-
 let titulo = document.querySelector("#titulo")
 let botonJugas = document.querySelector("#jugas")
 let botonJugarDeNuevo = document.querySelector(".jugarDeNuevo")
@@ -35,6 +34,7 @@ let posicionPregs = 0
 
 let arrBtn = []
 let btn
+let arrbotonesPregs = document.querySelector(".botonesPregs")
 // Terminan las variables
 function displayNone(array) {
     for (let i = 0; i < array.length; i++) {
@@ -77,10 +77,10 @@ function rellenarPregunta(arr) {
     pregunta.innerText = arr["pregunta"]
     for (let i = 0; i < arr["respuestas"].length; i++) {
         btn = document.createElement("button")
-        divPregunta.appendChild(btn)
-        btn.classList.add("pregunta__opcion")
-        btn.innerText = arr["respuestas"][i]["rta"]
         arrBtn.push(arr["respuestas"][i]["rta"])
+        btn.classList.add("pregunta__opcion")
+        arrbotonesPregs.appendChild(btn)
+        btn.innerText = arr["respuestas"][i]["rta"]
         btn.addEventListener("click", function () {
             if (arr["respuestas"][i]["correcto"] == true) {
                 contadorAcertadas++
@@ -99,15 +99,16 @@ function rellenarPregunta(arr) {
 function siguientePreg() {
     btnSiguiente.classList.remove("displayNone")
     btnSiguiente.addEventListener("click", btnSig)
+
 }
 
 function btnSig() {
-    btnSiguiente.classList.add("displayNone")
-    btn.innerText = ""
     posicionPregs++
+    arrBtn = []
     rellenarPregunta(preguntasDesordenadas[posicionPregs])
-    while (divPregunta.firstChild) {
-        divPregunta.removeChild(divPregunta.firstChild)
+    btnSiguiente.classList.add("displayNone")
+    while (arrbotonesPregs.firstChild) {
+        arrbotonesPregs.removeChild(arrbotonesPregs.firstChild)
     }
 }
 // function alertScore() {
