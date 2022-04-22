@@ -8,6 +8,7 @@ let arrDisplayNone = [botonJugarDeNuevo, score, btnSiguiente]
 let contenedorDeTodo = document.querySelector(".contenedor__preguntas__general")
 let divCategoriasDeJuego = document.querySelectorAll(".categorias__boton")
 let divPregunta = document.querySelector(".div__pregunta")
+let arrbotonesPregs = document.querySelector(".botonesPregs")
 
 //Opciones
 let opcionesUCM = document.querySelectorAll(".ucm > .pregunta__opcion")
@@ -17,7 +18,6 @@ let botonesCategoriasDeJuego = document.querySelectorAll(".categorias > button")
 let botonUCM = document.querySelector("#botonUCM")
 let botonXMEN = document.querySelector("#botonXMEN")
 let botonTODO = document.querySelector("#botonTODO")
-
 //Contadores
 let preguntasTotales = 0;
 let contadorAcertadas = 0;
@@ -31,10 +31,9 @@ let vecesJugadasUCMLS;
 //
 let preguntasDesordenadas = 0
 let posicionPregs = 0
-
 let arrBtn = []
 let btn
-let arrbotonesPregs = document.querySelector(".botonesPregs")
+
 // Terminan las variables
 function displayNone(array) {
     for (let i = 0; i < array.length; i++) {
@@ -69,6 +68,7 @@ botonUCM.onclick = () => {
     botonUCM.classList.add("btnSelected")
     desordenarPreguntas(preguntasUCM)
     rellenarPregunta(preguntasDesordenadas[posicionPregs])
+
 }
 function desordenarPreguntas(array) {
     preguntasDesordenadas = array.sort(() => Math.random() - 0.5)
@@ -77,9 +77,9 @@ function rellenarPregunta(arr) {
     pregunta.innerText = arr["pregunta"]
     for (let i = 0; i < arr["respuestas"].length; i++) {
         btn = document.createElement("button")
+        arrbotonesPregs.appendChild(btn)
         arrBtn.push(arr["respuestas"][i]["rta"])
         btn.classList.add("pregunta__opcion")
-        arrbotonesPregs.appendChild(btn)
         btn.innerText = arr["respuestas"][i]["rta"]
         btn.addEventListener("click", function () {
             if (arr["respuestas"][i]["correcto"] == true) {
@@ -99,17 +99,16 @@ function rellenarPregunta(arr) {
 function siguientePreg() {
     btnSiguiente.classList.remove("displayNone")
     btnSiguiente.addEventListener("click", btnSig)
-
 }
 
 function btnSig() {
     posicionPregs++
     arrBtn = []
-    rellenarPregunta(preguntasDesordenadas[posicionPregs])
     btnSiguiente.classList.add("displayNone")
     while (arrbotonesPregs.firstChild) {
         arrbotonesPregs.removeChild(arrbotonesPregs.firstChild)
     }
+    rellenarPregunta(preguntasDesordenadas[posicionPregs])
 }
 // function alertScore() {
 //     score.classList.remove("fadeOut")
