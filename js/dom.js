@@ -109,11 +109,11 @@ botonUCM.onclick = () => {
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
     jugar(preguntasUCM)
-let sumarVecesJugadasUCMLS = JSON.parse(localStorage.getItem("vecesJugadasUCM"))
-    sumarVecesJugadasUCMLS = sumarVecesJugadasUCMLS + 1;
-    console.log(vecesJugadasUCM + " vecesJugadasUCM");
-    console.log(sumarVecesJugadasUCMLS + " sumarVecesJugadasUCMLS");
-    return sumarVecesJugadasUCMLS
+    sumarVecesJugadasUCMLS = JSON.parse(localStorage.getItem("vecesJugadasUCM"))
+
+    sumarVecesJugadasUCMLS = sumarVecesJugadasUCMLS +1;
+
+console.log(sumarVecesJugadasUCMLS);
 }
 vecesJugadasUCMLS = localStorage.getItem("vecesJugadasUCM");
 botonXMEN.onclick = () => {
