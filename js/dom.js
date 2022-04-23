@@ -20,6 +20,7 @@ let preguntasUCM = document.querySelectorAll(".ucm")
 let preguntasXMEN = document.querySelectorAll(".xmen")
 let preguntasTODO = document.querySelectorAll(".todo")
 let arrPregs = [preguntasUCM, preguntasXMEN, preguntasTODO]
+//
 //Opciones
 let opcionesUCM = document.querySelectorAll(".ucm > .pregunta__opcion")
 let opcionesXMEN = document.querySelectorAll(".xmen > .pregunta__opcion")
@@ -31,16 +32,27 @@ let botonesCategoriasDeJuego = document.querySelectorAll(".categorias > button")
 let botonUCM = document.querySelector("#botonUCM")
 let botonXMEN = document.querySelector("#botonXMEN")
 let botonTODO = document.querySelector("#botonTODO")
-
+let divRanking = document.querySelector("#ranking")
+let botonRanking = document.querySelector(".ranking")
+let divRankingP = document.querySelectorAll("#ranking__p")
+let rankingP = document.querySelectorAll(".ranking__p")
 //Contadores
 let preguntasTotales = 0;
 let contadorAcertadas = 0;
 let contadorDesacertadas = 0;
 let limiteOpciones = 0;
-// Terminan las variables
+
 let vecesJugadasUCM = 0;
 let vecesJugadasUCMLS;
 
+let vecesJugadasXMEN = 0;
+let vecesJugadasXMENLS;
+
+let vecesJugadasTODO = 0;
+let vecesJugadasTODOLS;
+
+let arrVecesJugadasLS = [vecesJugadasUCMLS, vecesJugadasXMENLS, vecesJugadasTODOLS]
+// Terminan las variables
 //Oculto lo que necesito para empezar
 function fadeOut(array) {
     for (let i = 0; i < array.length; i++) {
@@ -87,26 +99,32 @@ function botonesCat(botonPrincipal, segundoBoton, tercerBoton, contenedorUno, co
     botonFinish.classList.remove("fadeOut")
     contenedorUno.classList.remove("contenedores")
     contenedorDos.classList.remove("contenedores")
+    divRanking.classList.add("fadeOut")
 }
 //Elegir Juego
 botonUCM.onclick = () => {
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
     jugar(preguntasUCM)
-    vecesJugadasUCM++
-    vecesJugadasUCMLS = localStorage.setItem("vecesJugadasUCM", vecesJugadasUCM);
+    vecesJugadasUCM+=1
 }
+vecesJugadasUCMLS = localStorage.setItem("vecesJugadasUCM", vecesJugadasUCM);
 botonXMEN.onclick = () => {
     botonesCat(botonXMEN, botonUCM, botonTODO, contPregsUCM, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 1, preguntasXMEN)
     jugar(preguntasXMEN)
+    vecesJugadasXMEN+=1
 }
+vecesJugadasXMENLS = localStorage.setItem("vecesJugadasXMEN", vecesJugadasXMEN);
+
 botonTODO.onclick = () => {
     botonesCat(botonTODO, botonUCM, botonXMEN, contPregsUCM, contPregsXMEN, botonTerminar)
     recorrerInicial(arrContPregs, 2, preguntasTODO)
     jugar(preguntasTODO)
-
+    vecesJugadasTODO+=1
 }
+vecesJugadasTODOLS = localStorage.setItem("vecesJugadasTODO", vecesJugadasTODO);
+
 //Funcion para automatizar 
 function recorrerInicial(arrGeneral, n, arrPregunta) {
     arrGeneral[n].classList.remove("fadeOut")
@@ -138,7 +156,7 @@ function contarPuntos() {
 function jugar(arr) {
     for (let i = 0; i < arr.length; i++) {
         preguntasTotales++
-        }
+    }
 
     contarPuntos()
 }
@@ -156,9 +174,21 @@ botonTerminar.onclick = () => {
 botonJugarDeNuevo.onclick = () => {
     //location.reload()
     botonJugarDeNuevo.setAttribute("href", "#header")
+    console.log(localStorage.getItem("vecesJugadasUCM"));
 }
+botonRanking.onclick = () => {
+    for (let i = 0; i < rankingP.length; i++) {
+        rankingP[0].innerText = ("Has jugado a UCM " + localStorage.getItem("vecesJugadasUCM"))
+        rankingP[1].innerText = ("Has jugado a XMEN " + localStorage.getItem("vecesJugadasXMEN"))
+        rankingP[2].innerText = ("Has jugado a TODO  " + localStorage.getItem("vecesJugadasTODO"))
+
+
+    }
+}
+
+
+
 function alertScore() {
-    console.log(localStorage.getItem("vecesJugadasUCM")); 
     score.classList.remove("fadeOut")
     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
     if (contadorAcertadas < preguntasTotales * 10 / 100) {
