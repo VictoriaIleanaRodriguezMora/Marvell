@@ -93,10 +93,11 @@ function botonesCat(botonPrincipal, segundoBoton, tercerBoton, contenedorUno, co
 function almacenarInfo(vecesJugadas) {
     let dataJuego = JSON.parse(localStorage.getItem(vecesJugadas))
     let newData;
-    if (dataJuego === null) {
+    if (dataJuego === null || dataJuego === 0) {
         newData = 1;
         localStorage.setItem(vecesJugadas, newData)
-    } else {
+    } 
+    else {
         newData = dataJuego += 1;
         localStorage.setItem(vecesJugadas, newData)
     }
@@ -138,7 +139,10 @@ botonRanking.onclick = () => {
         function ranking(vecesJugadas, poscion, boton) {
             if (localStorage.getItem(vecesJugadas) === null) {
                 rankingP[poscion].innerText = (`Aun no has jugado a ${boton}`)
-            } else {
+            } else if (localStorage.getItem(vecesJugadas) == 1) {
+                rankingP[poscion].innerText = (`Has jugado a ${boton} ${localStorage.getItem(vecesJugadas)} vez`)
+            }
+            else {
                 rankingP[poscion].innerText = (`Has jugado a ${boton} ${localStorage.getItem(vecesJugadas)} veces`)
             }
         }
