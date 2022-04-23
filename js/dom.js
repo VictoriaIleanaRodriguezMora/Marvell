@@ -1,12 +1,8 @@
-// let arrBotones = [botonUCM, botonXMEN, botonTODO]
-// let contenedorGeneralPreguntas = document.querySelectorAll(".contenedor__preguntas__general > .contenedores")
-// let secccionQuizz = document.querySelector(".quizz")
-// let arrPreguntas = [preguntasUCM, preguntasXMEN, preguntasTODO]
+//Elementos HTML
 let titulo = document.querySelector("#titulo")
 let botonJugas = document.querySelector(".jugas")
 let botonJugarDeNuevo = document.querySelector(".jugarDeNuevo")
 let score = document.querySelector("#score")
-
 //Variables contenedoras
 let contenedorDeTodo = document.querySelector(".contenedor__preguntas__general")
 let divCategoriasDeJuego = document.querySelectorAll(".categorias__boton")
@@ -14,12 +10,15 @@ let contPregsUCM = document.querySelector(".contenedor__preguntas__UCM")
 let contPregsXMEN = document.querySelector(".contenedor__preguntas__XMEN")
 let contPregsTODO = document.querySelector(".contenedor__preguntas__TODO")
 let arrContPregs = [contPregsUCM, contPregsXMEN, contPregsTODO]
-// Div Preguntas
+//Ranking
+let divRanking = document.querySelector("#ranking")
+let botonRanking = document.querySelector(".ranking")
+let divRankingP = document.querySelectorAll("#ranking__p")
+let rankingP = document.querySelectorAll(".ranking__p")
+// Div Preguntas 
 let preguntasUCM = document.querySelectorAll(".ucm")
 let preguntasXMEN = document.querySelectorAll(".xmen")
 let preguntasTODO = document.querySelectorAll(".todo")
-let arrPregs = [preguntasUCM, preguntasXMEN, preguntasTODO]
-//
 //Opciones
 let opcionesUCM = document.querySelectorAll(".ucm > .pregunta__opcion")
 let opcionesXMEN = document.querySelectorAll(".xmen > .pregunta__opcion")
@@ -32,10 +31,6 @@ let botonesCategoriasDeJuego = document.querySelectorAll(".categorias > button")
 let botonUCM = document.querySelector("#botonUCM")
 let botonXMEN = document.querySelector("#botonXMEN")
 let botonTODO = document.querySelector("#botonTODO")
-let divRanking = document.querySelector("#ranking")
-let botonRanking = document.querySelector(".ranking")
-let divRankingP = document.querySelectorAll("#ranking__p")
-let rankingP = document.querySelectorAll(".ranking__p")
 //Contadores
 let preguntasTotales = 0;
 let contadorAcertadas = 0;
@@ -66,7 +61,7 @@ botonTerminar.classList.add("fadeOut")
 contenedorDeTodo.classList.remove("contenedor__preguntas__general")
 botonJugarDeNuevo.removeAttribute("href", "#header")
 
-// Empieza el juego
+// EMPIEZA EL JUEGO
 // Se clickea el boton ¿JUGAS?
 botonJugas.addEventListener("click", fadeOutInicial)
 function fadeOutInicial() {
@@ -75,11 +70,12 @@ function fadeOutInicial() {
     titulo.classList.toggle("fadeOut")
     // Se muestran las categorias para jugar
     for (let i = 0; i < divCategoriasDeJuego.length; i++) {
-        //Mostrar categorias y elegir juego
+    //Mostrar categorias y elegir juego
         divCategoriasDeJuego[i].classList.toggle("fadeOut")
     }
 
 }
+//Automatiza tareas que se repiten en todos los botones
 function botonesCat(botonPrincipal, segundoBoton, tercerBoton, contenedorUno, contenedorDos, botonFinish) {
     contenedorDeTodo.classList.add("contenedor__preguntas__general")
     botonPrincipal.classList.remove("categorias__boton")
@@ -93,62 +89,43 @@ function botonesCat(botonPrincipal, segundoBoton, tercerBoton, contenedorUno, co
     divRanking.classList.add("fadeOut")
 }
 //Elegir Juego
-//UCM
-botonUCM.onclick = () => {
-    let dataJuego = JSON.parse(localStorage.getItem("vecesJugadasUCM"))
+//Funcion que almacena en el Local Storage
+function almacenarInfo(vecesJugadas) {
+    let dataJuego = JSON.parse(localStorage.getItem(vecesJugadas))
     let newData;
     if (dataJuego === null) {
         newData = 1;
-        localStorage.setItem("vecesJugadasUCM", newData)
-        console.log(newData);
+        localStorage.setItem(vecesJugadas, newData)
     } else {
         newData = dataJuego += 1;
-        localStorage.setItem("vecesJugadasUCM", newData)
-        console.log(newData);
+        localStorage.setItem(vecesJugadas, newData)
     }
+    return newData;
+
+}
+//UCM
+botonUCM.onclick = () => {
+    almacenarInfo("vecesJugadasUCM")
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
     jugar(preguntasUCM)
-    return newData;
 }
 vecesJugadasUCMLS = localStorage.getItem("vecesJugadasUCM");
 //XMEN
 botonXMEN.onclick = () => {
-    let dataJuego = JSON.parse(localStorage.getItem("vecesJugadasXMEN"))
-    let newData;
-    if (dataJuego === null) {
-        newData = 1;
-        localStorage.setItem("vecesJugadasXMEN", newData)
-        console.log(newData);
-    } else {
-        newData = dataJuego += 1;
-        localStorage.setItem("vecesJugadasXMEN", newData)
-        console.log(newData);
-    }
+    almacenarInfo("vecesJugadasXMEN")
     botonesCat(botonXMEN, botonUCM, botonTODO, contPregsUCM, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 1, preguntasXMEN)
     jugar(preguntasXMEN)
-    return newData;
 
 }
 vecesJugadasXMENLS = localStorage.getItem("vecesJugadasXMEN");
 //TODI
 botonTODO.onclick = () => {
-    let dataJuego = JSON.parse(localStorage.getItem("vecesJugadasTODO"))
-    let newData;
-    if (dataJuego === null) {
-        newData = 1;
-        localStorage.setItem("vecesJugadasTODO", newData)
-        console.log(newData);
-    } else {
-        newData = dataJuego += 1;
-        localStorage.setItem("vecesJugadasTODO", newData)
-        console.log(newData);
-    }
+    almacenarInfo("vecesJugadasTODO")
     botonesCat(botonTODO, botonUCM, botonXMEN, contPregsUCM, contPregsXMEN, botonTerminar)
     recorrerInicial(arrContPregs, 2, preguntasTODO)
     jugar(preguntasTODO)
-    return newData;
 
 }
 vecesJugadasTODOLS = localStorage.getItem("vecesJugadasTODO");
@@ -157,11 +134,17 @@ botonRanking.onclick = () => {
     botonRanking.classList.add("fadeOut")
     fadeOutRemove(divRankingP)
     for (let i = 0; i < rankingP.length; i++) {
-        rankingP[0].innerText = ("Has jugado a UCM " + localStorage.getItem("vecesJugadasUCM") + " veces")
-        rankingP[1].innerText = ("Has jugado a XMEN " + localStorage.getItem("vecesJugadasXMEN") + " veces")
-        rankingP[2].innerText = ("Has jugado a TODO  " + localStorage.getItem("vecesJugadasTODO") + " veces")
-        //en esta funcion, las muestro por pantalla
-        //aa ok, es la key
+
+        function ranking(vecesJugadas, poscion, boton) {
+            if (localStorage.getItem(vecesJugadas) === null) {
+                rankingP[poscion].innerText = (`Aun no has jugado a ${boton}`)
+            } else {
+                rankingP[poscion].innerText = (`Has jugado a ${boton} ${localStorage.getItem(vecesJugadas)} veces`)
+            }
+        }
+        ranking("vecesJugadasUCM", 0, botonUCM.innerText)
+        ranking("vecesJugadasXMEN", 1, botonXMEN.innerText)
+        ranking("vecesJugadasTODO", 2, botonTODO.innerText)
     }
 }
 //Funcion para automatizar 
@@ -215,8 +198,6 @@ botonJugarDeNuevo.onclick = () => {
     botonJugarDeNuevo.setAttribute("href", "#header")
     console.log(localStorage.getItem("vecesJugadasUCM"));
 }
-
-
 
 
 function alertScore() {
