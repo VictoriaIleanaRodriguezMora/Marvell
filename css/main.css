@@ -1043,6 +1043,19 @@ body {
       .quizz #ranking .ranking:hover {
         background-color: #2e0058;
         border: 5px solid #8c00ff; }
+    .quizz #ranking #ranking__p {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      padding: 1.5%;
+      border-radius: 9px;
+      width: 60%;
+      border: 2px solid black; }
+      .quizz #ranking #ranking__p .ranking__p {
+        font-size: 1.4rem;
+        border-bottom: 2px solid black; }
 
 #botones {
   display: flex;

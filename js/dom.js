@@ -42,8 +42,11 @@ let contadorAcertadas = 0;
 let contadorDesacertadas = 0;
 let limiteOpciones = 0;
 
-let vecesJugadasUCM = 0;
+let vecesJugadasUCM;
+vecesJugadasUCM = localStorage.setItem("vecesJugadasUCM", vecesJugadasUCM)
 let vecesJugadasUCMLS;
+let sumarVecesJugadasUCMLS;
+
 
 let vecesJugadasXMEN = 0;
 let vecesJugadasXMENLS;
@@ -106,24 +109,28 @@ botonUCM.onclick = () => {
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
     jugar(preguntasUCM)
-    vecesJugadasUCM+=1
+let sumarVecesJugadasUCMLS = JSON.parse(localStorage.getItem("vecesJugadasUCM"))
+    sumarVecesJugadasUCMLS = sumarVecesJugadasUCMLS + 1;
+    console.log(vecesJugadasUCM + " vecesJugadasUCM");
+    console.log(sumarVecesJugadasUCMLS + " sumarVecesJugadasUCMLS");
+    return sumarVecesJugadasUCMLS
 }
-vecesJugadasUCMLS = localStorage.setItem("vecesJugadasUCM", vecesJugadasUCM);
+vecesJugadasUCMLS = localStorage.getItem("vecesJugadasUCM");
 botonXMEN.onclick = () => {
     botonesCat(botonXMEN, botonUCM, botonTODO, contPregsUCM, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 1, preguntasXMEN)
     jugar(preguntasXMEN)
-    vecesJugadasXMEN+=1
+    vecesJugadasXMEN += 1
 }
-vecesJugadasXMENLS = localStorage.setItem("vecesJugadasXMEN", vecesJugadasXMEN);
+vecesJugadasXMENLS = localStorage.getItem("vecesJugadasXMEN");
 
 botonTODO.onclick = () => {
     botonesCat(botonTODO, botonUCM, botonXMEN, contPregsUCM, contPregsXMEN, botonTerminar)
     recorrerInicial(arrContPregs, 2, preguntasTODO)
     jugar(preguntasTODO)
-    vecesJugadasTODO+=1
+    vecesJugadasTODO += 1
 }
-vecesJugadasTODOLS = localStorage.setItem("vecesJugadasTODO", vecesJugadasTODO);
+vecesJugadasTODOLS = localStorage.getItem("vecesJugadasTODO");
 
 //Funcion para automatizar 
 function recorrerInicial(arrGeneral, n, arrPregunta) {
@@ -177,10 +184,11 @@ botonJugarDeNuevo.onclick = () => {
     console.log(localStorage.getItem("vecesJugadasUCM"));
 }
 botonRanking.onclick = () => {
+    botonRanking.classList.add("fadeOut")
     for (let i = 0; i < rankingP.length; i++) {
-        rankingP[0].innerText = ("Has jugado a UCM " + localStorage.getItem("vecesJugadasUCM"))
-        rankingP[1].innerText = ("Has jugado a XMEN " + localStorage.getItem("vecesJugadasXMEN"))
-        rankingP[2].innerText = ("Has jugado a TODO  " + localStorage.getItem("vecesJugadasTODO"))
+        rankingP[0].innerText = ("Has jugado a UCM " + localStorage.getItem("vecesJugadasUCM") + " veces")
+        rankingP[1].innerText = ("Has jugado a XMEN " + localStorage.getItem("vecesJugadasXMENLS") + " veces")
+        rankingP[2].innerText = ("Has jugado a TODO  " + localStorage.getItem("vecesJugadasTODOLS") + " veces")
 
 
     }
