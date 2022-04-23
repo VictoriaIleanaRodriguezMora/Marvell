@@ -6,7 +6,6 @@ let titulo = document.querySelector("#titulo")
 let botonJugas = document.querySelector(".jugas")
 let botonJugarDeNuevo = document.querySelector(".jugarDeNuevo")
 let score = document.querySelector("#score")
-let botonTerminar = document.querySelector(".terminar")
 
 //Variables contenedoras
 let contenedorDeTodo = document.querySelector(".contenedor__preguntas__general")
@@ -28,6 +27,7 @@ let opcionesTODO = document.querySelectorAll(".todo > .pregunta__opcion")
 let opcionesCorrectas = document.querySelectorAll(".opcion__correcta")
 let opcionesIncorrectas = document.querySelectorAll("#opIncorrecta")
 //Botones de juego
+let botonTerminar = document.querySelector(".terminar")
 let botonesCategoriasDeJuego = document.querySelectorAll(".categorias > button")
 let botonUCM = document.querySelector("#botonUCM")
 let botonXMEN = document.querySelector("#botonXMEN")
@@ -42,19 +42,6 @@ let contadorAcertadas = 0;
 let contadorDesacertadas = 0;
 let limiteOpciones = 0;
 
-let vecesJugadasUCM;
-vecesJugadasUCM = localStorage.setItem("vecesJugadasUCM", vecesJugadasUCM)
-let vecesJugadasUCMLS;
-let sumarVecesJugadasUCMLS;
-
-
-let vecesJugadasXMEN = 0;
-let vecesJugadasXMENLS;
-
-let vecesJugadasTODO = 0;
-let vecesJugadasTODOLS;
-
-let arrVecesJugadasLS = [vecesJugadasUCMLS, vecesJugadasXMENLS, vecesJugadasTODOLS]
 // Terminan las variables
 //Oculto lo que necesito para empezar
 function fadeOut(array) {
@@ -72,6 +59,7 @@ fadeOut(arrContPregs)
 fadeOut(preguntasUCM)
 fadeOut(preguntasXMEN)
 fadeOut(preguntasTODO)
+fadeOut(divRankingP)
 botonJugarDeNuevo.classList.add("fadeOut")
 score.classList.add("fadeOut")
 botonTerminar.classList.add("fadeOut")
@@ -107,41 +95,73 @@ function botonesCat(botonPrincipal, segundoBoton, tercerBoton, contenedorUno, co
 //Elegir Juego
 //UCM
 botonUCM.onclick = () => {
+    let dataJuego = JSON.parse(localStorage.getItem("vecesJugadasUCM"))
+    let newData;
+    if (dataJuego === null) {
+        newData = 1;
+        localStorage.setItem("vecesJugadasUCM", newData)
+        console.log(newData);
+    } else {
+        newData = dataJuego += 1;
+        localStorage.setItem("vecesJugadasUCM", newData)
+        console.log(newData);
+    }
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
     jugar(preguntasUCM)
-    sumarVecesJugadasUCMLS = JSON.parse(localStorage.getItem("vecesJugadasUCM"))
-
-    sumarVecesJugadasUCMLS = sumarVecesJugadasUCMLS +1;
-
-console.log(sumarVecesJugadasUCMLS);
+    return newData;
 }
 vecesJugadasUCMLS = localStorage.getItem("vecesJugadasUCM");
 //XMEN
 botonXMEN.onclick = () => {
+    let dataJuego = JSON.parse(localStorage.getItem("vecesJugadasXMEN"))
+    let newData;
+    if (dataJuego === null) {
+        newData = 1;
+        localStorage.setItem("vecesJugadasXMEN", newData)
+        console.log(newData);
+    } else {
+        newData = dataJuego += 1;
+        localStorage.setItem("vecesJugadasXMEN", newData)
+        console.log(newData);
+    }
     botonesCat(botonXMEN, botonUCM, botonTODO, contPregsUCM, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 1, preguntasXMEN)
     jugar(preguntasXMEN)
-    vecesJugadasXMEN += 1
+    return newData;
+
 }
 vecesJugadasXMENLS = localStorage.getItem("vecesJugadasXMEN");
 //TODI
 botonTODO.onclick = () => {
+    let dataJuego = JSON.parse(localStorage.getItem("vecesJugadasTODO"))
+    let newData;
+    if (dataJuego === null) {
+        newData = 1;
+        localStorage.setItem("vecesJugadasTODO", newData)
+        console.log(newData);
+    } else {
+        newData = dataJuego += 1;
+        localStorage.setItem("vecesJugadasTODO", newData)
+        console.log(newData);
+    }
     botonesCat(botonTODO, botonUCM, botonXMEN, contPregsUCM, contPregsXMEN, botonTerminar)
     recorrerInicial(arrContPregs, 2, preguntasTODO)
     jugar(preguntasTODO)
-    vecesJugadasTODO += 1
+    return newData;
+
 }
 vecesJugadasTODOLS = localStorage.getItem("vecesJugadasTODO");
 //RANKING
 botonRanking.onclick = () => {
     botonRanking.classList.add("fadeOut")
+    fadeOutRemove(divRankingP)
     for (let i = 0; i < rankingP.length; i++) {
         rankingP[0].innerText = ("Has jugado a UCM " + localStorage.getItem("vecesJugadasUCM") + " veces")
-        rankingP[1].innerText = ("Has jugado a XMEN " + localStorage.getItem("vecesJugadasXMENLS") + " veces")
-        rankingP[2].innerText = ("Has jugado a TODO  " + localStorage.getItem("vecesJugadasTODOLS") + " veces")
-
-
+        rankingP[1].innerText = ("Has jugado a XMEN " + localStorage.getItem("vecesJugadasXMEN") + " veces")
+        rankingP[2].innerText = ("Has jugado a TODO  " + localStorage.getItem("vecesJugadasTODO") + " veces")
+        //en esta funcion, las muestro por pantalla
+        //aa ok, es la key
     }
 }
 //Funcion para automatizar 
