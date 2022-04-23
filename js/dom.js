@@ -105,6 +105,7 @@ function botonesCat(botonPrincipal, segundoBoton, tercerBoton, contenedorUno, co
     divRanking.classList.add("fadeOut")
 }
 //Elegir Juego
+//UCM
 botonUCM.onclick = () => {
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
@@ -116,6 +117,7 @@ botonUCM.onclick = () => {
 console.log(sumarVecesJugadasUCMLS);
 }
 vecesJugadasUCMLS = localStorage.getItem("vecesJugadasUCM");
+//XMEN
 botonXMEN.onclick = () => {
     botonesCat(botonXMEN, botonUCM, botonTODO, contPregsUCM, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 1, preguntasXMEN)
@@ -123,7 +125,7 @@ botonXMEN.onclick = () => {
     vecesJugadasXMEN += 1
 }
 vecesJugadasXMENLS = localStorage.getItem("vecesJugadasXMEN");
-
+//TODI
 botonTODO.onclick = () => {
     botonesCat(botonTODO, botonUCM, botonXMEN, contPregsUCM, contPregsXMEN, botonTerminar)
     recorrerInicial(arrContPregs, 2, preguntasTODO)
@@ -131,7 +133,17 @@ botonTODO.onclick = () => {
     vecesJugadasTODO += 1
 }
 vecesJugadasTODOLS = localStorage.getItem("vecesJugadasTODO");
+//RANKING
+botonRanking.onclick = () => {
+    botonRanking.classList.add("fadeOut")
+    for (let i = 0; i < rankingP.length; i++) {
+        rankingP[0].innerText = ("Has jugado a UCM " + localStorage.getItem("vecesJugadasUCM") + " veces")
+        rankingP[1].innerText = ("Has jugado a XMEN " + localStorage.getItem("vecesJugadasXMENLS") + " veces")
+        rankingP[2].innerText = ("Has jugado a TODO  " + localStorage.getItem("vecesJugadasTODOLS") + " veces")
 
+
+    }
+}
 //Funcion para automatizar 
 function recorrerInicial(arrGeneral, n, arrPregunta) {
     arrGeneral[n].classList.remove("fadeOut")
@@ -183,16 +195,7 @@ botonJugarDeNuevo.onclick = () => {
     botonJugarDeNuevo.setAttribute("href", "#header")
     console.log(localStorage.getItem("vecesJugadasUCM"));
 }
-botonRanking.onclick = () => {
-    botonRanking.classList.add("fadeOut")
-    for (let i = 0; i < rankingP.length; i++) {
-        rankingP[0].innerText = ("Has jugado a UCM " + localStorage.getItem("vecesJugadasUCM") + " veces")
-        rankingP[1].innerText = ("Has jugado a XMEN " + localStorage.getItem("vecesJugadasXMENLS") + " veces")
-        rankingP[2].innerText = ("Has jugado a TODO  " + localStorage.getItem("vecesJugadasTODOLS") + " veces")
 
-
-    }
-}
 
 
 
