@@ -887,9 +887,14 @@ body {
   font-family: 'Comfortaa';
   width: 100vw;
   height: auto;
+<<<<<<< HEAD
   box-sizing: border-box;
   padding: 5% 0%; }
   .quizz .jugas {
+=======
+  box-sizing: border-box; }
+  .quizz .jugas, .quizz #ranking .ranking {
+>>>>>>> segundaPreentrega
     background-color: red;
     font-size: 2rem;
     width: 20%;
@@ -900,24 +905,25 @@ body {
     color: white;
     transition: 500ms;
     margin: 2%;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    text-decoration: none; }
     @media screen and (max-width: 1300px) {
-      .quizz .jugas {
+      .quizz .jugas, .quizz #ranking .ranking {
         font-size: 1.8rem; } }
     @media screen and (max-width: 1100px) {
-      .quizz .jugas {
+      .quizz .jugas, .quizz #ranking .ranking {
         font-size: 1.6rem;
         width: 40%; } }
     @media screen and (max-width: 1000px) {
-      .quizz .jugas {
+      .quizz .jugas, .quizz #ranking .ranking {
         font-size: 1.4rem;
         width: 50%; } }
     @media screen and (max-width: 900px) {
-      .quizz .jugas {
+      .quizz .jugas, .quizz #ranking .ranking {
         font-size: 1.1rem;
         width: 60%;
         border: 7px solid #640000; } }
-    .quizz .jugas:hover {
+    .quizz .jugas:hover, .quizz #ranking .ranking:hover {
       background-color: #640000;
       border-color: red; }
   .quizz .categorias {
@@ -1022,6 +1028,9 @@ body {
   .quizz .jugarDeNuevo {
     width: 60%;
     margin: 1%; }
+    .quizz .jugarDeNuevo a {
+      text-decoration: none;
+      color: white; }
   .quizz .terminar {
     padding: 3%;
     font-size: 1.3rem;
@@ -1032,6 +1041,59 @@ body {
       .quizz .terminar {
         padding: 5%;
         font-size: 1rem; } }
+  .quizz #ranking {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+    .quizz #ranking .ranking {
+      transition: 1s;
+      width: 20%;
+      background-color: #8c00ff;
+      color: white;
+      font-size: 1.5rem;
+      border: 5px solid #2e0058; }
+      @media screen and (max-width: 1300px) {
+        .quizz #ranking .ranking {
+          font-size: 1.8rem; } }
+      @media screen and (max-width: 1100px) {
+        .quizz #ranking .ranking {
+          font-size: 1.6rem;
+          width: 40%; } }
+      @media screen and (max-width: 1000px) {
+        .quizz #ranking .ranking {
+          font-size: 1.4rem;
+          width: 50%; } }
+      @media screen and (max-width: 900px) {
+        .quizz #ranking .ranking {
+          font-size: 1.1rem;
+          width: 60%; } }
+      .quizz #ranking .ranking:hover {
+        background-color: #2e0058;
+        border: 5px solid #8c00ff; }
+    .quizz #ranking #ranking__p {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      padding: 1.5%;
+      border-radius: 9px;
+      width: 60%;
+      border: 2px solid black; }
+      @media screen and (max-width: 500px) {
+        .quizz #ranking #ranking__p {
+          width: 80%; } }
+      .quizz #ranking #ranking__p .ranking__p {
+        font-size: 1.4rem;
+        border-bottom: 2px solid black; }
+        @media screen and (max-width: 1100px) {
+          .quizz #ranking #ranking__p .ranking__p {
+            font-size: 1.2rem; } }
+        @media screen and (max-width: 900px) {
+          .quizz #ranking #ranking__p .ranking__p {
+            font-size: 1rem; } }
 
 #botones {
   display: flex;
