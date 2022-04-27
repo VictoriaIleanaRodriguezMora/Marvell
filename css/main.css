@@ -887,14 +887,8 @@ body {
   font-family: 'Comfortaa';
   width: 100vw;
   height: auto;
-<<<<<<< HEAD
-  box-sizing: border-box;
-  padding: 5% 0%; }
-  .quizz .jugas {
-=======
   box-sizing: border-box; }
   .quizz .jugas, .quizz #ranking .ranking {
->>>>>>> segundaPreentrega
     background-color: red;
     font-size: 2rem;
     width: 20%;

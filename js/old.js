@@ -3,19 +3,18 @@ let botonJugas = document.querySelector("#jugas")
 let botonJugarDeNuevo = document.querySelector(".jugarDeNuevo")
 let score = document.querySelector("#score")
 let btnSiguiente = document.querySelector(".terminar")
+let arrDisplayNone = [botonJugarDeNuevo, score, btnSiguiente]
 //Variables contenedoras
 let contenedorDeTodo = document.querySelector(".contenedor__preguntas__general")
 let divCategoriasDeJuego = document.querySelectorAll(".categorias__boton")
 let divPregunta = document.querySelector(".div__pregunta")
 let arrbotonesPregs = document.querySelector(".botonesPregs")
-//Ranking
-let divRanking = document.querySelector("#ranking")
-let botonRanking = document.querySelector(".ranking")
-let divRankingP = document.querySelector("#ranking__p")
-let rankingP = document.querySelectorAll(".ranking__p")
+
 //Opciones
+let opcionesUCM = document.querySelectorAll(".ucm > .pregunta__opcion")
 let pregunta = document.querySelector(".pregunta__titulo")
 //Botones de juego
+let botonesCategoriasDeJuego = document.querySelectorAll(".categorias > button")
 let botonUCM = document.querySelector("#botonUCM")
 let botonXMEN = document.querySelector("#botonXMEN")
 let botonTODO = document.querySelector("#botonTODO")
@@ -29,7 +28,6 @@ let vecesJugadasXMEN = 0;
 let vecesJugadasTODO = 0;
 let vecesJugadasUCMLS;
 
-let arrDisplayNone = [botonJugarDeNuevo, score, btnSiguiente, divRankingP]
 //
 let preguntasDesordenadas = 0
 let posicionPregs = 0
@@ -47,29 +45,32 @@ function removeDisplayNone(array) {
         array[i].classList.remove("displayNone")
     }
 }
-displayNone(rankingP)
+
 // Configuraciones iniciales
 displayNone(arrDisplayNone)
 displayNone(divCategoriasDeJuego)
 displayNone(btnSiguiente)
-divRankingP.classList.add("displayNone")
 divPregunta.classList.add("displayNone")
 
 //
 botonJugas.onclick = () => {
-    botonJugas.classList.add("displayNone")
-    titulo.classList.add("displayNone")
-    removeDisplayNone(divCategoriasDeJuego)
-}
-
-botonUCM.onclick = () => {
     removeDisplayNone(divPregunta)
     botonUCM.style.disabled = "true"
     botonXMEN.classList.add("displayNone")
     botonTODO.classList.add("displayNone")
     botonUCM.classList.remove("categorias__boton")
     botonUCM.classList.add("btnSelected")
-    divRanking.classList.add("displayNone")
+    desordenarPreguntas(preguntasUCM)
+    rellenarPregunta(preguntasDesordenadas[posicionPregs])
+}
+
+botonUCM.onclick = () => {
+    removeDisplayNone(divPregunta)
+    botonUCM.style.disabled = "true"
+    botonUCM.classList.remove("categorias__boton")
+    botonUCM.classList.add("btnSelected")
+    botonXMEN.classList.add("displayNone")
+    botonTODO.classList.add("displayNone")
     desordenarPreguntas(preguntasUCM)
     rellenarPregunta(preguntasDesordenadas[posicionPregs])
 
@@ -117,15 +118,6 @@ function btnSig() {
     }
     rellenarPregunta(preguntasDesordenadas[posicionPregs])
 }
-
-//Ranking
-botonRanking.onclick = () => {
-    divRankingP.classList.toggle("displayNone")
-    for (let i = 0; i < rankingP.length; i++) {
-        rankingP[i].classList.toggle("displayNone")
-    }
-}
-
 function alertScore() {
     score.classList.remove("fadeOut")
     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
