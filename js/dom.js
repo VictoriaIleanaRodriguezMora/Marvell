@@ -1,7 +1,7 @@
 //LUXON
 const DateTime = luxon.DateTime
 let fechaDeJuego = DateTime.now()
-let mnsFechaDeJuego = (`La ultima vez que jugaste fue el ${fechaDeJuego.toLocaleString()} a las ${fechaDeJuego.toLocaleString(DateTime.TIME_SIMPLE)}`)
+let mnsFechaDeJuego = (`Ultima vez el ${fechaDeJuego.toLocaleString()} a las ${fechaDeJuego.toLocaleString(DateTime.TIME_SIMPLE)}`)
 //LUXON
 
 //HTML
