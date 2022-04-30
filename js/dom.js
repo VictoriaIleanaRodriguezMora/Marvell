@@ -1,7 +1,10 @@
-// let arrBotones = [botonUCM, botonXMEN, botonTODO]
-// let contenedorGeneralPreguntas = document.querySelectorAll(".contenedor__preguntas__general > .contenedores")
-// let secccionQuizz = document.querySelector(".quizz")
-// let arrPreguntas = [preguntasUCM, preguntasXMEN, preguntasTODO]
+//LUXON
+const DateTime = luxon.DateTime
+let fechaDeJuego = DateTime.now()
+let mnsFechaDeJuego;
+//LUXON
+
+//HTML
 let titulo = document.querySelector("#titulo")
 let botonJugas = document.querySelector(".jugas")
 let botonJugarDeNuevo = document.querySelector(".jugarDeNuevo")
@@ -99,12 +102,10 @@ botonUCM.onclick = () => {
     let newData;
     if (dataJuego === null) {
         newData = 1;
-        localStorage.setItem("vecesJugadasUCM", newData)
-        console.log(newData);
+        localStorage.setItem("vecesJugadasUCM", newData);
     } else {
         newData = dataJuego += 1;
-        localStorage.setItem("vecesJugadasUCM", newData)
-        console.log(newData);
+        localStorage.setItem("vecesJugadasUCM", newData);
     }
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
@@ -200,6 +201,9 @@ function jugar(arr) {
     contarPuntos()
 }
 botonTerminar.onclick = () => {
+    // this.style.disabled = true
+    mnsFechaDeJuego = (`La ultima vez que jugaste fue el ${fechaDeJuego.toLocaleString(DateTime.DATE_FULL)}`)
+    console.log(mnsFechaDeJuego);
     botonTerminar.classList.add("fadeOut")
     //Muestro el puntaje
     alertScore()
