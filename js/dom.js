@@ -99,6 +99,7 @@ function recorrerInicial(arrGeneral, n, arrPregunta) {
 function almacenarInfo(vecesJugadas) {
     let dataJuego = JSON.parse(localStorage.getItem(vecesJugadas))
     let newData;
+    
     if (dataJuego === null || dataJuego === 0) {
         newData = 1;
         localStorage.setItem(vecesJugadas, newData)
@@ -162,27 +163,23 @@ function recorrerInicial(arrGeneral, n, arrPregunta) {
     arrGeneral[n].classList.remove("fadeOut")
     fadeOutRemove(arrPregunta)
 }
+
 function contarPuntos() {
-    for (let i = 0; i < opcionesIncorrectas.length; i++) {
-        opcionesIncorrectas[i].addEventListener("click", function () {
-            contadorDesacertadas++
+    evaluarPuntos(opcionesCorrectas, contadorAcertadas)
+    evaluarPuntos(opcionesIncorrectas, contadorDesacertadas)
+
+}
+function evaluarPuntos(array, contador) {
+    for (let i = 0; i < array.length; i++) {
+        array[i].addEventListener("click", function () {
+            contador++
             limiteOpciones++
-            opcionesIncorrectas.disabled = true
+            array.disabled = true
             opcionesCorrectas.disabled = true
-            opcionesIncorrectas[i].classList.add("opcionSeleccionada")
+            array[i].classList.add("opcionSeleccionada")
         })
 
     }
-    for (let x = 0; x < opcionesCorrectas.length; x++) {
-        opcionesCorrectas[x].addEventListener("click", function () {
-            contadorAcertadas++
-            limiteOpciones++
-            opcionesCorrectas.disabled = true
-            opcionesIncorrectas.disabled = true
-            opcionesCorrectas[x].classList.add("opcionSeleccionada")
-        })
-    }
-
 }
 function jugar(arr) {
     for (let i = 0; i < arr.length; i++) {
