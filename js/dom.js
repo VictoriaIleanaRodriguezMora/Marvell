@@ -1,7 +1,7 @@
 //LUXON
 const DateTime = luxon.DateTime
 let fechaDeJuego = DateTime.now()
-let mnsFechaDeJuego;
+let mnsFechaDeJuego = (`La ultima vez que jugaste fue el ${fechaDeJuego.toLocaleString()} a las ${fechaDeJuego.toLocaleString(DateTime.TIME_SIMPLE)}`)
 //LUXON
 
 //HTML
@@ -96,73 +96,69 @@ function botonesCat(botonPrincipal, segundoBoton, tercerBoton, contenedorUno, co
     divRanking.classList.add("fadeOut")
 }
 //Elegir Juego
+
+//Almacenar Info
+function almacenarInfo(vecesJugadas) {
+    let dataJuego = JSON.parse(localStorage.getItem(vecesJugadas))
+    let newData;
+    if (dataJuego === null || dataJuego === 0) {
+        newData = 1;
+        localStorage.setItem(vecesJugadas, newData)
+    }
+    else {
+        newData = dataJuego += 1;
+        localStorage.setItem(vecesJugadas, newData)
+    }
+    return newData;
+
+}
 //UCM
 botonUCM.onclick = () => {
-    let dataJuego = JSON.parse(localStorage.getItem("vecesJugadasUCM"))
-    let newData;
-    if (dataJuego === null) {
-        newData = 1;
-        localStorage.setItem("vecesJugadasUCM", newData);
-    } else {
-        newData = dataJuego += 1;
-        localStorage.setItem("vecesJugadasUCM", newData);
-    }
+    almacenarInfo("vecesJugadasUCM")
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
     jugar(preguntasUCM)
-    return newData;
+    localStorage.setItem("ultVezJugadaUCM", mnsFechaDeJuego)
 }
-vecesJugadasUCMLS = localStorage.getItem("vecesJugadasUCM");
 //XMEN
 botonXMEN.onclick = () => {
-    let dataJuego = JSON.parse(localStorage.getItem("vecesJugadasXMEN"))
-    let newData;
-    if (dataJuego === null) {
-        newData = 1;
-        localStorage.setItem("vecesJugadasXMEN", newData)
-        console.log(newData);
-    } else {
-        newData = dataJuego += 1;
-        localStorage.setItem("vecesJugadasXMEN", newData)
-        console.log(newData);
-    }
+    almacenarInfo("vecesJugadasXMEN")
     botonesCat(botonXMEN, botonUCM, botonTODO, contPregsUCM, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 1, preguntasXMEN)
     jugar(preguntasXMEN)
-    return newData;
+    localStorage.getItem("vecesJugadasXMEN");
+    localStorage.setItem("ultVezJugadaXMEN", mnsFechaDeJuego)
 
 }
-vecesJugadasXMENLS = localStorage.getItem("vecesJugadasXMEN");
 //TODI
 botonTODO.onclick = () => {
-    let dataJuego = JSON.parse(localStorage.getItem("vecesJugadasTODO"))
-    let newData;
-    if (dataJuego === null) {
-        newData = 1;
-        localStorage.setItem("vecesJugadasTODO", newData)
-        console.log(newData);
-    } else {
-        newData = dataJuego += 1;
-        localStorage.setItem("vecesJugadasTODO", newData)
-        console.log(newData);
-    }
+    almacenarInfo("vecesJugadasTODO")
     botonesCat(botonTODO, botonUCM, botonXMEN, contPregsUCM, contPregsXMEN, botonTerminar)
     recorrerInicial(arrContPregs, 2, preguntasTODO)
     jugar(preguntasTODO)
-    return newData;
+    localStorage.getItem("vecesJugadasTODO");
+    localStorage.setItem("ultVezJugadaTODO", mnsFechaDeJuego)
 
 }
-vecesJugadasTODOLS = localStorage.getItem("vecesJugadasTODO");
 //RANKING
 botonRanking.onclick = () => {
     botonRanking.classList.add("fadeOut")
     fadeOutRemove(divRankingP)
     for (let i = 0; i < rankingP.length; i++) {
-        rankingP[0].innerText = ("Has jugado a UCM " + localStorage.getItem("vecesJugadasUCM") + " veces")
-        rankingP[1].innerText = ("Has jugado a XMEN " + localStorage.getItem("vecesJugadasXMEN") + " veces")
-        rankingP[2].innerText = ("Has jugado a TODO  " + localStorage.getItem("vecesJugadasTODO") + " veces")
-        //en esta funcion, las muestro por pantalla
-        //aa ok, es la key
+
+        function ranking(vecesJugadas, poscion, boton, ultVezJugada) {
+            if (localStorage.getItem(vecesJugadas) === null) {
+                rankingP[poscion].innerText = (`Aun no has jugado a ${boton}`)
+            } else if (localStorage.getItem(vecesJugadas) == 1) {
+                rankingP[poscion].innerText = (`Has jugado a ${boton} ${localStorage.getItem(vecesJugadas)} vez`)
+            }
+            else {
+                rankingP[poscion].innerText = (`Has jugado a ${boton} ${localStorage.getItem(vecesJugadas)} veces. ${localStorage.getItem(ultVezJugada)}`)
+            }
+        }
+        ranking("vecesJugadasUCM", 0, botonUCM.innerText, "ultVezJugadaUCM")
+        ranking("vecesJugadasXMEN", 1, botonXMEN.innerText, "ultVezJugadaXMEN")
+        ranking("vecesJugadasTODO", 2, botonTODO.innerText, "ultVezJugadaTODO")
     }
 }
 //Funcion para automatizar 
@@ -202,8 +198,7 @@ function jugar(arr) {
 }
 botonTerminar.onclick = () => {
     // this.style.disabled = true
-    mnsFechaDeJuego = (`La ultima vez que jugaste fue el ${fechaDeJuego.toLocaleString(DateTime.DATE_FULL)}`)
-    console.log(mnsFechaDeJuego);
+
     botonTerminar.classList.add("fadeOut")
     //Muestro el puntaje
     alertScore()
