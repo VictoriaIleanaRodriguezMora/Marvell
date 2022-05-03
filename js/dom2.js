@@ -35,7 +35,12 @@ let preguntasDesordenadas = 0
 let posicionPregs = 0
 let arrBtn = []
 let btn
+//LUXON
+const DateTime = luxon.DateTime
+let fechaDeJuego = DateTime.now().toLocaleString()
+let hsDeJuego = DateTime.now().toLocaleString(DateTime.TIME_SIMPLE)
 
+//LUXON
 // Terminan las variables
 function displayNone(array) {
     for (let i = 0; i < array.length; i++) {
@@ -61,45 +66,65 @@ botonJugas.onclick = () => {
     titulo.classList.add('displayNone')
     removeDisplayNone(divCategoriasDeJuego)
 }
-
-botonUCM.onclick = () => {
-    removeDisplayNone(divPregunta)
-    botonUCM.style.disabled = 'true'
-    botonXMEN.classList.add('displayNone')
-    botonTODO.classList.add('displayNone')
-    botonUCM.classList.remove('categorias__boton')
-    botonUCM.classList.add('btnSelected')
+function botonesCategorias(botonPrincipal, botonSecundario, botonSecundario2, arrPreguntas) {
+    botonPrincipal.style.disabled = 'true'
+    botonPrincipal.classList.remove('categorias__boton')
+    botonPrincipal.classList.add('btnSelected')
+    botonSecundario.classList.add('displayNone')
+    botonSecundario2.classList.add('displayNone')
     divRanking.classList.add('displayNone')
-    desordenarPreguntas(preguntasUCM)
+    desordenarPreguntas(arrPreguntas)
     rellenarPregunta(preguntasDesordenadas[posicionPregs])
+
+}
+botonUCM.onclick = () => {
+    botonesCategorias(botonUCM, botonXMEN, botonTODO, preguntasUCM)
+}
+botonXMEN.onclick = () => {
+    botonesCategorias(botonXMEN, botonUCM, botonTODO, preguntasXMEN)
+}
+botonTODO.onclick = () => {
+    botonesCategorias(botonTODO, botonUCM, botonXMEN, preguntasTODO)
 }
 function desordenarPreguntas(array) {
     preguntasDesordenadas = array.sort(() => Math.random() - 0.5)
 }
 function rellenarPregunta(arr) {
-    preguntasTotales++
-    console.log(`preguntas totlaes${preguntasTotales}`)
-    pregunta.innerText = arr['pregunta']
-    for (let i = 0; i < arr['respuestas'].length; i++) {
-        btn = document.createElement('button')
-        arrbotonesPregs.appendChild(btn)
-        arrBtn.push(arr['respuestas'][i]['rta'])
-        btn.classList.add('pregunta__opcion')
-        btn.innerText = arr['respuestas'][i]['rta']
-        btn.addEventListener('click', function () {
-            if (arr['respuestas'][i]['correcto'] == true) {
-                contadorAcertadas++
-                console.log(contadorAcertadas + 'a')
-                btn.style.disabled = 'true'
-                siguientePreg()
-            } else {
-                contadorDesacertadas++
-                console.log(contadorDesacertadas + 'des')
-                btn.style.disabled = 'true'
-                siguientePreg()
-            }
-        })
+    if (arr === undefined) {
+        terminaElJuego()
+    } else {
+        divPregunta.classList.remove("displayNone")
+        preguntasTotales++
+        console.log(`preguntas totales ${preguntasTotales}`)
+        pregunta.innerText = arr['pregunta']
+        for (let i = 0; i < arr['respuestas'].length; i++) {
+            console.log("else")
+            btn = document.createElement('button')
+            arrbotonesPregs.appendChild(btn)
+            arrBtn.push(arr['respuestas'][i]['rta'])
+            btn.classList.add('pregunta__opcion')
+            btn.innerText = arr['respuestas'][i]['rta']
+            btn.addEventListener('click', function () {
+                if (arr['respuestas'][i]['correcto'] == true) {
+                    contadorAcertadas++
+                    console.log(contadorAcertadas + 'a')
+                    btn.style.disabled = 'true'
+                    siguientePreg()
+                } else {
+                    contadorDesacertadas++
+                    console.log(contadorDesacertadas + 'des')
+                    btn.style.disabled = 'true'
+                    siguientePreg()
+                }
+            })
+
+        }
     }
+}
+function terminaElJuego() {
+    divPregunta.classList.add("displayNone")
+    alertScore()
+    botonJugarDeNuevo.classList.remove("displayNone")
 }
 function siguientePreg() {
     btnSiguiente.classList.remove('displayNone')
@@ -125,7 +150,7 @@ botonRanking.onclick = () => {
 }
 
 function alertScore() {
-    score.classList.remove('fadeOut')
+    score.classList.remove('displayNone')
     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
     if (contadorAcertadas < (preguntasTotales * 10) / 100) {
         score.innerText = `Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`
