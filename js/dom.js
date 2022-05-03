@@ -42,8 +42,9 @@ let limiteOpciones = 0;
 
 //LUXON
 const DateTime = luxon.DateTime
-let fechaDeJuego = DateTime.now()
-let mnsFechaDeJuego = (`Ultima vez el ${fechaDeJuego.toLocaleString()} a las ${fechaDeJuego.toLocaleString(DateTime.TIME_SIMPLE)}`)
+let fechaDeJuego = DateTime.now().toLocaleString()
+let hsDeJuego = DateTime.now().toLocaleString(DateTime.TIME_SIMPLE)
+// let mnsFechaDeJuego = (`Ultima vez el ${fechaDeJuego.toLocaleString()} a las ${fechaDeJuego.toLocaleString(DateTime.TIME_SIMPLE)}`)
 //LUXON
 
 // Terminan las variables
@@ -125,7 +126,9 @@ botonUCM.onclick = () => {
     botonesCat(botonUCM, botonXMEN, botonTODO, contPregsXMEN, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 0, preguntasUCM, 0)
     jugar(preguntasUCM)
-    localStorage.setItem("ultVezJugadaUCM", spanRanking)
+    localStorage.getItem("vecesJugadasUCM");
+    localStorage.setItem("ultVezJugadaUCM", fechaDeJuego)
+    localStorage.setItem("hsDeJuegoUCM", hsDeJuego)
 
 }
 //BOTON XMEN
@@ -134,8 +137,10 @@ botonXMEN.onclick = () => {
     botonesCat(botonXMEN, botonUCM, botonTODO, contPregsUCM, contPregsTODO, botonTerminar)
     recorrerInicial(arrContPregs, 1, preguntasXMEN)
     jugar(preguntasXMEN)
+
     localStorage.getItem("vecesJugadasXMEN");
-    localStorage.setItem("ultVezJugadaXMEN", spanRanking)
+    localStorage.setItem("ultVezJugadaXMEN", fechaDeJuego)
+    localStorage.setItem("hsDeJuegoXMEN", hsDeJuego)
 
 
 }
@@ -145,9 +150,10 @@ botonTODO.onclick = () => {
     botonesCat(botonTODO, botonUCM, botonXMEN, contPregsUCM, contPregsXMEN, botonTerminar)
     recorrerInicial(arrContPregs, 2, preguntasTODO)
     jugar(preguntasTODO)
-    localStorage.getItem("vecesJugadasTODO");
-    localStorage.setItem("ultVezJugadaTODO", spanRanking)
 
+    localStorage.getItem("vecesJugadasTODO");
+    localStorage.setItem("ultVezJugadaTODO", fechaDeJuego)
+    localStorage.setItem("hsDeJuegoTODO", hsDeJuego)
 
 }
 //BOTON RANKING
@@ -156,27 +162,28 @@ botonRanking.onclick = () => {
     fadeOutRemove(divRankingP)
     fadeOutRemove(spanRanking)
     for (let i = 0; i < rankingP.length; i++) {
-        function ranking(vecesJugadas, posc, boton, ultVezJugada) {
+        function ranking(vecesJugadas, posc, boton, ultVezJugada, hsDeJuego) {
             if (localStorage.getItem(vecesJugadas) === null) {
                 rankingP[posc].innerText = (`Aun no has jugado a ${boton}`)
             } else if (localStorage.getItem(vecesJugadas) == 1) {
                 rankingP[posc].innerText = (`Has jugado a ${boton} ${localStorage.getItem(vecesJugadas)} vez`)
-                spanRanking[posc].innerText = localStorage.getItem(ultVezJugada)
+                spanRanking[posc].innerText = (`Ultima vez el ${localStorage.getItem(ultVezJugada)} a las ${localStorage.getItem(hsDeJuego)}`)
 
             }
+            // let mnsFechaDeJuego = (`Ultima vez el ${fechaDeJuego.toLocaleString()} a las ${fechaDeJuego.toLocaleString(DateTime.TIME_SIMPLE)}`)
             else {
                 rankingP[posc].innerText = (`Has jugado a ${boton} ${localStorage.getItem(vecesJugadas)} veces.`)
-                spanRanking[posc].innerText = localStorage.getItem(ultVezJugada)
+                spanRanking[posc].innerText = (`Ultima vez el ${localStorage.getItem(ultVezJugada)} a las ${localStorage.getItem(hsDeJuego)}`)
             }
 
         }
-        ranking("vecesJugadasUCM", 0, botonUCM.innerText, "ultVezJugadaUCM")
-        ranking("vecesJugadasXMEN", 1, botonXMEN.innerText, "ultVezJugadaXMEN")
-        ranking("vecesJugadasTODO", 2, botonTODO.innerText, "ultVezJugadaTODO")
+        ranking("vecesJugadasUCM", 0, botonUCM.innerText, "ultVezJugadaUCM", "hsDeJuegoUCM")
+        ranking("vecesJugadasXMEN", 1, botonXMEN.innerText, "ultVezJugadaXMEN", "hsDeJuegoXMEN")
+        ranking("vecesJugadasTODO", 2, botonTODO.innerText, "ultVezJugadaTODO", "hsDeJuegoTODO")
     }
 }
 function recorrerInicial(arrGeneral, n, arrPregunta) {
-//Funcion para automatizar 
+    //Funcion para automatizar 
     arrGeneral[n].classList.remove("fadeOut")
     fadeOutRemove(arrPregunta)
 
