@@ -1,0 +1,91 @@
+    [
+        [
+            {
+                "pregunta": "¿Por quien consigue Clint la gema del Alma?",
+                "respuestas": [
+                    {
+                        "rta": "Bruja Escarlata",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "Gamora",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "Viuda Negra",
+                        "correcto": "true"
+                    },
+                    {
+                        "rta": "Carol Danvers",
+                        "correcto": "false"
+                    }
+                ]
+            },
+            {
+                "pregunta": "¿Que raza es aliada de Loki en Avengers??",
+                "respuestas": [
+                    {
+                        "rta": "Chitauri",
+                        "correcto": "true"
+                    },
+                    {
+                        "rta": "Klyntar",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "Kronans",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "Centaurians",
+                        "correcto": "false"
+                    }
+                ]
+            }
+        ]
+,
+    [
+            {
+                "pregunta": "¿Por quien consigue Clint la gema del Alma?",
+                "respuestas": [
+                    {
+                        "rta": "Bruja Escarlata",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "Gamora",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "Viuda Negra",
+                        "correcto": "true"
+                    },
+                    {
+                        "rta": "Carol Danvers",
+                        "correcto": "false"
+                    }
+                ]
+            },
+            {
+                "pregunta": "¿Que raza es aliada de Loki en Avengers??",
+                "respuestas": [
+                    {
+                        "rta": "Chitauri",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "Klyntar",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "Kronans",
+                        "correcto": "true"
+                    },
+                    {
+                        "rta": "Centaurians",
+                        "correcto": "false"
+                    }
+                ]
+            }
+        ]
+    ]
