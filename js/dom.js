@@ -170,7 +170,6 @@ botonRanking.onclick = () => {
                 spanRanking[posc].innerText = (`Ultima vez el ${localStorage.getItem(ultVezJugada)} a las ${localStorage.getItem(hsDeJuego)}`)
 
             }
-            // let mnsFechaDeJuego = (`Ultima vez el ${fechaDeJuego.toLocaleString()} a las ${fechaDeJuego.toLocaleString(DateTime.TIME_SIMPLE)}`)
             else {
                 rankingP[posc].innerText = (`Has jugado a ${boton} ${localStorage.getItem(vecesJugadas)} veces.`)
                 spanRanking[posc].innerText = (`Ultima vez el ${localStorage.getItem(ultVezJugada)} a las ${localStorage.getItem(hsDeJuego)}`)
