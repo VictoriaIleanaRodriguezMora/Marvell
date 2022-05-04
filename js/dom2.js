@@ -137,6 +137,7 @@ function rellenarPregunta(arr) {
             btn.innerText = arr['respuestas'][i]['rta']
             btn.addEventListener('click', function () {
                 if (arr['respuestas'][i]['correcto'] == true) {
+                    this.classList.add("opcionCorrecta")
                     contadorAcertadas++
                     console.log(contadorAcertadas + 'a')
                     btn.style.disabled = 'true'
@@ -200,7 +201,12 @@ botonRanking.onclick = () => {
         ranking("vecesJugadasTODO", 2, botonTODO.innerText, "ultVezJugadaTODO", "hsDeJuegoTODO")
     }
 }
-
+divRankingP.onclick = () => {
+    botonRanking.classList.remove("displayNone")
+    divRankingP.classList.add("displayNone")
+    rankingP.classList.add("displayNone")
+    spanRanking.classList.add("displayNone")
+}
 function alertScore() {
     score.classList.remove('displayNone')
     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
