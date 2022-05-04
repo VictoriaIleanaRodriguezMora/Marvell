@@ -966,7 +966,7 @@ body {
     flex-direction: column;
     box-sizing: border-box; }
     .quizz .contenedor__preguntas__general .div__pregunta {
-      width: 80%;
+      width: 110%;
       background-color: #000000d5;
       border-radius: 15px;
       display: flex;
@@ -980,13 +980,13 @@ body {
           width: 90%; } }
       .quizz .contenedor__preguntas__general .div__pregunta .pregunta__titulo {
         color: white;
-        font-size: 1.5em; }
+        font-size: 2em; }
         @media screen and (max-width: 1000px) {
           .quizz .contenedor__preguntas__general .div__pregunta .pregunta__titulo {
-            font-size: 1.2em; } }
+            font-size: 1.5em; } }
         @media screen and (max-width: 800px) {
           .quizz .contenedor__preguntas__general .div__pregunta .pregunta__titulo {
-            font-size: 1em; } }
+            font-size: 1.2em; } }
       .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs {
         width: 100%;
         display: flex;
@@ -995,7 +995,14 @@ body {
         flex-direction: column; }
         .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs .pregunta__opcion {
           color: black;
-          background-color: white; }
+          background-color: white;
+          font-size: 1.5em; }
+          @media screen and (max-width: 1000px) {
+            .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs .pregunta__opcion {
+              font-size: 1.2em; } }
+          @media screen and (max-width: 800px) {
+            .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs .pregunta__opcion {
+              font-size: 1em; } }
           .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs .pregunta__opcion:hover {
             background-color: #5a5a5a;
             color: white; }
@@ -1138,9 +1145,12 @@ body {
   transition: 300ms;
   opacity: 1; }
 
+.opcionCorrecta {
+  background-color: #376e00; }
+
 .btnSelected {
   transition: 500ms;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.7rem;
   border: 5px solid #2600ff;
   width: 10%;

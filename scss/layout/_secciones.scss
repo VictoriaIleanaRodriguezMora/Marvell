@@ -554,7 +554,7 @@
     box-sizing: border-box;
     // width: 100vw;
     .div__pregunta {
-      width: 80%;
+      width: 110%;
       background-color: $black;
       border-radius: 15px;
       display: flex;
@@ -569,12 +569,12 @@
       }
       .pregunta__titulo {
         color: white;
-        font-size: 1.5em;
+        font-size: 2em;
         @media screen and (max-width: 1000px) {
-          font-size: 1.2em;
+          font-size: 1.5em;
         }
         @media screen and (max-width: 800px) {
-          font-size: 1em;
+          font-size: 1.2em;
         }
       }
       .botonesPregs {
@@ -586,6 +586,13 @@
         .pregunta__opcion {
           color: black;
           background-color: white;
+          font-size: 1.5em;
+          @media screen and (max-width: 1000px) {
+            font-size: 1.2em;
+          }
+          @media screen and (max-width: 800px) {
+            font-size: 1em;
+          }
           &:hover {
             background-color: rgb(90, 90, 90);
             color: white;
