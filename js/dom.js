@@ -215,7 +215,6 @@ function jugar(arr) {
     for (let i = 0; i < arr.length; i++) {
         preguntasTotales++
     }
-
     contarPuntos()
 }
 //Termina el juego
@@ -251,5 +250,4 @@ function alertScore() {
         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Sos un expert@! 🥳`)
     }
 }
-
-
+ 

@@ -459,7 +459,7 @@ body {
   width: auto;
   height: auto;
   padding: 2%;
-  margin: 5% 18%;
+  margin: 2% 18%;
   border-radius: 20px;
   text-align: center;
   color: white;
@@ -887,7 +887,8 @@ body {
   font-family: 'Comfortaa';
   width: 100vw;
   height: auto;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 5% 0%; }
   .quizz .jugas, .quizz #ranking .ranking {
     background-color: red;
     font-size: 2rem;
@@ -964,38 +965,47 @@ body {
     align-items: center;
     flex-direction: column;
     box-sizing: border-box; }
-    .quizz .contenedor__preguntas__general .contenedores {
+    .quizz .contenedor__preguntas__general .div__pregunta {
+      width: 110%;
+      background-color: #000000d5;
+      border-radius: 15px;
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      align-items: center; }
-      .quizz .contenedor__preguntas__general .contenedores .div__pregunta {
-        width: 80%;
-        background-color: #000000d5;
-        border-radius: 15px;
+      align-self: center;
+      flex-direction: column;
+      padding: 2%;
+      margin: 1%; }
+      @media screen and (max-width: 900px) {
+        .quizz .contenedor__preguntas__general .div__pregunta {
+          width: 90%; } }
+      .quizz .contenedor__preguntas__general .div__pregunta .pregunta__titulo {
+        color: white;
+        font-size: 2em; }
+        @media screen and (max-width: 1000px) {
+          .quizz .contenedor__preguntas__general .div__pregunta .pregunta__titulo {
+            font-size: 1.5em; } }
+        @media screen and (max-width: 800px) {
+          .quizz .contenedor__preguntas__general .div__pregunta .pregunta__titulo {
+            font-size: 1.2em; } }
+      .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-self: center;
-        flex-direction: column;
-        padding: 2%;
-        margin: 1%; }
-        @media screen and (max-width: 900px) {
-          .quizz .contenedor__preguntas__general .contenedores .div__pregunta {
-            width: 90%; } }
-        .quizz .contenedor__preguntas__general .contenedores .div__pregunta .pregunta__titulo {
-          color: white;
+        flex-direction: column; }
+        .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs .pregunta__opcion {
+          color: black;
+          background-color: white;
           font-size: 1.5em; }
           @media screen and (max-width: 1000px) {
-            .quizz .contenedor__preguntas__general .contenedores .div__pregunta .pregunta__titulo {
+            .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs .pregunta__opcion {
               font-size: 1.2em; } }
           @media screen and (max-width: 800px) {
-            .quizz .contenedor__preguntas__general .contenedores .div__pregunta .pregunta__titulo {
+            .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs .pregunta__opcion {
               font-size: 1em; } }
-          .quizz .contenedor__preguntas__general .contenedores .div__pregunta .pregunta__titulo .pregunta__opcion {
-            color: black;
-            background-color: white; }
-            .quizz .contenedor__preguntas__general .contenedores .div__pregunta .pregunta__titulo .pregunta__opcion:hover {
-              background-color: #5a5a5a; }
+          .quizz .contenedor__preguntas__general .div__pregunta .botonesPregs .pregunta__opcion:hover {
+            background-color: #5a5a5a;
+            color: white; }
   .quizz .score {
     background-color: white;
     color: black;
@@ -1070,10 +1080,8 @@ body {
       justify-content: center;
       align-items: center;
       background: white;
-      padding: 1.5%;
       border-radius: 9px;
-      width: 60%;
-      border: 2px solid black; }
+      width: 60%; }
       @media screen and (max-width: 500px) {
         .quizz #ranking #ranking__p {
           width: 80%; } }
@@ -1129,21 +1137,20 @@ body {
         #botones a .fas {
           font-size: 15px; } }
 
-.fadeOut {
-  transition: 100ms;
-  opacity: 0;
-  display: none; }
-
 .displayNone {
+  opacity: 0;
   display: none; }
 
 .fadeShow {
   transition: 300ms;
   opacity: 1; }
 
-.buttonSelected {
+.opcionCorrecta {
+  background-color: #376e00; }
+
+.btnSelected {
   transition: 500ms;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.7rem;
   border: 5px solid #2600ff;
   width: 10%;
@@ -1154,18 +1161,18 @@ body {
   left: 1%;
   top: 20%; }
   @media screen and (max-width: 1050px) {
-    .buttonSelected {
+    .btnSelected {
       font-size: 1.2rem;
       padding: 1rem;
       width: 18%;
       position: relative; } }
   @media screen and (max-width: 800px) {
-    .buttonSelected {
+    .btnSelected {
       font-size: 1rem;
       padding: 0.8rem;
       width: 20%; } }
   @media screen and (max-width: 600px) {
-    .buttonSelected {
+    .btnSelected {
       font-size: 0.8rem;
       width: 30%; } }
 

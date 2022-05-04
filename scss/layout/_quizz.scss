@@ -1,11 +1,7 @@
-.fadeOut {
-  transition: 100ms;
-  opacity: 0;
 
-  display: none;
-}
 
 .displayNone {
+  opacity: 0;
   display: none;
 }
 
@@ -13,10 +9,12 @@
   transition: 300ms;
   opacity: 1;
 }
-
-.buttonSelected {
+.opcionCorrecta{
+  background-color: rgb(55, 110, 0);
+}
+.btnSelected {
   transition: 500ms;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.7rem;
   border: 5px solid rgb(38, 0, 255);
   width: 10%;
