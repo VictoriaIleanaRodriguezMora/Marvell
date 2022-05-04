@@ -13,6 +13,9 @@ let divRanking = document.querySelector('#ranking')
 let botonRanking = document.querySelector('.ranking')
 let divRankingP = document.querySelector('#ranking__p')
 let rankingP = document.querySelectorAll('.ranking__p')
+let spanRanking = document.querySelectorAll(".ranking__span")
+
+
 //Opciones
 let pregunta = document.querySelector('.pregunta__titulo')
 //Botones de juego
@@ -47,6 +50,7 @@ function displayNone(array) {
         array[i].classList.add('displayNone')
     }
 }
+
 function removeDisplayNone(array) {
     for (let i = 0; i < array.length; i++) {
         array[i].classList.remove('displayNone')
@@ -60,12 +64,29 @@ displayNone(btnSiguiente)
 divRankingP.classList.add('displayNone')
 divPregunta.classList.add('displayNone')
 
-//
+//Inicia juego
 botonJugas.onclick = () => {
     botonJugas.classList.add('displayNone')
     titulo.classList.add('displayNone')
     removeDisplayNone(divCategoriasDeJuego)
 }
+//Almacenar Info en Local Storage
+function almacenarInfo(vecesJugadas) {
+    let dataJuego = JSON.parse(localStorage.getItem(vecesJugadas))
+    let newData;
+    if (dataJuego === false) {
+        newData = 1;
+        localStorage.setItem(vecesJugadas, newData)
+    }
+    else {
+        newData = dataJuego += 1;
+        localStorage.setItem(vecesJugadas, newData)
+    }
+    return newData;
+
+}
+
+//Funcion que se ejecuta en todos los botones de categoria
 function botonesCategorias(botonPrincipal, botonSecundario, botonSecundario2, arrPreguntas) {
     botonPrincipal.style.disabled = 'true'
     botonPrincipal.classList.remove('categorias__boton')
@@ -78,13 +99,23 @@ function botonesCategorias(botonPrincipal, botonSecundario, botonSecundario2, ar
 
 }
 botonUCM.onclick = () => {
+    almacenarInfo("vecesJugadasUCM")
     botonesCategorias(botonUCM, botonXMEN, botonTODO, preguntasUCM)
+    localStorage.getItem("vecesJugadasUCM");
+    localStorage.setItem("ultVezJugadaUCM", fechaDeJuego)
+    localStorage.setItem("hsDeJuegoUCM", hsDeJuego)
 }
 botonXMEN.onclick = () => {
     botonesCategorias(botonXMEN, botonUCM, botonTODO, preguntasXMEN)
+    localStorage.getItem("vecesJugadasXMEN");
+    localStorage.setItem("ultVezJugadaXMEN", fechaDeJuego)
+    localStorage.setItem("hsDeJuegoXMEN", hsDeJuego)
 }
 botonTODO.onclick = () => {
     botonesCategorias(botonTODO, botonUCM, botonXMEN, preguntasTODO)
+    localStorage.getItem("vecesJugadasTODO");
+    localStorage.setItem("ultVezJugadaTODO", fechaDeJuego)
+    localStorage.setItem("hsDeJuegoTODO", hsDeJuego)
 }
 function desordenarPreguntas(array) {
     preguntasDesordenadas = array.sort(() => Math.random() - 0.5)
@@ -141,11 +172,32 @@ function btnSig() {
     rellenarPregunta(preguntasDesordenadas[posicionPregs])
 }
 
-//Ranking
+
+//BOTON RANKING
 botonRanking.onclick = () => {
-    divRankingP.classList.toggle('displayNone')
+    botonRanking.classList.add("displayNone")
+    divRankingP.classList.remove("displayNone")
+    removeDisplayNone(rankingP)
+    removeDisplayNone(spanRanking)
+
     for (let i = 0; i < rankingP.length; i++) {
-        rankingP[i].classList.toggle('displayNone')
+        function ranking(vecesJugadas, posc, boton, ultVezJugada, hsDeJuego) {
+            if (localStorage.getItem(vecesJugadas) === null) {
+                rankingP[posc].innerText = (`Aun no has jugado a ${boton}`)
+            } else if (localStorage.getItem(vecesJugadas) == 1) {
+                rankingP[posc].innerText = (`Has jugado a ${boton} ${localStorage.getItem(vecesJugadas)} vez`)
+                spanRanking[posc].innerText = (`Ultima vez el ${localStorage.getItem(ultVezJugada)} a las ${localStorage.getItem(hsDeJuego)}`)
+
+            }
+            else {
+                rankingP[posc].innerText = (`Has jugado a ${boton} ${localStorage.getItem(vecesJugadas)} veces.`)
+                spanRanking[posc].innerText = (`Ultima vez el ${localStorage.getItem(ultVezJugada)} a las ${localStorage.getItem(hsDeJuego)}`)
+            }
+
+        }
+        ranking("vecesJugadasUCM", 0, botonUCM.innerText, "ultVezJugadaUCM", "hsDeJuegoUCM")
+        ranking("vecesJugadasXMEN", 1, botonXMEN.innerText, "ultVezJugadaXMEN", "hsDeJuegoXMEN")
+        ranking("vecesJugadasTODO", 2, botonTODO.innerText, "ultVezJugadaTODO", "hsDeJuegoTODO")
     }
 }
 
@@ -187,6 +239,27 @@ const preguntasUCM = [
 ]
 
 const preguntasXMEN = [
+    {
+        pregunta: '¿Por quien consigue Clint la gema del Alma?',
+        respuestas: [
+            { rta: 'Bruja Escarlata', correcto: false },
+            { rta: 'Gamora', correcto: false },
+            { rta: 'Viuda Negra', correcto: true },
+            { rta: 'Carol Danvers', correcto: false },
+        ],
+    },
+    {
+        pregunta: '¿Que raza es aliada de Loki en Avengers??',
+        respuestas: [
+            { rta: 'Chitauri', correcto: false },
+            { rta: 'Klyntar', correcto: false },
+            { rta: 'Kronans', correcto: true },
+            { rta: 'Centaurians', correcto: false },
+        ],
+    },
+]
+
+const preguntasTODO = [
     {
         pregunta: '¿Por quien consigue Clint la gema del Alma?',
         respuestas: [

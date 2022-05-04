@@ -1078,6 +1078,11 @@ body {
       @media screen and (max-width: 500px) {
         .quizz #ranking #ranking__p {
           width: 80%; } }
+      .quizz #ranking #ranking__p .ranking__span {
+        margin: 1%;
+        background-color: rgba(180, 180, 180, 0.36);
+        padding: 1%;
+        border-radius: 15px; }
       .quizz #ranking #ranking__p .ranking__p {
         font-size: 1.4rem;
         border-bottom: 2px solid black; }
