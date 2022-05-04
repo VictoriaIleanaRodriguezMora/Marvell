@@ -1073,13 +1073,16 @@ body {
       justify-content: center;
       align-items: center;
       background: white;
-      padding: 1.5%;
       border-radius: 9px;
-      width: 60%;
-      border: 2px solid black; }
+      width: 60%; }
       @media screen and (max-width: 500px) {
         .quizz #ranking #ranking__p {
           width: 80%; } }
+      .quizz #ranking #ranking__p .ranking__span {
+        margin: 1%;
+        background-color: rgba(180, 180, 180, 0.36);
+        padding: 1%;
+        border-radius: 15px; }
       .quizz #ranking #ranking__p .ranking__p {
         font-size: 1.4rem;
         border-bottom: 2px solid black; }
@@ -1128,6 +1131,7 @@ body {
           font-size: 15px; } }
 
 .displayNone {
+  opacity: 0;
   display: none; }
 
 .fadeShow {
