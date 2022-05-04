@@ -204,8 +204,6 @@ botonRanking.onclick = () => {
 divRankingP.onclick = () => {
     botonRanking.classList.remove("displayNone")
     divRankingP.classList.add("displayNone")
-    rankingP.classList.add("displayNone")
-    spanRanking.classList.add("displayNone")
 }
 function alertScore() {
     score.classList.remove('displayNone')
