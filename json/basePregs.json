@@ -46,76 +46,168 @@
             }
         ],
         [
+            
             {
                 "categoria": "xmen",
-                "pregunta": "¿Por quien consigue Clint la gema del Alma?",
+                "pregunta": "¿En que pelicula Wolverine viaja al pasado?",
                 "respuestas": [
                     {
-                        "rta": "Bruja Escarlata",
-                        "correcto": "false"
-                    },
-                    {
-                        "rta": "Gamora",
-                        "correcto": "false"
-                    },
-                    {
-                        "rta": "Viuda Negra",
+                        "rta": "X-men Dias del Futuro Pasado",
                         "correcto": "true"
                     },
                     {
-                        "rta": "Carol Danvers",
+                        "rta": "X-men Origenes",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "X-men 2",
+                        "correcto": "false"
+                    }
+                    
+                ]
+            },
+            {
+                "categoria": "xmen",
+                "pregunta": "¿Como se llama la nave de los X-men?",
+                "respuestas": [
+                    {
+                        "rta": "X-ship",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "X-jet",
+                        "correcto": "true"
+                    },
+                    {
+                        "rta": "X-moon",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "La increible nave de los xmen",
                         "correcto": "false"
                     }
                 ]
             },
             {
                 "categoria": "xmen",
-                "pregunta": "¿Que raza es aliada de Loki en Avengers??",
+                "pregunta": "¿Que accidente tiene Charles Xavier que lo deja invalido?",
                 "respuestas": [
                     {
-                        "rta": "Chitauri",
+                        "rta": "Accidente de auto",
                         "correcto": "false"
                     },
                     {
-                        "rta": "Klyntar",
+                        "rta": "Golpe en la cabeza",
                         "correcto": "false"
                     },
                     {
-                        "rta": "Kronans",
+                        "rta": "Disparo en la espina dorsal",
+                        "correcto": "true"
+                    }
+                ]
+            },
+            {
+                "categoria": "xmen",
+                "pregunta": "¿En donde ocurre 'La Batalla Final' donde Logan tiene que matar a Phoenix?",
+                "respuestas": [
+                    {
+                        "rta": "Genosha",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "Alcatraz",
                         "correcto": "true"
                     },
                     {
-                        "rta": "Centaurians",
+                        "rta": "Canada",
                         "correcto": "false"
                     }
+                    
+                ]
+            },
+            {
+                "categoria": "xmen",
+                "pregunta": "¿Donde nació Lobezno?",
+                "respuestas": [
+                    {
+                        "rta": "Canada",
+                        "correcto": "true"
+                    },
+                    {
+                        "rta": "EEUU",
+                        "correcto": "true"
+                    },
+                    {
+                        "rta": "Inglaterra",
+                        "correcto": "false"
+                    }
+                    
+                ]
+            },
+            {
+                "categoria": "xmen",
+                "pregunta": "¿Cual es el verdadero nombre de Logan?",
+                "respuestas": [
+                    {
+                        "rta": "James",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "Jimmy",
+                        "correcto": "true"
+                    },
+                    {
+                        "rta": "David",
+                        "correcto": "false"
+                    }
+                    
+                ]
+            },
+            {
+                "categoria": "xmen",
+                "pregunta": "¿Cual es el verdadero nombre de Logan?",
+                "respuestas": [
+                    {
+                        "rta": "James",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "Jimmy",
+                        "correcto": "true"
+                    },
+                    {
+                        "rta": "David",
+                        "correcto": "false"
+                    }
+                    
                 ]
             }
         ],
         [
             {
-                "categoria": "xmen",
-                "pregunta": "¿Por quien consigue Clint la gema del Alma?",
+                "categoria": "todo",
+                "pregunta": "¿Como se llama la nave de los X-men?",
                 "respuestas": [
                     {
-                        "rta": "Bruja Escarlata",
+                        "rta": "X-ship",
                         "correcto": "false"
                     },
                     {
-                        "rta": "Gamora",
-                        "correcto": "false"
-                    },
-                    {
-                        "rta": "Viuda Negra",
+                        "rta": "X-jet",
                         "correcto": "true"
                     },
                     {
-                        "rta": "Carol Danvers",
+                        "rta": "X-moon",
+                        "correcto": "false"
+                    },
+                    {
+                        "rta": "La increible nave de los xmen",
                         "correcto": "false"
                     }
                 ]
             },
             {
-                "categoria": "xmen",
+                "categoria": "todo",
                 "pregunta": "¿Que raza es aliada de Loki en Avengers??",
                 "respuestas": [
                     {

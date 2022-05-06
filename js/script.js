@@ -141,15 +141,18 @@ function rellenarPregunta(arr) {
         console.log(`preguntas totales ${preguntasTotales}`)
         pregunta.innerText = arr['pregunta']
         for (let i = 0; i < arr['respuestas'].length; i++) {
+
             console.log("else")
             btn = document.createElement('button')
             arrbotonesPregs.appendChild(btn)
             arrBtn.push(arr['respuestas'][i]['rta'])
             btn.classList.add('pregunta__opcion')
             btn.innerText = arr['respuestas'][i]['rta']
+
             btn.addEventListener('click', function () {
+                console.log(arr['respuestas'][i]['correcto']);
                 if (arr['respuestas'][i]['correcto'] == true) {
-                    this.classList.add("opcionCorrecta")
+                    // this.classList.add("opcionCorrecta")
                     contadorAcertadas++
                     console.log(contadorAcertadas + 'a')
                     btn.style.disabled = 'true'
