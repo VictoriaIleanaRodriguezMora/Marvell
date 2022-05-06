@@ -1,39 +1,39 @@
 let ucm
 let xmen
 let todo
-fetch('../json/basePregs.json')
-.then((respuesta) => respuesta.json())
-.then((data) => {
-    data    
-    ucm = data[0]
-    xmen = data[1]
-    todo = data[2]
-})
+fetch("../json/basePregs.json")
+    .then((respuesta) => respuesta.json())
+    .then((data) => {
+        data
+        ucm = data[0]
+        xmen = data[1]
+        todo = data[2]
+    })
 
-let titulo = document.querySelector('#titulo')
-let botonJugas = document.querySelector('#jugas')
-let botonJugarDeNuevo = document.querySelector('.jugarDeNuevo')
-let score = document.querySelector('#score')
-let btnSiguiente = document.querySelector('.terminar')
+let titulo = document.querySelector("#titulo")
+let botonJugas = document.querySelector("#jugas")
+let botonJugarDeNuevo = document.querySelector(".jugarDeNuevo")
+let score = document.querySelector("#score")
+let btnSiguiente = document.querySelector(".terminar")
 //Variables contenedoras
-let contenedorDeTodo = document.querySelector('.contenedor__preguntas__general')
-let divCategoriasDeJuego = document.querySelectorAll('.categorias__boton')
-let divPregunta = document.querySelector('.div__pregunta')
-let arrbotonesPregs = document.querySelector('.botonesPregs')
+let contenedorDeTodo = document.querySelector(".contenedor__preguntas__general")
+let divCategoriasDeJuego = document.querySelectorAll(".categorias__boton")
+let divPregunta = document.querySelector(".div__pregunta")
+let arrbotonesPregs = document.querySelector(".botonesPregs")
 //Ranking
-let divRanking = document.querySelector('#ranking')
-let botonRanking = document.querySelector('.ranking')
-let divRankingP = document.querySelector('#ranking__p')
-let rankingP = document.querySelectorAll('.ranking__p')
+let divRanking = document.querySelector("#ranking")
+let botonRanking = document.querySelector(".ranking")
+let divRankingP = document.querySelector("#ranking__p")
+let rankingP = document.querySelectorAll(".ranking__p")
 let spanRanking = document.querySelectorAll(".ranking__span")
 
 
 //Opciones
-let pregunta = document.querySelector('.pregunta__titulo')
+let pregunta = document.querySelector(".pregunta__titulo")
 //Botones de juego
-let botonUCM = document.querySelector('#botonUCM')
-let botonXMEN = document.querySelector('#botonXMEN')
-let botonTODO = document.querySelector('#botonTODO')
+let botonUCM = document.querySelector("#botonUCM")
+let botonXMEN = document.querySelector("#botonXMEN")
+let botonTODO = document.querySelector("#botonTODO")
 //Contadores
 let preguntasTotales = 0
 let contadorAcertadas = 0
@@ -59,13 +59,13 @@ let hsDeJuego = DateTime.now().toLocaleString(DateTime.TIME_SIMPLE)
 // Terminan las variables
 function displayNone(array) {
     for (let i = 0; i < array.length; i++) {
-        array[i].classList.add('displayNone')
+        array[i].classList.add("displayNone")
     }
 }
 
 function removeDisplayNone(array) {
     for (let i = 0; i < array.length; i++) {
-        array[i].classList.remove('displayNone')
+        array[i].classList.remove("displayNone")
     }
 }
 displayNone(rankingP)
@@ -73,13 +73,13 @@ displayNone(rankingP)
 displayNone(arrDisplayNone)
 displayNone(divCategoriasDeJuego)
 displayNone(btnSiguiente)
-divRankingP.classList.add('displayNone')
-divPregunta.classList.add('displayNone')
+divRankingP.classList.add("displayNone")
+divPregunta.classList.add("displayNone")
 
 //Inicia juego
 botonJugas.onclick = () => {
-    botonJugas.classList.add('displayNone')
-    titulo.classList.add('displayNone')
+    botonJugas.classList.add("displayNone")
+    titulo.classList.add("displayNone")
     removeDisplayNone(divCategoriasDeJuego)
 }
 //Almacenar Info en Local Storage
@@ -100,17 +100,18 @@ function almacenarInfo(vecesJugadas) {
 
 //Funcion que se ejecuta en todos los botones de categoria
 function botonesCategorias(botonPrincipal, botonSecundario, botonSecundario2, arrPreguntas) {
-    botonPrincipal.style.disabled = 'true'
-    botonPrincipal.classList.remove('categorias__boton')
-    botonPrincipal.classList.add('btnSelected')
-    botonSecundario.classList.add('displayNone')
-    botonSecundario2.classList.add('displayNone')
-    divRanking.classList.add('displayNone')
+    botonPrincipal.style.disabled = "true"
+    botonPrincipal.classList.remove("categorias__boton")
+    botonPrincipal.classList.add("btnSelected")
+    botonSecundario.classList.add("displayNone")
+    botonSecundario2.classList.add("displayNone")
+    divRanking.classList.add("displayNone")
     desordenarPreguntas(arrPreguntas)
     rellenarPregunta(preguntasDesordenadas[posicionPregs])
 
 }
 botonUCM.onclick = () => {
+    botonUCM.style.disabled = "true"
     almacenarInfo("vecesJugadasUCM")
     botonesCategorias(botonUCM, botonXMEN, botonTODO, ucm)
     localStorage.getItem("vecesJugadasUCM");
@@ -139,28 +140,27 @@ function rellenarPregunta(arr) {
         divPregunta.classList.remove("displayNone")
         preguntasTotales++
         console.log(`preguntas totales ${preguntasTotales}`)
-        pregunta.innerText = arr['pregunta']
-        for (let i = 0; i < arr['respuestas'].length; i++) {
-
+        pregunta.innerText = arr["pregunta"]
+        for (let i = 0; i < arr["respuestas"].length; i++) {
             console.log("else")
-            btn = document.createElement('button')
+            btn = document.createElement("button")
             arrbotonesPregs.appendChild(btn)
-            arrBtn.push(arr['respuestas'][i]['rta'])
-            btn.classList.add('pregunta__opcion')
-            btn.innerText = arr['respuestas'][i]['rta']
-
-            btn.addEventListener('click', function () {
-                console.log(arr['respuestas'][i]['correcto']);
-                if (arr['respuestas'][i]['correcto'] == true) {
-                    // this.classList.add("opcionCorrecta")
+            arrBtn.push(arr["respuestas"][i]["rta"])
+            btn.classList.add("pregunta__opcion")
+            btn.innerText = arr["respuestas"][i]["rta"]
+            //Evento al apretar una de las opciones
+            btn.addEventListener("click", function () {
+                console.log(arr["respuestas"][i]["correcto"]);
+                if (arr["respuestas"][i]["correcto"] == "true") {
+                    // this.classList.add("opcionCorrecta"))
                     contadorAcertadas++
-                    console.log(contadorAcertadas + 'a')
-                    btn.style.disabled = 'true'
+                    console.log(contadorAcertadas + "a")
+                    btn.style.disabled = "true"
                     siguientePreg()
                 } else {
                     contadorDesacertadas++
-                    console.log(contadorDesacertadas + 'des')
-                    btn.style.disabled = 'true'
+                    console.log(contadorDesacertadas + "des")
+                    btn.style.disabled = "true"
                     siguientePreg()
                 }
             })
@@ -174,14 +174,14 @@ function terminaElJuego() {
     botonJugarDeNuevo.classList.remove("displayNone")
 }
 function siguientePreg() {
-    btnSiguiente.classList.remove('displayNone')
-    btnSiguiente.addEventListener('click', btnSig)
+    btnSiguiente.classList.remove("displayNone")
+    btnSiguiente.addEventListener("click", btnSig)
 }
 
 function btnSig() {
     posicionPregs++
     arrBtn = []
-    btnSiguiente.classList.add('displayNone')
+    btnSiguiente.classList.add("displayNone")
     while (arrbotonesPregs.firstChild) {
         arrbotonesPregs.removeChild(arrbotonesPregs.firstChild)
     }
@@ -221,7 +221,7 @@ divRankingP.onclick = () => {
     divRankingP.classList.add("displayNone")
 }
 function alertScore() {
-    score.classList.remove('displayNone')
+    score.classList.remove("displayNone")
     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
     if (contadorAcertadas < (preguntasTotales * 10) / 100) {
         score.innerText = `Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`
