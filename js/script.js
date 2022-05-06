@@ -1,3 +1,15 @@
+let ucm
+let xmen
+let todo
+fetch('../json/basePregs.json')
+.then((respuesta) => respuesta.json())
+.then((data) => {
+    data    
+    ucm = data[0]
+    xmen = data[1]
+    todo = data[2]
+})
+
 let titulo = document.querySelector('#titulo')
 let botonJugas = document.querySelector('#jugas')
 let botonJugarDeNuevo = document.querySelector('.jugarDeNuevo')
@@ -100,19 +112,19 @@ function botonesCategorias(botonPrincipal, botonSecundario, botonSecundario2, ar
 }
 botonUCM.onclick = () => {
     almacenarInfo("vecesJugadasUCM")
-    botonesCategorias(botonUCM, botonXMEN, botonTODO, preguntasUCM)
+    botonesCategorias(botonUCM, botonXMEN, botonTODO, ucm)
     localStorage.getItem("vecesJugadasUCM");
     localStorage.setItem("ultVezJugadaUCM", fechaDeJuego)
     localStorage.setItem("hsDeJuegoUCM", hsDeJuego)
 }
 botonXMEN.onclick = () => {
-    botonesCategorias(botonXMEN, botonUCM, botonTODO, preguntasXMEN)
+    botonesCategorias(botonXMEN, botonUCM, botonTODO, xmen)
     localStorage.getItem("vecesJugadasXMEN");
     localStorage.setItem("ultVezJugadaXMEN", fechaDeJuego)
     localStorage.setItem("hsDeJuegoXMEN", hsDeJuego)
 }
 botonTODO.onclick = () => {
-    botonesCategorias(botonTODO, botonUCM, botonXMEN, preguntasTODO)
+    botonesCategorias(botonTODO, botonUCM, botonXMEN, todo)
     localStorage.getItem("vecesJugadasTODO");
     localStorage.setItem("ultVezJugadaTODO", fechaDeJuego)
     localStorage.setItem("hsDeJuegoTODO", hsDeJuego)
@@ -220,66 +232,3 @@ function alertScore() {
         score.innerText = `Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Sos un expert@! 🥳`
     }
 }
-
-const preguntasUCM = [
-    {
-        pregunta: '¿Por quien consigue Clint la gema del Alma?',
-        respuestas: [
-            { rta: 'Bruja Escarlata', correcto: false },
-            { rta: 'Gamora', correcto: false },
-            { rta: 'Viuda Negra', correcto: true },
-            { rta: 'Carol Danvers', correcto: false },
-        ],
-    },
-    {
-        pregunta: '¿Que raza es aliada de Loki en Avengers??',
-        respuestas: [
-            { rta: 'Chitauri', correcto: true },
-            { rta: 'Klyntar', correcto: false },
-            { rta: 'Kronans', correcto: false },
-            { rta: 'Centaurians', correcto: false },
-        ],
-    },
-]
-
-const preguntasXMEN = [
-    {
-        pregunta: '¿Por quien consigue Clint la gema del Alma?',
-        respuestas: [
-            { rta: 'Bruja Escarlata', correcto: false },
-            { rta: 'Gamora', correcto: false },
-            { rta: 'Viuda Negra', correcto: true },
-            { rta: 'Carol Danvers', correcto: false },
-        ],
-    },
-    {
-        pregunta: '¿Que raza es aliada de Loki en Avengers??',
-        respuestas: [
-            { rta: 'Chitauri', correcto: false },
-            { rta: 'Klyntar', correcto: false },
-            { rta: 'Kronans', correcto: true },
-            { rta: 'Centaurians', correcto: false },
-        ],
-    },
-]
-
-const preguntasTODO = [
-    {
-        pregunta: '¿Por quien consigue Clint la gema del Alma?',
-        respuestas: [
-            { rta: 'Bruja Escarlata', correcto: false },
-            { rta: 'Gamora', correcto: false },
-            { rta: 'Viuda Negra', correcto: true },
-            { rta: 'Carol Danvers', correcto: false },
-        ],
-    },
-    {
-        pregunta: '¿Que raza es aliada de Loki en Avengers??',
-        respuestas: [
-            { rta: 'Chitauri', correcto: false },
-            { rta: 'Klyntar', correcto: false },
-            { rta: 'Kronans', correcto: true },
-            { rta: 'Centaurians', correcto: false },
-        ],
-    },
-]
