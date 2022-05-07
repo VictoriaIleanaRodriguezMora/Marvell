@@ -239,3 +239,10 @@ function alertScore() {
         score.innerText = `Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Sos un expert@! 🥳`
     }
 }
+
+
+//CODIGO DE BOOSTRAP
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
