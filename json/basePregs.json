@@ -1,0 +1,370 @@
+    [
+        [
+            {
+                "categoria": "ucm",
+                "pregunta": "¿Por quien consigue Clint la gema del Alma?",
+                "respuestas": [
+                    {
+                        "rta": "Bruja Escarlata",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Gamora",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Viuda Negra",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "Carol Danvers",
+                        "correcto": false
+                    }
+                ]
+            },
+            {
+                "categoria": "ucm",
+                "pregunta": "¿Que raza es aliada de Loki en Avengers?",
+                "respuestas": [
+                    {
+                        "rta": "Chitauri",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "Klyntar",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Kronans",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Centaurians",
+                        "correcto": false
+                    }
+                ]
+            },
+            {
+                "categoria": "ucm",
+                "pregunta": "¿Con que gema logra Thanos volver en el tiempo y quitarle la gema del Alma a Vision?",
+                "respuestas": [
+                    {
+                        "rta": "La gema naranja",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "La gema amarilla",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "La gema Verde ",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "La gema Azul",
+                        "correcto": false
+                    }
+                ]
+            },
+            {
+                "categoria": "ucm",
+                "pregunta": "¿En donde aparece 'Ojo de Halcon' por primera vez?",
+                "respuestas": [
+                    {
+                        "rta": "Los vengadores (2012)",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Guardianes de la Galaxia (2017) ",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Thor (2011)",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "Iron Man (2008)",
+                        "correcto": false
+                    }
+                ]
+            }
+        ],
+        [
+            
+            {
+                "categoria": "xmen",
+                "pregunta": "¿En que pelicula Wolverine viaja al pasado?",
+                "respuestas": [
+                    {
+                        "rta": "X-men Dias del Futuro Pasado",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "X-men Origenes",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "X-men 2",
+                        "correcto": false
+                    }
+                    
+                ]
+            },
+            {
+                "categoria": "xmen",
+                "pregunta": "¿Como se llama la nave de los X-men?",
+                "respuestas": [
+                    {
+                        "rta": "X-ship",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "X-jet",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "X-moon",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "La increible nave de los xmen",
+                        "correcto": false
+                    }
+                ]
+            },
+            {
+                "categoria": "xmen",
+                "pregunta": "¿Que accidente tiene Charles Xavier que lo deja invalido?",
+                "respuestas": [
+                    {
+                        "rta": "Accidente de auto",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Golpe en la cabeza",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Disparo en la espina dorsal",
+                        "correcto": true
+                    }
+                ]
+            },
+            {
+                "categoria": "xmen",
+                "pregunta": "¿En donde ocurre 'La Batalla Final' donde Logan tiene que matar a Phoenix?",
+                "respuestas": [
+                    {
+                        "rta": "Genosha",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Alcatraz",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "Canada",
+                        "correcto": false
+                    }
+                    
+                ]
+            },
+            {
+                "categoria": "xmen",
+                "pregunta": "¿Donde nació Lobezno?",
+                "respuestas": [
+                    {
+                        "rta": "Canada",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "EEUU",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Inglaterra",
+                        "correcto": false
+                    }
+                    
+                ]
+            },
+            {
+                "categoria": "xmen",
+                "pregunta": "¿Cual es el verdadero nombre de Logan?",
+                "respuestas": [
+                    {
+                        "rta": "James",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Jimmy",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "David",
+                        "correcto": false
+                    }
+                    
+                ]
+            }
+            
+        ],
+        [
+            {
+                "categoria": "todo",
+                "pregunta": "¿En que pelicula Wolverine viaja al pasado?",
+                "respuestas": [
+                    {
+                        "rta": "X-men Dias del Futuro Pasado",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "X-men Origenes",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "X-men 2",
+                        "correcto": false
+                    }
+                    
+                ]
+            },
+            {
+                "categoria": "todo",
+                "pregunta": "¿Como se llama la nave de los X-men?",
+                "respuestas": [
+                    {
+                        "rta": "X-ship",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "X-jet",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "X-moon",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "La increible nave de los todo",
+                        "correcto": false
+                    }
+                ]
+            },
+            {
+                "categoria": "todo",
+                "pregunta": "¿Que accidente tiene Charles Xavier que lo deja invalido?",
+                "respuestas": [
+                    {
+                        "rta": "Accidente de auto",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Golpe en la cabeza",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Disparo en la espina dorsal",
+                        "correcto": true
+                    }
+                ]
+            },
+            {
+                "categoria": "todo",
+                "pregunta": "¿En donde ocurre 'La Batalla Final' donde Logan tiene que matar a Phoenix?",
+                "respuestas": [
+                    {
+                        "rta": "Genosha",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Alcatraz",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "Canada",
+                        "correcto": false
+                    }
+                    
+                ]
+            },
+            {
+                "categoria": "todo",
+                "pregunta": "¿Donde nació Lobezno?",
+                "respuestas": [
+                    {
+                        "rta": "Canada",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "EEUU",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "Inglaterra",
+                        "correcto": false
+                    }
+                    
+                ]
+            },
+            {
+                "categoria": "todo",
+                "pregunta": "¿Cual es el verdadero nombre de Logan?",
+                "respuestas": [
+                    {
+                        "rta": "James",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Jimmy",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "David",
+                        "correcto": false
+                    }
+                    
+                ]
+            },
+            {
+                "categoria": "todo",
+                "pregunta": "¿Qué personajes tiene un premio por intrepretar en live action más veces a un superhéroe de marvel?",
+                "respuestas": [
+                    {
+                        "rta": "Hugh Jackman & Robert D. Junior",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Hugh JackMan & Patrick Stewart",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "Patrick Stewart & Robert D. Junior",
+                        "correcto": false
+                    }                 
+                ]
+            },
+            {
+                "categoria": "todo",
+                "pregunta": "¿Qué actor debutó en Marvel en la película 'Avengers'?",
+                "respuestas": [
+                    {
+                        "rta": "Jeremy Renner",
+                        "correcto": false
+                    },
+                    {
+                        "rta": "Mark Ruffalo ",
+                        "correcto": true
+                    },
+                    {
+                        "rta": "Scarlett Johansson",
+                        "correcto": false
+                    }                 
+                ]
+            }
+
+
+
+
+        ]
+    ]
