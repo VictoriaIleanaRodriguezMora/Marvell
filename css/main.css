@@ -887,9 +887,8 @@ body {
   font-family: 'Comfortaa';
   width: 100vw;
   height: auto;
-  box-sizing: border-box;
-  padding: 5% 0%; }
-  .quizz .jugas, .quizz #ranking .ranking {
+  box-sizing: border-box; }
+  .quizz .jugas, .quizz #ranking .botonRanking {
     background-color: red;
     font-size: 2rem;
     width: 20%;
@@ -903,22 +902,22 @@ body {
     box-sizing: border-box;
     text-decoration: none; }
     @media screen and (max-width: 1300px) {
-      .quizz .jugas, .quizz #ranking .ranking {
+      .quizz .jugas, .quizz #ranking .botonRanking {
         font-size: 1.8rem; } }
     @media screen and (max-width: 1100px) {
-      .quizz .jugas, .quizz #ranking .ranking {
+      .quizz .jugas, .quizz #ranking .botonRanking {
         font-size: 1.6rem;
         width: 40%; } }
     @media screen and (max-width: 1000px) {
-      .quizz .jugas, .quizz #ranking .ranking {
+      .quizz .jugas, .quizz #ranking .botonRanking {
         font-size: 1.4rem;
         width: 50%; } }
     @media screen and (max-width: 900px) {
-      .quizz .jugas, .quizz #ranking .ranking {
+      .quizz .jugas, .quizz #ranking .botonRanking {
         font-size: 1.1rem;
         width: 60%;
         border: 7px solid #640000; } }
-    .quizz .jugas:hover, .quizz #ranking .ranking:hover {
+    .quizz .jugas:hover, .quizz #ranking .botonRanking:hover {
       background-color: #640000;
       border-color: red; }
   .quizz .categorias {
@@ -966,7 +965,7 @@ body {
     flex-direction: column;
     box-sizing: border-box; }
     .quizz .contenedor__preguntas__general .div__pregunta {
-      width: 110%;
+      width: 60vw;
       background-color: #000000d5;
       border-radius: 15px;
       display: flex;
@@ -1049,29 +1048,31 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center; }
-    .quizz #ranking .ranking {
+    .quizz #ranking .botonRanking {
       transition: 1s;
       width: 20%;
       background-color: #8c00ff;
       color: white;
       font-size: 1.5rem;
-      border: 5px solid #2e0058; }
+      border: 5px solid #2e0058;
+      margin-top: -5%; }
       @media screen and (max-width: 1300px) {
-        .quizz #ranking .ranking {
+        .quizz #ranking .botonRanking {
           font-size: 1.8rem; } }
       @media screen and (max-width: 1100px) {
-        .quizz #ranking .ranking {
+        .quizz #ranking .botonRanking {
           font-size: 1.6rem;
-          width: 40%; } }
+          width: 40%;
+          margin-top: 0%; } }
       @media screen and (max-width: 1000px) {
-        .quizz #ranking .ranking {
+        .quizz #ranking .botonRanking {
           font-size: 1.4rem;
           width: 50%; } }
       @media screen and (max-width: 900px) {
-        .quizz #ranking .ranking {
+        .quizz #ranking .botonRanking {
           font-size: 1.1rem;
           width: 60%; } }
-      .quizz #ranking .ranking:hover {
+      .quizz #ranking .botonRanking:hover {
         background-color: #2e0058;
         border: 5px solid #8c00ff; }
     .quizz #ranking #ranking__p {
@@ -1079,24 +1080,46 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: white;
+      background-color: rgba(98, 0, 255, 0.774);
+      padding: 1.5%;
       border-radius: 9px;
       width: 60%; }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 800px) {
         .quizz #ranking #ranking__p {
           width: 80%; } }
+      @media screen and (max-width: 500px) {
+        .quizz #ranking #ranking__p {
+          width: 90%; } }
       .quizz #ranking #ranking__p .ranking__span {
         margin: 1%;
-        background-color: rgba(180, 180, 180, 0.36);
+        background-color: white;
         padding: 1%;
-        border-radius: 15px; }
+        border-radius: 15px;
+        font-size: 1.4em; }
+        @media screen and (max-width: 900px) {
+          .quizz #ranking #ranking__p .ranking__span {
+            font-size: 1.2rem; } }
+        @media screen and (max-width: 500px) {
+          .quizz #ranking #ranking__p .ranking__span {
+            font-size: 1rem; } }
+        @media screen and (max-width: 300px) {
+          .quizz #ranking #ranking__p .ranking__span {
+            font-size: 0.8rem; } }
       .quizz #ranking #ranking__p .ranking__p {
-        font-size: 1.4rem;
-        border-bottom: 2px solid black; }
+        font-size: 1.8rem;
+        border-bottom: 2px solid black;
+        color: white;
+        text-shadow: 4px 4px 3px black; }
         @media screen and (max-width: 1100px) {
           .quizz #ranking #ranking__p .ranking__p {
-            font-size: 1.2rem; } }
+            font-size: 1.6rem; } }
         @media screen and (max-width: 900px) {
+          .quizz #ranking #ranking__p .ranking__p {
+            font-size: 1.4rem; } }
+        @media screen and (max-width: 500px) {
+          .quizz #ranking #ranking__p .ranking__p {
+            font-size: 1.2rem; } }
+        @media screen and (max-width: 300px) {
           .quizz #ranking #ranking__p .ranking__p {
             font-size: 1rem; } }
 
@@ -1146,7 +1169,10 @@ body {
   opacity: 1; }
 
 .opcionCorrecta {
-  background-color: #376e00; }
+  background-color: rgba(104, 202, 6, 0.637); }
+
+.opcionIncorrecta {
+  background-color: rgba(110, 0, 0, 0.61); }
 
 .btnSelected {
   transition: 500ms;

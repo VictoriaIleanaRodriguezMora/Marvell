@@ -22,7 +22,7 @@ let divPregunta = document.querySelector(".div__pregunta")
 let arrbotonesPregs = document.querySelector(".botonesPregs")
 //Ranking
 let divRanking = document.querySelector("#ranking")
-let botonRanking = document.querySelector(".ranking")
+let botonRanking = document.querySelector(".botonRanking")
 let divRankingP = document.querySelector("#ranking__p")
 let rankingP = document.querySelectorAll(".ranking__p")
 let spanRanking = document.querySelectorAll(".ranking__span")
@@ -100,7 +100,7 @@ function almacenarInfo(vecesJugadas) {
 
 //Funcion que se ejecuta en todos los botones de categoria
 function botonesCategorias(botonPrincipal, botonSecundario, botonSecundario2, arrPreguntas) {
-    botonPrincipal.style.disabled = "true"
+    botonPrincipal.disabled = true;
     botonPrincipal.classList.remove("categorias__boton")
     botonPrincipal.classList.add("btnSelected")
     botonSecundario.classList.add("displayNone")
@@ -111,7 +111,7 @@ function botonesCategorias(botonPrincipal, botonSecundario, botonSecundario2, ar
 
 }
 botonUCM.onclick = () => {
-    botonUCM.style.disabled = "true"
+    botonUCM.disabled = true;
     almacenarInfo("vecesJugadasUCM")
     botonesCategorias(botonUCM, botonXMEN, botonTODO, ucm)
     localStorage.getItem("vecesJugadasUCM");
@@ -130,55 +130,53 @@ botonTODO.onclick = () => {
     localStorage.setItem("ultVezJugadaTODO", fechaDeJuego)
     localStorage.setItem("hsDeJuegoTODO", hsDeJuego)
 }
+//Funcion para mostrar aleatoriamente las pregs
 function desordenarPreguntas(array) {
     preguntasDesordenadas = array.sort(() => Math.random() - 0.5)
 }
+//Funciona que pone el contenido en las preguntas
 function rellenarPregunta(arr) {
     if (arr === undefined) {
         terminaElJuego()
     } else {
         divPregunta.classList.remove("displayNone")
         preguntasTotales++
-        console.log(`preguntas totales ${preguntasTotales}`)
         pregunta.innerText = arr["pregunta"]
         for (let i = 0; i < arr["respuestas"].length; i++) {
             console.log("else")
             btn = document.createElement("button")
+            btn.disabled = false
             arrbotonesPregs.appendChild(btn)
             arrBtn.push(arr["respuestas"][i]["rta"])
             btn.classList.add("pregunta__opcion")
             btn.innerText = arr["respuestas"][i]["rta"]
             //Evento al apretar una de las opciones
             btn.addEventListener("click", function () {
-                console.log(arr["respuestas"][i]["correcto"]);
-                if (arr["respuestas"][i]["correcto"] == "true") {
-                    // this.classList.add("opcionCorrecta"))
+
+                let opCorrecta = arr["respuestas"][i]["correcto"]
+                if (opCorrecta == true) {
                     contadorAcertadas++
                     console.log(contadorAcertadas + "a")
-                    btn.style.disabled = "true"
+                    btn.disabled = true
                     siguientePreg()
                 } else {
                     contadorDesacertadas++
                     console.log(contadorDesacertadas + "des")
-                    btn.style.disabled = "true"
+                    btn.disabled = true
                     siguientePreg()
                 }
+                btn.disabled = true
+
             })
 
         }
     }
 }
-function terminaElJuego() {
-    divPregunta.classList.add("displayNone")
-    alertScore()
-    botonJugarDeNuevo.classList.remove("displayNone")
-}
+//Funciones que muestra el boton SIGUIENTE
 function siguientePreg() {
     btnSiguiente.classList.remove("displayNone")
-    btnSiguiente.addEventListener("click", btnSig)
 }
-
-function btnSig() {
+btnSiguiente.onclick = () => {
     posicionPregs++
     arrBtn = []
     btnSiguiente.classList.add("displayNone")
@@ -188,6 +186,12 @@ function btnSig() {
     rellenarPregunta(preguntasDesordenadas[posicionPregs])
 }
 
+//Encargada de mostrar la alerta de juego finalizado con el puntaje
+function terminaElJuego() {
+    divPregunta.classList.add("displayNone")
+    alertScore()
+    botonJugarDeNuevo.classList.remove("displayNone")
+}
 
 //BOTON RANKING
 botonRanking.onclick = () => {
