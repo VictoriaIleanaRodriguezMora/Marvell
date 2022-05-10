@@ -112,20 +112,22 @@ function botonesCategorias(botonPrincipal, botonSecundario, botonSecundario2, ar
 }
 botonUCM.onclick = () => {
     botonUCM.disabled = true;
-    almacenarInfo("vecesJugadasUCM")
     botonesCategorias(botonUCM, botonXMEN, botonTODO, ucm)
+    almacenarInfo("vecesJugadasUCM")
     localStorage.getItem("vecesJugadasUCM");
     localStorage.setItem("ultVezJugadaUCM", fechaDeJuego)
     localStorage.setItem("hsDeJuegoUCM", hsDeJuego)
 }
 botonXMEN.onclick = () => {
     botonesCategorias(botonXMEN, botonUCM, botonTODO, xmen)
+    almacenarInfo("vecesJugadasXMEN")
     localStorage.getItem("vecesJugadasXMEN");
     localStorage.setItem("ultVezJugadaXMEN", fechaDeJuego)
     localStorage.setItem("hsDeJuegoXMEN", hsDeJuego)
 }
 botonTODO.onclick = () => {
     botonesCategorias(botonTODO, botonUCM, botonXMEN, todo)
+    almacenarInfo("vecesJugadasTODO")
     localStorage.getItem("vecesJugadasTODO");
     localStorage.setItem("ultVezJugadaTODO", fechaDeJuego)
     localStorage.setItem("hsDeJuegoTODO", hsDeJuego)
