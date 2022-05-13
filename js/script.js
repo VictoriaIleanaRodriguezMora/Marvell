@@ -62,24 +62,30 @@ function displayNone(array) {
         array[i].classList.add("displayNone")
     }
 }
-
+function displayNoneElement(element) {
+        element.classList.add("displayNone")
+}
 function removeDisplayNone(array) {
     for (let i = 0; i < array.length; i++) {
         array[i].classList.remove("displayNone")
     }
+}
+function removeDisplayNoneElement(element) {
+        element.classList.remove("displayNone")
 }
 displayNone(rankingP)
 // Configuraciones iniciales
 displayNone(arrDisplayNone)
 displayNone(divCategoriasDeJuego)
 displayNone(btnSiguiente)
-divRankingP.classList.add("displayNone")
-divPregunta.classList.add("displayNone")
+displayNoneElement(divRankingP)
+displayNoneElement(divPregunta)
+
 
 //Inicia juego
 botonJugas.onclick = () => {
-    botonJugas.classList.add("displayNone")
-    titulo.classList.add("displayNone")
+    displayNoneElement(botonJugas)
+    displayNoneElement(titulo)
     removeDisplayNone(divCategoriasDeJuego)
 }
 //Almacenar Info en Local Storage
@@ -103,9 +109,10 @@ function botonesCategorias(botonPrincipal, botonSecundario, botonSecundario2, ar
     botonPrincipal.disabled = true;
     botonPrincipal.classList.remove("categorias__boton")
     botonPrincipal.classList.add("btnSelected")
-    botonSecundario.classList.add("displayNone")
-    botonSecundario2.classList.add("displayNone")
-    divRanking.classList.add("displayNone")
+    displayNoneElement(botonSecundario)
+    displayNoneElement(botonSecundario2)
+    displayNoneElement(divPregunta)
+    displayNoneElement(divRanking)
     desordenarPreguntas(arrPreguntas)
     rellenarPregunta(preguntasDesordenadas[posicionPregs])
 
@@ -176,12 +183,13 @@ function rellenarPregunta(arr) {
 }
 //Funciones que muestra el boton SIGUIENTE
 function siguientePreg() {
-    btnSiguiente.classList.remove("displayNone")
+    removeDisplayNoneElement(btnSiguiente)
 }
 btnSiguiente.onclick = () => {
     posicionPregs++
     arrBtn = []
-    btnSiguiente.classList.add("displayNone")
+    displayNoneElement(btnSiguiente)
+    //remueve los botones
     while (arrbotonesPregs.firstChild) {
         arrbotonesPregs.removeChild(arrbotonesPregs.firstChild)
     }
@@ -190,15 +198,15 @@ btnSiguiente.onclick = () => {
 
 //Encargada de mostrar la alerta de juego finalizado con el puntaje
 function terminaElJuego() {
-    divPregunta.classList.add("displayNone")
+    displayNoneElement(divPregunta)
     alertScore()
-    botonJugarDeNuevo.classList.remove("displayNone")
+    removeDisplayNoneElement(botonJugarDeNuevo)
 }
 
 //BOTON RANKING
 botonRanking.onclick = () => {
-    botonRanking.classList.add("displayNone")
-    divRankingP.classList.remove("displayNone")
+    displayNoneElement(botonRanking)
+    removeDisplayNoneElement(divRankingP)
     removeDisplayNone(rankingP)
     removeDisplayNone(spanRanking)
 
@@ -223,28 +231,31 @@ botonRanking.onclick = () => {
     }
 }
 divRankingP.onclick = () => {
-    botonRanking.classList.remove("displayNone")
-    divRankingP.classList.add("displayNone")
+    displayNoneElement(divRankingP)
+    removeDisplayNoneElement(botonRanking)
 }
 function alertScore() {
-    score.classList.remove("displayNone")
+    removeDisplayNoneElement(score)
     //Estos son cuentas para calcular el porcentaje de respuestas correctas e incorrectas. No hay problemas con esta funcion. Se ejecuta en jugarDeNuevo
-    if (contadorAcertadas < (preguntasTotales * 10) / 100) {
-        score.innerText = `Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`
-    } else if (contadorAcertadas < (preguntasTotales * 30) / 100) {
-        score.innerText = `Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, nadie es perfecto... 😵`
-    } else if (contadorAcertadas < (preguntasTotales * 60) / 100) {
-        score.innerText = `Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bien! Seguro que podes hacerlo mejor 😉`
-    } else if (contadorAcertadas < (preguntasTotales * 100) / 100) {
-        score.innerText = `Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, si fuera Fury, te habria considerado! 😁`
-    } else if (contadorAcertadas == (preguntasTotales * 100) / 100) {
-        score.innerText = `Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Sos un expert@! 🥳`
-    }
+    contadorAcertadas < preguntasTotales * 10 / 100
+        ?
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`) :
+        contadorAcertadas < preguntasTotales * 30 / 100
+        ?
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}.`) :
+        contadorAcertadas < preguntasTotales * 60 / 100
+        ?
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bien! Seguro que podes hacerlo mejor 😉`) :
+        contadorAcertadas < preguntasTotales * 100 / 100
+        ?
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, si fuera Fury, te habria considerado! 😁`) :
+        contadorAcertadas == preguntasTotales * 100 / 100 ?
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Sos un expert@! 🥳`) : console.log("");
 }
 
 
 //CODIGO DE BOOSTRAP
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  return new bootstrap.Popover(popoverTriggerEl)
+    return new bootstrap.Popover(popoverTriggerEl)
 })
