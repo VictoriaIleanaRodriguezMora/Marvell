@@ -18,8 +18,8 @@ let btnSiguiente = document.querySelector(".terminar")
 //Variables contenedoras
 let contenedorDeTodo = document.querySelector(".contenedor__preguntas__general")
 let divCategoriasDeJuego = document.querySelectorAll(".categorias__boton")
-let divPregunta = document.querySelector(".div__pregunta")
 let arrbotonesPregs = document.querySelector(".botonesPregs")
+let divPregunta = document.querySelector(".div__pregunta")
 //Ranking
 let divRanking = document.querySelector("#ranking")
 let botonRanking = document.querySelector(".botonRanking")
@@ -50,6 +50,7 @@ let preguntasDesordenadas = 0
 let posicionPregs = 0
 let arrBtn = []
 let btn
+let btnArr = []
 //LUXON
 const DateTime = luxon.DateTime
 let fechaDeJuego = DateTime.now().toLocaleString()
@@ -63,7 +64,7 @@ function displayNone(array) {
     }
 }
 function displayNoneElement(element) {
-        element.classList.add("displayNone")
+    element.classList.add("displayNone")
 }
 function removeDisplayNone(array) {
     for (let i = 0; i < array.length; i++) {
@@ -71,7 +72,7 @@ function removeDisplayNone(array) {
     }
 }
 function removeDisplayNoneElement(element) {
-        element.classList.remove("displayNone")
+    element.classList.remove("displayNone")
 }
 displayNone(rankingP)
 // Configuraciones iniciales
@@ -152,32 +153,32 @@ function rellenarPregunta(arr) {
         preguntasTotales++
         pregunta.innerText = arr["pregunta"]
         for (let i = 0; i < arr["respuestas"].length; i++) {
-            console.log("else")
             btn = document.createElement("button")
-            btn.disabled = false
+            btnArr.push(btn)
             arrbotonesPregs.appendChild(btn)
+            btn.disabled = false
             arrBtn.push(arr["respuestas"][i]["rta"])
             btn.classList.add("pregunta__opcion")
             btn.innerText = arr["respuestas"][i]["rta"]
             //Evento al apretar una de las opciones
             btn.addEventListener("click", function () {
-
-                let opCorrecta = arr["respuestas"][i]["correcto"]
-                if (opCorrecta == true) {
+                let opcionAEvaluar = arr["respuestas"][i]["correcto"]
+                let opCorrrecta = arr["respuestas"][i]["correcto"]
+                if (opcionAEvaluar == true) {
                     contadorAcertadas++
-                    console.log(contadorAcertadas + "a")
-                    btn.disabled = true
+                    this.classList.add("opcionCorrecta")
+                    this.classList.remove("pregunta__opcion")
+                    btnArr[i].disabled = true
+                    
                     siguientePreg()
                 } else {
                     contadorDesacertadas++
-                    console.log(contadorDesacertadas + "des")
-                    btn.disabled = true
+                    this.classList.add("opcionIncorrecta")
+                    this.classList.remove("pregunta__opcion")
+                    btnArr[i].disabled = true
                     siguientePreg()
                 }
-                btn.disabled = true
-
             })
-
         }
     }
 }
@@ -188,9 +189,10 @@ function siguientePreg() {
 btnSiguiente.onclick = () => {
     posicionPregs++
     arrBtn = []
+    btnArr = []
     displayNoneElement(btnSiguiente)
-    //remueve los botones
     while (arrbotonesPregs.firstChild) {
+    //remueve los botones
         arrbotonesPregs.removeChild(arrbotonesPregs.firstChild)
     }
     rellenarPregunta(preguntasDesordenadas[posicionPregs])
@@ -241,16 +243,16 @@ function alertScore() {
         ?
         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`) :
         contadorAcertadas < preguntasTotales * 30 / 100
-        ?
-        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}.`) :
-        contadorAcertadas < preguntasTotales * 60 / 100
-        ?
-        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bien! Seguro que podes hacerlo mejor 😉`) :
-        contadorAcertadas < preguntasTotales * 100 / 100
-        ?
-        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, si fuera Fury, te habria considerado! 😁`) :
-        contadorAcertadas == preguntasTotales * 100 / 100 ?
-        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Sos un expert@! 🥳`) : console.log("");
+            ?
+            score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}.`) :
+            contadorAcertadas < preguntasTotales * 60 / 100
+                ?
+                score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bien! Seguro que podes hacerlo mejor 😉`) :
+                contadorAcertadas < preguntasTotales * 100 / 100
+                    ?
+                    score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, si fuera Fury, te habria considerado! 😁`) :
+                    contadorAcertadas == preguntasTotales * 100 / 100 ?
+                        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Sos un expert@! 🥳`) : console.log("");
 }
 
 

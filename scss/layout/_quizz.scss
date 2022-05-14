@@ -4,19 +4,37 @@
   width: 0%;
 }
 
-.fadeShow {
-  transition: 300ms;
-  opacity: 1;
-}
-
 .opcionCorrecta {
-  background-color: rgba(104, 202, 6, 0.637);
+  background-color: rgba(116, 228, 4, 0.747);
+  color: black;
+  font-size: 1.5em;
+  @media screen and (max-width: 1000px) {
+    font-size: 1.2em;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 1em;
+  }
+  &:hover {
+    background-color: rgba(29, 252, 0, 0.63);
+    color: white;
+  }
 }
 
 .opcionIncorrecta {
-  background-color: rgba(110, 0, 0, 0.61);
+  background-color: rgb(255, 0, 0);
+  color: black;
+  font-size: 1.5em;
+  @media screen and (max-width: 1000px) {
+    font-size: 1.2em;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 1em;
+  }
+  &:hover {
+    background-color: rgba(168, 0, 0, 0.952);
+    color: white;
+  }
 }
-
 
 .btnSelected {
   transition: 500ms;
