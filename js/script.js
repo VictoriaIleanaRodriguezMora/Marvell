@@ -168,18 +168,25 @@ function rellenarPregunta(arr) {
                     contadorAcertadas++
                     this.classList.add("opcionCorrecta")
                     this.classList.remove("pregunta__opcion")
-                    btnArr[i].disabled = true
-                    
+                    btnArr.disabled = true
                     siguientePreg()
                 } else {
                     contadorDesacertadas++
                     this.classList.add("opcionIncorrecta")
                     this.classList.remove("pregunta__opcion")
-                    btnArr[i].disabled = true
+                    btnArr.disabled = true
                     siguientePreg()
                 }
+                deshabilitarBtn(btnArr)
             })
+
         }
+    }
+}
+
+function deshabilitarBtn(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i].disabled = true
     }
 }
 //Funciones que muestra el boton SIGUIENTE
@@ -192,7 +199,7 @@ btnSiguiente.onclick = () => {
     btnArr = []
     displayNoneElement(btnSiguiente)
     while (arrbotonesPregs.firstChild) {
-    //remueve los botones
+        //remueve los botones
         arrbotonesPregs.removeChild(arrbotonesPregs.firstChild)
     }
     rellenarPregunta(preguntasDesordenadas[posicionPregs])

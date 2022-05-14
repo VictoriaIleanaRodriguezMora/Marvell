@@ -1166,7 +1166,7 @@ body {
   width: 0%; }
 
 .opcionCorrecta {
-  text-shadow: 3px 3px 2px black;
+  text-shadow: 0px 0px 5px black;
   background-color: #00ff34;
   color: white;
   font-size: 1.5em; }
@@ -1177,11 +1177,11 @@ body {
     .opcionCorrecta {
       font-size: 1em; } }
   .opcionCorrecta:hover {
-    background-color: rgba(32, 252, 0, 0.63);
+    background-color: #16a100;
     color: white; }
 
 .opcionIncorrecta {
-  text-shadow: 3px 3px 2px black;
+  text-shadow: 0px 0px 5px black;
   background-color: rgba(255, 0, 0, 0.616);
   color: white;
   font-size: 1.5em; }
