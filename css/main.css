@@ -1166,8 +1166,9 @@ body {
   width: 0%; }
 
 .opcionCorrecta {
-  background-color: rgba(116, 228, 4, 0.747);
-  color: black;
+  text-shadow: 3px 3px 2px black;
+  background-color: #00ff34;
+  color: white;
   font-size: 1.5em; }
   @media screen and (max-width: 1000px) {
     .opcionCorrecta {
@@ -1176,12 +1177,13 @@ body {
     .opcionCorrecta {
       font-size: 1em; } }
   .opcionCorrecta:hover {
-    background-color: rgba(29, 252, 0, 0.63);
+    background-color: rgba(32, 252, 0, 0.63);
     color: white; }
 
 .opcionIncorrecta {
-  background-color: red;
-  color: black;
+  text-shadow: 3px 3px 2px black;
+  background-color: rgba(255, 0, 0, 0.616);
+  color: white;
   font-size: 1.5em; }
   @media screen and (max-width: 1000px) {
     .opcionIncorrecta {
@@ -1190,7 +1192,7 @@ body {
     .opcionIncorrecta {
       font-size: 1em; } }
   .opcionIncorrecta:hover {
-    background-color: rgba(168, 0, 0, 0.952);
+    background-color: rgba(168, 0, 0, 0.699);
     color: white; }
 
 .btnSelected {
