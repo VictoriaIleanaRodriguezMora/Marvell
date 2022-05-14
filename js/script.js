@@ -144,6 +144,7 @@ botonTODO.onclick = () => {
 function desordenarPreguntas(array) {
     preguntasDesordenadas = array.sort(() => Math.random() - 0.5)
 }
+
 //Funciona que pone el contenido en las preguntas
 function rellenarPregunta(arr) {
     if (arr === undefined) {
@@ -163,18 +164,15 @@ function rellenarPregunta(arr) {
             //Evento al apretar una de las opciones
             btn.addEventListener("click", function () {
                 let opcionAEvaluar = arr["respuestas"][i]["correcto"]
-                let opCorrrecta = arr["respuestas"][i]["correcto"]
                 if (opcionAEvaluar == true) {
                     contadorAcertadas++
                     this.classList.add("opcionCorrecta")
                     this.classList.remove("pregunta__opcion")
-                    btnArr.disabled = true
                     siguientePreg()
                 } else {
                     contadorDesacertadas++
                     this.classList.add("opcionIncorrecta")
                     this.classList.remove("pregunta__opcion")
-                    btnArr.disabled = true
                     siguientePreg()
                 }
                 deshabilitarBtn(btnArr)
@@ -250,16 +248,16 @@ function alertScore() {
         ?
         score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Creo que vos no viste ni una pelicula. 🥴`) :
         contadorAcertadas < preguntasTotales * 30 / 100
-            ?
-            score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}.`) :
-            contadorAcertadas < preguntasTotales * 60 / 100
-                ?
-                score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bien! Seguro que podes hacerlo mejor 😉`) :
-                contadorAcertadas < preguntasTotales * 100 / 100
-                    ?
-                    score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, si fuera Fury, te habria considerado! 😁`) :
-                    contadorAcertadas == preguntasTotales * 100 / 100 ?
-                        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Sos un expert@! 🥳`) : console.log("");
+        ?
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, nadie es perfecto. 😅`) :
+        contadorAcertadas < preguntasTotales * 60 / 100
+        ?
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bien! Seguro que podes hacerlo mejor. 😉`) :
+        contadorAcertadas < preguntasTotales * 100 / 100
+        ?
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Bueno, si fuera Fury, te habria considerado! 😁`) :
+        contadorAcertadas == preguntasTotales * 100 / 100 ?
+        score.innerText = (`Has acertado ${contadorAcertadas}, de ${preguntasTotales}. Sos un expert@! 🥳`) : console.log("");
 }
 
 
